@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="493.932" height="344"
+     viewBox="0 0 493.932 344">
+    <defs>
+        <style>
+            .a{fill:#e6ecf7;}.b{fill:#14c397;}.c{fill:#acb7d0;}.d{fill:#fdd55c;}.e{filter:url(#e);}.f{filter:url(#c);}.g{filter:url(#a);}
+        </style>
+        <filter id="a" x="0" y="0.004" width="281.86" height="251.471" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="b"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="b"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="c" x="212.072" y="0" width="281.86" height="251.471" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="d"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="d"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="e" x="86.109" y="60.106" width="321.783" height="283.894" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="f"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="f"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(58 37.43)">
+        <g class="g" transform="matrix(1, 0, 0, 1, -58, -37.43)">
+            <rect class="a" width="161.86" height="131.471" transform="translate(60 40)"/>
+        </g>
+        <rect class="b" width="161.86" height="29.324" transform="translate(1.932 2.574)"/>
+        <rect class="c" width="136.066" height="17.079" transform="translate(14.829 42.528)"/>
+        <rect class="c" width="99.307" height="5.801" transform="translate(14.829 72.496)"/>
+        <rect class="c" width="64.485" height="5.801" transform="translate(14.829 82.486)"/>
+        <rect class="c" width="85.122" height="5.801" transform="translate(14.829 92.476)"/>
+        <rect class="c" width="99.307" height="5.801" transform="translate(14.829 102.463)"/>
+        <rect class="c" width="33.21" height="5.801" transform="translate(14.829 112.453)"/>
+        <g class="f" transform="matrix(1, 0, 0, 1, -58, -37.43)">
+            <rect class="a" width="161.86" height="131.471" transform="translate(433.93 171.47) rotate(180)"/>
+        </g>
+        <rect class="b" width="161.86" height="29.324" transform="translate(375.932 31.894) rotate(180)"/>
+        <rect class="c" width="136.066" height="17.079" transform="translate(363.035 59.61) rotate(180)"/>
+        <rect class="c" width="99.307" height="5.801" transform="translate(363.031 78.3) rotate(180)"/>
+        <rect class="c" width="64.485" height="5.801" transform="translate(363.031 88.287) rotate(180)"/>
+        <rect class="c" width="85.122" height="5.801" transform="translate(363.035 98.273) rotate(180)"/>
+        <rect class="c" width="99.307" height="5.801" transform="translate(363.031 108.264) rotate(180)"/>
+        <rect class="c" width="33.21" height="5.801" transform="translate(363.035 118.254) rotate(180)"/>
+        <g class="e" transform="matrix(1, 0, 0, 1, -58, -37.43)">
+            <rect class="a" width="201.783" height="163.894" transform="translate(146.11 100.11)"/>
+        </g>
+        <rect class="d" width="201.783" height="36.553" transform="translate(88.04 62.676)"/>
+        <rect class="c" width="169.626" height="21.29" transform="translate(104.117 112.487)"/>
+        <rect class="c" width="123.802" height="7.23" transform="translate(104.117 149.847)"/>
+        <rect class="c" width="80.39" height="7.23" transform="translate(104.117 162.301)"/>
+        <rect class="c" width="106.117" height="7.23" transform="translate(104.117 174.751)"/>
+        <rect class="c" width="123.802" height="7.23" transform="translate(104.117 187.204)"/>
+        <rect class="c" width="41.401" height="7.23" transform="translate(104.117 199.658)"/>
+    </g>
+</svg>

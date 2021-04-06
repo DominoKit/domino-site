@@ -1,0 +1,43 @@
+/** Add css rules here for your application. */
+
+.root {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+}
+
+.root-body {
+    width: 100%;
+    height: calc(100vh);
+}
+
+.nav-header {
+    height: 60px;
+    width: 100%;
+}
+
+.nav-body {
+    width: 100%;
+}
+
+.nav-header .nav-item {
+    height: 60px;
+    line-height: 60px;
+    /*border: 1px solid black;*/
+}
+
+.nav-header .nav-item .nav-tabs{
+    background-color: transparent;
+    height: 58px;
+    border-bottom: none;
+}
+
+.nav-header .nav-item .nav-tabs li {
+    min-width: 150px;
+}
+
+.nav-header .nav-item .nav-tabs li a div div{
+    width: 100%;
+    line-height: 48px;
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <rect id="teal-sq" rx="2" ry="2" x="0" y="0" width="7.987" height="7.987" fill="rgba(20,195,151,1)" style="transform:translate(20px,110px)">
+    </rect>
+    <rect id="brown-sq" rx="1" ry="1" x="0" y="0" width="3.993" height="3.993" fill="rgba(64,63,61,1)"  style="transform:translate(10px,112px)">
+    </rect>
+
+    <rect id="teal-sq" rx="2" ry="2" x="0" y="0" width="7.987" height="7.987" fill="rgba(20,195,151,1)" style="transform:translate(0px,0px)">
+    </rect>
+    <rect id="brown-sq" rx="1" ry="1" x="0" y="0" width="3.993" height="3.993" fill="rgba(64,63,61,1)"  style="transform:translate(14px,2px)">
+    </rect>
+</svg>

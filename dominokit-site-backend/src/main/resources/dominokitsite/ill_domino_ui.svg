@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="431" height="314.192"
+     viewBox="0 0 431 314.192">
+    <defs>
+        <style>
+            .a{fill:#e6ecf7;}.b{fill:#e14b5a;}.c{fill:#fdd55c;}.d{fill:#14c397;}.e{fill:#acb7d0;}.f{fill:#403f3d;}.g{filter:url(#a);}
+        </style>
+        <filter id="a" x="44.471" y="0" width="386.529" height="314.192" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="b"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="b"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-57.643 37.861)">
+        <g class="g" transform="matrix(1, 0, 0, 1, 57.64, -37.86)">
+            <path class="a" d="M0,0,133.583.356l.631,238.669L.631,238.669Z"
+                  transform="translate(104.47 169.15) rotate(-74.21)"/>
+        </g>
+        <ellipse class="b" cx="1.904" cy="1.887" rx="1.904" ry="1.887" transform="translate(200.849 6.231)"/>
+        <ellipse class="c" cx="1.904" cy="1.887" rx="1.904" ry="1.887" transform="translate(206.711 7.875)"/>
+        <ellipse class="d" cx="1.904" cy="1.887" rx="1.904" ry="1.887" transform="translate(212.573 9.518)"/>
+        <path class="e"
+              d="M749.58,354.6a11.431,11.431,0,0,0-4.734.111,11.124,11.124,0,0,0,.335-4.742,11.259,11.259,0,0,0-4.232,2.707,11.11,11.11,0,0,0-2.175-4.5,11.185,11.185,0,0,0-2.22,4.214,11.346,11.346,0,0,0-3.974-2.552,8.994,8.994,0,0,0,6.039,10.542l.014.017.008-.009.1.036s.013-.068.032-.191l.035-.043.007.055c-.049.114-.074.179-.074.179l.1.021,0,.012.022-.007A9.1,9.1,0,0,0,749.58,354.6Z"
+              transform="translate(-503.411 -297.079)"/>
+        <ellipse class="e" cx="2.523" cy="2.501" rx="2.523" ry="2.501" transform="translate(237.841 43.422)"/>
+        <path class="e" d="M.009.406,154.493,0l-.009,3.4L0,3.8Z" transform="translate(224.895 68.23) rotate(15.79)"/>
+        <path class="d" d="M.07.07,26.716,0l-.071,26.45L0,26.52Z" transform="translate(234.109 88.422) rotate(15.79)"/>
+        <path class="c" d="M.07.07,26.716,0l-.071,26.45L0,26.52Z" transform="translate(281.738 101.775) rotate(15.79)"/>
+        <path class="d" d="M.07.07,26.716,0l-.071,26.45L0,26.52Z" transform="translate(329.367 115.127) rotate(15.79)"/>
+        <path class="e" d="M.006.052,19.793,0l-.006,2.274L0,2.326Z"
+              transform="translate(228.76 119.892) rotate(15.79)"/>
+        <path class="e" d="M.006.052,19.793,0l-.006,2.274L0,2.326Z"
+              transform="translate(276.389 133.245) rotate(15.79)"/>
+        <path class="e" d="M.006.052,19.793,0l-.006,2.274L0,2.326Z"
+              transform="translate(324.018 146.598) rotate(15.79)"/>
+        <path class="f"
+              d="M778.172,621h28.6v11.86H790.135v11.86h16.644v11.859H778.172Zm34.327,0H841.1v10.313H824.461v2.062H841.1v23.719H812.5v-10.83h16.643V644.2H812.5V621Zm34.327,0h28.606v10.313H858.789v2.062h16.643v23.719H846.826v-10.83h16.643V644.2H846.827V621Z"
+              transform="translate(-470.522 -427.951)"/>
+        <path class="f"
+              d="M220.926,499h11.8v11.558h10.795V499h11.8v35h-11.8V522.281H232.727V534h-11.8V499Zm49.914,11.607H260.453V499h32.583v11.607H282.643V534h-11.8V510.607h0ZM298.207,499h12.3l7.569,12.3,7.562-12.3h12.309v35H326.2V516.653L318.08,529.1h-.2l-8.124-12.445V534H298.207Zm45.617,0h11.8v23.433h16.595V534h-28.4V499Z"
+              transform="translate(-163.283 -360.215)"/>
+    </g>
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="432.001" height="483"
+     viewBox="0 0 432.001 483">
+    <defs>
+        <style>
+            .a{fill:#e6ecf7;}.b{fill:#acb7d0;}.c{fill:#14c397;}.d{fill:#fdd55c;}.e{fill:#fff;}.f{fill:#e14b5a;}.g{filter:url(#g);}.h{filter:url(#e);}.i{filter:url(#c);}.j{filter:url(#a);}
+        </style>
+        <filter id="a" x="88.155" y="191.134" width="253.701" height="291.867" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="b"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="b"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="c" x="0" y="131.075" width="171.862" height="230.146" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="d"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="d"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="e" x="92.294" y="0" width="245.476" height="200.549" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="f"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="f"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="g" x="260.97" y="150.725" width="171.031" height="192.634" filterUnits="userSpaceOnUse">
+            <feOffset dy="20" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="20" result="h"/>
+            <feFlood flood-color="#acb7d0" flood-opacity="0.239"/>
+            <feComposite operator="in" in2="h"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g transform="translate(-11.546 39.929)">
+        <path class="a"
+              d="M473.572,445.312a133,133,0,1,1,93.842-38.962,132.791,132.791,0,0,1-93.842,38.962Zm0-265.026c-72.615,0-131.692,59.216-131.692,132s59.077,132,131.692,132,131.692-59.215,131.692-132-59.077-132-131.692-132Z"
+              transform="translate(-246.542 -135.949)"/>
+        <rect class="b" width="134.015" height="99.51" transform="translate(276.307 195.297) rotate(90)"/>
+        <g class="j" transform="matrix(1, 0, 0, 1, 11.55, -39.93)">
+            <path class="a"
+                  d="M5579.546-2513.062v-53.2h133.7v53.2Zm0-59.335v-53.2h133.7v53.2Zm0-59.335v-53.2h133.7v53.2Z"
+                  transform="translate(-5431.39 2916.06)"/>
+        </g>
+        <rect class="c" width="133.7" height="8.184" transform="translate(159.702 213.76)"/>
+        <rect class="d" width="133.7" height="8.184" transform="translate(159.702 273.095)"/>
+        <rect class="c" width="133.7" height="8.184" transform="translate(159.702 332.43)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(264.314 195.808)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(275.031 195.808)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(285.747 195.808)"/>
+        <ellipse class="d" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(264.314 254.12)"/>
+        <ellipse class="d" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(275.031 254.12)"/>
+        <ellipse class="d" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(285.747 254.12)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(264.314 312.432)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(275.031 312.432)"/>
+        <ellipse class="c" cx="3.062" cy="3.069" rx="3.062" ry="3.069" transform="translate(285.747 312.432)"/>
+        <g class="i" transform="matrix(1, 0, 0, 1, 11.55, -39.93)">
+            <path class="a"
+                  d="M348.112,358.494V453.63a7.5,7.5,0,0,1-7.486,7.5H303.74a7.5,7.5,0,0,1-7.49-7.506V358.494a7.5,7.5,0,0,1,7.49-7.5h4.474a3.568,3.568,0,0,0,3.294,4.914h21.029a3.568,3.568,0,0,0,3.294-4.914h4.793a7.5,7.5,0,0,1,7.487,7.5Z"
+                  transform="translate(-236.25 -179.91)"/>
+        </g>
+        <rect class="e" width="46.948" height="65.473" transform="translate(74.003 149.314)"/>
+        <rect class="b" width="18.738" height="1.073" transform="translate(87.333 194.335)"/>
+        <rect class="d" width="28.994" height="1.073" transform="translate(87.314 198.276)"/>
+        <rect class="b" width="22.754" height="1.073" transform="translate(87.314 201.989)"/>
+        <rect class="b" width="13.385" height="1.073" transform="translate(87.314 205.702)"/>
+        <rect class="b" width="20.077" height="1.073" transform="translate(87.314 209.414)"/>
+        <rect class="b" width="2.142" height="2.147" transform="translate(78.835 194.027)"/>
+        <rect class="d" width="2.142" height="2.147" transform="translate(78.835 197.739)"/>
+        <rect class="b" width="2.142" height="2.147" transform="translate(78.835 201.452)"/>
+        <rect class="b" width="2.142" height="2.147" transform="translate(78.835 205.165)"/>
+        <rect class="b" width="2.142" height="2.147" transform="translate(78.835 208.878)"/>
+        <rect class="b" width="18.88" height="18.924" transform="translate(88.132 157.498)"/>
+        <g class="h" transform="matrix(1, 0, 0, 1, 11.55, -39.93)">
+            <rect class="a" width="125.476" height="80.549" transform="translate(152.29 40)"/>
+        </g>
+        <rect class="e" width="104.032" height="39.404" transform="translate(173.3 22.606)"/>
+        <rect class="b" width="24.968" height="1.43" transform="translate(192.254 29.433)"/>
+        <rect class="d" width="38.633" height="1.43" transform="translate(192.229 34.684)"/>
+        <rect class="b" width="30.318" height="1.43" transform="translate(192.229 39.631)"/>
+        <rect class="b" width="17.834" height="1.43" transform="translate(192.229 44.578)"/>
+        <rect class="b" width="26.751" height="1.43" transform="translate(192.229 49.525)"/>
+        <rect class="b" width="2.853" height="2.86" transform="translate(180.931 29.022)"/>
+        <rect class="d" width="2.853" height="2.86" transform="translate(180.931 33.969)"/>
+        <rect class="b" width="2.853" height="2.86" transform="translate(180.931 38.916)"/>
+        <rect class="b" width="2.853" height="2.86" transform="translate(180.931 43.863)"/>
+        <rect class="b" width="2.853" height="2.86" transform="translate(180.931 48.81)"/>
+        <rect class="b" width="25.545" height="25.605" transform="translate(246.681 27.543)"/>
+        <ellipse class="f" cx="2.001" cy="2.003" rx="2.001" ry="2.003" transform="translate(166.678 1.659)"/>
+        <ellipse class="d" cx="2.001" cy="2.003" rx="2.001" ry="2.003" transform="translate(173.43 1.659)"/>
+        <ellipse class="c" cx="2.001" cy="2.003" rx="2.001" ry="2.003" transform="translate(180.181 1.659)"/>
+        <g class="g" transform="matrix(1, 0, 0, 1, 11.55, -39.93)">
+            <path class="a"
+                  d="M5589.752-2612.294v-15.856a25.557,25.557,0,0,1-10.205-20.462,25.558,25.558,0,0,1,10.205-20.461v-15.855h30.619v15.855a25.555,25.555,0,0,1,10.207,20.462,25.555,25.555,0,0,1-10.207,20.462v15.855Z"
+                  transform="translate(-5258.58 2875.65)"/>
+        </g>
+        <ellipse class="e" cx="19.902" cy="19.949" rx="19.902" ry="19.949" transform="translate(338.129 167.164)"/>
+        <rect class="b" width="15.435" height="0.884" transform="translate(351.514 181.647)"/>
+        <rect class="d" width="23.883" height="0.884" transform="translate(351.498 184.893)"/>
+        <rect class="b" width="18.743" height="0.884" transform="translate(351.498 187.952)"/>
+        <rect class="b" width="11.025" height="0.884" transform="translate(351.498 191.01)"/>
+        <rect class="b" width="16.538" height="0.884" transform="translate(351.498 194.068)"/>
+        <rect class="b" width="1.764" height="1.768" transform="translate(344.514 181.393)"/>
+        <rect class="d" width="1.764" height="1.768" transform="translate(344.514 184.451)"/>
+        <rect class="b" width="1.764" height="1.768" transform="translate(344.514 187.509)"/>
+        <rect class="b" width="1.764" height="1.768" transform="translate(344.514 190.568)"/>
+        <rect class="b" width="1.764" height="1.768" transform="translate(344.514 193.626)"/>
+    </g>
+</svg>
