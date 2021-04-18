@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.dominokit.site</groupId>
+        <groupId>org.dominokit</groupId>
         <artifactId>dominokit-site</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -15,7 +15,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.dominokit.site</groupId>
+            <groupId>org.dominokit</groupId>
             <artifactId>dominokit-site-frontend</artifactId>
             <version>1.0-SNAPSHOT</version>
             <type>war</type>
@@ -27,25 +27,29 @@
             <version>${vertx.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.api</groupId>
-            <artifactId>domino-api-client</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-api-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.api</groupId>
-            <artifactId>domino-api-server</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-api-server</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.logging</groupId>
-            <artifactId>domino-remote-logging</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-remote-logging</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.logging</groupId>
-            <artifactId>domino-log4j-server-logging</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-log4j-server-logging</artifactId>
         </dependency>
-    
+        <dependency>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-resteasy-plugin</artifactId>
+        </dependency>
+	
 		<dependency>
-			<groupId>org.dominokit.site</groupId>
-			<artifactId>home-backend</artifactId>
+			<groupId>org.dominokit</groupId>
+			<artifactId>pages-backend</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
@@ -131,7 +135,7 @@
                                 <systemProperty>
                                     <key>domino.webroot.location</key>
                                     <value>
-                                        ${basedir}/../dominokit-site-frontend/target/dominokit-site-frontend-1.0-SNAPSHOT/dominokit-site
+                                        ${basedir}/../dominokit-site-frontend/target/dominokit-site-frontend-1.0-SNAPSHOT/dominokitsite
                                     </value>
                                 </systemProperty>
                             </systemProperties>
@@ -154,7 +158,7 @@
                             <systemProperties>
                                 <systemProperty>
                                     <key>domino.webroot.location</key>
-                                    <value>${basedir}/../target/gwt/launcherDir/dominokit-site
+                                    <value>${basedir}/../target/gwt/launcherDir/dominokitsite
                                     </value>
                                 </systemProperty>
                             </systemProperties>

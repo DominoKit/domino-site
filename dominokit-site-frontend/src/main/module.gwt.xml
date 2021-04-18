@@ -5,7 +5,7 @@
 
     <source path=""/>
 
-    <entry-point class="org.dominokit.site.AppClientModule"/>
+    <entry-point class="org.dominokit.AppClientModule"/>
 
     <!-- logging -->
     <set-property name="gwt.logging.logLevel" value="INFO"/>

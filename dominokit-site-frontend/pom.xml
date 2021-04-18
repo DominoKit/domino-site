@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.dominokit.site</groupId>
+        <groupId>org.dominokit</groupId>
         <artifactId>dominokit-site</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -28,57 +28,51 @@
             <artifactId>gwt-dev</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.api</groupId>
-            <artifactId>domino-api-shared</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-api-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino.impl</groupId>
-            <artifactId>domino-gwt</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-api-shared</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.dominokit.domino</groupId>
-            <artifactId>domino-gwt-view</artifactId>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-gwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.dominokit</groupId>
+            <artifactId>domino-mvp-gwt-view</artifactId>
         </dependency>
         <dependency>
             <groupId>org.dominokit</groupId>
             <artifactId>domino-ui</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.dominokit.domino.api</groupId>
-            <artifactId>domino-api-client</artifactId>
-        </dependency>
-    
-		<dependency>
-			<groupId>org.dominokit.site</groupId>
-			<artifactId>home-frontend</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
 	
 		<dependency>
-			<groupId>org.dominokit.site</groupId>
-			<artifactId>home-frontend</artifactId>
+			<groupId>org.dominokit</groupId>
+			<artifactId>pages-frontend</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.dominokit</groupId>
+			<artifactId>pages-frontend</artifactId>
 			<version>${project.version}</version>
 			<classifier>sources</classifier>
 		</dependency>
-
 	
-
 		<dependency>
-			<groupId>org.dominokit.site</groupId>
-			<artifactId>home-frontend-ui</artifactId>
+			<groupId>org.dominokit</groupId>
+			<artifactId>pages-frontend-ui</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-
 	
-
 		<dependency>
-			<groupId>org.dominokit.site</groupId>
-			<artifactId>home-frontend-ui</artifactId>
+			<groupId>org.dominokit</groupId>
+			<artifactId>pages-frontend-ui</artifactId>
 			<version>${project.version}</version>
 			<classifier>sources</classifier>
 		</dependency>
-
 	</dependencies>
     <build>
         <plugins>
@@ -87,7 +81,7 @@
                 <artifactId>gwt-maven-plugin</artifactId>
                 <configuration>
                     <extra>${extra.directory}/gwt/extra</extra>
-                    <moduleName>org.dominokit.site.AppClientModule</moduleName>
+                    <moduleName>org.dominokit.AppClientModule</moduleName>
                     <moduleShortName>dominokitsite</moduleShortName>
                 </configuration>
             </plugin>
