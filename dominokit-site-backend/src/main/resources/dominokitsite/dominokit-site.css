@@ -38,7 +38,7 @@
 }
 
 .navigation {
-    height: 50px;
+    height: 70px;
     display: flex;
 }
 
@@ -57,6 +57,22 @@
     line-height: 50px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.header-link.active {
+    color: #14C397;
+}
+
+.header-link.active::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    display: block;
+    position: relative;
+    background: #14C397 0% 0% no-repeat padding-box;
+    margin-left: 48%;
+    transform: matrix(0.77, 0.64, -0.64, 0.77, 0, 0);
+    margin-top: -10px;
 }
 
 .header-link:hover {
@@ -196,7 +212,6 @@
     display: inline-block;
     padding-right: 20px;
     padding-left: 20px;
-    margin-top: 20px;
     cursor: pointer;
 }
 
@@ -218,6 +233,46 @@
 }
 
 .getting-started img {
+    height: 24px;
+    width: 24px;
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    left: 10px;
+}
+
+.button {
+    margin-right: 10px;
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    display: inline-block;
+    padding-right: 20px;
+    padding-left: 20px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+.button .button-img {
+    -webkit-mask-position: center;
+    mask-position: center;
+    font-size: 21px;
+    padding-left: 24px;
+    top: 2px;
+}
+.button div {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.button span {
+    font: normal normal normal 14px/17px Lato;
+    letter-spacing: 0px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.button img {
     height: 24px;
     width: 24px;
     position: relative;
@@ -979,5 +1034,132 @@
     font-weight: 600;
 }
 
+.solution-main {
+    margin: 20px 124px 20px 124px;
+    padding: 0 10px 0 10px;
+}
 
+.solution-header {
+    display: flex;
+    align-items: center;
+}
 
+.solution-name {
+    font: normal normal 900 36px/44px Lato;
+}
+
+.view-on-github {
+    color: #000000;
+}
+
+.view-on-github:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.view-on-github:hover .button-img {
+    background-color: #FFFFFF;
+}
+
+.view-on-github .button-img {
+    -webkit-mask: url(/assets/ic_view_on_github.svg) no-repeat;
+    mask: url(/assets/ic_view_on_github.svg) no-repeat;
+    background: #000000;
+}
+
+.see-live-demo {
+    color: #14C397;
+}
+
+.see-live-demo:hover {
+    background-color: #14C397;
+    color: #FFFFFF;
+}
+
+.see-live-demo:hover .button-img {
+    background-color: #FFFFFF;
+}
+
+.see-live-demo .button-img {
+    -webkit-mask: url(/assets/ic_see_live_demo.svg) no-repeat;
+    mask: url(/assets/ic_see_live_demo.svg) no-repeat;
+    background: #14C397;
+}
+
+.solution-version {
+    flex-grow: 1;
+}
+
+.solution-version div {
+    width: 70px;
+    height: 28px;
+    background: #E6ECF7 0% 0% no-repeat padding-box;
+    border: 1px solid #ACB7D0;
+    border-radius: 4px;
+    margin-left: 10px;
+    line-height: 28px;
+    padding: 2px 0 2px 5px;
+}
+
+.solution-version img {
+    margin-left: 10px;
+}
+
+.solution-description {
+    margin-top: 15px;
+    font: normal normal normal 16px/24px Lato;
+}
+
+.solution-badges {
+    display: flex;
+    margin-top: 15px;
+}
+
+.badge {
+    display: flex;
+    margin-right: 10px;
+}
+
+.badge .badge-left-section {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 5px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-left: 1px solid #000000;
+    font: normal normal normal 12px/15px Lato;
+}
+
+.badge .badge-right-section {
+    background-color: #52BA9A;
+    color: #FFFFFF;
+    padding: 5px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-right: 1px solid #52BA9A;
+    font: normal normal normal 12px/15px Lato;
+}
+
+.solution-video {
+    margin-top: 20px;
+}
+
+.solution-features{
+    display: flex;
+    margin-top: 20px;
+}
+
+.solution-feature {
+    padding-top: 25px;
+    border-top: 1px solid #E6ECF7;
+    margin-right: 30px;
+}
+
+.solution-feature h1 {
+    font: normal normal normal 24px/29px Lato;
+}
+
+.solution-feature p {
+    font: normal normal normal 16px/24px Lato;
+
+}

@@ -23,7 +23,7 @@ public abstract class BaseHomeProxy extends ViewBaseClientPresenter<HomeView> im
         @OnReveal
         public void loadHome() {
             fetchContent("main/content/home");
-            new Timer(){
+            new Timer() {
                 @Override
                 public void run() {
                     view.enhanceClientsNavigation();
@@ -83,7 +83,7 @@ public abstract class BaseHomeProxy extends ViewBaseClientPresenter<HomeView> im
     protected abstract String getPageTitle();
 
     protected void fetchContent(String contentPath) {
-        if(enhanced) {
+        if (enhanced) {
             ContentServiceFactory.INSTANCE
                     .getPageContent(contentPath)
                     .onSuccess(this::updateContent)

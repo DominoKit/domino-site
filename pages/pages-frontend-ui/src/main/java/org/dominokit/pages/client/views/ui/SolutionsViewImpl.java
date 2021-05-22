@@ -4,22 +4,16 @@ import elemental2.dom.*;
 import jsinterop.base.Js;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.ui.utils.DominoElement;
-import org.dominokit.pages.client.presenters.BaseHomeProxy;
 import org.dominokit.pages.client.presenters.SolutionsProxy;
-import org.dominokit.pages.client.views.HomeView;
+import org.dominokit.pages.client.views.SolutionsView;
 
 import static elemental2.dom.DomGlobal.document;
 import static elemental2.dom.DomGlobal.window;
 import static org.dominokit.domino.ui.style.Unit.px;
 
-@UiView(presentable = {
-        BaseHomeProxy.HomeProxy.class,
-        BaseHomeProxy.NewsProxy.class,
-        BaseHomeProxy.AboutProxy.class
-})
-public class HomeViewImpl extends FakeView implements HomeView {
-
-    private HomeUiHandlers uiHandlers;
+@UiView(presentable = SolutionsProxy.class)
+public class SolutionsViewImpl extends FakeView implements SolutionsView {
+    private SolutionsUiHandlers uiHandlers;
     private EventListener removeSolutionsMenuListener;
 
     @Override
@@ -173,7 +167,7 @@ public class HomeViewImpl extends FakeView implements HomeView {
 
     @Override
     public void updateContent(String content) {
-        DominoElement.of(getElement("#body"))
+        DominoElement.of(document.body)
                 .clearElement()
                 .setInnerHtml(content);
     }
@@ -184,7 +178,7 @@ public class HomeViewImpl extends FakeView implements HomeView {
     }
 
     @Override
-    public void setUiHandlers(HomeUiHandlers uiHandlers) {
+    public void setUiHandlers(SolutionsUiHandlers uiHandlers) {
         this.uiHandlers = uiHandlers;
     }
 }
