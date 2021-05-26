@@ -4,17 +4,7 @@
 <head th:replace="~{commons :: header(pageTitle='Domino UI')}"></head>
 <body>
 <div id="root">
-    <div style="box-shadow: 0px 1px 2px #acb7d033;">
-        <div class="header-root">
-            <div th:replace="~{commons :: navigationTopBar (active = 'solutions')}"></div>
-        </div>
-    </div>
-    <div id="body">
-        <div th:replace="~{main/content/dominoui :: content}"></div>
-    </div>
-    <div th:replace="~{commons :: supportUs}"></div>
-    <div th:replace="~{commons :: footer}"></div>
-    <div th:replace="~{commons :: solutionsMenu}"></div>
+    <div th:replace="~{main/content/dominoui :: solutionContent}"></div>
 </div>
 </body>
 </html>
