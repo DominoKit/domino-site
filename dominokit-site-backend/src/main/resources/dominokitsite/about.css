@@ -1,0 +1,171 @@
+.about-main .about-main-section .about-section-cntr {
+    padding: 40px;
+}
+
+.about-main .about-section h1 {
+    text-align: center;
+    width: fit-content;
+    font: normal normal bold 36px/44px Lato;
+    letter-spacing: 0px;
+    padding: 20px;
+    color: #1F1E1C;
+    border-radius: 107px;
+    margin: 0px auto;
+}
+
+.about-main .about-section p {
+    text-align: center;
+    font: normal normal normal 16px/24px Lato;
+    letter-spacing: 0px;
+    color: #6a7181;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 40px;
+}
+
+.about-main .greyed {
+    background-color: #E6ECF7;
+}
+
+.authors {
+    text-align: center;
+}
+
+.authors-main {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 40px 40px 40px;
+}
+
+.authors-main .author-card-cntr {
+    flex-grow: 1;
+    padding: 20px;
+    max-width: 25%;
+}
+
+.author-card {
+    transition: all 0.5s;
+    width: 100%;
+    max-width: 353px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 4px;
+    filter: grayscale(100%) contrast(90%);
+    position: relative;
+    padding: 20px;
+    color: #E6ECF7;
+}
+
+.author-card.active {
+    filter: none;
+    color: #6a7181;
+}
+
+.author-card-header {
+    text-align: left;
+}
+
+.author-card .author-card-image img {
+    padding: 10px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transition: all ease-in-out 0.25s;
+}
+
+.author-card .author-card-image.left img {
+    border-left: 15px solid #14C397;
+    border-bottom: 15px solid #14C397;
+    border-right: 15px solid #FDD55C;
+    border-top: 15px solid #FDD55C;
+}
+
+.author-card .author-card-image.left img:hover {
+    border-right: 15px solid #14C397;
+    border-top: 15px solid #14C397;
+    border-left: 15px solid #FDD55C;
+    border-bottom: 15px solid #FDD55C;
+    transform: scale(1.1);
+}
+
+.author-card .author-card-image.right img {
+    border-right: 15px solid #14C397;
+    border-top: 15px solid #14C397;
+    border-left: 15px solid #FDD55C;
+    border-bottom: 15px solid #FDD55C;
+}
+
+.author-card .author-card-image.right img:hover {
+    border-left: 15px solid #14C397;
+    border-bottom: 15px solid #14C397;
+    border-right: 15px solid #FDD55C;
+    border-top: 15px solid #FDD55C;
+    transform: scale(1.1);
+}
+
+.author-card .author-card-name h3 {
+    padding-top: 20px;
+    color: #1B1B40;
+    font: normal normal bold 18px/24px Lato;
+    margin-bottom: 5px;
+}
+
+.author-card .author-card-title h4 {
+    color: #14C397;
+    font: normal normal normal 14px/24px Lato;
+    margin: 0px;
+}
+
+.author-card .author-card-comment p {
+    text-align: center;
+    font: normal normal normal 16px/24px Lato;
+}
+
+.author-card .author-card-logo img {
+    border-radius: 6px;
+    max-width: 96px;
+    max-height: 96px;
+}
+
+.about-main .about-section {
+    padding: 40px;
+}
+
+.our-mission {
+    width: 100%;
+    text-align: center;
+}
+
+.sponsors-logos {
+    display: flex;
+}
+
+.sponsors-logos .sponsor-logo {
+    flex-grow: 1;
+    justify-content: center;
+    display: flex;
+}
+
+.sponsors-logos img {
+    margin: auto;
+}
+
+.sponsors-logos img.installe4j {
+    width: 158px;
+    height: 44px;
+}
+
+.sponsors-logos img.jetbrains {
+    width: 160px;
+    height: 147px;
+}
+
+.sponsors-logos img.vertispan {
+    width: 158px;
+    height: 64px;
+}
+
+.about-main .contact-chat-icon {
+    width: 32px;
+}
