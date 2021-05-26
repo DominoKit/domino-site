@@ -1,5 +1,6 @@
 package org.dominokit.pages.client.presenters;
 
+import com.google.gwt.user.client.Timer;
 import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
 import org.dominokit.domino.api.shared.extension.MainDominoEvent;
@@ -26,7 +27,12 @@ public class SolutionsProxy extends ViewBaseClientPresenter<SolutionsView> imple
     protected void updateContent(String content) {
         view.updateContent(content);
         view.setPageTitle(solution);
-        view.enhance();
+        new Timer(){
+            @Override
+            public void run() {
+                view.enhance();
+            }
+        }.schedule(1000);
     }
 
     protected void fetchContent(String contentPath) {
