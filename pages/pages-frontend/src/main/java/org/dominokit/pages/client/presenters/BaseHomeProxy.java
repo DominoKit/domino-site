@@ -1,5 +1,6 @@
 package org.dominokit.pages.client.presenters;
 
+import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
 import org.dominokit.domino.api.shared.extension.MainDominoEvent;
@@ -13,8 +14,6 @@ import org.gwtproject.timer.client.Timer;
 @OnStateChanged(HomeEvent.class)
 @DependsOn(@EventsGroup(MainDominoEvent.class))
 public abstract class BaseHomeProxy extends ViewBaseClientPresenter<HomeView> implements HomeView.HomeUiHandlers {
-
-    private static boolean enhanced = false;
 
     @PresenterProxy
     @AutoRoute(token = "home")
@@ -67,31 +66,22 @@ public abstract class BaseHomeProxy extends ViewBaseClientPresenter<HomeView> im
         }
     }
 
-    @OnInit
-    public void onPagesInit() {
-        if (!enhanced) {
-            view.enhance();
-            enhanced = true;
-        }
-    }
-
     protected void updateContent(String content) {
         view.updateContent(content);
         view.setPageTitle(getPageTitle());
+        view.enhance();
     }
 
     protected abstract String getPageTitle();
 
     protected void fetchContent(String contentPath) {
-        if (enhanced) {
-            ContentServiceFactory.INSTANCE
-                    .getPageContent(contentPath)
-                    .onSuccess(this::updateContent)
-                    .onFailed(failedResponseBean -> {
+        ContentServiceFactory.INSTANCE
+                .getPageContent(contentPath)
+                .onSuccess(this::updateContent)
+                .onFailed(failedResponseBean -> {
 
-                    })
-                    .send();
-        }
+                })
+                .send();
     }
 
     @Override

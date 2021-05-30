@@ -605,8 +605,8 @@
     </svg>
 </div>
 
-<div th:fragment="gettingStarted">
-    <a class="getting-started">
+<div th:fragment="gettingStarted (url)">
+    <a class="getting-started" th:href="${url}">
         <div>
             <img src="/assets/ic_getting_started.svg">
         </div>

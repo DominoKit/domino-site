@@ -30,6 +30,18 @@ public class HomeViewImpl extends FakeView implements HomeView {
         };
         enhanceLinks();
         enhanceMenuPosition();
+//        enhanceGettingStarted();
+    }
+
+    private void enhanceGettingStarted() {
+        HTMLCollection<Element> gettingStartedNodes = document.body.getElementsByClassName("getting-started");
+        gettingStartedNodes.asList().forEach(element -> {
+            HTMLElement htmlElement = Js.uncheckedCast(element);
+            DominoElement.of(htmlElement)
+                    .addClickListener(evt -> {
+                        uiHandlers.onLinkClick(htmlElement.getAttribute("href"));
+                    });
+        });
     }
 
     private void enhanceLinks() {
@@ -173,7 +185,7 @@ public class HomeViewImpl extends FakeView implements HomeView {
 
     @Override
     public void updateContent(String content) {
-        DominoElement.of(getElement("#body"))
+        DominoElement.of(getElement("#root"))
                 .clearElement()
                 .setInnerHtml(content);
     }

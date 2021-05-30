@@ -1,164 +1,184 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<div class="about-main" th:fragment="aboutContent">
+<div th:fragment="aboutContent">
+    <div th:replace="~{commons :: mainHeader}"></div>
+    <div id="body">
+        <div class="about-main" >
 
-    <div class="about-main-section">
-        <div class="about-section-cntr">
-            <div class="about-section">
-                <h1>Who we are</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum. Stet clita kasd gubergren, no sea takimata</p>
-            </div>
-            <div class="broad-video">
-                <video width="100%" height="500" controls>
-                </video>
-            </div>
-            <div class="feature-blocks">
-                <div class="feature-block">
-                    <img src="/assets/ic_type_safe.svg"/>
-                    <h1>Mession</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                        ea
-                        rebum. Stet clita kasd gubergren, no sea takimata
-                    </p>
+            <div class="about-main-section">
+                <div class="about-section-cntr">
+                    <div class="about-section">
+                        <h1>Who we are</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut
+                            labore
+                            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea
+                            rebum. Stet clita kasd gubergren, no sea takimata</p>
+                    </div>
+                    <div class="broad-video">
+                        <video width="100%" height="500" controls>
+                        </video>
+                    </div>
+                    <div class="feature-blocks">
+                        <div class="feature-block">
+                            <img src="/assets/ic_type_safe.svg"/>
+                            <h1>Mession</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt
+                                ut
+                                labore
+                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                dolores et
+                                ea
+                                rebum. Stet clita kasd gubergren, no sea takimata
+                            </p>
+                        </div>
+                        <div class="feature-block">
+                            <img src="/assets/ic_rich_components.svg"/>
+                            <h1>Philosophy</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt
+                                ut
+                                labore
+                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                dolores et
+                                ea
+                                rebum. Stet clita kasd gubergren, no sea takimata
+                            </p>
+                        </div>
+                        <div class="feature-block">
+                            <img src="/assets/ic_typography_and_font_icons.svg"/>
+                            <h1>Clients</h1>
+                            <p>
+                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                                invidunt
+                                ut
+                                labore
+                                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                                dolores et
+                                ea
+                                rebum. Stet clita kasd gubergren, no sea takimata
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="feature-block">
-                    <img src="/assets/ic_rich_components.svg"/>
-                    <h1>Philosophy</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                        ea
-                        rebum. Stet clita kasd gubergren, no sea takimata
-                    </p>
-                </div>
-                <div class="feature-block">
-                    <img src="/assets/ic_typography_and_font_icons.svg"/>
-                    <h1>Clients</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-                        ut
-                        labore
-                        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et
-                        ea
-                        rebum. Stet clita kasd gubergren, no sea takimata
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="about-section greyed">
-            <h1>Sponsors</h1>
-            <div class="sponsors-logos">
-                <div class="sponsor-logo">
-                    <img src="assets/ic_our_sponsors_vertispan_logo.png" class="vertispan">
+                <div class="about-section greyed">
+                    <h1>Sponsors</h1>
+                    <div class="sponsors-logos">
+                        <div class="sponsor-logo">
+                            <img src="assets/ic_our_sponsors_vertispan_logo.png" class="vertispan">
+                        </div>
+                        <div class="sponsor-logo">
+                            <img src="assets/ic_our_sponsors_jetbrains_logo.png" class="jetbrains">
+                        </div>
+                        <div class="sponsor-logo">
+                            <img src="assets/ic_our_sponsors_install4j_logo.png" class="installe4j">
+                        </div>
+                    </div>
+
                 </div>
-                <div class="sponsor-logo">
-                    <img src="assets/ic_our_sponsors_jetbrains_logo.png" class="jetbrains">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="assets/ic_our_sponsors_install4j_logo.png" class="installe4j">
+
+                <div class="about-section-cntr">
+                    <div class="about-section ">
+                        <h1>Contact us</h1>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut
+                            labore
+                            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                            dolores et ea
+                            rebum. Stet clita kasd gubergren, no sea takimata</p>
+                    </div>
+
+                    <div class="feature-blocks">
+                        <div class="feature-block">
+                            <img src="/assets/ic_type_safe.svg"/>
+                            <h1>Social Media</h1>
+                            <div th:replace="~{commons :: newsSocialButtons}"></div>
+                        </div>
+                        <div class="feature-block">
+                            <img src="/assets/ic_rich_components.svg"/>
+                            <h1>Email and Phone</h1>
+                            <p>
+                                info@dominokit.com
+                            </p>
+                            <p>
+                                sales@dominokit.com
+                            </p>
+                        </div>
+                        <div class="feature-block">
+                            <img src="/assets/ic_typography_and_font_icons.svg"/>
+                            <h1>Chat</h1>
+                            <img src="/assets/gitter.png" class="contact-chat-icon">
+                            <img src="/assets/discord.png" class="contact-chat-icon">
+                            <img src="/assets/element.svg" class="contact-chat-icon">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-        </div>
 
-        <div class="about-section-cntr">
-            <div class="about-section ">
-                <h1>Contact us</h1>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum. Stet clita kasd gubergren, no sea takimata</p>
-            </div>
+            <div class="authors about-section greyed">
+                <h1>Meet the Authors</h1>
+                <div class="authors-main">
+                    <div class="author-card-cntr">
+                        <div d-client-card="0" class="author-card active">
+                            <div class="author-card-header">
+                                <img src="assets/ic_testmonials_quotes.svg">
+                            </div>
+                            <div class="author-card-image left">
+                                <img src="assets/Ahmad.Bawaneh.jpg">
+                            </div>
+                            <div class="author-card-name">
+                                <h3>Ahmad Bawaneh</h3>
+                            </div>
+                            <div class="author-card-title">
+                                <h4>Technologist @Progressoft</h4>
+                            </div>
+                            <div class="author-card-comment">
+                                <p>“ava developer with 13+ years experience in building enterprise web application,
+                                    works on
+                                    both frontend and backend”</p>
+                            </div>
+                            <div class="author-card-logo">
+                                <img src="assets/ProgressSoft.png">
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="feature-blocks">
-                <div class="feature-block">
-                    <img src="/assets/ic_type_safe.svg"/>
-                    <h1>Social Media</h1>
-                    <div th:replace="~{commons :: newsSocialButtons}"></div>
-                </div>
-                <div class="feature-block">
-                    <img src="/assets/ic_rich_components.svg"/>
-                    <h1>Email and Phone</h1>
-                    <p>
-                        info@dominokit.com
-                    </p>
-                    <p>
-                        sales@dominokit.com
-                    </p>
-                </div>
-                <div class="feature-block">
-                    <img src="/assets/ic_typography_and_font_icons.svg"/>
-                    <h1>Chat</h1>
-                    <img src="/assets/gitter.png" class="contact-chat-icon">
-                    <img src="/assets/discord.png" class="contact-chat-icon">
-                    <img src="/assets/element.svg" class="contact-chat-icon">
+                    <div class="author-card-cntr">
+                        <div d-client-card="0" class="author-card active">
+                            <div class="author-card-header">
+                                <img src="assets/ic_testmonials_quotes.svg">
+                            </div>
+                            <div class="author-card-image right">
+                                <img src="assets/Rafat.albarouki.jpg">
+                            </div>
+                            <div class="author-card-name">
+                                <h3>Rafat Al-Barouki</h3>
+                            </div>
+                            <div class="author-card-title">
+                                <h4>Senior Java developer @Progressoft</h4>
+                            </div>
+                            <div class="author-card-comment">
+                                <p>“ava developer with 7+ years experience in building enterprise web application, works
+                                    on
+                                    both frontend and backend”</p>
+                            </div>
+                            <div class="author-card-logo">
+                                <img src="assets/ProgressSoft.png">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    <div class="authors about-section greyed">
-        <h1>Meet the Authors</h1>
-        <div class="authors-main">
-            <div class="author-card-cntr">
-                <div d-client-card="0" class="author-card active">
-                    <div class="author-card-header">
-                        <img src="assets/ic_testmonials_quotes.svg">
-                    </div>
-                    <div class="author-card-image left">
-                        <img src="assets/Ahmad.Bawaneh.jpg">
-                    </div>
-                    <div class="author-card-name">
-                        <h3>Ahmad Bawaneh</h3>
-                    </div>
-                    <div class="author-card-title">
-                        <h4>Technologist @Progressoft</h4>
-                    </div>
-                    <div class="author-card-comment">
-                        <p>“ava developer with 13+ years experience in building enterprise web application, works on
-                            both frontend and backend”</p>
-                    </div>
-                    <div class="author-card-logo">
-                        <img src="assets/ProgressSoft.png">
-                    </div>
-                </div>
-            </div>
-
-            <div class="author-card-cntr">
-                <div d-client-card="0" class="author-card active">
-                    <div class="author-card-header">
-                        <img src="assets/ic_testmonials_quotes.svg">
-                    </div>
-                    <div class="author-card-image right">
-                        <img src="assets/Rafat.albarouki.jpg">
-                    </div>
-                    <div class="author-card-name">
-                        <h3>Rafat Al-Barouki</h3>
-                    </div>
-                    <div class="author-card-title">
-                        <h4>Senior Java developer @Progressoft</h4>
-                    </div>
-                    <div class="author-card-comment">
-                        <p>“ava developer with 7+ years experience in building enterprise web application, works on
-                            both frontend and backend”</p>
-                    </div>
-                    <div class="author-card-logo">
-                        <img src="assets/ProgressSoft.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div th:replace="~{commons :: supportUs}"></div>
+    <div th:replace="~{commons :: footer}"></div>
+    <div th:replace="~{commons :: solutionsMenu}"></div>
 </div>

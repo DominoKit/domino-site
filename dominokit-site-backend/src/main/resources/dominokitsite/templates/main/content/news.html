@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<div class="news-main" th:fragment="newsContent">
-    <div th:replace="~{main/news/news_00003 :: news_00003}"></div>
-    <div th:replace="~{main/news/news_00002 :: news_00002}"></div>
-    <div th:replace="~{main/news/news_00001 :: news_00001}"></div>
+<div th:fragment="newsContent">
+    <div th:replace="~{commons :: mainHeader}"></div>
+    <div id="body">
+        <div class="news-main">
+            <div th:replace="~{main/news/news_00003 :: news_00003}"></div>
+            <div th:replace="~{main/news/news_00002 :: news_00002}"></div>
+            <div th:replace="~{main/news/news_00001 :: news_00001}"></div>
+        </div>
+    </div>
+    <div th:replace="~{commons :: supportUs}"></div>
+    <div th:replace="~{commons :: footer}"></div>
+    <div th:replace="~{commons :: solutionsMenu}"></div>
 </div>

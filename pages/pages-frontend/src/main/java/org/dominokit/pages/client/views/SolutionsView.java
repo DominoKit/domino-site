@@ -10,8 +10,6 @@ public interface SolutionsView extends ContentView, HasUiHandlers<SolutionsView.
 
     void updateContent(String content);
 
-    void enhanceClientsNavigation();
-
     void setPageTitle(String pageTitle);
 
     interface SolutionsUiHandlers extends UiHandlers {

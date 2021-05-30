@@ -24,10 +24,22 @@ public class SolutionsViewImpl extends FakeView implements SolutionsView {
         };
         enhanceLinks();
         enhanceMenuPosition();
+//        enhanceGettingStarted();
+    }
+
+    private void enhanceGettingStarted() {
+        HTMLCollection<Element> gettingStartedNodes = document.body.getElementsByClassName("getting-started");
+        gettingStartedNodes.asList().forEach(element -> {
+            HTMLElement htmlElement = Js.uncheckedCast(element);
+            DominoElement.of(htmlElement)
+                    .addClickListener(evt -> {
+                        uiHandlers.onLinkClick(htmlElement.getAttribute("href"));
+                    });
+        });
     }
 
     private void enhanceLinks() {
-        NodeList<Element> elements = getElements("a[d-link]");
+        NodeList<Element> elements = document.querySelectorAll("a[d-link]");
         elements.asList()
                 .forEach(element -> {
                     DominoElement.of(Js.<HTMLElement>uncheckedCast(element))
@@ -60,121 +72,20 @@ public class SolutionsViewImpl extends FakeView implements SolutionsView {
                 });
     }
 
-    public void enhanceClientsNavigation() {
-        DominoElement.of(getElement("#nav-client-prev"))
-                .addClickListener(evt -> {
-                    evt.stopPropagation();
-                    evt.preventDefault();
-                    int activeIndex = getActiveClient();
-                    HTMLElement main = getElement(".clients-main");
-                    if (activeIndex > 0) {
-                        for (int i = 0; i < activeIndex; i++) {
-                            HTMLElement card = getElement(main, "div[d-client-card=\"" + i + "\"]");
-                            int index = i;
-                            card.classList.asList()
-                                    .forEach(cssClass -> {
-                                        if (cssClass.startsWith("client-card-l-")) {
-                                            card.classList.remove(cssClass);
-                                            if (index == activeIndex - 1) {
-                                                DominoElement.of(card).css("active");
-                                            } else {
-                                                DominoElement.of(card).css("client-card-l-" + (activeIndex - index));
-                                            }
-                                        }
-                                    });
-                        }
-                        DominoElement.of(getElement(main, "div[d-client-card=\"" + activeIndex + "\"]"))
-                                .removeCss("active")
-                                .css("client-card-r-" + activeIndex);
-
-                        int newActiveIndex = getActiveClient();
-                        for (int i = newActiveIndex + 1; i < 5; i++) {
-                            HTMLElement card = getElement(main, "div[d-client-card=\"" + i + "\"]");
-                            int index = i;
-                            card.classList.asList()
-                                    .forEach(cssClass -> {
-                                        if (cssClass.startsWith("client-card-l-") || cssClass.startsWith("client-card-r-")) {
-                                            card.classList.remove(cssClass);
-                                            DominoElement.of(card).css("client-card-r-" + (index - newActiveIndex));
-                                        }
-                                    });
-                        }
-                    }
-                });
-
-        DominoElement.of(getElement("#nav-client-next"))
-                .addClickListener(evt -> {
-                    evt.stopPropagation();
-                    evt.preventDefault();
-                    int activeIndex = getActiveClient();
-                    HTMLElement main = getElement(".clients-main");
-                    if (activeIndex < 4) {
-                        for (int i = activeIndex + 1; i < 5; i++) {
-                            HTMLElement card = getElement(main, "div[d-client-card=\"" + i + "\"]");
-                            int index = i;
-                            card.classList.asList()
-                                    .forEach(cssClass -> {
-                                        if (cssClass.startsWith("client-card-r-")) {
-                                            card.classList.remove(cssClass);
-                                            if (index == activeIndex + 1) {
-                                                DominoElement.of(card).css("active");
-                                            } else {
-                                                DominoElement.of(card).css("client-card-r-" + (index - activeIndex));
-                                            }
-                                        }
-                                    });
-                        }
-                        DominoElement.of(getElement(main, "div[d-client-card=\"" + activeIndex + "\"]"))
-                                .removeCss("active")
-                                .css("client-card-l-" + activeIndex);
-
-                        int newActiveIndex = getActiveClient();
-                        for (int i = newActiveIndex - 1; i >= 0; i--) {
-                            HTMLElement card = getElement(main, "div[d-client-card=\"" + i + "\"]");
-                            int index = i;
-                            card.classList.asList()
-                                    .forEach(cssClass -> {
-                                        if (cssClass.startsWith("client-card-l-") || cssClass.startsWith("client-card-r-")) {
-                                            card.classList.remove(cssClass);
-                                            DominoElement.of(card).css("client-card-l-" + (newActiveIndex - index));
-                                        }
-                                    });
-                        }
-                    }
-                });
-    }
-
-    private int getActiveClient() {
-        return Integer.parseInt(DominoElement.of(getElement(getElement(".clients-main"), ".active"))
-                .getAttribute("d-client-card"));
-    }
-
-    private NodeList<Element> getElements(String selector) {
-        return DomGlobal.document.querySelectorAll(selector);
-    }
-
-    private NodeList<Element> getElements(Element root, String selector) {
-        return root.querySelectorAll(selector);
-    }
-
     private HTMLElement getElement(String selector) {
-        return Js.uncheckedCast(DomGlobal.document.querySelector(selector));
-    }
-
-    private HTMLElement getElement(Element root, String selector) {
-        return Js.uncheckedCast(root.querySelector(selector));
+        return Js.uncheckedCast(document.querySelector(selector));
     }
 
     @Override
     public void updateContent(String content) {
-        DominoElement.of(document.body)
+        DominoElement.of(getElement("#root"))
                 .clearElement()
                 .setInnerHtml(content);
     }
 
     @Override
     public void setPageTitle(String pageTitle) {
-        document.title = "DominoKit - "+pageTitle;
+        document.title = "DominoKit - " + pageTitle;
     }
 
     @Override
