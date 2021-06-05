@@ -69,6 +69,7 @@ public class SolutionsViewImpl extends FakeView implements SolutionsView {
         DominoElement.of(getElement("#root"))
                 .clearElement()
                 .setInnerHtml(content);
+        window.scrollTo(0,0);
     }
 
     @Override

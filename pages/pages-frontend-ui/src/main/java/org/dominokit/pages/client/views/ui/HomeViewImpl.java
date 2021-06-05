@@ -7,6 +7,8 @@ import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.pages.client.presenters.BaseHomeProxy;
 import org.dominokit.pages.client.presenters.SolutionsProxy;
 import org.dominokit.pages.client.views.HomeView;
+import org.gwtproject.core.client.GWT;
+import org.gwtproject.core.client.Scheduler;
 
 import static elemental2.dom.DomGlobal.document;
 import static elemental2.dom.DomGlobal.window;
@@ -176,11 +178,12 @@ public class HomeViewImpl extends FakeView implements HomeView {
         DominoElement.of(getElement("#root"))
                 .clearElement()
                 .setInnerHtml(content);
+        window.scrollTo(0,0);
     }
 
     @Override
     public void setPageTitle(String pageTitle) {
-        document.title = "DominoKit - "+pageTitle;
+        document.title = "DominoKit - " + pageTitle;
     }
 
     @Override

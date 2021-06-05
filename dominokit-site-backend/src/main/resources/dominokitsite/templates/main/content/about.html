@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<div th:fragment="aboutContent">
+<div th:fragment="aboutContent" class="yellow-bar">
+    <div th:replace="~{commons :: navigationTopBar}"></div>
     <div th:replace="~{commons :: mainHeader}"></div>
     <div id="body">
         <div class="about-main" >
@@ -140,7 +141,7 @@
                                 <h4>Technologist @Progressoft</h4>
                             </div>
                             <div class="author-card-comment">
-                                <p>“ava developer with 13+ years experience in building enterprise web application,
+                                <p>“Java developer with 13+ years experience in building enterprise web application,
                                     works on
                                     both frontend and backend”</p>
                             </div>
@@ -165,7 +166,7 @@
                                 <h4>Senior Java developer @Progressoft</h4>
                             </div>
                             <div class="author-card-comment">
-                                <p>“ava developer with 7+ years experience in building enterprise web application, works
+                                <p>“Java developer with 7+ years experience in building enterprise web application, works
                                     on
                                     both frontend and backend”</p>
                             </div>

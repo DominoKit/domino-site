@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <div th:fragment="solutionContent">
-    <div style="box-shadow: 0px 1px 2px #acb7d033;">
-        <div class="header-root">
-            <div th:replace="~{commons :: navigationTopBar (active = 'solutions')}"></div>
-        </div>
-    </div>
+    <div th:replace="~{commons :: navigationTopBar (active = 'solutions')}"></div>
     <div id="body">
         <div class="solution-main" th:fragment="content">
             <div class="solution-header">

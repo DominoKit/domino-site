@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<div th:fragment="newsContent">
+<div th:fragment="newsContent" class="yellow-bar">
+    <div th:replace="~{commons :: navigationTopBar}"></div>
     <div th:replace="~{commons :: mainHeader}"></div>
     <div id="body">
         <div class="news-main">

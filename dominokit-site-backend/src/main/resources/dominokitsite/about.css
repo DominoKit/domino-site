@@ -41,7 +41,6 @@
 .authors-main .author-card-cntr {
     flex-grow: 1;
     padding: 20px;
-    max-width: 25%;
 }
 
 .author-card {
@@ -60,6 +59,7 @@
 .author-card.active {
     filter: none;
     color: #6a7181;
+    margin: auto;
 }
 
 .author-card-header {
