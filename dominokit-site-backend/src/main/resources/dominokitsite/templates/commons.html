@@ -90,6 +90,10 @@
     <div class="menu">
         <a d-link="solutions" class="header-link" th:classappend="${active == 'solutions'} ? 'active' : ''"
            href="/solutions">Solutions</a>
+        <a d-link="services" class="header-link" th:classappend="${active == 'services'} ? 'active' : ''"
+           href="/solutions">Services</a>
+        <a d-link="resources" class="header-link" th:classappend="${active == 'resources'} ? 'active' : ''"
+           href="/resources">Resources</a>
         <a d-link="news" class="header-link" th:classappend="${active == 'news'} ? 'active' : ''" href="/news">News</a>
         <a d-link="about" class="header-link" th:classappend="${active == 'about'} ? 'active' : ''" href="/about">About
             us</a>
@@ -618,6 +622,14 @@
 <div th:fragment="button (class, title)">
     <a th:class="${'button ' + class}">
         <span class="button-img"></span>
+        <div>
+            <span th:text="${title}"></span>
+        </div>
+    </a>
+</div>
+
+<div th:fragment="buttonNoImage (class, title)">
+    <a th:class="${'button-no-img ' + class}">
         <div>
             <span th:text="${title}"></span>
         </div>
