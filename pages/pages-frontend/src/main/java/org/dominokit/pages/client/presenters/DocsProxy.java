@@ -3,35 +3,36 @@ package org.dominokit.pages.client.presenters;
 import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
 import org.dominokit.domino.api.shared.extension.MainDominoEvent;
+import org.dominokit.domino.history.DominoHistory;
 import org.dominokit.domino.history.TokenFilter;
-import org.dominokit.pages.client.views.SolutionsView;
-import org.dominokit.pages.shared.events.SolutionsEvent;
+import org.dominokit.pages.client.views.DocsView;
+import org.dominokit.pages.shared.events.DocumentationEvent;
 import org.dominokit.pages.shared.service.ContentServiceFactory;
 
 @PresenterProxy
-@AutoRoute(token = "solutions/:solution", reRouteActivated = true)
+@AutoRoute(token = "solutions/:solution/docs", reRouteActivated = true)
 @Slot("enhance-slot")
 @AutoReveal
-@OnStateChanged(SolutionsEvent.class)
+@OnStateChanged(DocumentationEvent.class)
 @DependsOn(@EventsGroup(MainDominoEvent.class))
-public class SolutionsProxy extends ViewBaseClientPresenter<SolutionsView> implements SolutionsView.SolutionsUiHandlers {
+public class DocsProxy extends ViewBaseClientPresenter<DocsView> implements DocsView.DocsUiHandlers {
 
-    @PathParameter("solution")
+    @PathParameter
     String solution;
 
     @RoutingTokenFilter
-    public static TokenFilter onRoute(String token){
-        return TokenFilter.endsWith(token);
+    public static TokenFilter onRoute(String token) {
+        return TokenFilter.startsWith(token);
     }
 
     @StartupTokenFilter
-    public static TokenFilter onDirectRoute(String token){
-        return TokenFilter.endsWith(token);
+    public static TokenFilter onDirectRoute(String token) {
+        return TokenFilter.startsWith(token);
     }
 
     @OnReveal
     public void load() {
-        fetchContent("main/content/" + solution);
+        fetchContent("main/content/" + solution + "/docs");
     }
 
     protected void updateContent(String content) {
@@ -52,6 +53,8 @@ public class SolutionsProxy extends ViewBaseClientPresenter<SolutionsView> imple
 
     @Override
     public void onLinkClick(String href) {
-        history().fireState(href);
+        if (!history().currentToken().containsPath(href)) {
+            history().fireState("solutions/" + solution + "/docs/" + href);
+        }
     }
 }
