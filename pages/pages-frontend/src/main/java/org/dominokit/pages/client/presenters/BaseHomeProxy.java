@@ -1,7 +1,13 @@
 package org.dominokit.pages.client.presenters;
 
-import elemental2.dom.DomGlobal;
-import org.dominokit.domino.api.client.annotations.presenter.*;
+import org.dominokit.domino.api.client.annotations.presenter.AutoReveal;
+import org.dominokit.domino.api.client.annotations.presenter.AutoRoute;
+import org.dominokit.domino.api.client.annotations.presenter.DependsOn;
+import org.dominokit.domino.api.client.annotations.presenter.EventsGroup;
+import org.dominokit.domino.api.client.annotations.presenter.OnReveal;
+import org.dominokit.domino.api.client.annotations.presenter.OnStateChanged;
+import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
+import org.dominokit.domino.api.client.annotations.presenter.Slot;
 import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
 import org.dominokit.domino.api.shared.extension.MainDominoEvent;
 import org.dominokit.pages.client.views.HomeView;

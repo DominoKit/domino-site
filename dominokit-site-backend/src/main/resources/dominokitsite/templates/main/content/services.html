@@ -4,123 +4,203 @@
 <div th:fragment="servicesContent" class="yellow-bar">
     <div th:replace="~{commons :: navigationTopBar}"></div>
     <div th:replace="~{commons :: mainHeader}"></div>
-    <div id="body">
+    <div id="body" class="services">
+        <div class="services-header">
+            <h1 class="services-title">DominoKit Experts are here to take your application to the next level and deploy to production</h1>
+            <h3>We will help you with the following technologies and more</h3>
+
+            <div class="feature-blocks">
+                <div class="feature-block">
+                    <img src="/assets/ic_type_safe.svg"/>
+                    <h1>DominoKit</h1>
+                    <p>
+                        We are the authors' and with us, you will get best support ever for DominoKit toolchain.
+                    </p>
+                </div>
+                <div class="feature-block">
+                    <img src="/assets/ic_rich_components.svg"/>
+                    <h1>Java</h1>
+                    <p>
+                        We have been using Java for yours, we are experts, and we know how to get the job done.
+                    </p>
+                </div>
+                <div class="feature-block">
+                    <img src="/assets/ic_typography_and_font_icons.svg"/>
+                    <h1>GWT/J2CL</h1>
+                    <p>
+                        We are active GWT community members, and we contributed to the project many times, and we know the technology.
+                    </p>
+                </div>
+                <div class="feature-block">
+                    <img src="/assets/ic_type_safe.svg"/>
+                    <h1>JavaScript</h1>
+                    <p>
+                        Our toolchain uses Java, But we had to know JavaScript first to build those tool.
+                    </p>
+                </div>
+            </div>
+        </div>
+
         <div class="services-main">
-            <div class="authors-main">
-                <div class="author-card-cntr">
-                    <div d-client-card="0" class="author-card active">
-                        <div class="author-card-header">
-                            <img src="assets/ic_testmonials_quotes.svg">
-                        </div>
-                        <div class="author-card-image left">
-                            <h2 class="service-plan">Plan A</h2>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4 Hours/Month</h3>
-                        </div>
-                        <div class="author-card-title">
-                            <h4><b>400</b> USD/Month Annual subscription </h4>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4800USD Total</h3>
-                        </div>
-                        <div class="author-card-comment" style="padding-top: 10px;">
-                            <div th:replace="~{commons :: buttonNoImage ('green-button', 'Subscribe')}"></div>
-                        </div>
+            <div class="service-card-cntr">
+                <div d-client-card="0" class="service-card free">
+                    <h2>Free</h2>
+                    <p class="plan">Open source free plan</p>
+                    <h2 class="price">$ 0</h2>
+                    <p class="plan title">Get free support</p>
+                    <ul>
+                        <li>Free support for free components</li>
+                        <li>Global public chat</li>
+                    </ul>
+                    <div>
+                        <a class="learn-more">
+                            <div>
+                                <span>Learn more</span>
+                            </div>
+                            <div>
+                                <img src="assets/go-arrow.svg">
+                            </div>
+
+                        </a>
                     </div>
-                </div>
-                <div class="author-card-cntr">
-                    <div d-client-card="0" class="author-card active">
-                        <div class="author-card-header">
-                            <img src="assets/ic_testmonials_quotes.svg">
-                        </div>
-                        <div class="author-card-image left">
-                            <h2 class="service-plan">Plan A</h2>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4 Hours/Month</h3>
-                        </div>
-                        <div class="author-card-title">
-                            <h4><b>400</b> USD/Month Annual subscription </h4>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4800USD Total</h3>
-                        </div>
-                        <div class="author-card-comment" style="padding-top: 10px;">
-                            <div th:replace="~{commons :: buttonNoImage ('green-button', 'Subscribe')}"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="author-card-cntr">
-                    <div d-client-card="0" class="author-card active">
-                        <div class="author-card-header">
-                            <img src="assets/ic_testmonials_quotes.svg">
-                        </div>
-                        <div class="author-card-image left">
-                            <h2 class="service-plan">Plan A</h2>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4 Hours/Month</h3>
-                        </div>
-                        <div class="author-card-title">
-                            <h4><b>400</b> USD/Month Annual subscription </h4>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4800USD Total</h3>
-                        </div>
-                        <div class="author-card-comment" style="padding-top: 10px;">
-                            <div th:replace="~{commons :: buttonNoImage ('green-button', 'Subscribe')}"></div>
-                        </div>
+                    <div class="start-plan">
+                        <a class="learn-more">
+                            <div>
+                                <span>Signup for free</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="authors-main">
-                <div class="author-card-cntr">
-                    <div d-client-card="0" class="author-card active">
-                        <div class="author-card-header">
-                            <img src="assets/ic_testmonials_quotes.svg">
-                        </div>
-                        <div class="author-card-image left">
-                            <h2 class="service-plan">Plan A</h2>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4 Hours/Month</h3>
-                        </div>
-                        <div class="author-card-title">
-                            <h4><b>400</b> USD/Month Annual subscription </h4>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4800USD Total</h3>
-                        </div>
-                        <div class="author-card-comment" style="padding-top: 10px;">
-                            <div th:replace="~{commons :: buttonNoImage ('green-button', 'Subscribe')}"></div>
-                        </div>
+            <div class="service-card-cntr">
+                <div d-client-card="0" class="service-card basic">
+                    <h2>Basic</h2>
+                    <p class="plan">For small projects and teams</p>
+                    <h2 class="price">$ 400 - 4H/Month</h2>
+                    <p class="plan title">Everything in Free and</p>
+                    <ul>
+                        <li>4/Month Hours of dedicated support</li>
+                        <li>Access to all basic components</li>
+                        <li>Bug fixes within 5 days</li>
+                    </ul>
+                    <div>
+                        <a class="learn-more">
+                            <div>
+                                <span>Learn more</span>
+                            </div>
+                            <div>
+                                <img src="assets/go-arrow.svg">
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="start-plan">
+                        <a class="learn-more">
+                            <div>
+                                <span>Register</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="author-card-cntr">
-                    <div d-client-card="0" class="author-card active">
-                        <div class="author-card-header">
-                            <img src="assets/ic_testmonials_quotes.svg">
-                        </div>
-                        <div class="author-card-image left">
-                            <h2 class="service-plan">Plan A</h2>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4 Hours/Month</h3>
-                        </div>
-                        <div class="author-card-title">
-                            <h4><b>400</b> USD/Month Annual subscription </h4>
-                        </div>
-                        <div class="author-card-name">
-                            <h3>4800USD Total</h3>
-                        </div>
-                        <div class="author-card-comment" style="padding-top: 10px;">
-                            <div th:replace="~{commons :: buttonNoImage ('green-button', 'Subscribe')}"></div>
-                        </div>
+            </div>
+            <div class="service-card-cntr">
+                <div d-client-card="0" class="service-card professional">
+                    <h2>Professional</h2>
+                    <p class="plan">More components for large projects and teams</p>
+                    <h2 class="price">$ 720 - 8H/Month</h2>
+                    <p class="plan title">Everything in Basic and</p>
+                    <ul>
+                        <li>+4/Month Hours of dedicated support</li>
+                        <li>Access to all professional components</li>
+                        <li>Bug fixes within 4 days</li>
+                    </ul>
+                    <div>
+                        <a class="learn-more">
+                            <div>
+                                <span>Learn more</span>
+                            </div>
+                            <div>
+                                <img src="assets/go-arrow.svg">
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="start-plan">
+                        <a class="learn-more">
+                            <div>
+                                <span>Recommended</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card-cntr">
+                <div d-client-card="0" class="service-card enterprise">
+                    <h2>Enterprise</h2>
+                    <p class="plan">Specialized components for enterprise large projects</p>
+                    <h2 class="price">$ 1140 - 12H/Month</h2>
+                    <p class="plan title">Everything in professional and</p>
+                    <ul>
+                        <li>+4/Month Hours of dedicated support</li>
+                        <li>Access to all enterprise components</li>
+                        <li>Bug fixes within 3 days</li>
+                    </ul>
+                    <div>
+                        <a class="learn-more">
+                            <div>
+                                <span>Learn more</span>
+                            </div>
+                            <div>
+                                <img src="assets/go-arrow.svg">
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="start-plan">
+                        <a class="learn-more">
+                            <div>
+                                <span>Register</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card-cntr">
+                <div d-client-card="0" class="service-card custom">
+                    <h2>Custom</h2>
+                    <p class="plan">Find what works for your project and team</p>
+                    <h2 class="price">Lets find out.</h2>
+                    <p class="plan title">If you need different plan</p>
+                    <ul>
+                        <li>Custom dedicated support hours</li>
+                        <li>Choose your components set</li>
+                        <li>Bug fixes within 3+ days</li>
+                    </ul>
+                    <div>
+                        <a class="learn-more">
+                            <div>
+                                <span>Learn more</span>
+                            </div>
+                            <div>
+                                <img src="assets/go-arrow.svg">
+                            </div>
+
+                        </a>
+                    </div>
+                    <div class="start-plan">
+                        <a class="learn-more">
+                            <div>
+                                <span>Contact us</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+<!--        <div>Website development using DominoKit tool chain</div>-->
+<!--        <div>Enterprise application development using DominoKit tool chain</div>-->
+<!--        <div>Mobile application development with DominoKit and other technologies tool chain</div>-->
+<!--        <div>Supported technology Java, GWT, J2CL, Javascript, DominoKit</div>-->
     </div>
     <div th:replace="~{commons :: supportUs}"></div>
     <div th:replace="~{commons :: footer}"></div>

@@ -1,27 +1,156 @@
 .services-main {
-
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 40px 40px 40px 40px;
 }
 
-.service-plan {
-    border-left: 15px solid #14C397;
-    border-bottom: 15px solid #14C397;
-    border-right: 15px solid #FDD55C;
-    border-top: 15px solid #FDD55C;
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    margin: auto;
-    line-height: 250px;
-    font-size: 50px;
-    transform: scale(0.8);
-    cursor: pointer;
-    transition: all 0.25s ease-in-out;
+.services .feature-block {
+    max-width: 25%;
+    min-width: 25%;
 }
 
-.service-plan:hover {
-    transform: scale(1);
-    border-right: 15px solid #14C397;
-    border-top: 15px solid #14C397;
-    border-left: 15px solid #FDD55C;
-    border-bottom: 15px solid #FDD55C;
+.service-card-cntr {
+    width: 100%;
+}
+
+.service-card {
+    margin-left: 10px;
+    margin-right: 10px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000029;
+    font-family: 'Lato', sans-serif;
+    color: #403f3d;
+    flex-grow: 1;
+    border-top: 7px;
+    border-top-style: solid;
+    border-radius: 10px;
+}
+
+.service-card:hover .start-plan{
+    transform: translate(0, 0) scale(1.05);
+    border-radius: 10px;
+}
+
+.service-card .start-plan {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 0.2s;
+}
+
+.service-card .price {
+    color: #52BA9A;
+}
+
+.service-card .plan {
+    font: normal normal normal 13px/16px Lato;
+}
+
+.service-card .plan.title {
+    font-size: 18px;
+    color: #312F2FFF;
+}
+
+.service-card ul {
+    list-style: none;
+    padding-inline-start: 0px;
+    min-height: 100px;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    color: #7d7a7a;
+}
+
+.service-card.free {
+    border-top-color: #575988;
+}
+
+.service-card.free:hover {
+    border-left: 1px solid #575988;
+    border-right: 1px solid #575988;
+}
+
+.service-card.free .start-plan {
+    background-color: #575988;
+}
+
+.service-card .start-plan .learn-more span {
+    color: #FFFFFF;
+}
+
+.service-card.basic {
+    border-top-color: #14c397;
+}
+
+.service-card.basic:hover {
+    border-left: 1px solid #14c397;
+    border-right: 1px solid #14c397;
+}
+
+.service-card.basic .start-plan {
+    background-color: #14c397;
+}
+
+.service-card.professional {
+    border-top-color: #fdd75c;
+}
+
+.service-card.professional:hover {
+    border-left: 1px solid #fdd75c;
+    border-right: 1px solid #fdd75c;
+}
+
+.service-card.professional .start-plan {
+    background-color: #fdd75c;
+}
+
+.service-card.enterprise {
+    border-top-color: #e14b5a;
+}
+
+.service-card.enterprise:hover {
+    border-left: 1px solid #e14b5a;
+    border-right: 1px solid #e14b5a;
+}
+
+.service-card.enterprise .start-plan {
+    background-color: #e14b5a;
+}
+
+.service-card.custom {
+    border-top-color: #1f1e1c;
+}
+
+.service-card.custom:hover {
+    border-left: 1px solid #1f1e1c;
+    border-right: 1px solid #1f1e1c;
+}
+
+.service-card.custom .start-plan {
+    background-color: #1f1e1c;
+}
+
+.services-header {
+    margin: 20px 124px 20px 124px;
+    padding: 0 10px 0 10px;
+}
+
+.services-header .services-title {
+    text-align: center;
+    font: normal normal bold 24px/36px Lato;
+    letter-spacing: 0px;
+    color: #14C397;
+    padding: 40px 40px 40px
+}
+
+.services-header h3 {
+    text-align: center;
+    font: normal normal bold 16px/18px Lato;
+    letter-spacing: 0px;
+    color: #1F1E1C;
+    padding: 0px 40px 40px
 }
