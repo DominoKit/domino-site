@@ -11,9 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
+    <link type="text/css" rel="stylesheet" href="/css/domino-ui.css">
+    <link type="text/css" rel="stylesheet" href="/css/themes/all-themes.css">
     <link type="text/css" rel="stylesheet" href="/dominokit-site.css">
+    <link type="text/css" rel="stylesheet" href="/prettify/prettify.css">
+    <link type="text/css" rel="stylesheet" href="/prettify/desert.css">
 
+    <script src="/prettify/prettify.js"></script>
     <script src="/dominokitsite.nocache.js"></script>
 </head>
 <body>
@@ -83,20 +87,16 @@
 
 <div class="navigation" th:fragment="navigationTopBar">
     <div class="logo">
-        <a d-link="home" href="/home">
+        <a href="/home">
             <img src="/assets/ic_dominokit_logo_header.svg">
         </a>
     </div>
     <div class="menu">
-        <a d-link="solutions" class="header-link" th:classappend="${active == 'solutions'} ? 'active' : ''"
-           href="/solutions">Solutions</a>
-        <a d-link="services" class="header-link" th:classappend="${active == 'services'} ? 'active' : ''"
-           href="/solutions">Services</a>
-        <a d-link="resources" class="header-link" th:classappend="${active == 'resources'} ? 'active' : ''"
-           href="/resources">Resources</a>
+        <a d-link="solutions" class="header-link" th:classappend="${active == 'solutions'} ? 'active' : ''" href="/solutions">Solutions</a>
+        <a d-link="services" class="header-link" th:classappend="${active == 'services'} ? 'active' : ''" href="/services">Services</a>
+        <a d-link="resources" class="header-link" th:classappend="${active == 'resources'} ? 'active' : ''" href="/resources">Resources</a>
         <a d-link="news" class="header-link" th:classappend="${active == 'news'} ? 'active' : ''" href="/news">News</a>
-        <a d-link="about" class="header-link" th:classappend="${active == 'about'} ? 'active' : ''" href="/about">About
-            us</a>
+        <a d-link="about" class="header-link" th:classappend="${active == 'about'} ? 'active' : ''" href="/about">About us</a>
     </div>
     <div class="github">
         <a class="external-link" href="https://github.com/DominoKit" target="_blank"><img src="/assets/github.svg"
@@ -609,7 +609,7 @@
 </div>
 
 <div th:fragment="gettingStarted (url)">
-    <a class="getting-started" th:href="${url}">
+    <a class="getting-started" th:href="${url}" th:attr="d-link=${url}">
         <div>
             <img src="/assets/ic_getting_started.svg">
         </div>
@@ -639,6 +639,80 @@
 <div class="badge" th:fragment="badge (leftText, rightText)">
     <div class="badge-left-section" th:text="${leftText}"></div>
     <div class="badge-right-section" th:text="${rightText}"></div>
+</div>
+
+<div class="docs-menu" th:fragment="dominoUiMenu">
+    <div class="docs-search-bar">
+        <img src="/assets/ic_search.svg"/>
+        <input type="text" placeholder="Search"/>
+    </div>
+    <p class="docs-menu-title">GETTING STARTED</p>
+    <ul class="docs-menu-root">
+        <li class="docs-menu-item parent collapsed">
+            <a class="docs-menu-item-title" href="getting-started/create-project" d-link="solutions/dominoui/docs/getting-started/create-project">
+                <span>Create domino-ui project</span></a>
+            <ul class="docs-menu-children">
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title" href="getting-started/create-project/cli" d-link="solutions/dominoui/docs/getting-started/create-project/cli"><span>Using dominokit-cli tool</span>
+                    </a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title" href="getting-started/create-project/archetype" d-link="solutions/dominoui/docs/getting-started/create-project/archetype"><span>From Domino-ui Archetype</span>
+                    </a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title" href="getting-started/create-project/nalu" d-link="solutions/dominoui/docs/getting-started/create-project/nalu"><span>Using Nalu Project Initializer</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="docs-menu-item parent collapsed">
+            <a class="docs-menu-item-title"><span>What's New</span></a>
+            <ul class="docs-menu-children">
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title"><span>Using domino cli tool</span></a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title"><span>From Domino-ui Archetype</span></a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title"><span>Using Nalo Project Initializer</span></a>
+                </li>
+            </ul>
+        </li>
+        <li class="docs-menu-item parent collapsed">
+            <a class="docs-menu-item-title">
+                <span>Components</span></a>
+            <ul class="docs-menu-children">
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title" href="getting-started/alerts" d-link="solutions/dominoui/docs/getting-started/alerts"><span>Alerts</span></a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title"><span>Badges</span></a>
+                </li>
+                <li class="docs-menu-item">
+                    <a class="docs-menu-item-title"><span>Breadcrumbs</span></a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="code" th:fragment="code(codeString)">
+    <div class="code-img">
+        <img src="/assets/ic_cmd_command.svg"/>
+    </div>
+    <pre th:text="${codeString}"></pre>
+</div>
+
+<div th:fragment="nextPage(url, description)" style="display: flex;justify-content: right;align-items: center;">
+    <p style="margin-right: 5px"><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
+    <span><img src="/assets/go-arrow.svg"></span>
+</div>
+
+<div th:fragment="previousPage(url, description)" style="display: flex;align-items: center;">
+    <span><img src="/assets/previous-arrow.svg"></span>
+    <p style="margin-right: 5px"><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
 </div>
 
 </html>

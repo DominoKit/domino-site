@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="docsContent">
+    <div style="display: flex; flex-direction: column; height: 100%">
+        <div style="flex-grow: 1">
+            <h1>Create project using GWT tbroyer archetype</h1>
+            <p>follow the steps <a href="https://github.com/tbroyer/gwt-maven-archetypes">here</a> then follow steps in Method 4 below to add domino-ui to the project.</p>
+        </div>
+        <div style="display: flex; justify-content: space-between">
+            <div th:replace="~{commons :: previousPage('solutions/dominoui/docs/getting-started/create-project/cli', 'Create Using dominokit-cli Tool') }"></div>
+            <div th:replace="~{commons :: nextPage('solutions/dominoui/docs/getting-started/create-project/nalu', 'Create project using Nalu project initializer') }"></div>
+        </div>
+    </div>
+</div>

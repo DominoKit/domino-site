@@ -1,21 +1,17 @@
 package org.dominokit.pages.client.presenters;
 
 import org.dominokit.domino.api.client.annotations.presenter.*;
-import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
-import org.dominokit.domino.api.shared.extension.MainDominoEvent;
-import org.dominokit.domino.history.DominoHistory;
 import org.dominokit.domino.history.TokenFilter;
 import org.dominokit.pages.client.views.DocsView;
 import org.dominokit.pages.shared.events.DocumentationEvent;
-import org.dominokit.pages.shared.service.ContentServiceFactory;
 
-@PresenterProxy
-@AutoRoute(token = "solutions/:solution/docs", reRouteActivated = true)
-@Slot("enhance-slot")
-@AutoReveal
+@PresenterProxy(name = DocsProxy.NAME)
+@AutoRoute(token = DocsProxy.PATH)
 @OnStateChanged(DocumentationEvent.class)
-@DependsOn(@EventsGroup(MainDominoEvent.class))
-public class DocsProxy extends ViewBaseClientPresenter<DocsView> implements DocsView.DocsUiHandlers {
+public class DocsProxy extends SitePresenter<DocsView> {
+
+    public static final String PATH = "solutions/:solution/docs";
+    public static final String NAME = "DOCS_PROXY";
 
     @PathParameter
     String solution;
@@ -31,30 +27,18 @@ public class DocsProxy extends ViewBaseClientPresenter<DocsView> implements Docs
     }
 
     @OnReveal
-    public void load() {
-        fetchContent("main/content/" + solution + "/docs");
+    public void enhanceTree() {
+        view.enhanceTree();
+        view.selectMenu(getPage());
+        history().listen(TokenFilter.startsWith(PATH), state -> view.selectMenu(getPage()));
     }
 
-    protected void updateContent(String content) {
-        view.updateContent(content);
-        view.setPageTitle(solution);
-        view.enhance();
-    }
-
-    protected void fetchContent(String contentPath) {
-        ContentServiceFactory.INSTANCE
-                .getPageContent(contentPath)
-                .onSuccess(this::updateContent)
-                .onFailed(failedResponseBean -> {
-
-                })
-                .send();
+    private String getPage() {
+        return history().currentToken().noRootValue().replace("solutions/" + solution + "/docs", "").replaceFirst("/", "");
     }
 
     @Override
-    public void onLinkClick(String href) {
-        if (!history().currentToken().containsPath(href)) {
-            history().fireState("solutions/" + solution + "/docs/" + href);
-        }
+    protected String getPageTitle() {
+        return solution;
     }
 }

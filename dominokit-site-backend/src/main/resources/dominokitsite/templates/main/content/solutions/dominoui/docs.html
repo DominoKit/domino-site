@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="docsContent">
+    <div th:replace="~{commons :: navigationTopBar (active = 'solutions')}"></div>
+    <div id="body">
+        <div class="docs-body">
+            <div th:replace="~{commons :: dominoUiMenu }"></div>
+            <div class="docs-content">this is docs</div>
+        </div>
+    </div>
+    <div th:replace="~{commons :: solutionsMenu}"></div>
+</div>

@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="docsContent" style="display: flex; flex-direction: column; height: 100%">
+    <div style="flex-grow: 1; margin-bottom: 20px;">
+        <div component-slot="alerts"></div>
+    </div>
+    <div th:replace="~{commons :: nextPage('../badges', 'Badges') }"></div>
+</div>

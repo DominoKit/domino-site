@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{commons :: header(pageTitle='Domino UI')}"></head>
+<body>
+<div id="root">
+    <div th:replace="~{commons :: navigationTopBar (active = 'solutions')}"></div>
+    <div id="body">
+        <div class="docs-body">
+            <div th:replace="~{commons :: dominoUiMenu }"></div>
+            <div class="docs-content">
+                <div th:replace="~{main/content/solutions/dominoui/docs/getting-started/create-project :: docsContent}"></div>
+            </div>
+        </div>
+    </div>
+    <div th:replace="~{commons :: solutionsMenu}"></div>
+</div>
+</body>
+</html>

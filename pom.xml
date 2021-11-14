@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <groupId>org.dominokit</groupId>
     <artifactId>dominokit-site</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -15,11 +15,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <vertx.version>3.9.0</vertx.version>
-        <domino.history.version>1.0.0-RC3</domino.history.version>
-        <domino.rest.version>1.0.0-RC3</domino.rest.version>
-        <domino.ui.version>1.0.0-RC2</domino.ui.version>
+        <domino.history.version>1.0.0-RC4</domino.history.version>
+        <domino.rest.version>1.0.0-RC6</domino.rest.version>
+        <domino.ui.version>1.0.0-RC10</domino.ui.version>
         <domino.jackson.version>1.0.0-RC3</domino.jackson.version>
-        <domino.mvp.version>1.0.0-RC3</domino.mvp.version>
+        <domino.mvp.version>1.0.0-RC11</domino.mvp.version>
     </properties>
 
     <dependencyManagement>
