@@ -2,38 +2,55 @@ package org.dominokit.pages.client.presenters;
 
 import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
-import org.dominokit.domino.api.shared.extension.MainDominoEvent;
+import org.dominokit.domino.history.DominoHistory;
 import org.dominokit.pages.client.views.SiteView;
 import org.dominokit.pages.shared.events.PageEnhancedEvent;
 import org.dominokit.pages.shared.service.ContentServiceFactory;
 
+import java.util.function.Consumer;
+
 @Slot("enhance-slot")
 @AutoReveal
-@DependsOn(@EventsGroup(MainDominoEvent.class))
 public abstract class SitePresenter<V extends SiteView> extends ViewBaseClientPresenter<V> implements SiteView.SiteUiHandlers {
+
+    @RoutingState
+    protected DominoHistory.State state;
 
     @OnReveal
     public void load() {
         view.setPageTitle(getPageTitle());
-        enhance();
+        if(!state.isDirect()) {
+            updateContent(content -> {
+                view.updateRootContent(content);
+                view.enhance();
+                onReveal();
+            });
+        } else {
+            view.enhance();
+            onReveal();
+        }
+    }
+
+    @Override
+    public void navigateTo(String href) {
+        if (!history().currentToken().path().equals(href)) {
+            fireEvent(PageEnhancedEvent.class, new PageEnhancedEvent(false));
+            history().fireState(href);
+        }
+    }
+
+    protected void updateContent(Consumer<String> contentConsumer) {
+        String path = "main/content/" + getPath();
+        ContentServiceFactory.INSTANCE
+                .getPageContent(path)
+                .onSuccess(contentConsumer::accept)
+                .send();
+    }
+
+    protected void onReveal() {
     }
 
     protected abstract String getPageTitle();
 
-    @Override
-    public void onLinkClick(String href) {
-        String path = "main/content/" + href;
-        ContentServiceFactory.INSTANCE
-                .getPageContent(path)
-                .onSuccess(content -> {
-                    view.updateContent(content);
-                    enhance();
-                    history().fireState(href);
-                })
-                .send();
-    }
-
-    private void enhance() {
-        view.enhance(() -> fireEvent(PageEnhancedEvent.class, new PageEnhancedEvent(true)));
-    }
+    protected abstract String getPath();
 }

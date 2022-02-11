@@ -1,0 +1,3 @@
+Alert.success().dismissible()
+     .appendChild(Strong.of("Well done!"))
+     .appendChild(" You successfully read this important alert message.");

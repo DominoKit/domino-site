@@ -29,6 +29,10 @@ pre {
     padding: 12px !important;
 }
 
+a {
+    color: #333;
+}
+
 #root {
     /*border: 1px solid #0000000d;*/
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
@@ -556,8 +560,6 @@ pre {
     display: flex;
     text-align: center;
     padding: 40px 40px 40px 40px;
-    margin-left: -190px;
-    margin-right: -150px;
 }
 
 .our-clients h1 {
@@ -1385,16 +1387,149 @@ pre {
 }
 
 .component-preview {
+    padding: 10px;
+    background: #E6ECF7;
     margin-bottom: 20px;
 }
 
+.component-preview .component-content {
+    background: #FFFFFF;
+}
+
 .component-preview .component-container {
+    margin: 12px;
+}
+
+.component-preview .component-title {
+    color: #1F1E1C;
+}
+
+.component-preview .component-code-icon {
+    color: #ACB7D0;
+    cursor: pointer;
+}
+
+.component-preview .component-code-icon.active {
+    color: #14C397;
+}
+
+.component-preview .component-code {
+    background: #403F3D;
+    color: white;
+    white-space: pre-wrap;
     padding: 20px;
-    border-radius: 4px;
-    border: 1px #E6ECF7 solid;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .component-code {
     border-radius: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-root {
+        margin: 0 20px 0 20px;
+        padding-top: 12px;
+    }
+
+    .intro-pic {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .navigation {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .product-root {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .product .product-root .description {
+        padding-left: 0;
+    }
+
+    .product .product-root .pic {
+        padding-right: 0;
+    }
+
+    .product .product-root .pic img {
+        width: 100%;
+    }
+
+    .product.swap .product-root {
+        flex-direction: column-reverse;
+    }
+
+    .product.swap .product-root .pic {
+        padding-left: 0;
+    }
+
+    .product.swap .product-root .description {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    #domino-mvp .description {
+        padding-top: 0;
+    }
+
+    #domino-ui .description {
+        padding-top: 0;
+    }
+
+    #domino-jackson .description {
+        padding-top: 0;
+    }
+
+    #domino-rest .description {
+        padding-top: 0;
+    }
+
+    .why-dominokit .why-row {
+        padding-top: 0;
+        flex-direction: column;
+    }
+
+    .why-dominokit .why-row .why-col {
+        margin-bottom: 60px;
+    }
+
+    .why-icon {
+        height: 100px;
+    }
+
+    .our-sponsors .sponsors-main {
+        padding: 0;
+    }
+
+    .our-sponsors h1 {
+        padding: 50px 0 0 0;
+    }
+
+    .support-us {
+        padding: 75px;
+    }
+
+    .footer-main {
+        padding: 40px 100px 40px 100px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-copyrights {
+        padding: 0;
+    }
+
+    #footer {
+        height: auto;
+    }
 }

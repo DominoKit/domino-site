@@ -1,5 +1,6 @@
 package org.dominokit;
 
+import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.mvp.slots.ContentSlot;
 import org.dominokit.domino.api.client.mvp.view.HasContent;
 import org.dominokit.domino.api.shared.extension.Content;
@@ -19,6 +20,7 @@ public class FakeSlot implements ContentSlot {
 
   @Override
   public void updateContent(Content view) {
+    DomGlobal.console.info("*** update content " + view.get());
     if (view.get() instanceof FakeElement) {
       if (nonNull(old)) {
         old.get().remove();

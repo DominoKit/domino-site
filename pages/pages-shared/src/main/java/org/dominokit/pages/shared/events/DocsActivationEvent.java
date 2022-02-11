@@ -2,12 +2,12 @@ package org.dominokit.pages.shared.events;
 
 import org.dominokit.domino.api.shared.extension.ActivationEvent;
 
-public class DocumentationEvent extends ActivationEvent {
-    public DocumentationEvent(boolean status) {
+public class DocsActivationEvent extends ActivationEvent {
+    public DocsActivationEvent(boolean status) {
         super(status);
     }
 
-    public DocumentationEvent(String serializedEvent) {
+    public DocsActivationEvent(String serializedEvent) {
         super(serializedEvent);
     }
 }

@@ -6,4 +6,8 @@ public class PageEnhancedEvent extends ActivationEvent {
     public PageEnhancedEvent(boolean active) {
         super(active);
     }
+
+    public PageEnhancedEvent(String serializedEvent) {
+        super(serializedEvent);
+    }
 }

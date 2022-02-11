@@ -38,10 +38,8 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
                 String content = event.result().toString();
                 response.putHeader("Content-length", content.length() + "")
                         .write(content);
-                response.end();
-            } else {
-                response.end();
             }
+            response.end();
         });
         return response;
     }

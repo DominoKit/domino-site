@@ -4,7 +4,6 @@ import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.shared.extension.MainDominoEvent;
 import org.dominokit.pages.client.views.HomeView;
 import org.dominokit.pages.shared.events.HomeEvent;
-import org.dominokit.pages.shared.service.ContentServiceFactory;
 
 @Slot("enhance-slot")
 @AutoReveal
@@ -20,6 +19,11 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
         protected String getPageTitle() {
             return "Home";
         }
+
+        @Override
+        protected String getPath() {
+            return "home";
+        }
     }
 
     @PresenterProxy
@@ -29,6 +33,11 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
         @Override
         protected String getPageTitle() {
             return "Services";
+        }
+
+        @Override
+        protected String getPath() {
+            return "services";
         }
     }
 
@@ -41,6 +50,11 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
             return "News";
         }
 
+        @Override
+        protected String getPath() {
+            return "news";
+        }
+
     }
 
     @PresenterProxy
@@ -50,6 +64,11 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
         @Override
         protected String getPageTitle() {
             return "About";
+        }
+
+        @Override
+        protected String getPath() {
+            return "about";
         }
     }
 }

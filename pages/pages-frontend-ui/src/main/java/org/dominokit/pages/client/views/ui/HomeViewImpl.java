@@ -17,6 +17,11 @@ import org.dominokit.pages.client.views.HomeView;
 public class HomeViewImpl extends SiteViewImpl implements HomeView {
 
     @Override
+    protected boolean emptyContent() {
+        return false;
+    }
+
+    @Override
     protected void extraEnhancement() {
         enhanceClientsNavigation();
     }

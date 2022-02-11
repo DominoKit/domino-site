@@ -5,18 +5,13 @@ import org.dominokit.domino.api.client.mvp.view.HasUiHandlers;
 import org.dominokit.domino.api.client.mvp.view.UiHandlers;
 
 public interface SiteView extends ContentView, HasUiHandlers<SiteView.SiteUiHandlers> {
-    void updateContent(String content);
+    void updateRootContent(String content);
 
     void setPageTitle(String pageTitle);
 
-    void enhance(EnhanceListener listener);
+    void enhance();
 
     interface SiteUiHandlers extends UiHandlers {
-        void onLinkClick(String href);
-    }
-
-    @FunctionalInterface
-    interface EnhanceListener {
-        void onPageEnhanced();
+        void navigateTo(String href);
     }
 }

@@ -5,4 +5,6 @@ public interface DocsView extends SiteView {
     void selectMenu(String menuHref);
 
     void enhanceTree();
+
+    void updateDocsContent(String content);
 }

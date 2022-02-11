@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <vertx.version>3.9.0</vertx.version>
-        <domino.history.version>1.0.0-RC4</domino.history.version>
+        <domino.history.version>HEAD-SNAPSHOT</domino.history.version>
         <domino.rest.version>1.0.0-RC6</domino.rest.version>
         <domino.ui.version>1.0.0-RC10</domino.ui.version>
         <domino.jackson.version>1.0.0-RC3</domino.jackson.version>
@@ -48,6 +48,11 @@
                 <groupId>io.vertx</groupId>
                 <artifactId>vertx-web-templ-thymeleaf</artifactId>
                 <version>3.9.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.dominokit</groupId>
+                <artifactId>domino-history-shared</artifactId>
+                <version>HEAD-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -131,5 +136,7 @@
         <module>dominokit-site-frontend</module>
         <module>dominokit-site-backend</module>
 		<module>pages</module>
-	</modules>
+        <module>sample-processor</module>
+        <module>samples-processor-api</module>
+    </modules>
 </project>

@@ -3,6 +3,7 @@ package org.dominokit;
 import com.google.gwt.core.client.EntryPoint;
 import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.ClientApp;
+import org.dominokit.domino.api.client.mvp.slots.SlotsManager;
 import org.dominokit.domino.gwt.client.app.DominoGWT;
 import org.dominokit.domino.view.GwtView;
 import org.dominokit.rest.DominoRestConfig;
@@ -17,9 +18,9 @@ public class AppClientModule implements EntryPoint {
         DominoRestConfig.initDefaults();
         DominoGWT.init();
         GwtView.init();
-        ClientApp.make()
-                .slotsManager()
-                .registerSlot("enhance-slot", new FakeSlot());
+        SlotsManager slotsManager = ClientApp.make().slotsManager();
+        slotsManager.registerSlot("enhance-slot", new FakeSlot());
+        slotsManager.registerSlot("content-slot", new FakeSlot());
         ClientApp.make().run();
         LOGGER.info("dominokit-site Application frontend have been initialized.");
         if (ClientApp.make().getHistory().currentToken().isEmpty()) {
