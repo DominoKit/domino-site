@@ -333,7 +333,8 @@ a {
 
 .why-dominokit {
     background-color: #E6ECF7;
-    padding-top: 128px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .why-dominokit h1 {
@@ -1047,6 +1048,7 @@ a {
 
 .solution-name {
     font: normal normal 900 36px/44px Lato;
+    margin-top: 0.3em;
 }
 
 .view-on-github {
