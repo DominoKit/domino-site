@@ -2,14 +2,12 @@ package org.dominokit.pages.client.views.ui;
 
 import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.domino.api.client.mvp.slots.IsSlot;
 import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.domino.view.slots.SingleElementSlot;
 import org.dominokit.pages.client.presenters.DocsProxy;
 import org.dominokit.pages.client.views.DocsView;
 
 import static elemental2.dom.DomGlobal.window;
-import static java.util.Objects.isNull;
 
 @UiView(presentable = DocsProxy.class)
 public class DocsViewImpl extends SiteViewImpl implements DocsView {
@@ -40,8 +38,4 @@ public class DocsViewImpl extends SiteViewImpl implements DocsView {
         ClientApp.make().slotsManager().registerSlot("docs-content", SingleElementSlot.of(getElement(".docs-content")));
     }
 
-    @Override
-    protected boolean emptyContent() {
-        return isNull(getElement(".docs-content"));
-    }
 }

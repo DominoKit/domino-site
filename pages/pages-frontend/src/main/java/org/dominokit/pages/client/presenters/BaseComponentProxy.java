@@ -1,6 +1,5 @@
 package org.dominokit.pages.client.presenters;
 
-import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.annotations.presenter.OnReveal;
 import org.dominokit.domino.api.client.annotations.presenter.RoutingTokenFilter;
 import org.dominokit.domino.api.client.annotations.presenter.StartupTokenFilter;
@@ -9,7 +8,7 @@ import org.dominokit.domino.history.TokenFilter;
 import org.dominokit.pages.client.views.components.ComponentView;
 import org.dominokit.pages.shared.service.ContentServiceFactory;
 
-public class BaseComponentProxy<V extends ComponentView> extends ViewBaseClientPresenter<V> {
+public class BaseComponentProxy<V extends ComponentView> extends NavigableProxy<V> {
 
     @StartupTokenFilter
     public static TokenFilter onDirectRoute(String token) {
@@ -23,7 +22,6 @@ public class BaseComponentProxy<V extends ComponentView> extends ViewBaseClientP
 
     @OnReveal
     public void onReveal() {
-        DomGlobal.console.info("*** reveal view for "+ getClass().getName());
         String path = "main/content/" + history().currentToken().path();
         ContentServiceFactory.INSTANCE
                 .getPageContent(path)

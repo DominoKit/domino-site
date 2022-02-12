@@ -8,7 +8,7 @@ import org.dominokit.pages.shared.events.DocsActivationEvent;
 import org.dominokit.pages.shared.events.SlotRegisteredEvent;
 
 @PresenterProxy(parent = DocsProxy.NAME)
-@AutoRoute(token = "solutions/dominoui/docs/getting-started/alerts")
+@AutoRoute(token = "solutions/dominoui/docs/components/alerts")
 @AutoReveal
 @Slot("docs-content")
 @DependsOn(@EventsGroup({DocsActivationEvent.class, SlotRegisteredEvent.class}))

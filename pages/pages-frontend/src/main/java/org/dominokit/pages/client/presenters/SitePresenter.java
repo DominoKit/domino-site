@@ -1,17 +1,18 @@
 package org.dominokit.pages.client.presenters;
 
-import org.dominokit.domino.api.client.annotations.presenter.*;
-import org.dominokit.domino.api.client.mvp.presenter.ViewBaseClientPresenter;
+import org.dominokit.domino.api.client.annotations.presenter.AutoReveal;
+import org.dominokit.domino.api.client.annotations.presenter.OnReveal;
+import org.dominokit.domino.api.client.annotations.presenter.RoutingState;
+import org.dominokit.domino.api.client.annotations.presenter.Slot;
 import org.dominokit.domino.history.DominoHistory;
 import org.dominokit.pages.client.views.SiteView;
-import org.dominokit.pages.shared.events.PageEnhancedEvent;
 import org.dominokit.pages.shared.service.ContentServiceFactory;
 
 import java.util.function.Consumer;
 
 @Slot("enhance-slot")
 @AutoReveal
-public abstract class SitePresenter<V extends SiteView> extends ViewBaseClientPresenter<V> implements SiteView.SiteUiHandlers {
+public abstract class SitePresenter<V extends SiteView> extends NavigableProxy<V> {
 
     @RoutingState
     protected DominoHistory.State state;
@@ -28,14 +29,6 @@ public abstract class SitePresenter<V extends SiteView> extends ViewBaseClientPr
         } else {
             view.enhance();
             onReveal();
-        }
-    }
-
-    @Override
-    public void navigateTo(String href) {
-        if (!history().currentToken().path().equals(href)) {
-            fireEvent(PageEnhancedEvent.class, new PageEnhancedEvent(false));
-            history().fireState(href);
         }
     }
 

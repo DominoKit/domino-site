@@ -1276,6 +1276,10 @@ a {
     overflow-y: auto;
 }
 
+.docs-content > div {
+    flex-grow: 1;
+}
+
 .docs-content .pic {
     display: flex;
     justify-content: center;
@@ -1361,6 +1365,27 @@ a {
 .docs-menu-item-title.active {
     background: #E6ECF7 0% 0% no-repeat padding-box;
     color: #1F1E1C;
+}
+
+.next-page {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.previous-page {
+    display: flex;
+    align-items: center;
+}
+
+.next-page p,
+.previous-page p {
+    margin-right: 5px
+}
+
+.next-page:hover a,
+.previous-page:hover a {
+    color: #14C397;
 }
 
 .code {

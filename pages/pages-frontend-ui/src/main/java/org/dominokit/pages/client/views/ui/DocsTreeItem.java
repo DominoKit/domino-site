@@ -43,6 +43,13 @@ public class DocsTreeItem {
         }
     }
 
+    private void collapse() {
+        if (isParent()) {
+            root.removeCss("expanded");
+            root.addCss("collapsed");
+        }
+    }
+
     private boolean isParent() {
         return !subItems.isEmpty();
     }
@@ -50,6 +57,7 @@ public class DocsTreeItem {
     public void deselect() {
         hrefElement.removeCss("active");
         subItems.forEach(DocsTreeItem::deselect);
+        collapse();
     }
 
     public Optional<DocsTreeItem> itemHasHref(String menuHref) {

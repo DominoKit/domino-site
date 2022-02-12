@@ -1,24 +1,21 @@
 package org.dominokit.pages.client.views.ui;
 
-import elemental2.dom.*;
+import elemental2.dom.DOMRect;
+import elemental2.dom.EventListener;
+import elemental2.dom.HTMLElement;
 import jsinterop.base.Js;
-import org.dominokit.domino.api.client.mvp.view.BaseDominoView;
 import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.pages.client.views.SiteView;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 import static elemental2.dom.DomGlobal.document;
 import static elemental2.dom.DomGlobal.window;
 import static org.dominokit.domino.ui.style.Unit.px;
 
-public abstract class SiteViewImpl extends BaseDominoView<FakeElement> implements SiteView {
+public abstract class SiteViewImpl extends NavigableViewImpl<FakeElement> implements SiteView {
 
     private EventListener removeSolutionsMenuListener;
-    protected SiteView.SiteUiHandlers uiHandlers;
-    private final Map<String, EventListener> clickListeners = new HashMap<>();
 
     protected void initRoot(FakeElement root) {
     }
@@ -31,28 +28,6 @@ public abstract class SiteViewImpl extends BaseDominoView<FakeElement> implement
                 this.removeHandler.onRemoved();
             }
         }, getClass().getName());
-    }
-
-    private void enhanceLinks() {
-        NodeList<Element> elements = document.querySelectorAll("a[d-link]");
-        elements.asList().forEach(element -> {
-            DominoElement.of(Js.<HTMLElement>uncheckedCast(element)).apply(self -> {
-                String dLink = self.getAttribute("d-link");
-                if (!"solutions".equalsIgnoreCase(dLink)) {
-                    if (clickListeners.containsKey(self.getDominoId())) {
-                        self.removeEventListener("click", clickListeners.get(self.getDominoId()));
-                        clickListeners.remove(self.getDominoId());
-                    }
-                    EventListener clickListener = evt -> {
-                        evt.preventDefault();
-                        evt.stopPropagation();
-                        uiHandlers.navigateTo(dLink);
-                    };
-                    self.addClickListener(clickListener);
-                    clickListeners.put(self.getDominoId(), clickListener);
-                }
-            });
-        });
     }
 
     private void enhanceMenuPosition() {
@@ -81,8 +56,6 @@ public abstract class SiteViewImpl extends BaseDominoView<FakeElement> implement
         window.scrollTo(0, 0);
     }
 
-    protected abstract boolean emptyContent();
-
     @Override
     public void setPageTitle(String pageTitle) {
         document.title = "DominoKit - " + pageTitle;
@@ -101,10 +74,5 @@ public abstract class SiteViewImpl extends BaseDominoView<FakeElement> implement
 
     protected void extraEnhancement() {
 
-    }
-
-    @Override
-    public void setUiHandlers(SiteView.SiteUiHandlers uiHandlers) {
-        this.uiHandlers = uiHandlers;
     }
 }

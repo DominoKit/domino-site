@@ -4,9 +4,7 @@ import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.history.TokenFilter;
 import org.dominokit.pages.client.views.DocsView;
 import org.dominokit.pages.shared.events.DocsActivationEvent;
-import org.dominokit.pages.shared.events.PageEnhancedEvent;
 import org.dominokit.pages.shared.events.SlotRegisteredEvent;
-import org.dominokit.pages.shared.service.ContentServiceFactory;
 
 import static org.dominokit.domino.history.TokenFilter.startsWith;
 
@@ -46,21 +44,9 @@ public class DocsProxy extends SitePresenter<DocsView> {
         fireEvent(SlotRegisteredEvent.class, new SlotRegisteredEvent(false));
     }
 
-    private void updateDocsContent() {
-        fireEvent(PageEnhancedEvent.class, new PageEnhancedEvent(false));
-        String path = "main/content/" + history().currentToken().path();
-        ContentServiceFactory.INSTANCE
-                .getPageContent(path)
-                .onSuccess(content -> {
-                    view.updateDocsContent(content);
-                    view.selectMenu(getPage());
-                    fireEvent(PageEnhancedEvent.class, new PageEnhancedEvent(true));
-                })
-                .send();
-    }
-
     private String getPage() {
-        String page = history().currentToken().noRootValue().replace("solutions/" + solution + "/docs/getting-started", "").replaceFirst("/", "");
+        String page = history().currentToken().noRootValue().replace("solutions/" + solution + "/docs", "")
+                               .replaceFirst("/", "");
         if (page.contains("#")) {
             page = page.substring(0, page.lastIndexOf("#"));
         }

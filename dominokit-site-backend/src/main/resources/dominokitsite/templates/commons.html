@@ -653,22 +653,22 @@
     <p class="docs-menu-title">GETTING STARTED</p>
     <ul class="docs-menu-root">
         <li class="docs-menu-item parent collapsed">
-            <a class="docs-menu-item-title" href="create-project"
+            <a class="docs-menu-item-title" href="getting-started/create-project"
                d-link="solutions/dominoui/docs/getting-started/create-project">
                 <span>Create domino-ui project</span></a>
             <ul class="docs-menu-children">
                 <li class="docs-menu-item">
-                    <a class="docs-menu-item-title" href="create-project/cli"
+                    <a class="docs-menu-item-title" href="getting-started/create-project/cli"
                        d-link="solutions/dominoui/docs/getting-started/create-project/cli"><span>Using dominokit-cli tool</span>
                     </a>
                 </li>
                 <li class="docs-menu-item">
-                    <a class="docs-menu-item-title" href="create-project/archetype"
+                    <a class="docs-menu-item-title" href="getting-started/create-project/archetype"
                        d-link="solutions/dominoui/docs/getting-started/create-project/archetype"><span>From Domino-ui Archetype</span>
                     </a>
                 </li>
                 <li class="docs-menu-item">
-                    <a class="docs-menu-item-title" href="create-project/nalu"
+                    <a class="docs-menu-item-title" href="getting-started/create-project/nalu"
                        d-link="solutions/dominoui/docs/getting-started/create-project/nalu"><span>Using Nalu Project Initializer</span>
                     </a>
                 </li>
@@ -690,7 +690,7 @@
         </li>
         <p class="docs-menu-title" style="margin: 20px 0 20px 0">COMPONENTS</p>
         <li class="docs-menu-item parent">
-            <a class="docs-menu-item-title" href="alerts" d-link="solutions/dominoui/docs/getting-started/alerts"><span>Alerts</span></a>
+            <a class="docs-menu-item-title" href="components/alerts" d-link="solutions/dominoui/docs/components/alerts"><span>Alerts</span></a>
         </li>
         <li class="docs-menu-item parent">
             <a class="docs-menu-item-title"><span>Badges</span></a>
@@ -708,14 +708,14 @@
     <pre th:text="${codeString}"></pre>
 </div>
 
-<div th:fragment="nextPage(url, description)" style="display: flex;justify-content: right;align-items: center;">
-    <p style="margin-right: 5px"><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
+<div th:fragment="nextPage(url, description)" class="next-page">
+    <p><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
     <span><img src="/assets/go-arrow.svg"></span>
 </div>
 
-<div th:fragment="previousPage(url, description)" style="display: flex;align-items: center;">
+<div th:fragment="previousPage(url, description)" class="previous-page">
     <span><img src="/assets/previous-arrow.svg"></span>
-    <p style="margin-right: 5px"><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
+    <p><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
 </div>
 
 </html>

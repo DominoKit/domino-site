@@ -1,8 +1,8 @@
 package org.dominokit.pages.client.views.components;
 
-import org.dominokit.domino.api.client.mvp.view.ContentView;
+import org.dominokit.pages.client.views.NavigableView;
 
-public interface ComponentView extends ContentView {
+public interface ComponentView extends NavigableView {
     void scrollTo(String section);
 
     void appendContent(String content);
