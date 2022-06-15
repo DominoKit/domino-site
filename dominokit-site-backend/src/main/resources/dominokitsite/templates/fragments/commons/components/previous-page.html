@@ -1,0 +1,4 @@
+<div th:fragment="content(url, description)" class="dk-c-previous-page">
+	<span><img src="/assets/previous-arrow.svg"></span>
+	<p><a th:attr="d-link=${url}" th:href="${url}" th:text="${description}"></a></p>
+</div>

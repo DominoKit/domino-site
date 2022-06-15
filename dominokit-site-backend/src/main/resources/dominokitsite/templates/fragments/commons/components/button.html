@@ -1,0 +1,8 @@
+<div th:fragment="content (class, title)" th:class="${'dk-c-button ' + class}">
+	<a>
+		<span class="button-img"></span>
+		<div>
+			<span th:text="${title}"></span>
+		</div>
+	</a>
+</div>

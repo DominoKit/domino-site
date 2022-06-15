@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="content">
+	<div th:replace="fragments/commons/navigation :: content"></div>
+	<div id="body">
+		<div class="docs-body">
+			<div th:replace="fragments/commons/components/dominoui-menu :: content"></div>
+			<div class="docs-content"></div>
+		</div>
+	</div>
+	<div th:replace="fragments/commons/components/solutions-menu :: content"></div>
+</div>

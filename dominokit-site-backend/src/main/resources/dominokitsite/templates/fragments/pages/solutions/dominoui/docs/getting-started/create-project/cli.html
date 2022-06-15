@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="content" style="display: flex; flex-direction: column; height: 100%">
+	<div style="flex-grow: 1">
+		<h1>Create project using dominokit-cli Tool</h1>
+		<h3>Prerequisites</h3>
+		<ul>
+			<li style="margin-bottom: 20px">Java</li>
+			<li>Maven</li>
+		</ul>
+		<h3>Steps</h3>
+		<ol>
+			<li style="margin-bottom: 20px">Download and install dominokit-cli tool from here <a
+					href="https://github.com/DominoKit/domino-cli/releases">dominokit-cli</a></li>
+			<li style="margin-bottom: 20px">After installing the tool in a terminal execute the
+				following
+				command:
+				<div th:replace="fragments/commons/components/code :: content('dominokit gen app -n [yourAppNameHere] -t basic -g [groupId here]')"></div>
+			</li>
+			<li>Your are done, CD into the project folder, execute <strong>mvn clean install</strong>
+				and
+				run the application using the provided <strong>run.sh</strong> file.
+			</li>
+		</ol>
+	</div>
+	<div style="display: flex; justify-content: space-between">
+		<div th:replace="fragments/commons/components/previous-page :: content('solutions/dominoui/docs/getting-started/create-project', 'Create DominoUI project')"></div>
+		<div th:replace="fragments/commons/components/next-page :: content('solutions/dominoui/docs/getting-started/create-project/archetype', 'Create Using archetype')"></div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+.dk-c-support-us {
+    padding: 9.375em;
+    text-align: center;
+    background: var(--color-green) url('/assets/Pattern.svg') 0 0 repeat padding-box;
+}
+
+.dk-c-support-us__title {
+    margin: 0;
+    color: var(--color-white);
+    text-align: center;
+    letter-spacing: 0;
+}
+
+.dk-c-support-us__donate {
+    display: inline-block;
+    margin-top: 2.5em;
+    width: 15em;
+    height: 2.5em;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-white);
+    border-radius: 4px;
+    padding-left: 0.625em;
+    padding-right: 0.625em;
+    line-height: 2.5em;
+    color: var(--color-grey);
+}
+
+.dk-c-support-us__donate:hover {
+    background-color: #403F3D;
+    color: var(--color-white);
+}
+
+.dk-c-support-us__donate-title {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+    .dk-c-support-us {
+        padding: 4em;
+    }
+}

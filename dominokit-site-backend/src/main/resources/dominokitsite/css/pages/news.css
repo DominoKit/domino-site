@@ -1,0 +1,130 @@
+.dk-p-news-title {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.news-main {
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.news-main .dk-c-card {
+    margin: 1em 4em;
+}
+
+.news-main .news-item:nth-child(even) {
+    background-color: var(--color-light-box-shadow);
+}
+
+.news-item {
+    padding: 3.75em 3.75em 5em 3.75em;
+}
+
+.news-item > a {
+    text-align: left;
+    font-size: 1.5em;
+    color: var(--color-green);
+}
+
+.news-item a {
+    color: var(--color-green);
+}
+
+.news-item a:hover,
+.news-item a:visited {
+    color: var(--color-green);
+}
+
+.news-item > p {
+    text-align: left;
+    font-size: 0.875em;
+    color: var(--color-light-grey);
+    margin: 1px;
+}
+
+.news-item-content p {
+    flex-grow: 2;
+    text-align: left;
+    font-size: 1.125em;
+    line-height: 2.1875em;
+}
+
+.news-item table {
+    border-spacing: 0
+}
+
+.news-item table thead {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.news-item table a {
+    color: var(--color-black);
+}
+
+.news-item table thead tr th {
+    text-align: center;
+    font-size: 1.125em;
+    min-width: 18.75em;
+    line-height: 3.125em;
+}
+
+.news-item table tbody tr td {
+    text-align: center;
+    min-width: 18.75em;
+    line-height: 1.875em;
+    font-weight: 100;
+    border-bottom: 1px solid var(--color-light-grey);
+    border-left: 1px solid var(--color-light-grey);
+    border-right: 1px solid var(--color-light-grey);
+}
+
+.news-item .news-social-buttons {
+    position: relative;
+    right: 0;
+    float: right;
+    display: inline-block;
+    color: var(--color-black);
+    background-color: var(--color-box-shadow);
+    border-radius: 1.3125em;
+    padding: 0.3125em;
+    line-height: 0.625em;
+}
+
+.news-item .news-social-buttons svg {
+    fill: var(--color-grey);
+    cursor: pointer;
+}
+
+.news-item .news-social-buttons svg:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out;
+    transition-duration: 0.1s;
+}
+
+.news-item table td.bolder {
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .news-item {
+        padding: 1em;
+    }
+
+    .news-item > a {
+        font-size: 1.2em;
+    }
+
+    .news-item-content p {
+        font-size: 1.2em;
+    }
+
+    .news-main .dk-c-card {
+        margin: 1em;
+    }
+}

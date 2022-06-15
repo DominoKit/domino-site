@@ -1,0 +1,39 @@
+.learn-more a {
+    width: 9.375em;
+    height: 2.5em;
+    display: inline-block;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+    cursor: pointer;
+    line-height: 2.5em;
+}
+
+
+.learn-more a div {
+    display: inline-block;
+}
+
+.learn-more a span {
+    color: var(--color-black);
+    position: relative;
+    padding-left: 0.9375em;
+    font-size: 0.875em;
+}
+
+.learn-more a img {
+    height: 0.875em;
+    width: 0.875em;
+    position: relative;
+    display: inline-block;
+    top: 0.1875em;
+}
+
+@media only screen and (max-width: 600px) {
+    .learn-more {
+        width: 100%;
+    }
+
+    .learn-more a {
+        width: 100%;
+    }
+}

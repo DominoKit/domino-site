@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
-<head th:replace="~{commons :: header(pageTitle='Domino History')}"></head>
+<head th:replace="fragments/head::head">
 <body>
 <div id="root">
-    <div th:replace="~{main/content/solutions/dominohistory :: solutionContent}"></div>
+    <div th:replace="fragments/pages/solutions/dominohistory/main :: content"></div>
 </div>
 </body>
 </html>
