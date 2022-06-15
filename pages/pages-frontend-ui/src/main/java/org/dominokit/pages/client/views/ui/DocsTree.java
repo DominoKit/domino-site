@@ -16,9 +16,9 @@ public class DocsTree {
     private final List<DocsTreeItem> treeItems = new ArrayList<>();
 
     public void build() {
-        treeItems.addAll(getElements(document.body, "ul.docs-menu-root")
+        treeItems.addAll(getElements(document.body, "ul.dk-c-dui-menu-root")
                 .stream()
-                .map(element -> getElements(element.element(), ".docs-menu-item.parent"))
+                .map(element -> getElements(element.element(), ".dk-c-dui-menu-item.parent"))
                 .flatMap(Collection::stream)
                 .map(element -> createTreeItem(element, null))
                 .collect(toList()));
@@ -27,7 +27,7 @@ public class DocsTree {
     private DocsTreeItem createTreeItem(DominoElement<HTMLElement> item, DocsTreeItem parent) {
         ArrayList<DocsTreeItem> subItems = new ArrayList<>();
         DocsTreeItem docsTreeItem = new DocsTreeItem(this, item, parent, subItems);
-        subItems.addAll(getElements(item.element(), ".docs-menu-children .docs-menu-item")
+        subItems.addAll(getElements(item.element(), ".dk-c-dui-menu-children .dk-c-dui-menu-item")
                 .stream()
                 .map(element -> createTreeItem(element, docsTreeItem))
                 .collect(toList()));

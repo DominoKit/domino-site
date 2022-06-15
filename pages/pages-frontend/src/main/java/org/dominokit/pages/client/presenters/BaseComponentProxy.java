@@ -22,7 +22,7 @@ public class BaseComponentProxy<V extends ComponentView> extends NavigableProxy<
 
     @OnReveal
     public void onReveal() {
-        String path = "main/content/" + history().currentToken().path();
+        String path = "fragments/pages/" + history().currentToken().path();
         ContentServiceFactory.INSTANCE
                 .getPageContent(path)
                 .onSuccess(content -> {

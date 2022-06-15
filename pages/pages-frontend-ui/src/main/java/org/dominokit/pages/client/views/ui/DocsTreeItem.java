@@ -1,6 +1,5 @@
 package org.dominokit.pages.client.views.ui;
 
-import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLAnchorElement;
 import elemental2.dom.HTMLElement;
 import org.dominokit.domino.ui.utils.DominoElement;
@@ -10,18 +9,16 @@ import java.util.Optional;
 
 public class DocsTreeItem {
 
-    private final DocsTree docsTree;
     private final DominoElement<HTMLElement> root;
     private final DocsTreeItem parent;
     private final List<DocsTreeItem> subItems;
     private final DominoElement<HTMLAnchorElement> hrefElement;
 
     public DocsTreeItem(DocsTree docsTree, DominoElement<HTMLElement> root, DocsTreeItem parent, List<DocsTreeItem> subItems) {
-        this.docsTree = docsTree;
         this.root = root;
         this.parent = parent;
         this.subItems = subItems;
-        hrefElement = DominoElement.of((HTMLAnchorElement) root.element().querySelector("a.docs-menu-item-title"));
+        hrefElement = DominoElement.of((HTMLAnchorElement) root.element().querySelector("a.dk-c-dui-menu-item-title"));
         hrefElement.addClickListener(evt -> {
             docsTree.deselectAll();
             select();
@@ -65,7 +62,7 @@ public class DocsTreeItem {
             return Optional.of(this);
         }
         for (DocsTreeItem subItem : subItems) {
-            if(subItem.itemHasHref(menuHref).isPresent()){
+            if (subItem.itemHasHref(menuHref).isPresent()) {
                 return Optional.of(subItem);
             }
         }

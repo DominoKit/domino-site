@@ -33,7 +33,7 @@ public abstract class SitePresenter<V extends SiteView> extends NavigableProxy<V
     }
 
     protected void updateContent(Consumer<String> contentConsumer) {
-        String path = "main/content/" + getPath();
+        String path = "fragments/pages/" + getPath();
         ContentServiceFactory.INSTANCE
                 .getPageContent(path)
                 .onSuccess(contentConsumer::accept)

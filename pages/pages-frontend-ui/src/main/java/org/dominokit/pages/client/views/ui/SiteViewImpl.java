@@ -1,21 +1,27 @@
 package org.dominokit.pages.client.views.ui;
 
 import elemental2.dom.DOMRect;
+import elemental2.dom.DomGlobal;
 import elemental2.dom.EventListener;
 import elemental2.dom.HTMLElement;
 import jsinterop.base.Js;
 import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.pages.client.views.SiteView;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static elemental2.dom.DomGlobal.document;
 import static elemental2.dom.DomGlobal.window;
+import static java.util.Objects.nonNull;
+import static org.dominokit.domino.ui.style.Unit.em;
 import static org.dominokit.domino.ui.style.Unit.px;
 
 public abstract class SiteViewImpl extends NavigableViewImpl<FakeElement> implements SiteView {
 
     private EventListener removeSolutionsMenuListener;
+    private EventListener hideListener;
 
     protected void initRoot(FakeElement root) {
     }
@@ -31,19 +37,45 @@ public abstract class SiteViewImpl extends NavigableViewImpl<FakeElement> implem
     }
 
     private void enhanceMenuPosition() {
-        HTMLElement solutionsLink = getElement("a[d-link=\"solutions\"]");
-        Optional.ofNullable(solutionsLink).map(DominoElement::of).ifPresent(element -> element.addClickListener(evt -> {
-            evt.preventDefault();
-            evt.stopPropagation();
+        for (HTMLElement solutionsLink : getElements("a[d-link=\"solutions\"]")) {
+            Optional.ofNullable(solutionsLink).map(DominoElement::of).ifPresent(element -> {
+                element.addClickListener(evt -> {
+                    evt.preventDefault();
+                    evt.stopPropagation();
 
-            document.addEventListener("click", removeSolutionsMenuListener);
-            DOMRect targetRect = solutionsLink.getBoundingClientRect();
-            HTMLElement menu = getElement(".solutions-menu");
+                    document.addEventListener("click", removeSolutionsMenuListener);
+                    DOMRect targetRect = solutionsLink.getBoundingClientRect();
+                    HTMLElement menu = getElement(".dk-c-solutions-menu");
 
-            menu.style.setProperty("top", px.of((targetRect.top + targetRect.height + window.pageYOffset)));
-            menu.style.setProperty("left", px.of((targetRect.left + window.pageXOffset - (145 - (targetRect.width / 2)))));
-            DominoElement.of(menu).style().setDisplay("block");
-        }));
+                    menu.style.setProperty("top", em.of((targetRect.top + targetRect.height + window.pageYOffset) / 16));
+                    menu.style.setProperty("left", em.of(((targetRect.left + window.pageXOffset - (130 - (targetRect.width / 2)))) / 16));
+                    DominoElement.of(menu).style().setDisplay("block");
+                    if(nonNull(hideListener)){
+                        window.removeEventListener("click", hideListener);
+                    }
+                    hideListener = evt1 -> DominoElement.of(menu).style().setDisplay("none");
+                    window.addEventListener("click", hideListener);
+                });
+            });
+        }
+
+        HTMLElement mobileNav = getElement("div[class=\"dk-c-mobile-nav\"]");
+        Optional.ofNullable(mobileNav).ifPresent(htmlElement -> {
+            EventListener eventListener = evt1 -> {
+                if (htmlElement.classList.contains("open")) {
+                    htmlElement.classList.remove("open");
+                } else {
+                    htmlElement.classList.add("open");
+                }
+            };
+            htmlElement.addEventListener("click", eventListener);
+            htmlElement.addEventListener("touch", eventListener);
+        });
+    }
+
+    protected List<HTMLElement> getElements(String selector) {
+        return document.querySelectorAll(selector).asList().stream().map(element -> (HTMLElement) element)
+                .collect(Collectors.toList());
     }
 
     protected HTMLElement getElement(String selector) {
@@ -64,7 +96,7 @@ public abstract class SiteViewImpl extends NavigableViewImpl<FakeElement> implem
     @Override
     public void enhance() {
         removeSolutionsMenuListener = evt -> {
-            DominoElement.of(getElement(".solutions-menu")).style().setDisplay("none");
+            DominoElement.of(getElement(".dk-c-solutions-menu")).style().setDisplay("none");
             document.removeEventListener("click", removeSolutionsMenuListener);
         };
         enhanceLinks();

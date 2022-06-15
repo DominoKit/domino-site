@@ -22,7 +22,7 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
 
         @Override
         protected String getPath() {
-            return "home";
+            return "home/main";
         }
     }
 
@@ -37,7 +37,7 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
 
         @Override
         protected String getPath() {
-            return "services";
+            return "services/main";
         }
     }
 
@@ -52,7 +52,7 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
 
         @Override
         protected String getPath() {
-            return "news";
+            return "news/main";
         }
 
     }
@@ -68,7 +68,7 @@ public abstract class BaseHomeProxy extends SitePresenter<HomeView> {
 
         @Override
         protected String getPath() {
-            return "about";
+            return "about/main";
         }
     }
 }

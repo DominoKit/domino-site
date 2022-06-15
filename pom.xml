@@ -102,6 +102,10 @@
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
                         <failOnError>true</failOnError>
+                        <codeserverArgs>
+                            <codeserverArg>-bindAddress</codeserverArg>
+                            <codeserverArg>0.0.0.0</codeserverArg>
+                        </codeserverArgs>
                     </configuration>
                 </plugin>
                 <plugin>

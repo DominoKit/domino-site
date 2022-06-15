@@ -63,6 +63,6 @@ public class DocsProxy extends SitePresenter<DocsView> {
 
     @Override
     protected String getPath() {
-        return PATH.replace(":solution", solution);
+        return PATH.replace(":solution", solution) + "/main";
     }
 }

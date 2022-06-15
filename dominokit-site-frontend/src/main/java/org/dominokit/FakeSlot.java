@@ -20,7 +20,6 @@ public class FakeSlot implements ContentSlot {
 
   @Override
   public void updateContent(Content view) {
-    DomGlobal.console.info("*** update content " + view.get());
     if (view.get() instanceof FakeElement) {
       if (nonNull(old)) {
         old.get().remove();
