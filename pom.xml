@@ -101,6 +101,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
+                        <style>DETAILED</style>
                         <failOnError>true</failOnError>
                         <codeserverArgs>
                             <codeserverArg>-bindAddress</codeserverArg>

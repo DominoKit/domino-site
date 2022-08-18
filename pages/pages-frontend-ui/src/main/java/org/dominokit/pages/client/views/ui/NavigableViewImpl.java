@@ -21,7 +21,7 @@ public abstract class NavigableViewImpl<T> extends BaseDominoView<T> implements 
     private NavigableUiHandlers uiHandlers;
 
     protected void enhanceLinks() {
-        NodeList<Element> elements = document.querySelectorAll("a[d-link]");
+        NodeList<Element> elements = document.querySelectorAll("[d-link]");
         elements.asList().forEach(element -> {
             DominoElement.of(Js.<HTMLElement>uncheckedCast(element)).apply(self -> {
                 String dLink = self.getAttribute("d-link");
@@ -37,6 +37,16 @@ public abstract class NavigableViewImpl<T> extends BaseDominoView<T> implements 
                     };
                     self.addClickListener(clickListener);
                     clickListeners.put(self.getDominoId(), clickListener);
+                } else {
+                    self.addClickListener(evt -> {
+                        if (self.containsCss("expanded")) {
+                            self.removeCss("expanded");
+                            self.addCss("collapsed");
+                        } else {
+                            self.removeCss("collapsed");
+                            self.addCss("expanded");
+                        }
+                    });
                 }
             });
         });
