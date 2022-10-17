@@ -2,8 +2,6 @@
     width: 9.375em;
     height: 2.5em;
     display: inline-block;
-    padding-right: 1.25em;
-    padding-left: 1.25em;
     cursor: pointer;
     line-height: 2.5em;
 }
@@ -16,7 +14,6 @@
 .learn-more a span {
     color: var(--color-black);
     position: relative;
-    padding-left: 0.9375em;
     font-size: 0.875em;
 }
 

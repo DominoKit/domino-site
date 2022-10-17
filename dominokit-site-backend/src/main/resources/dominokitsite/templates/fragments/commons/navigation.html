@@ -1,61 +1,61 @@
 <div th:fragment="content" class="dk-c-navigation">
-	<div class="dk-c-mobile-nav">
-		<i class="material-icons">menu</i>
-		<div class="dk-c-mobile-nav__menu">
-			<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable collapsed"
-			   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link--active' : ''"
-			   href="/solutions">
-				<div class="dk-c-nav-menu__header-link-content">
-					<div class="dk-c-nav-menu__header-link-title">Solutions</div>
-					<div class="dk-c-nav-menu__header-link-icon">
-						<i class="material-icons collapsed">keyboard_arrow_right</i>
-						<i class="material-icons expanded">keyboard_arrow_down</i>
-					</div>
-				</div>
-				<ul class="dk-c-mobile-nav__submenu">
-					<li d-link="solutions/dominomvp">Domino MVP</li>
-					<li d-link="solutions/dominoui">Domino UI</li>
-					<li d-link="solutions/dominojackson">Domino Jackson</li>
-					<li d-link="solutions/dominorest">Domino REST</li>
-					<li d-link="solutions/dominohistory">Domino History</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-				</ul>
-			</a>
-			<a d-link="news" class="dk-c-nav-menu__header-link dk-u-clickable"
-			   th:classappend="${active == 'news'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/news">News</a>
-			<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"
-			   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link--active' : ''"
-			   href="/contact-us">Contact
-				us</a>
-		</div>
-	</div>
+<!--	<div class="dk-c-mobile-nav">-->
+<!--		<i class="material-icons">menu</i>-->
+<!--		<div class="dk-c-mobile-nav__menu">-->
+<!--						<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable collapsed"-->
+<!--						   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''"-->
+<!--						   href="/solutions">-->
+<!--							<div class="dk-c-nav-menu__header-link-content">-->
+<!--								<div class="dk-c-nav-menu__header-link-title">Solutions</div>-->
+<!--								<div class="dk-c-nav-menu__header-link-icon">-->
+<!--									<i class="material-icons collapsed">keyboard_arrow_right</i>-->
+<!--									<i class="material-icons expanded">keyboard_arrow_down</i>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<ul class="dk-c-mobile-nav__submenu">-->
+<!--								<li d-link="solutions/dominomvp">Domino MVP</li>-->
+<!--								<li d-link="solutions/dominoui">Domino UI</li>-->
+<!--								<li d-link="solutions/dominojackson">Domino Jackson</li>-->
+<!--								<li d-link="solutions/dominorest">Domino REST</li>-->
+<!--								<li d-link="solutions/dominohistory">Domino History</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--								<li d-link="solutions/dominocli">Domino CLI</li>-->
+<!--							</ul>-->
+<!--						</a>-->
+<!--						<a d-link="news" class="dk-c-nav-menu__header-link dk-u-clickable"-->
+<!--						   th:classappend="${active == 'news'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''" href="/news">News</a>-->
+<!--						<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"-->
+<!--						   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''"-->
+<!--						   href="/contact-us">Contact-->
+<!--							us</a>-->
+<!--		</div>-->
+<!--	</div>-->
 	<div class="dk-c-navigation__logo">
 		<a d-link="home" href="/">
 			<img src="/assets/ic_dominokit_logo_header.png" alt="header">
 		</a>
 	</div>
 	<div class="dk-c-nav-menu">
-		<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link--active' : ''"
-		   href="/solutions">Solutions</a>
-		<a d-link="news" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'news'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/news">News</a>
-		<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/contact-us">Contact
-			us</a>
+<!--		<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable"-->
+<!--		   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''"-->
+<!--		   href="/solutions">Solutions</a>-->
+<!--		<a d-link="services" class="dk-c-nav-menu__header-link dk-u-clickable"-->
+<!--		   th:classappend="${active == 'services'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''" href="/services">Services</a>-->
+<!--		<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"-->
+<!--		   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link&#45;&#45;active' : ''" href="/contact-us">Contact-->
+<!--			us</a>-->
 	</div>
 	<div class="dk-c-navigation__logo">
 		<a class="dk-u-clickable" href="https://github.com/DominoKit" target="_blank">

@@ -1,10 +1,9 @@
 <div th:fragment="content" class="dk-p-home__solutions">
 	<div class="dk-p-home__solutions-title">
 		<h1>Our Solutions</h1>
-		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-			labore
-			et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-			rebum. Stet clita kasd gubergren, no sea takimata</p>
+		<p>We provide these tools to help you build web applications even if you are new to the web world. Our tools
+			work perfectly together to give you the flexibility you need to deliver the best experience to the end
+			user. Our mission is to make your life easier by implementing an easy-to-use modules with minimal work needed.</p>
 	</div>
 	<div class="dk-p-home__solutions__product" id="domino-mvp">
 		<div class="product-root">
@@ -14,8 +13,8 @@
 					both
 					simple and complex applications using GWT.</p>
 				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominomvp/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+<!--					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominomvp/docs')"></div>-->
+					<div th:replace="fragments/commons/components/learn-more :: content('https://github.com/DominoKit/domino-mvp')"></div>
 				</div>
 			</div>
 			<div class="pic">
@@ -31,8 +30,8 @@
 					developer
 					with GWT without dependencies on external JavaScript.</p>
 				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominoui/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+<!--					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominoui/docs')"></div>-->
+					<div th:replace="fragments/commons/components/learn-more :: content('https://github.com/DominoKit/domino-ui')"></div>
 				</div>
 			</div>
 			<div class="pic">
@@ -48,8 +47,8 @@
 					client
 					side GWT, J2CL, and on JVM side based.</p>
 				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominojackson/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+<!--					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominojackson/docs')"></div>-->
+					<div th:replace="fragments/commons/components/learn-more :: content('https://github.com/DominoKit/domino-jackson')"></div>
 				</div>
 			</div>
 			<div class="pic">
@@ -65,8 +64,8 @@
 					interfaces, and the generated clients can be used from both client side and on the
 					server.</p>
 				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominorest/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+<!--					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominorest/docs')"></div>-->
+					<div th:replace="fragments/commons/components/learn-more :: content('https://github.com/DominoKit/domino-rest')"></div>
 				</div>
 			</div>
 			<div class="pic">
@@ -152,7 +151,7 @@
 						</div>
 					</div>
 					<h2>Independent Components & Libraries</h2>
-					<p>Fully customize built-in components & libraries</p>
+					<p>Fully customized built-in components & libraries</p>
 				</div>
 				<div class="why-col">
 					<div class="why-icon">
@@ -231,7 +230,7 @@
 						</div>
 					</div>
 					<h2>Maintainable</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur</p>
+					<p>Easy to change and add new features</p>
 				</div>
 				<div class="why-col">
 					<div class="why-icon">
@@ -270,7 +269,7 @@
 						</div>
 					</div>
 					<h2>Full Java Stack for Front-end Development</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur</p>
+					<p>Java developer? no worries, build your frontend from A to Z using Java!</p>
 				</div>
 				<div class="why-col">
 					<div class="why-icon">
@@ -307,7 +306,7 @@
 						</div>
 					</div>
 					<h2>Completely Open Source</h2>
-					<p>Lorem ipsum dolor sit amet, consetetur</p>
+					<p>We love open source, so don't worry you don't need to pay us</p>
 				</div>
 			</div>
 		</div>
@@ -319,138 +318,139 @@
 			<div><img src="assets/ic_our_sponsors_install4j_logo.png"/></div>
 		</div>
 	</div>
-	<div class="dk-c-our-clients">
-		<h1>What our clients say</h1>
-		<div class="clients-main">
-			<div class="client-card-cntr">
-				<div d-client-card="0" class="client-card client-card-0 client-card-l-2">
-					<div class="client-card-header">
-						<img src="assets/ic_testmonials_quotes.svg">
-					</div>
-					<div class="client-card-image">
-						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
-					</div>
-					<div class="client-card-name">
-						<h3>Flavio Castro</h3>
-					</div>
-					<div class="client-card-title">
-						<h4>Tech Leader / Architect @Ardan1</h4>
-					</div>
-					<div class="client-card-comment">
-						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-							lives
-							easier
-							while providing a better and faster experience to the users”</p>
-					</div>
-					<div class="client-card-logo">
-						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">
-					</div>
-				</div>
-			</div>
-			<div class="client-card-cntr">
-				<div d-client-card="1" class="client-card client-card-1 client-card-l-1">
-					<div class="client-card-header">
-						<img src="assets/ic_testmonials_quotes.svg">
-					</div>
-					<div class="client-card-image">
-						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
-					</div>
-					<div class="client-card-name">
-						<h3>Flavio Castro</h3>
-					</div>
-					<div class="client-card-title">
-						<h4>Tech Leader / Architect @Ardan1</h4>
-					</div>
-					<div class="client-card-comment">
-						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-							lives
-							easier
-							while providing a better and faster experience to the users”</p>
-					</div>
-					<div class="client-card-logo">
-						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">
-					</div>
-				</div>
-			</div>
-			<div class="client-card-cntr">
-				<div d-client-card="2" class="client-card client-card-2 active">
-					<div class="client-card-header">
-						<img src="assets/ic_testmonials_quotes.svg">
-					</div>
-					<div class="client-card-image">
-						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
-					</div>
-					<div class="client-card-name">
-						<h3>Flavio Castro</h3>
-					</div>
-					<div class="client-card-title">
-						<h4>Tech Leader / Architect @Ardan1</h4>
-					</div>
-					<div class="client-card-comment">
-						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-							lives
-							easier
-							while providing a better and faster experience to the users”</p>
-					</div>
-					<div class="client-card-logo">
-						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">
-					</div>
-				</div>
-			</div>
-			<div class="client-card-cntr">
-				<div d-client-card="3" class="client-card client-card-3 client-card-r-1">
-					<div class="client-card-header">
-						<img src="assets/ic_testmonials_quotes.svg">
-					</div>
-					<div class="client-card-image">
-						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
-					</div>
-					<div class="client-card-name">
-						<h3>Flavio Castro</h3>
-					</div>
-					<div class="client-card-title">
-						<h4>Tech Leader / Architect @Ardan1</h4>
-					</div>
-					<div class="client-card-comment">
-						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-							lives
-							easier
-							while providing a better and faster experience to the users”</p>
-					</div>
-					<div class="client-card-logo">
-						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">
-					</div>
-				</div>
-			</div>
-			<div class="client-card-cntr">
-				<div d-client-card="4" class="client-card client-card-4 client-card-r-2">
-					<div class="client-card-header">
-						<img src="assets/ic_testmonials_quotes.svg">
-					</div>
-					<div class="client-card-image">
-						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
-					</div>
-					<div class="client-card-name">
-						<h3>Flavio Castro</h3>
-					</div>
-					<div class="client-card-title">
-						<h4>Tech Leader / Architect @Ardan1</h4>
-					</div>
-					<div class="client-card-comment">
-						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-							lives
-							easier
-							while providing a better and faster experience to the users”</p>
-					</div>
-					<div class="client-card-logo">
-						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="dk-c-our-clients-nav">
-			<span id="nav-client-prev"><img src="assets/ic_testmonials_previous.svg"></span>
-			<span id="nav-client-next"><img src="assets/ic_testmonials_next.svg"></span>
-		</div>
-	</div>
+<!--	<div class="dk-c-our-clients">-->
+<!--		<h1>What our clients say</h1>-->
+<!--		<div class="clients-main">-->
+<!--			<div class="client-card-cntr">-->
+<!--				<div d-client-card="0" class="client-card client-card-0 client-card-l-2">-->
+<!--					<div class="client-card-header">-->
+<!--						<img src="assets/ic_testmonials_quotes.svg">-->
+<!--					</div>-->
+<!--					<div class="client-card-image">-->
+<!--						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">-->
+<!--					</div>-->
+<!--					<div class="client-card-name">-->
+<!--						<h3>Flavio Castro</h3>-->
+<!--					</div>-->
+<!--					<div class="client-card-title">-->
+<!--						<h4>Tech Leader / Architect @Ardan1</h4>-->
+<!--					</div>-->
+<!--					<div class="client-card-comment">-->
+<!--						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers-->
+<!--							lives-->
+<!--							easier-->
+<!--							while providing a better and faster experience to the users”</p>-->
+<!--					</div>-->
+<!--					<div class="client-card-logo">-->
+<!--						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="client-card-cntr">-->
+<!--				<div d-client-card="1" class="client-card client-card-1 client-card-l-1">-->
+<!--					<div class="client-card-header">-->
+<!--						<img src="assets/ic_testmonials_quotes.svg">-->
+<!--					</div>-->
+<!--					<div class="client-card-image">-->
+<!--						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">-->
+<!--					</div>-->
+<!--					<div class="client-card-name">-->
+<!--						<h3>Flavio Castro</h3>-->
+<!--					</div>-->
+<!--					<div class="client-card-title">-->
+<!--						<h4>Tech Leader / Architect @Ardan1</h4>-->
+<!--					</div>-->
+<!--					<div class="client-card-comment">-->
+<!--						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers-->
+<!--							lives-->
+<!--							easier-->
+<!--							while providing a better and faster experience to the users”</p>-->
+<!--					</div>-->
+<!--					<div class="client-card-logo">-->
+<!--						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="client-card-cntr">-->
+<!--				<div d-client-card="2" class="client-card client-card-2 active">-->
+<!--					<div class="client-card-header">-->
+<!--						<img src="assets/ic_testmonials_quotes.svg">-->
+<!--					</div>-->
+<!--					<div class="client-card-image">-->
+<!--						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">-->
+<!--					</div>-->
+<!--					<div class="client-card-name">-->
+<!--						<h3>Flavio Castro</h3>-->
+<!--					</div>-->
+<!--					<div class="client-card-title">-->
+<!--						<h4>Tech Leader / Architect @Ardan1</h4>-->
+<!--					</div>-->
+<!--					<div class="client-card-comment">-->
+<!--						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers-->
+<!--							lives-->
+<!--							easier-->
+<!--							while providing a better and faster experience to the users”</p>-->
+<!--					</div>-->
+<!--					<div class="client-card-logo">-->
+<!--						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="client-card-cntr">-->
+<!--				<div d-client-card="3" class="client-card client-card-3 client-card-r-1">-->
+<!--					<div class="client-card-header">-->
+<!--						<img src="assets/ic_testmonials_quotes.svg">-->
+<!--					</div>-->
+<!--					<div class="client-card-image">-->
+<!--						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">-->
+<!--					</div>-->
+<!--					<div class="client-card-name">-->
+<!--						<h3>Flavio Castro</h3>-->
+<!--					</div>-->
+<!--					<div class="client-card-title">-->
+<!--						<h4>Tech Leader / Architect @Ardan1</h4>-->
+<!--					</div>-->
+<!--					<div class="client-card-comment">-->
+<!--						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers-->
+<!--							lives-->
+<!--							easier-->
+<!--							while providing a better and faster experience to the users”</p>-->
+<!--					</div>-->
+<!--					<div class="client-card-logo">-->
+<!--						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--			<div class="client-card-cntr">-->
+<!--				<div d-client-card="4" class="client-card client-card-4 client-card-r-2">-->
+<!--					<div class="client-card-header">-->
+<!--						<img src="assets/ic_testmonials_quotes.svg">-->
+<!--					</div>-->
+<!--					<div class="client-card-image">-->
+<!--						<img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">-->
+<!--					</div>-->
+<!--					<div class="client-card-name">-->
+<!--						<h3>Flavio Castro</h3>-->
+<!--					</div>-->
+<!--					<div class="client-card-title">-->
+<!--						<h4>Tech Leader / Architect @Ardan1</h4>-->
+<!--					</div>-->
+<!--					<div class="client-card-comment">-->
+<!--						<p>“After years working with GWT, Domino-ui came to the rescue, making the developers-->
+<!--							lives-->
+<!--							easier-->
+<!--							while providing a better and faster experience to the users”</p>-->
+<!--					</div>-->
+<!--					<div class="client-card-logo">-->
+<!--						<img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="dk-c-our-clients-nav">-->
+<!--			<span id="nav-client-prev"><img src="assets/ic_testmonials_previous.svg"></span>-->
+<!--			<span id="nav-client-next"><img src="assets/ic_testmonials_next.svg"></span>-->
+<!--		</div>-->
+<!--	</div>-->
+
 </div>
