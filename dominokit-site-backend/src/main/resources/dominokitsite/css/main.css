@@ -3,3 +3,86 @@
 @import "utilities/_utilities.css";
 @import "components/components.css";
 @import "pages/pages.css";
+/* ================================================================================ */
+
+body.dui {
+    position: relative;
+    overflow-y: auto;
+}
+
+.dui-tab-anchor {
+    height: 100%;
+    line-height: 48px;
+}
+
+.dui-site-nav-bar {
+    z-index: 99999;
+}
+
+.dui-site-nav-bar .dui-tab-header {
+    min-width: 80px;
+    justify-content: center;
+}
+
+.dui-site-nav-bar .dui-tab-anchor:hover,
+.dui-site-nav-bar .dui-tab-anchor:focus,
+.dui[class*="dui-bg-"] .dui-site-nav-bar .dui-tab-anchor:hover,
+.dui[class*="dui-bg-"] .dui-site-nav-bar .dui-tab-anchor:focus {
+    --dui-tab-anchor-focus-color: var(--dui-clr-teal);
+}
+
+.dui-main {
+    border-width: 0 1px 0 1px;
+    border-style: solid;
+    border-color: var(--dui-clr-grey-l-3);
+}
+
+.dui-site-nav-bar .dui-tab-header-text {
+    display: inline-block;
+    text-align: center;
+}
+
+.dui-nav-header {
+    top: 0;
+    z-index: 9999;
+    --dui-shadow-clr: var(--dui-clr-teal);
+    box-shadow: var(--dui-box-shadow-sm);
+}
+
+.dui-site-solutions-menu.dui-dd-bottom-middle .dui-popover-wrapper .dui-popover-arrow {
+    top: -15px
+}
+
+.dui-site-solutions-menu ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.dui-site-solutions-menu ul li {
+    padding: var(--dui-spc-3);
+}
+
+.dui-site-solutions-menu ul li:hover {
+    background-color: var(--dui-clr-yellow-l-3);
+}
+
+.dui-site-home-header {
+    height: 37.5em;
+    background-color: var(--color-white);
+    background-image: url(/assets/yellow-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.dui-site-home-banner {
+    position: relative;
+    top: -4em;
+}
+
+.dui-site-banner {
+    margin: 0 7.75em 0 7.75em;
+    padding-top: 0.75em;
+}
+
+.dui-site-banner a.dui {
+    text-decoration: none;
+}

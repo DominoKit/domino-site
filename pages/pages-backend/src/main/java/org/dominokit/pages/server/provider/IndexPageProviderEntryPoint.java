@@ -20,10 +20,10 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
 
         context.router().get("/service/content")
                 .produces(MediaType.TEXT_HTML)
-                .consumes(MediaType.TEXT_PLAIN)
                 .handler(routingContext -> {
-                    String pagePath = routingContext.request().getParam("pagePath");
-                    contentProvider.provideContent(pagePath, new ThymeleafIndexPageProvider.ContentConsumer() {
+                    String path = routingContext.request().getParam("path");
+                    String page = routingContext.request().getParam("page");
+                    contentProvider.provideContent("pages/" + path+"/"+page, new ThymeleafIndexPageProvider.ContentConsumer() {
                         @Override
                         public void onSuccess(String content) {
                             routingContext
@@ -39,7 +39,7 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                         public void onFailed(Throwable exception) {
                             routingContext
                                     .response()
-                                    .write("Failed to load content for path : "+pagePath)
+                                    .write("Failed to load content for path : " + path +"/"+page)
                                     .setStatusCode(500).end();
                         }
                     });

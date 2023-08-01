@@ -1,64 +1,75 @@
-<div th:fragment="content" class="dk-c-navigation">
-	<div class="dk-c-mobile-nav">
-		<i class="material-icons">menu</i>
-		<div class="dk-c-mobile-nav__menu">
-			<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable collapsed"
-			   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link--active' : ''"
-			   href="/solutions">
-				<div class="dk-c-nav-menu__header-link-content">
-					<div class="dk-c-nav-menu__header-link-title">Solutions</div>
-					<div class="dk-c-nav-menu__header-link-icon">
-						<i class="material-icons collapsed">keyboard_arrow_right</i>
-						<i class="material-icons expanded">keyboard_arrow_down</i>
-					</div>
-				</div>
-				<ul class="dk-c-mobile-nav__submenu">
-					<li d-link="solutions/dominomvp">Domino MVP</li>
-					<li d-link="solutions/dominoui">Domino UI</li>
-					<li d-link="solutions/dominojackson">Domino Jackson</li>
-					<li d-link="solutions/dominorest">Domino REST</li>
-					<li d-link="solutions/dominohistory">Domino History</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-					<li d-link="solutions/dominocli">Domino CLI</li>
-				</ul>
-			</a>
-			<a d-link="news" class="dk-c-nav-menu__header-link dk-u-clickable"
-			   th:classappend="${active == 'news'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/news">News</a>
-			<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"
-			   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link--active' : ''"
-			   href="/contact-us">Contact
-				us</a>
-		</div>
-	</div>
-	<div class="dk-c-navigation__logo">
-		<a d-link="home" href="/">
-			<img src="/assets/ic_dominokit_logo_header.png" alt="header">
-		</a>
-	</div>
-	<div class="dk-c-nav-menu">
-		<a d-link="solutions" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'solutions'} ? 'dk-c-nav-menu__header-link--active' : ''"
-		   href="/solutions">Solutions</a>
-		<a d-link="news" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'news'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/news">News</a>
-		<a d-link="about" class="dk-c-nav-menu__header-link dk-u-clickable"
-		   th:classappend="${active == 'contact-us'} ? 'dk-c-nav-menu__header-link--active' : ''" href="/contact-us">Contact
-			us</a>
-	</div>
-	<div class="dk-c-navigation__logo">
-		<a class="dk-u-clickable" href="https://github.com/DominoKit" target="_blank">
-			<img class="dk-c-navigation__github" src="/assets/github.svg" alt="github"></a>
-	</div>
+<div th:fragment="content" class="dui dui-site-nav-bar dui-sticky dui-top-0 dui-overflow-y-hidden">
+    <nav class="dui dui-nav-bar dui-h-16 dui-bg-yellow-d-2 dui-elevation-1">
+        <img class="dui dui-prefix-addon dui-order-first dui-w-12 dui-h-12 dui-" src="/assets/logo/128.png">
+        <h4 class="dui dui-nav-title">DominoKit</h4>
+        <div class="dui dui-nav-body dui-h-full">
+            <div class="dui dui-tabs dui-horizontal dui-h-full">
+                <ul class="dui dui-tabs-nav dui-justify-center dui-h-full dui-border-0">
+                    <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="home">
+                        <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/home" aria-expanded="true">
+                            <div class="dui dui-tab-header">
+                                <span class="dui dui-tab-header-item dui-tab-header-text">Home</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="solutions">
+                        <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/solutions" aria-expanded="true">
+                            <div class="dui dui-tab-header">
+                                <span class="dui dui-tab-header-item dui-tab-header-text">Solutions</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="resources">
+                        <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/resources" aria-expanded="true">
+                            <div class="dui dui-tab-header">
+                                <span class="dui dui-tab-header-item dui-tab-header-text">Resources</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="news">
+                        <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/news" aria-expanded="true">
+                            <div class="dui dui-tab-header">
+                                <span class="dui dui-tab-header-item dui-tab-header-text">News</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="about-us">
+                        <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/about-us" aria-expanded="true">
+                            <div class="dui dui-tab-header">
+                                <span class="dui dui-tab-header-item dui-tab-header-text">About us</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a class="dui dui-postfix-addon dui-order-last-4" tabindex="0" href="https://github.com/DominoKit"
+           target="_blank">
+            <i class="dui mdi mdi-github  dui-clickable"></i>
+        </a>
+    </nav>
+    <div class="dui dui-hidden" dui-site-section='solutions-menu'>
+        <ul class="dui">
+            <li class="dui dui-flex dui-flex-col">
+                <a class="dui dui-fg-teal dui-font-bold" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">Domino UI</a>
+                <span class="dui dui-font-size-3">UI components library</span>
+            </li>
+            <li class="dui dui-flex dui-flex-col">
+                <a class="dui dui-fg-teal dui-font-bold" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-mvp" aria-expanded="true">Domino MVP</a>
+                <span class="dui dui-font-size-3">Routing and navigation framework</span>
+            </li>
+            <li class="dui dui-flex dui-flex-col">
+                <a class="dui dui-fg-teal dui-font-bold" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson" aria-expanded="true">Domino Jackson</a>
+                <span class="dui dui-font-size-3">JSON Mapping library</span>
+            </li>
+            <li class="dui dui-flex dui-flex-col">
+                <a class="dui dui-fg-teal dui-font-bold" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest" aria-expanded="true">Domino Rest</a>
+                <span class="dui dui-font-size-3">REST Client generation library</span>
+            </li>
+            <li class="dui dui-flex dui-flex-col">
+                <a class="dui dui-fg-teal dui-font-bold" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history" aria-expanded="true">Domino History</a>
+                <span class="dui dui-font-size-3">URL Manipulation library</span>
+            </li>
+        </ul>
+    </div>
 </div>

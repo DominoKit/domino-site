@@ -1,37 +1,6 @@
 @import url(about.css);
 @import url(services.css);
 
-@media only screen and (min-width: 2000px) {
-    body {
-        margin: 0 400px 0 400px;
-    }
-}
-
-@media only screen and (max-width: 1920px) {
-    body {
-        margin: 0 200px 0 200px;
-    }
-}
-
-body {
-    background-color: #fff;
-}
-
-* {
-    -webkit-box-sizing: unset;
-    -moz-box-sizing: unset;
-    box-sizing: unset;
-}
-
-pre {
-    white-space: pre-wrap;
-    margin: 0;
-    padding: 12px !important;
-}
-
-a {
-    color: #333;
-}
 
 #root {
     /*border: 1px solid #0000000d;*/

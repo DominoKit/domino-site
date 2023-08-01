@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
-<head th:replace="fragments/head::head">
+<head th:replace="fragments/commons/head::head">
 </head>
-<body>
+<body class="dui dui-theme-default dui-colors-light dui-accent-teal">
 <div id="root">
-    <div th:replace="fragments/pages/news/main :: content"></div>
+    <div th:replace="pages/news/main :: content"></div>
 </div>
 </body>
 </html>

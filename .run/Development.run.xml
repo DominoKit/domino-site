@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Development" type="CompoundRunConfigurationType">
+    <toRun name="backend-dev" type="Application" />
+    <toRun name="frontend-dev" type="MavenRunConfiguration" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -15,28 +15,7 @@
     --color-red: #E14B5A;
 }
 
-body {
-    background-color: #fff;
-    font: normal normal normal 16px Lato;
-}
 
-@media only screen and (min-width: 2000px) {
-    body {
-        margin: 0 25em 0 25em;
-    }
-}
-
-@media only screen and (max-width: 1920px) {
-    body {
-        margin: 0 12.5em 0 12.5em;
-    }
-}
-
-@media only screen and (max-width: 1650px) {
-    body {
-        margin: 0;
-    }
-}
 
 #root {
     box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);

@@ -5,7 +5,10 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.templ.thymeleaf.ThymeleafTemplateEngine;
 import org.dominokit.domino.api.server.PluginContext;
+import org.dominokit.domino.api.server.plugins.DefaultIndexPageProvider;
 import org.dominokit.domino.api.server.plugins.IndexPageProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
 import java.util.Arrays;
@@ -15,6 +18,8 @@ import java.util.function.Consumer;
 import static java.util.Objects.isNull;
 
 public class ThymeleafIndexPageProvider implements IndexPageProvider {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ThymeleafIndexPageProvider.class);
 
     public static final String TEMPLATE_PREFIX = "dominokitsite/templates/";
     public static final String TEMPLATE_SUFFIX = ".html";
@@ -26,21 +31,29 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
         initEngine(pluginContext);
 
         HttpServerResponse response = routingContext
-                .response()
-                .setStatusCode(statusCode)
-                .putHeader("Content-type", "text/html");
-        String templateName = "index";
-        if (!Arrays.asList("/", "/home").contains(routingContext.request().path().toLowerCase(Locale.ROOT))) {
-            templateName = routingContext.request().path();
-        }
-        engine.render(new JsonObject(), templateName, event -> {
-            if (event.succeeded()) {
-                String content = event.result().toString();
-                response.putHeader("Content-length", content.length() + "")
-                        .write(content);
+                .response();
+
+        String requestPath = routingContext.request().path();
+        if(!requestPath.startsWith("assets") && !requestPath.startsWith("service/") && !requestPath.endsWith(".js")) {
+            response
+                    .setStatusCode(statusCode)
+                    .putHeader("Content-type", "text/html");
+            String templateName = "index";
+            String path = requestPath.toLowerCase(Locale.ROOT);
+            if(!path.equals("/") && !path.equals("/home") && !path.contains("css/")){
+                templateName = requestPath;
             }
-            response.end();
-        });
+            engine.render(new JsonObject(), templateName, event -> {
+                if (event.succeeded()) {
+                    String content = event.result().toString();
+                    response.putHeader("Content-length", content.length() + "")
+                            .write(content);
+                }
+                response.end();
+            });
+        }else {
+            routingContext.next();
+        }
         return response;
     }
 
