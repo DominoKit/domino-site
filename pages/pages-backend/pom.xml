@@ -46,6 +46,12 @@
             <artifactId>thymeleaf</artifactId>
             <version>3.0.15.RELEASE</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.kohsuke/github-api -->
+        <dependency>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>github-api</artifactId>
+            <version>1.315</version>
+        </dependency>
     </dependencies>
 
     <build>

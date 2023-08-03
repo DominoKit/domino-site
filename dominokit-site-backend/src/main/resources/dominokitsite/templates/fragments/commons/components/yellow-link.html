@@ -1,0 +1,10 @@
+<div th:fragment="content (url, icon, text)" class="dui dui-site-yellow-link dui-rounded dui-bg-yellow dui-border dui-border-solid dui-border-yellow">
+	<a class="dui dui-flex dui-gap-1 dui-items-center dui-justify-center" th:href="${url}"  tabindex="0" dui-site-data="nav-anchor" aria-expanded="true">
+		<div>
+			<span th:text="${text}"></span>
+		</div>
+		<div>
+			<i class="dui mdi" th:classappend="${icon}"></i>
+		</div>
+	</a>
+</div>

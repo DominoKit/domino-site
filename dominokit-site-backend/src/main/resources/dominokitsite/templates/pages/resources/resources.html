@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="content" id="dui-content-container" class="dui dui-site-content-container">
+    <div th:replace="fragments/commons/header :: content"></div>
+    <div th:replace="pages/resources/body :: content"></div>
+    <div th:replace="fragments/commons/support :: content"></div>
+    <div th:replace="fragments/commons/footer :: content"></div>
+</div>
+

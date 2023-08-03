@@ -48,7 +48,7 @@
 			<artifactId>pages-backend</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-	</dependencies>
+    </dependencies>
 
     <build>
         <plugins>

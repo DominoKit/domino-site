@@ -1,7 +1,10 @@
 package org.dominokit.pages.client.presenters;
 
+import org.dominokit.domino.api.client.ClientApp;
+import org.dominokit.domino.api.client.extension.DominoEvents;
 import org.dominokit.domino.history.HistoryToken;
 import org.dominokit.pages.client.views.PagesView;
+import org.dominokit.pages.shared.events.ContentState;
 
 public class SolutionContentLoader implements ContentLoader {
 
@@ -16,6 +19,8 @@ public class SolutionContentLoader implements ContentLoader {
         getContent(token.path(), page, content -> {
             view.replaceContent(content, "dui-content-container");
             view.enhancePadding();
+            view.registerSlots();
+            DominoEvents.fire(ContentState.class, new ContentState(true));
         });
     }
 }

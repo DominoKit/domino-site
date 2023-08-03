@@ -1,0 +1,49 @@
+<div th:fragment="content" class="dui">
+	<div class="dui dui-flex dui-gap-2 dui-items-center dui-p-4">
+		<h1 class="dui dui-fg-teal dui-grow-1">Domino UI</h1>
+		<div th:replace="fragments/commons/components/external-link :: content('https://github.com/DominoKit/domino-ui', 'mdi-github', 'View on Github')"></div>
+		<div th:replace="fragments/commons/components/external-link :: content('https://demo2.dominokit.org/home', 'mdi-movie', 'See live demo')"></div>
+		<div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+	</div>
+	<p class="dui dui-p-x-4 dui-m-0">A type safe and feature rich UI components library for java
+		developer without dependencies on external JavaScript.</p>
+	<div class="dui dui-flex dui-gap-2 dui-p-4">
+		<div th:replace="fragments/commons/components/badge :: content ('Version', '2.0.0')"></div>
+		<div th:replace="fragments/commons/components/link-badge :: content ('https://discord.gg/35UG3FhfHq', 'Discord', 'join chat')"></div>
+		<div th:replace="fragments/commons/components/badge :: content ('Build', 'passing')"></div>
+		<div th:replace="fragments/commons/components/badge :: content ('Maven central', '2.0.0')"></div>
+		<div th:replace="fragments/commons/components/badge :: content ('Nexus', 'HEAD-SNAPSHOT')"></div>
+	</div>
+	<div class="dui dui-p-x-4 dui-p-t-4">
+		<iframe width="100%" height="500" class="dui dui-rounded" src="https://www.youtube.com/embed/TIe2d69S1T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</div>
+
+	<div class="dui dui-p-4">
+		<div class="feature-blocks">
+			<div class="feature-block">
+				<img src="/assets/ic_type_safe.svg"/>
+				<h1>Type Safe</h1>
+				<p>
+					Java based compiled to JavaScript, which means during development of the application you have
+					the power to refactor and keep your app maintainable all the time.
+				</p>
+			</div>
+			<div class="feature-block">
+				<img src="/assets/ic_rich_components.svg"/>
+				<h1>Rich Components</h1>
+				<p>
+					Having rich interactive forms is essential for enterprise applications. We have a rich set of
+					form controls to enable developers implement both simple and complex form easily.
+				</p>
+			</div>
+			<div class="feature-block">
+				<img src="/assets/ic_typography_and_font_icons.svg"/>
+				<h1>Typography & Font Icons</h1>
+				<p>
+					Icons and Typography can enhance the user experience of the application. We have a variety of
+					font icons that can bring forms and other elements in the page into life.
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

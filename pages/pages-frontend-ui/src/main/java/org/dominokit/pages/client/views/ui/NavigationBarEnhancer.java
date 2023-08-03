@@ -26,7 +26,7 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
     private static SingleElementCssClass activeCss = SingleElementCssClass.of(dui_active);
     private static SingleElementCssClass menuActiveELementCss = SingleElementCssClass.of(dui_active);
 
-    private static final CssClass dui_site_menu_padded_content = ()->"dui-site-menu-padded-content";
+    private static final CssClass dui_site_menu_padded_content = () -> "dui-site-menu-padded-content";
     private static Popover popover;
 
     public static void enhance() {
@@ -40,7 +40,7 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                         activeCss.apply(element);
                     }
                     String data = element.getAttribute("dui-site-data");
-                    if(ClientApp.make().getHistory().currentToken().startsWithPath(data)){
+                    if (ClientApp.make().getHistory().currentToken().startsWithPath(data)) {
                         activeCss.apply(element);
                     }
 
@@ -89,21 +89,21 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                     anchor.addClickListener(evt -> {
                         evt.stopPropagation();
                         evt.preventDefault();
-                            String href = anchor.getAttribute("href");
-                            if (nonNull(href) && !href.isEmpty()) {
-                                if (href.startsWith("/")) {
-                                    href = href.substring(1);
-                                }
-                                popover.close();
-                                ClientApp.make().getHistory().fireState(StateToken.of(href));
+                        String href = anchor.getAttribute("href");
+                        if (nonNull(href) && !href.isEmpty()) {
+                            if (href.startsWith("/")) {
+                                href = href.substring(1);
                             }
+                            popover.close();
+                            ClientApp.make().getHistory().fireState(StateToken.of(href));
+                        }
                     });
                 }
             });
 
             anchorElement.addClickListener(evt -> {
-               evt.stopPropagation();
-               evt.preventDefault();
+                evt.stopPropagation();
+                evt.preventDefault();
                 popover.open();
             });
         }
@@ -121,13 +121,13 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                                 anchorElement.addClickListener(evt -> {
                                     evt.stopPropagation();
                                     evt.preventDefault();
-                                        String href = anchorElement.getAttribute("href");
-                                        if (nonNull(href) && !href.isEmpty()) {
-                                            if (href.startsWith("/")) {
-                                                href = href.substring(1);
-                                            }
-                                            ClientApp.make().getHistory().fireState(StateToken.of(href));
+                                    String href = anchorElement.getAttribute("href");
+                                    if (nonNull(href) && !href.isEmpty()) {
+                                        if (href.startsWith("/")) {
+                                            href = href.substring(1);
                                         }
+                                        ClientApp.make().getHistory().fireState(StateToken.of(href));
+                                    }
                                 });
                             });
                 });
@@ -137,7 +137,6 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                 .stream()
                 .filter(element -> !element.hasAttribute("dui-processed"))
                 .forEach(element -> {
-                    DomGlobal.console.info("Enhancing code blocks");
                     element.setAttribute("dui-processed", "true");
                     elements.elementOf(element).setInnerHtml(PR.prettyPrintOne(element.textContent.replace("<", "&lt;").replace(">", "&gt;"), null, false));
                 });
@@ -146,11 +145,11 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
     public static void enhancePadding() {
         Element menuElement = DomGlobal.document.body.querySelector("#dui-site-left-menu");
         elements.body().addCss(BooleanCssClass.of(dui_site_menu_padded_content, nonNull(menuElement)));
-        if(nonNull(menuElement)){
+        if (nonNull(menuElement)) {
             String path = ClientApp.make().getHistory().currentToken().path();
             Element activeAnchor = menuElement.querySelector("[href$='" + path + "']");
-            if(nonNull(activeAnchor)) {
-                menuActiveELementCss.apply(activeAnchor.parentElement);
+            if (nonNull(activeAnchor)) {
+                menuActiveELementCss.apply(activeAnchor);
             }
         }
     }

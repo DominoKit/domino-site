@@ -6,6 +6,7 @@ import org.dominokit.domino.gwt.client.app.DominoGWT;
 import org.dominokit.domino.history.StateToken;
 import org.dominokit.domino.ui.themes.DominoThemeManager;
 import org.dominokit.domino.view.DominoViewOptions;
+import org.dominokit.domino.view.slots.ElementIdSlot;
 import org.dominokit.rest.DominoRestConfig;
 
 import java.util.logging.Logger;

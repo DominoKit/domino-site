@@ -1,0 +1,12 @@
+<div class="dui dui-relative dui-bg-black-l-3 dui-rounded dui-overflow-hidden dui-m-y-4" th:fragment="content (code)">
+    <div class="dui dui-flex dui-site-code dui-overflow-auto">
+		<pre class="dui dui-site-pre">
+			<code class="dui dui-site-code" th:text="${code}">
+
+			</code>
+		</pre>
+    </div>
+	<div class="dui dui-site-copy-icon">
+		<i class="dui mdi mdi-content-copy dui-fg-white dui-clickable" th:attr="onclick=|copyCode(`${code}`)|"></i>
+	</div>
+</div>

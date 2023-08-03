@@ -1,81 +1,93 @@
-<div th:fragment="content" class="dk-p-home__solutions">
-	<div class="dk-p-home__solutions-title">
+<div th:fragment="content" class="dui dui-m-t-24">
+	<div class="dui dui-flex dui-flex-col dui-justify-center dui-m-x-1_4p dui-text-center">
 		<h1>Our Solutions</h1>
 		<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
 			labore
 			et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
 			rebum. Stet clita kasd gubergren, no sea takimata</p>
 	</div>
-	<div class="dk-p-home__solutions__product" id="domino-mvp">
-		<div class="product-root">
-			<div class="description">
-				<h1 class="product-header">Domino MVP</h1>
-				<p class="product-description">A small, simple and a very lightweight framework for building
-					both
-					simple and complex applications using GWT.</p>
-				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominomvp/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+	<div class="dui dui-w-full" id="domino-mvp">
+		<div class="dui dui-flex dui-p-x-56 dui-p-t-32 dui-w-full dui-items-center dui-justify-around">
+			<div class="dui">
+				<h1 class="dui dui-fg-teal">Domino MVP</h1>
+				<p class="dui dui-max-w-96">A small, simple and a very lightweight framework for building
+					both simple and complex applications with robust routing and page life cycle.</p>
+				<div class="dui dui-flex dui-gap-2">
+					<div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-mvp/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+					<div th:replace="fragments/commons/components/white-link :: content('solutions/domino-mvp', 'mdi-book-open-page-variant', 'Learn more')"></div>
 				</div>
 			</div>
-			<div class="pic">
-				<img src="assets/ill_domino_mvp.svg"/>
+			<div class="dui dui-site-solution-pic dui-relative">
+				<div class="blob">
+					<img src="/assets/blob-1.svg">
+				</div>
+				<img src="assets/ill_domino_mvp.svg" class="dui dui-absolute dui-top-0"/>
 			</div>
 		</div>
 	</div>
-	<div class="dk-p-home__solutions__product swap" id="domino-ui">
-		<div class="product-root">
-			<div class="description">
-				<h1 class="product-header">Domino UI</h1>
-				<p class="product-description">A type safe material design with bootstrap builder for java
-					developer
-					with GWT without dependencies on external JavaScript.</p>
-				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('solutions/dominoui/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+
+	<div class="dui dui-w-full" id="domino-ui">
+		<div class="dui dui-flex dui-flex-row-reverse dui-p-x-56 dui-p-t-32 dui-w-full dui-items-center dui-justify-around">
+			<div class="dui">
+				<h1 class="dui dui-fg-teal">Domino UI</h1>
+				<p class="dui dui-max-w-96">A type safe and feature rich UI components library for java
+					developer without dependencies on external JavaScript.</p>
+				<div class="dui dui-flex dui-gap-2">
+					<div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+					<div th:replace="fragments/commons/components/white-link :: content('solutions/domino-ui', 'mdi-book-open-page-variant', 'Learn more')"></div>
 				</div>
 			</div>
-			<div class="pic">
-				<img src="assets/ill_domino_ui.svg"/>
+			<div class="dui dui-site-solution-pic dui-relative">
+				<div class="blob blob-reverse">
+					<img src="/assets/blob-2.svg">
+				</div>
+				<img src="assets/ill_domino_ui.svg" class="dui dui-absolute dui-top-0"/>
 			</div>
 		</div>
 	</div>
-	<div class="dk-p-home__solutions__product" id="domino-jackson">
-		<div class="product-root">
-			<div class="description">
-				<h1 class="product-header">Domino Jackson</h1>
-				<p class="product-description">Annotation processor based JSON mapper that works on both the
-					client
-					side GWT, J2CL, and on JVM side based.</p>
-				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominojackson/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+
+	<div class="dui dui-w-full" id="domino-jackson">
+		<div class="dui dui-flex dui-p-x-56 dui-p-t-32 dui-w-full dui-items-center dui-justify-around">
+			<div class="dui">
+				<h1 class="dui dui-fg-teal">Domino Jackson</h1>
+				<p class="dui dui-max-w-96">Annotation processor based JSON library to generates mappers that works on both the JVM and the browser.</p>
+				<div class="dui dui-flex dui-gap-2">
+					<div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-jackson/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+					<div th:replace="fragments/commons/components/white-link :: content('solutions/domino-jackson', 'mdi-book-open-page-variant', 'Learn more')"></div>
 				</div>
 			</div>
-			<div class="pic">
-				<img src="assets/ill_domino_jackson.svg"/>
+			<div class="dui dui-site-solution-pic dui-relative">
+				<div class="blob">
+					<img src="/assets/blob-3.svg">
+				</div>
+				<img src="assets/ill_domino_jackson.svg" class="dui dui-absolute dui-top-0"/>
 			</div>
 		</div>
 	</div>
-	<div class="dk-p-home__solutions__product swap" id="domino-rest">
-		<div class="product-root">
-			<div class="description">
-				<h1 class="product-header">Domino REST</h1>
-				<p class="product-description">A library for generating rest clients from JaxRs compatible
+
+	<div class="dui dui-w-full" id="domino-rest">
+		<div class="dui dui-flex dui-flex-row-reverse dui-p-x-56 dui-p-y-32 dui-w-full dui-items-center dui-justify-around">
+			<div class="dui">
+				<h1 class="dui dui-fg-teal">Domino REST</h1>
+				<p class="dui dui-max-w-96">A library for generating rest clients from JaxRs compatible
 					interfaces, and the generated clients can be used from both client side and on the
 					server.</p>
-				<div class="product-navigation">
-					<div th:replace="fragments/commons/components/getting-started :: content('/solutions/dominorest/docs')"></div>
-					<div th:replace="fragments/commons/components/learn-more :: content"></div>
+				<div class="dui dui-flex dui-gap-2">
+					<div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+					<div th:replace="fragments/commons/components/white-link :: content('solutions/domino-rest', 'mdi-book-open-page-variant', 'Learn more')"></div>
 				</div>
 			</div>
-			<div class="pic">
-				<img src="assets/ill_domino_rest.svg"/>
+			<div class="dui dui-site-solution-pic dui-relative">
+				<div class="blob blob-reverse">
+					<img src="/assets/blob-4.svg">
+				</div>
+				<img src="assets/ill_domino_rest.svg" class="dui dui-absolute dui-top-0"/>
 			</div>
 		</div>
 	</div>
+
 	<div class="dk-c-why-dominokit">
-		<h1>Why to choose DominoKit?</h1>
+		<h1>Why choose DominoKit?</h1>
 		<div>
 			<div class="why-row">
 				<div class="why-col">

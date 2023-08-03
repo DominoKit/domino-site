@@ -17,4 +17,11 @@ public interface LoadContentService {
     @Consumes(MediaType.TEXT_PLAIN)
     @Reader(StringReader.class)
     String getPageContent(@QueryParam("path") String path, @QueryParam("page") String page);
+
+    @GET
+    @Path("source")
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.TEXT_PLAIN)
+    @Reader(StringReader.class)
+    String getSourceCode(@QueryParam("path") String path);
 }

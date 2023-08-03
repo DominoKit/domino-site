@@ -1,0 +1,50 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started" aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started/demo" aria-expanded="true">
+                Demo applications
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Demo applications built with Domino UI</h1>
+    <h2 class="dui dui-site-docs-subtitle">Domino UI components showcase</h2>
+
+    <div class="dui dui-flex dui-gap-4 dui-m-b-12 dui-m-t-8">
+        <div th:replace="fragments/commons/components/external-link :: content('https://github.com/DominoKit/domino-ui-demo', 'mdi-github', 'View on Github')"></div>
+        <div th:replace="fragments/commons/components/external-link :: content('https://demo2.dominokit.org/home', 'mdi-movie', 'See live demo')"></div>
+    </div>
+    
+    <img src="/assets/components-showcase.png" class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive" alt="components-showcase">
+
+    <hr class="dui dui-m-y-8"/>
+
+    <h2 class="dui dui-site-docs-subtitle">CRM sample application</h2>
+
+    <div class="dui dui-flex dui-gap-4 dui-m-b-12 dui-m-t-8">
+        <div th:replace="fragments/commons/components/external-link :: content('https://github.com/DominoKit/crm', 'mdi-github', 'View on Github')"></div>
+        <div th:replace="fragments/commons/components/external-link :: content('https://dominokit.github.io/crm/index.html', 'mdi-movie', 'See live demo')"></div>
+    </div>
+
+    <img src="/assets/crm-sample.png" class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive" alt="crm-sample">
+
+    <hr class="dui dui-m-y-8"/>
+
+    <h2 class="dui dui-site-docs-subtitle">DominoDo sample application</h2>
+
+    <div class="dui dui-flex dui-gap-4 dui-m-b-12 dui-m-t-8">
+        <div th:replace="fragments/commons/components/external-link :: content('https://github.com/DominoKit/dominodo', 'mdi-github', 'View on Github')"></div>
+        <div th:replace="fragments/commons/components/external-link :: content('https://dominokit.github.io/dominodo/index.html', 'mdi-movie', 'See live demo')"></div>
+    </div>
+    <img src="/assets/dominodo-sample.png" class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive" alt="dominodo-sample">
+</div>
