@@ -1,0 +1,19 @@
+<div th:fragment="content (id, title, url)" class="dui">
+	<div class="dui dui-flex dui-items-center">
+		<h2 class="dui dui-site-docs-subtitle dui-grow-1">API Docs</h2>
+		<h3 class="dui dui-site-docs-methods-title" th:text="${title}"></h3>
+		<div class="dui dui-site-white-link dui-rounded dui-bg-white dui-border dui-border-solid dui-border-teal">
+			<a class="dui dui-flex dui-gap-1 dui-items-center dui-justify-center" th:href="${url}" tabindex="0" aria-expanded="true" target="_blank">
+				<div>
+					<span>Browse full javadocs</span>
+				</div>
+				<div>
+					<i class="dui mdi mdi-book-open-page-variant"></i>
+				</div>
+			</a>
+		</div>
+	</div>
+	<div class="dui dui-site-component-docs" th:id="${id}"></div>
+</div>
+
+

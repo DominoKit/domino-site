@@ -130,6 +130,7 @@ public class AppLayoutSample extends BaseDominoElement<HTMLDivElement, AppLayout
                                     })
                             );
                 });
+        init(this);
 
     }
 

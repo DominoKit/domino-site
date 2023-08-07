@@ -1,17 +1,15 @@
 package org.dominokit.pages.server.provider;
 
 import com.google.auto.service.AutoService;
-import io.vertx.core.json.Json;
+import com.jcabi.github.*;
+import io.vertx.core.json.JsonObject;
 import org.dominokit.domino.api.server.entrypoint.ServerAppEntryPoint;
 import org.dominokit.domino.api.server.entrypoint.VertxContext;
 import org.dominokit.domino.api.server.plugins.IndexPageContext;
-import org.kohsuke.github.GHContent;
-import org.kohsuke.github.GHRepository;
-import org.kohsuke.github.GitHub;
-import org.kohsuke.github.GitHubBuilder;
 
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 @AutoService(ServerAppEntryPoint.class)
@@ -50,30 +48,38 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                         }
                     });
                 });
+        context.configRetriever().getConfig(event -> {
+            JsonObject configuration = event.result();
+            context.router().get("/service/source")
+                    .produces(MediaType.TEXT_PLAIN)
+                    .handler(routingContext -> {
+                        String path = routingContext.request().getParam("path");
+                        try {
+                            Github github = new RtGithub(configuration.getString("domino_github_token"));
+                            Repo repo = github.repos().get(new Coordinates.Simple("DominoKit", "domino-site"));
+                            InputStream contentStream = repo
+                                    .contents()
+                                    .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
+                                    .raw();
 
-        context.router().get("/service/source")
-                .produces(MediaType.TEXT_HTML)
-                .handler(routingContext -> {
-                    String path = routingContext.request().getParam("path");
-                    try {
-                        GitHub github = new GitHubBuilder().withOAuthToken("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").build();
-                        GHRepository repository = github.getRepository("domino-site");
-                        GHContent fileContent = repository.getFileContent("domino-site/pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/"));
-                        String content = new String(fileContent.read().readAllBytes(), StandardCharsets.UTF_8);
-                        routingContext
-                                .response()
-                                .setStatusCode(200)
-                                .putHeader("Content-type", "text/plain")
-                                .putHeader("Content-length", content.length() + "")
-                                .write(content)
-                                .end();
+                            String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
+                            routingContext
+                                    .response()
+                                    .setStatusCode(200)
+                                    .putHeader("Content-type", "text/plain")
+                                    .putHeader("Content-length", content.length() + "")
+                                    .write(content)
+                                    .end();
 
-                    } catch (IOException e) {
-                        routingContext
-                                .response()
-                                .write("Failed to load content for path : " + path)
-                                .setStatusCode(500).end();
-                    }
-                });
+                        } catch (IOException e) {
+                            routingContext
+                                    .response()
+                                    .write("Failed to load content for path : " + path)
+                                    .setStatusCode(500).end();
+                        }
+                    });
+        });
+
+
     }
 }

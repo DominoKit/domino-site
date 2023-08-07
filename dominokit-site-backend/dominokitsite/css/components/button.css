@@ -1,0 +1,66 @@
+.dk-c-button a {
+    height: 2.5em;
+    border-radius: 4px;
+    display: inline-block;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+    cursor: pointer;
+    border: 1px solid;
+    line-height: 2.1em;
+}
+
+.dk-c-button a .button-img {
+    -webkit-mask-position: center;
+    mask-position: center;
+    font-size: 1.3125em;
+    padding-left: 1.5em;
+    top: 0.125em;
+}
+
+.dk-c-button a div {
+    display: inline-block;
+}
+
+.dk-c-button a span {
+    font-size: 0.875em;
+    position: relative;
+}
+
+.dk-c-button a img {
+    height: 1.5em;
+    width: 1.5em;
+    position: relative;
+    top: 0.5em;
+    display: inline-block;
+    left: 0.625em;
+}
+
+.dk-c-button-no-img a {
+    height: 2.5em;
+    border-radius: 4px;
+    display: inline-block;
+    padding-right: 1.25em;
+    padding-left: 1.25em;
+    cursor: pointer;
+    border: 1px solid;
+    line-height: 2.1em;
+}
+
+.dk-c-button-no-img a div {
+    display: inline-block;
+}
+
+.dk-c-button-no-img a span {
+    font-size: 0.875em;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+    .dk-c-button {
+        width: 100%;
+    }
+
+    .dk-c-button a {
+        width: 100%;
+    }
+}

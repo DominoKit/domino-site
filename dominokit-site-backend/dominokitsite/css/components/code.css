@@ -1,0 +1,16 @@
+.dk-c-code {
+    display: flex;
+    background: var(--color-light-blue) 0 0 no-repeat padding-box;
+    border-radius: 4px;
+    margin-top: 0.625em;
+    overflow: auto;
+}
+
+.dk-c-code .dk-c-code-img {
+    margin: 0.625em;
+    width: 1.4em;
+    height: 2em;
+    padding: 0.3em;
+    background: var(--color-red) 0 0 no-repeat padding-box;
+    border-radius: 4px;
+}

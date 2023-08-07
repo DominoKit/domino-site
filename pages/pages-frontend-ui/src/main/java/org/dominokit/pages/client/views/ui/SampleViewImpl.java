@@ -26,7 +26,7 @@ public abstract class SampleViewImpl extends BaseElementView<HTMLDivElement> imp
                         String sampleId = element.getAttribute("dui-sample-id");
                         if (samples.containsKey(sampleId)) {
                             element.clearElement()
-                                    .appendChild(samples.get(sampleId).getComponent().get());
+                                    .appendChild(DemoComponent.create(samples.get(sampleId)));
                         }
                     }
                 });

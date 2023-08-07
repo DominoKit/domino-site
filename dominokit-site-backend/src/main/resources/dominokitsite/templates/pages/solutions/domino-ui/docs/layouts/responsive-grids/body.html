@@ -1,0 +1,45 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-grids-row" dui-site-data="org.dominokit.domino.ui.grid.Row"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-grids-column" dui-site-data="org.dominokit.domino.ui.grid.Column"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Layouts
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/responsive-grids" aria-expanded="true">
+                Responsive grids
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Grid Layout</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-grids-row-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-grids-column-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/responsive-grids-anatomy.png" class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive" alt="responsive-grids-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">Header section, Optional, can span down up to 6 rows.</li>
+        <li class="dui">Footer section, Optional, can span up to 6 rows.</li>
+        <li class="dui">Left section, Optional, can span right up to 6 columns and can span up or down to take over the space from the header and footer.</li>
+        <li class="dui">Right section, Optional, can span left up to 6 column and can span up or down to take over the space from the header and footer.</li>
+        <li class="dui">Content panel, Mandatory, this is the main layout content panel.</li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <div id="dui-sample-slot"></div>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="grid-layout"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-row-method-docs', 'Row', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Row.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-column-method-docs', 'Column', https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Column.html')"></div>
+
+</div>

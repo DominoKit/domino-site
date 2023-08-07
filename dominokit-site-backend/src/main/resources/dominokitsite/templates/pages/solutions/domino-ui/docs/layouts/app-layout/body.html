@@ -1,4 +1,5 @@
 <div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-app-layout" dui-site-data="org.dominokit.domino.ui.layout.AppLayout"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">
@@ -18,6 +19,8 @@
     </ol>
 
     <h1 class="dui dui-site-docs-title">Application Layout</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-app-layout-class-docs"></div>
 
     <p class="dui">A component that provides feature rich main application layout that includes, Navigation bar, left drawer, right drawer, footer and main content panel.</p>
 
@@ -41,5 +44,6 @@
     <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
     <div id="dui-sample-slot"></div>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="app-layout"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-app-layout-method-docs', '', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/layout/AppLayout.html')"></div>
 
 </div>

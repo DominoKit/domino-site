@@ -241,13 +241,7 @@ a.dui.dui-site-menu-link.dui-active {
     white-space-collapse: preserve;
 }
 
-.dui-site-component-docs-class,
-.dui-site-docs-methods-title:empty,
+#dui-site-component-docs-class,
 .dui-site-component-docs:empty {
     display: none;
-}
-
-.dui-external-javadocs {
-    color: var(--dui-clr-blue);
-    text-decoration: none;
 }

@@ -48,6 +48,13 @@
 			<artifactId>pages-backend</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.dominokit</groupId>
+			<artifactId>domino-ui</artifactId>
+			<version>${domino.ui.version}</version>
+            <classifier>javadoc</classifier>
+		</dependency>
     </dependencies>
 
     <build>

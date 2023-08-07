@@ -1,0 +1,32 @@
+.docs-body {
+    display: flex;
+    height: calc(100vh - 4.375em);
+}
+
+.docs-content {
+    flex-grow: 1;
+    padding: 3.125em 12.5em;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.docs-content > div {
+    flex-grow: 1;
+}
+
+.docs-content .pic {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+@media only screen and (max-width: 600px) {
+    .docs-body {
+        flex-direction: column;
+    }
+
+    .docs-content {
+        padding: 1em;
+    }
+}

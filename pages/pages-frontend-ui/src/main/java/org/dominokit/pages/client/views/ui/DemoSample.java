@@ -3,20 +3,19 @@ package org.dominokit.pages.client.views.ui;
 import org.dominokit.domino.ui.IsElement;
 
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
-public class DemoSample {
+public class DemoSample<T extends IsElement<?>> {
 
     private final String slot;
     private final Class<?> sampleClass;
-    private final Supplier<IsElement<?>> component;
-    private Consumer<DemoComponent> onRender = demoComponent -> {};
+    private final LazyProvider<T> component;
+    private Consumer<DemoComponent<T>> onRender = demoComponent -> {};
 
-    public static DemoSample of(String slot, Class<?> sampleClass, Supplier<IsElement<?>> component){
-        return new DemoSample(slot, sampleClass, component);
+    public static <T extends IsElement<?>> DemoSample<T> of(String slot, Class<T> sampleClass, LazyProvider<T> component){
+        return new DemoSample<>(slot, sampleClass, component);
     }
 
-    public DemoSample(String slot, Class<?> sampleClass, Supplier<IsElement<?>> component) {
+    public DemoSample(String slot, Class<?> sampleClass, LazyProvider<T> component) {
         this.slot = slot;
         this.sampleClass = sampleClass;
         this.component = component;
@@ -26,12 +25,12 @@ public class DemoSample {
         return slot;
     }
 
-    public DemoSample onRender(Consumer<DemoComponent> onRender){
+    public DemoSample<T> onRender(Consumer<DemoComponent<T>> onRender){
         this.onRender = onRender;
         return this;
     }
 
-    void onRender(DemoComponent demoComponent) {
+    void onRender(DemoComponent<T> demoComponent) {
         onRender.accept(demoComponent);
     }
 
@@ -39,7 +38,7 @@ public class DemoSample {
         return sampleClass;
     }
 
-    public Supplier<IsElement<?>> getComponent() {
+    public LazyProvider<T> getComponent() {
         return component;
     }
 }
