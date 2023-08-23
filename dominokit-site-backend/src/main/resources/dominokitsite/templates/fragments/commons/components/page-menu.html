@@ -1,0 +1,6 @@
+<div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;" th:fragment="content (items)">
+     <span th:each="item : ${items}" class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection(`${item[0]}`)">
+            <i class="dui mdi" th:classappend="${item[1]}"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis" th:text="${item[2]}"></span>
+        </span>
+</div>

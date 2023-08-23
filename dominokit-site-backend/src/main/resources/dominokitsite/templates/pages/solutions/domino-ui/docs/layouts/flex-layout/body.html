@@ -1,0 +1,36 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Layouts
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/flex-layout" aria-expanded="true">
+                Flex layout
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Flex layout</h1>
+
+    <p class="dui">Flex layouts provides and easy and efficient way to layout and align elements within a container, and also provide the ability to distribute the space between the items within the flex container. <a class="dui dui-decoration-none dui-fg-blue" href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex" target="_blank">check mdn flex documentation</a></p>
+
+    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <div id="dui-sample-slot"></div>
+    <h3 class="dui dui-flex dui-flex-col">
+        <span class="dui dui-fg-teal">Flex layout playground</span>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="flex-layout-playground"></div>
+
+    <h3 class="dui dui-flex dui-flex-col">
+        <span class="dui dui-fg-teal">Flex item playground</span>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="flex-item-playground"></div>
+
+</div>

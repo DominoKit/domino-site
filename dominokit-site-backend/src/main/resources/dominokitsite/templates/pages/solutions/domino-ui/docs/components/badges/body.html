@@ -1,0 +1,77 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-badge" dui-site-data="org.dominokit.domino.ui.badges.Badge"></div>
+    <div id="dui-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/components/badges" aria-expanded="true">
+                Badges
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
+            <i class="dui mdi mdi-arrow-up-thin"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-buttons')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Buttons</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-icons')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Icons</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-lists')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Lists</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
+            <i class="dui mdi mdi-book-open-page-variant"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
+        </span>
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Badges</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-badge-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+
+    <div id="dui-sample-slot"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-buttons">
+        <span class="dui dui-fg-teal">Badges in buttons</span>
+        <small class="dui">Badges can go inside other components like buttons.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="badges-buttons"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-icons">
+        <span class="dui dui-fg-teal">Badges with icons</span>
+        <small class="dui">Badges will auto fit when added to icons.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="badges-icons"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-lists">
+        <span class="dui dui-fg-teal">Badges in lists</span>
+        <small class="dui">Badges can fit in other components like lists, trees and Nav bars</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="badges-lists"></div>
+
+    <div  id="dui-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-badge-method-docs', 'Badge', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/badges/Badge.html')"></div>
+
+</div>

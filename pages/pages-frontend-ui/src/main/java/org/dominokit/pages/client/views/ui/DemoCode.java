@@ -10,20 +10,6 @@ import org.dominokit.domino.ui.utils.DominoNavigator;
 
 public class DemoCode extends BaseDominoElement<HTMLDivElement, DemoCode> {
 
-    /*
-    <div class="dui dui-relative dui-bg-black-l-3 dui-rounded dui-overflow-hidden dui-m-y-4" th:fragment="content (code)">
-        <div class="dui dui-flex dui-site-code dui-overflow-auto">
-            <pre class="dui dui-site-pre">
-                <code class="dui dui-site-code" th:text="${code}">
-
-                </code>
-            </pre>
-        </div>
-        <div class="dui dui-site-copy-icon">
-            <i class="dui mdi mdi-content-copy dui-fg-white dui-clickable" th:attr="onclick=|copyCode(`${code}`)|"></i>
-        </div>
-    </div>
-     */
     private final DivElement root;
 
     public static DemoCode create(String code) {
@@ -34,7 +20,7 @@ public class DemoCode extends BaseDominoElement<HTMLDivElement, DemoCode> {
         this.root = div()
                 .addCss(dui_relative, dui_bg_black_l_3, dui_rounded, dui_overflow_hidden, dui_m_y_4)
                 .appendChild(div()
-                        .addCss(dui_flex, ()->"dui-site-code", dui_overflow_auto, dui_m_b_4)
+                        .addCss(dui_flex, ()->"dui-site-code", dui_overflow_auto)
                         .setCssProperty("max-height", "700px")
                         .appendChild(pre()
                                 .addCss(()->"dui-site-pre")

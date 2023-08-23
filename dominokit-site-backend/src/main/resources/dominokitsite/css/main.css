@@ -241,13 +241,92 @@ a.dui.dui-site-menu-link.dui-active {
     white-space-collapse: preserve;
 }
 
-.dui-site-component-docs-class,
-.dui-site-docs-methods-title:empty,
+#dui-site-component-docs-class,
 .dui-site-component-docs:empty {
     display: none;
 }
+.sample-div {
+    text-align: center;
+    line-height: 50px;
+    font-size: larger;
+    height: 50px;
+    color: white;
+    background-color: var(--dui-accent);
+    border: 1px solid var(--dui-accent-d-4);
+}
 
-.dui-external-javadocs {
-    color: var(--dui-clr-blue);
-    text-decoration: none;
+.count-reset {
+    counter-reset: col;
+}
+
+.counter:before {
+    counter-increment: col;
+    content: counter(col);
+}
+
+.demo-split-div {
+    width: 100%;
+    height: 100%;
+}
+
+.demo-flex-layout-result-container {
+    height: 500px;
+    background: #777777;
+}
+
+.demo-flex-layout-counter {
+    counter-reset: section;
+}
+
+.demo-flex-layout-block {
+    width: 100px;
+    min-height: 100px;
+    background: var(--dui-clr-dominant);
+    margin: 10px;
+    line-height: 100px;
+}
+
+.demo-flex-layout-block h4 {
+    text-align: center;
+    line-height: 100px;
+    font-size: larger;
+    margin: 0px;
+}
+
+.demo-flex-layout-block h4::before {
+    counter-increment: section;
+    content: counter(section);
+}
+
+h3.dui small.dui {
+    font-weight: 300;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    width: 10%;
+    position: relative;
+    margin: 30px auto;
+    overflow: visible;
+}
+
+hr.center-diamond {
+    background: var(--dui-clr-teal);
+}
+
+hr.center-diamond:before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--dui-clr-teal);
+    display: inline-block;
+    border: 2px solid var(--dui-clr-teal);
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin: 0 0 0 -3px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* IE 9 */
+    -webkit-transform:rotate(45deg);
 }

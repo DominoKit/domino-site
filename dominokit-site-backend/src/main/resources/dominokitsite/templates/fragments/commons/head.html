@@ -16,5 +16,9 @@
 		function copyCode(code){
 			navigator.clipboard.writeText(code);
 		}
+		function scrollToSection(elementId){
+			let elementById = document.getElementById(elementId);
+			elementById.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+		}
 	</script>
 </head>

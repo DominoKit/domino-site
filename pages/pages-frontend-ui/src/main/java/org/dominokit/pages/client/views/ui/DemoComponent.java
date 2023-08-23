@@ -15,6 +15,7 @@ import org.dominokit.domino.ui.themes.*;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.ChildHandler;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
+import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.pages.shared.service.LoadContentServiceFactory;
 
 public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTMLDivElement, DemoComponent<T>> {
@@ -42,7 +43,7 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                                 .appendChild(demoCard = Card.create().addCss(dui_elevation_0)
                                         .withBody((card, body) -> body.addCss(dui_p_0))
                                         .appendChild(NavBar.create("Colors selectors")
-                                                .addCss(dui_h_16, dui_m_x_0, dui_m_y_2, dui_bg_teal, dui_fg_white)
+                                                .addCss(dui_h_16, dui_m_x_0, dui_m_y_2)
                                                 .appendChild(PostfixAddOn.of(div()
                                                                 .addCss(dui_flex, dui_flex_wrap, dui_gap_0_5)
                                                                 .appendChild(themDiv(dui_bg_red, DominoThemeAccent.RED))
@@ -76,7 +77,7 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                                         )
                                         .appendChild(sampleContent = div()
                                                 .addCss("dui-theme-default")
-                                                .addCss(dui_border, dui_border_solid, dui_border_teal)
+                                                .addCss(dui_border, dui_border_solid, dui_border_teal, dui_bg_dominant_d_1)
                                                 .appendChild(demoSample.getComponent().get()))
                                 )
                         )

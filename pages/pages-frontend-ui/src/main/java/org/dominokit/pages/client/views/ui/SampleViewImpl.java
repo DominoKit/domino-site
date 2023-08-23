@@ -2,9 +2,7 @@ package org.dominokit.pages.client.views.ui;
 
 import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.view.BaseElementView;
-import org.dominokit.pages.client.presenters.components.AppLayoutProxy;
 import org.dominokit.pages.client.views.SampleView;
 
 import java.util.HashMap;
