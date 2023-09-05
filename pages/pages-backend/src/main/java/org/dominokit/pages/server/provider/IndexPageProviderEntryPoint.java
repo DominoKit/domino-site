@@ -2,10 +2,15 @@ package org.dominokit.pages.server.provider;
 
 import com.google.auto.service.AutoService;
 import com.jcabi.github.*;
+import io.vertx.core.buffer.Buffer;
+import io.vertx.core.http.HttpMethod;
+import io.vertx.core.json.Json;
 import io.vertx.core.json.JsonObject;
 import org.dominokit.domino.api.server.entrypoint.ServerAppEntryPoint;
 import org.dominokit.domino.api.server.entrypoint.VertxContext;
 import org.dominokit.domino.api.server.plugins.IndexPageContext;
+import org.dominokit.pages.shared.model.ContactList;
+import org.dominokit.pages.shared.model.ContactList_MapperImpl;
 
 import javax.ws.rs.core.MediaType;
 import java.io.IOException;
@@ -21,6 +26,23 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
     public void onModulesLoaded(VertxContext context) {
         contentProvider = new ThymeleafIndexPageProvider();
         IndexPageContext.INSTANCE.setIndexPageProvider(contentProvider);
+
+        context
+                .router()
+                .route(HttpMethod.GET, "/service/contacts")
+                .handler(event -> {
+                    Buffer buffer = context
+                            .vertx()
+                            .fileSystem()
+                            .readFileBlocking("contacts.json");
+
+                    String contactJson = buffer.toString(StandardCharsets.UTF_8);
+
+                    ContactList contactList = ContactList_MapperImpl.INSTANCE.read(contactJson);
+                    event.response()
+                            .setStatusCode(200)
+                            .end(Json.encode(contactList.getContacts()));
+                });
 
         context.router().get("/service/content")
                 .produces(MediaType.TEXT_HTML)

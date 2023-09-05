@@ -1,0 +1,88 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-notification" dui-site-data="org.dominokit.domino.ui.notifications.Notification"></div>
+
+    <div id="dui-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/components/notifications" aria-expanded="true">
+                Notifications
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
+            <i class="dui mdi mdi-arrow-up-thin"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-basic')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Basic</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-context')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Context</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-colored')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Colored</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-animation')">
+            <i class="dui mdi mdi-circle-small"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Animation</span>
+        </span>
+        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
+            <i class="dui mdi mdi-book-open-page-variant"></i>
+            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
+        </span>
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Modals</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-notification-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+
+    <div id="dui-sample-slot"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-basic">
+        <span class="dui dui-fg-teal">Basic notifications</span>
+        <small class="dui">Show a notification in different positions.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="notifications-basic"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-context">
+        <span class="dui dui-fg-teal">Context notifications</span>
+        <small class="dui">Notifications based on the context, error, success, warning and others.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="notifications-context"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-colored">
+        <span class="dui dui-fg-teal">Colored notifications</span>
+        <small class="dui">Notifications can be customized with different colors.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="notifications-colored"></div>
+
+    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-animation">
+        <span class="dui dui-fg-teal">Notification animations</span>
+        <small class="dui">Notifications can have different types of enter and exit animations.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="notifications-animation"></div>
+
+    <div  id="dui-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-notification-method-docs', 'Notification', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/notifications/Notification.html')"></div>
+
+</div>

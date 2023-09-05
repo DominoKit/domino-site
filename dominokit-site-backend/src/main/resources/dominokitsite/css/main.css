@@ -151,6 +151,12 @@ body.dui {
     border-right: 1px solid var(--dui-clr-blue-grey-l-4);
     width: var(--dui-spc-72);
     min-height: calc(100vh - 64px);
+    max-height: calc(100vh - 64px);
+}
+
+.dui-menu-content {
+    max-height: calc(100vh - 113px);
+    overflow-y: auto;
 }
 
 .dui-solution-doc-content {
@@ -175,11 +181,15 @@ body.dui {
     padding-left: var(--dui-spc-16);
 }
 
+.dui-site-docs-sub-menu-item {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
 a.dui.dui-site-menu-link {
     text-decoration: none;
     display: flex;
     align-items: center;
-    padding-top: var(--dui-spc-4);
     color: var(--dui-clr-blue-grey);
     font-size: 16px;
     font-weight: 600;
@@ -329,4 +339,25 @@ hr.center-diamond:before {
     transform:rotate(45deg);
     -ms-transform:rotate(45deg); /* IE 9 */
     -webkit-transform:rotate(45deg);
+}
+
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--dui-clr-dominant-d-1) var(--dui-clr-dominant-d-2);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--dui-clr-dominant-d-1);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--dui-clr-dominant-d-2);
+    border-radius: 20px;
+    border: 3px solid var(--dui-clr-dominant-d-1);
 }
