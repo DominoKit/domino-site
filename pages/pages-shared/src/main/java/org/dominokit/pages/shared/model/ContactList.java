@@ -7,6 +7,8 @@ import java.util.List;
 @JSONMapper
 public class ContactList {
 
+    public static final ContactList_MapperImpl MAPPER= new ContactList_MapperImpl();
+
     private List<Contact> contacts;
 
     public ContactList() {

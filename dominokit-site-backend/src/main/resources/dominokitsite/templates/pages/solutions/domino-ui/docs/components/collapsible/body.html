@@ -6,7 +6,7 @@
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-accordion" dui-site-data="org.dominokit.domino.ui.collapsible.Accordion"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-accordion-panel" dui-site-data="org.dominokit.domino.ui.collapsible.AccordionPanel"></div>
 
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
@@ -27,27 +27,7 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-strategies')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Collapse strategies</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-accordion-basic')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Accordion</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-accordion-multi-open')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Accordion multi open</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Strategies,Accordion,Multi open,Letters,Selectable,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Collapsible</h1>
@@ -73,29 +53,29 @@
         <li class="dui">Collapsed accordion panel.</li>
     </ol>
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
 
-    <div id="dui-sample-slot"></div>
+    <div id="dui-demo-sample-slot"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-strategies">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-strategies">
         <span class="dui dui-fg-teal">Collapse strategies</span>
         <small class="dui">Different ways to expand/collapse an element.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-strategy"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-accordion-basic">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-accordion">
         <span class="dui dui-fg-teal">Accordion</span>
         <small class="dui">Group collapsed panels</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-accordion"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-accordion-multi-open">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-multi-open">
         <span class="dui dui-fg-teal">Accordion Multi-open</span>
         <small class="dui">Accordion can have multiple panels open at the same time.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-accordion-multi-open"></div>
 
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-method-docs', 'Collapsible', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/Collapsible.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-handlers-method-docs', 'CollapsibleHandlers', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/CollapsibleHandlers.html')"></div>

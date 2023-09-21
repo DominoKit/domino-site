@@ -1,0 +1,59 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-slider" dui-site-data="org.dominokit.domino.ui.sliders.Slider"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/components/sliders" aria-expanded="true">
+                Sliders
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Colored,Picker,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Sliders</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-slider-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic sliders</span>
+        <small class="dui">Simple sliders, min/max and thumb.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="sliders-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-colored">
+        <span class="dui dui-fg-teal">Colored sliders</span>
+        <small class="dui">Sliders can have different colors.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="sliders-colored"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-picker">
+        <span class="dui dui-fg-teal">Color picker example</span>
+        <small class="dui">A sample to show slider in action.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="sliders-picker"></div>
+
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-slider-method-docs', 'Slider', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/sliders/Slider.html')"></div>
+
+</div>

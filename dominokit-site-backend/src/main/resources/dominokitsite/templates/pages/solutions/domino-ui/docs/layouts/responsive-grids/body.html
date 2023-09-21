@@ -3,7 +3,7 @@
          dui-site-data="org.dominokit.domino.ui.grid.Row"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-grids-column"
          dui-site-data="org.dominokit.domino.ui.grid.Column"></div>
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
@@ -24,35 +24,7 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-12-columns')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">12 Columns</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-16-columns')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">16 Columns</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-18-columns')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">18 Columns</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-24-columns')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">24 Columns</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-32-columns')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">32 Columns</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,12 Columns,16 Columns,18 Columns,24 Columns,32 Columns,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Grid Layout</h1>
@@ -79,34 +51,34 @@
         <li class="dui">Row gaps, each row can have a consistent gap between its columns.</li>
     </ol>
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
-    <div id="dui-sample-slot"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-12-columns">
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+    <div id="dui-demo-sample-slot"></div>
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-12-columns">
         <span class="dui dui-fg-teal">12 Columns</span>
         <small class="dui">Default row is a 12 columns grid.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-12-columns"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-16-columns">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-16-columns">
         <span class="dui dui-fg-teal">16 Columns</span>
         <small class="dui">Responsive grid with 16 columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-16-columns"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-18-columns">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-18-columns">
         <span class="dui dui-fg-teal">18 Columns</span>
         <small class="dui">Responsive grid with 18 columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-18-columns"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-24-columns">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-24-columns">
         <span class="dui dui-fg-teal">24 Columns</span>
         <small class="dui">Responsive grid with 24 columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-24-columns"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-32-columns">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-32-columns">
         <span class="dui dui-fg-teal">32 Columns</span>
         <small class="dui">Responsive grid with 32 columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-32-columns"></div>
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-row-method-docs', 'Row', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Row.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-column-method-docs', 'Column', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Column.html')"></div>
 

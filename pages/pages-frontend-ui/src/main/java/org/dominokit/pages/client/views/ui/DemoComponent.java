@@ -7,7 +7,6 @@ import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.layout.NavBar;
-import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.tabs.Tab;
 import org.dominokit.domino.ui.tabs.TabsPanel;
@@ -15,7 +14,6 @@ import org.dominokit.domino.ui.themes.*;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.ChildHandler;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
-import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.pages.shared.service.LoadContentServiceFactory;
 
 public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTMLDivElement, DemoComponent<T>> {
@@ -46,25 +44,25 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                                                 .addCss(dui_h_16, dui_m_x_0, dui_m_y_2)
                                                 .appendChild(PostfixAddOn.of(div()
                                                                 .addCss(dui_flex, dui_flex_wrap, dui_gap_0_5)
-                                                                .appendChild(themDiv(dui_bg_red, DominoThemeAccent.RED))
-                                                                .appendChild(themDiv(dui_bg_pink, DominoThemeAccent.PINK))
-                                                                .appendChild(themDiv(dui_bg_purple, DominoThemeAccent.PURPLE))
-                                                                .appendChild(themDiv(dui_bg_deep_purple, DominoThemeAccent.DEEP_PURPLE))
-                                                                .appendChild(themDiv(dui_bg_indigo, DominoThemeAccent.INDIGO))
-                                                                .appendChild(themDiv(dui_bg_blue, DominoThemeAccent.BLUE))
-                                                                .appendChild(themDiv(dui_bg_light_blue, DominoThemeAccent.LIGHT_BLUE))
-                                                                .appendChild(themDiv(dui_bg_cyan, DominoThemeAccent.CYAN))
-                                                                .appendChild(themDiv(dui_bg_teal, DominoThemeAccent.TEAL))
-                                                                .appendChild(themDiv(dui_bg_green, DominoThemeAccent.GREEN))
-                                                                .appendChild(themDiv(dui_bg_light_green, DominoThemeAccent.LIGHT_GREEN))
-                                                                .appendChild(themDiv(dui_bg_lime, DominoThemeAccent.LIME))
-                                                                .appendChild(themDiv(dui_bg_yellow, DominoThemeAccent.YELLOW))
-                                                                .appendChild(themDiv(dui_bg_amber, DominoThemeAccent.AMBER))
-                                                                .appendChild(themDiv(dui_bg_orange, DominoThemeAccent.ORANGE))
-                                                                .appendChild(themDiv(dui_bg_deep_orange, DominoThemeAccent.DEEP_ORANGE))
-                                                                .appendChild(themDiv(dui_bg_brown, DominoThemeAccent.BROWN))
-                                                                .appendChild(themDiv(dui_bg_grey, DominoThemeAccent.GREY))
-                                                                .appendChild(themDiv(dui_bg_blue_grey, DominoThemeAccent.BLUE_GREY))
+                                                                .appendChild(themeDiv(dui_bg_red, DominoThemeAccent.RED))
+                                                                .appendChild(themeDiv(dui_bg_pink, DominoThemeAccent.PINK))
+                                                                .appendChild(themeDiv(dui_bg_purple, DominoThemeAccent.PURPLE))
+                                                                .appendChild(themeDiv(dui_bg_deep_purple, DominoThemeAccent.DEEP_PURPLE))
+                                                                .appendChild(themeDiv(dui_bg_indigo, DominoThemeAccent.INDIGO))
+                                                                .appendChild(themeDiv(dui_bg_blue, DominoThemeAccent.BLUE))
+                                                                .appendChild(themeDiv(dui_bg_light_blue, DominoThemeAccent.LIGHT_BLUE))
+                                                                .appendChild(themeDiv(dui_bg_cyan, DominoThemeAccent.CYAN))
+                                                                .appendChild(themeDiv(dui_bg_teal, DominoThemeAccent.TEAL))
+                                                                .appendChild(themeDiv(dui_bg_green, DominoThemeAccent.GREEN))
+                                                                .appendChild(themeDiv(dui_bg_light_green, DominoThemeAccent.LIGHT_GREEN))
+                                                                .appendChild(themeDiv(dui_bg_lime, DominoThemeAccent.LIME))
+                                                                .appendChild(themeDiv(dui_bg_yellow, DominoThemeAccent.YELLOW))
+                                                                .appendChild(themeDiv(dui_bg_amber, DominoThemeAccent.AMBER))
+                                                                .appendChild(themeDiv(dui_bg_orange, DominoThemeAccent.ORANGE))
+                                                                .appendChild(themeDiv(dui_bg_deep_orange, DominoThemeAccent.DEEP_ORANGE))
+                                                                .appendChild(themeDiv(dui_bg_brown, DominoThemeAccent.BROWN))
+                                                                .appendChild(themeDiv(dui_bg_grey, DominoThemeAccent.GREY))
+                                                                .appendChild(themeDiv(dui_bg_blue_grey, DominoThemeAccent.BLUE_GREY))
                                                         )
                                                 )
                                                 .appendChild(PostfixAddOn.of(Icons.theme_light_dark()
@@ -77,7 +75,7 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                                         )
                                         .appendChild(sampleContent = div()
                                                 .addCss("dui-theme-default")
-                                                .addCss(dui_border, dui_border_solid, dui_border_teal, dui_bg_dominant_d_1)
+                                                .addCss(dui_border, dui_border_solid, dui_border_teal_l_5, dui_bg_dominant, dui_ignore_fg)
                                                 .appendChild(demoSample.getComponent().get()))
                                 )
                         )
@@ -103,9 +101,10 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
         ;
         init(this);
         demoSample.onRender(this);
+        ElementThemeManager.INSTANCE.apply(DominoThemeAccent.TEAL, sampleContent);
     }
 
-    private DivElement themDiv(CssClass bg, IsDominoTheme theme) {
+    private DivElement themeDiv(CssClass bg, IsDominoTheme theme) {
         return div()
                 .addCss(bg, dui_w_4, dui_h_4, dui_cursor_pointer, dui_border, dui_border_solid, dui_border_white)
                 .addClickListener(evt -> {

@@ -1,0 +1,61 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tree" dui-site-data="org.dominokit.domino.ui.tree.Tree"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tree-item" dui-site-data="org.dominokit.domino.ui.tree.TreeItem"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/components/tree" aria-expanded="true">
+                Tree
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Nested,Featured,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Popover</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-tree-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-tree-item-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic tree</span>
+        <small class="dui">Simple tree with simple tree items.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tree-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-nested">
+        <span class="dui dui-fg-teal">Nested trees</span>
+        <small class="dui">Tree items nesting other tree items.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tree-nested"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-featured">
+        <span class="dui dui-fg-teal">Tree features</span>
+        <small class="dui">Tree with expand/collapse icons, search and folding.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tree-featured"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-method-docs', 'Tree', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tree/Tree.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-item-method-docs', 'TreeItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tree/TreeItem.html')"></div>
+
+</div>

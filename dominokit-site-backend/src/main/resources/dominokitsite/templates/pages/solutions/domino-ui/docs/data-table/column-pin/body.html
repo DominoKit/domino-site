@@ -1,0 +1,47 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-column-pin" dui-site-data="org.dominokit.domino.ui.datatable.plugins.column.PinColumnsPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-column-pin-config" dui-site-data="org.dominokit.domino.ui.datatable.plugins.column.PinColumnsConfig"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Data table
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/data-table/column-pin" aria-expanded="true">
+                Column pin
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Column pin,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Column pin</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-datatable-column-pin-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-column-resize-pin-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-column-resize">
+        <span class="dui dui-fg-teal">Column pin</span>
+        <small class="dui">Allow the user to fix columns position on the sides of the data table.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-column-pin"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-column-pin-config-method-docs', 'PinColumnsConfig', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/column/PinColumnsConfig.html')"></div>
+
+</div>

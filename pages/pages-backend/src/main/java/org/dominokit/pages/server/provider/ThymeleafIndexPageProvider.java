@@ -7,6 +7,8 @@ import io.vertx.ext.web.templ.thymeleaf.ThymeleafTemplateEngine;
 import org.dominokit.domino.api.server.PluginContext;
 import org.dominokit.domino.api.server.plugins.DefaultIndexPageProvider;
 import org.dominokit.domino.api.server.plugins.IndexPageProvider;
+import org.dominokit.domino.ui.icons.lib.MdiByTagFactory;
+import org.dominokit.domino.ui.icons.lib.MdiTags;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -21,6 +23,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -54,9 +57,12 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
             engine.render(new JsonObject(), templateName, event -> {
                 if (event.succeeded()) {
                     String content = event.result().toString();
-                    content = processJavaDocs(content);
+                    Document websiteDocument = Jsoup.parse(content);
+                    processJavaDocs(websiteDocument);
+                    processSideNav(websiteDocument);
+                    processIconsMenu(websiteDocument);
                     response.putHeader("Content-length", content.length() + "")
-                            .write(content);
+                            .write(websiteDocument.html());
                 }
                 response.end();
             });
@@ -66,55 +72,88 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
         return response;
     }
 
-    public void provideContent(String templatePath, ContentConsumer consumer) {
-        engine.render(new JsonObject(), templatePath, event -> {
+    private void processIconsMenu(Document websiteDocument) {
+        Element iconsMenu = websiteDocument.getElementById("dui-mdi-icons-menu");
+        if (nonNull(iconsMenu)) {
+
+            MdiTags.TAGS.forEach(tag -> {
+                iconsMenu.append("<li class=\"dui dui-site-docs-sub-menu-item\">\n" +
+                        "\t\t\t\t\t\t<a class=\"dui dui-site-menu-link\" tabindex=\"0\" dui-site-data=\"nav-anchor\" href=\"/solutions/domino-ui/docs/mdi-icons?tag=" + tagToLinkParam(tag) + "\" aria-expanded=\"true\">\n" +
+                        "\t\t\t\t\t\t\t<span class=\"dui\">" + tag + "</span>\n" +
+                        "\t\t\t\t\t\t</a>\n" +
+                        "\t\t\t\t\t</li>");
+            });
+        }
+    }
+
+    private String tagToLinkParam(String tag) {
+        return tag.replace(" / ", "_");
+    }
+
+    public void provideContent(String templatePath, JsonObject context, ContentConsumer consumer) {
+        engine.render(context, templatePath, event -> {
             if (event.succeeded()) {
                 String content = event.result().toString();
-                content = processJavaDocs(content);
-                consumer.onSuccess(content);
+                Document websiteDocument = Jsoup.parse(content);
+                processJavaDocs(websiteDocument);
+                processSideNav(websiteDocument);
+                processIconsMenu(websiteDocument);
+                consumer.onSuccess(websiteDocument.html());
             } else {
                 consumer.onFailed(event.cause());
             }
         });
     }
 
-    private String processJavaDocs(String content) {
-
-            Document websiteDocument = Jsoup.parse(content);
-            Elements docsClassElements = websiteDocument.getElementsByAttribute("dui-site-docs");
-            docsClassElements.forEach(docsClassElement -> {
-                try {
+    private void processJavaDocs(Document websiteDocument) {
+        Elements docsClassElements = websiteDocument.getElementsByAttribute("dui-site-docs");
+        docsClassElements.forEach(docsClassElement -> {
+            try {
                 if (nonNull(docsClassElement)) {
                     String docsClass = docsClassElement.attributes().get("dui-site-data");
                     String idPrefix = docsClassElement.attributes().get("dui-site-data-id-prefix");
                     if (!docsClass.trim().isEmpty()) {
-                        String docsHtml = new String(Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(docsClass.replace(".", "/") + ".html")).readAllBytes(), StandardCharsets.UTF_8);
-                        Document docsDocument = Jsoup.parse(docsHtml);
-                        Element jClassDocsElement = docsDocument.getElementById("dui-class-docs");
-                        Element webSiteClassdDocsElement = websiteDocument.getElementById(idPrefix+"-class-docs");
-                        if (nonNull(jClassDocsElement) && nonNull(webSiteClassdDocsElement)) {
-                            webSiteClassdDocsElement.html(jClassDocsElement.html());
+                        String classDocs = new String(Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(docsClass.replace(".", "/") + "-dui-site-class-docs.html")).readAllBytes(), StandardCharsets.UTF_8);
+
+                        Element webSiteClassdDocsElement = websiteDocument.getElementById(idPrefix + "-class-docs");
+                        if (nonNull(webSiteClassdDocsElement)) {
+                            webSiteClassdDocsElement.html(classDocs);
                         }
 
-                        Element jMethodsDocsElement = docsDocument.selectFirst("#method\\.summary+h3+table.memberSummary");
-                        Element webSiteMethodsDocsElement = websiteDocument.getElementById(idPrefix+"-method-docs");
-
-                        if (nonNull(jMethodsDocsElement) && nonNull(webSiteMethodsDocsElement)) {
-                            Elements captions = jMethodsDocsElement.getElementsByTag("caption");
-                            if(!captions.isEmpty()) {
-                                captions.get(0).remove();
-                            }
-                            webSiteMethodsDocsElement.html(jMethodsDocsElement.outerHtml());
+                        String membersDocs = new String(Objects.requireNonNull(this.getClass().getClassLoader().getResourceAsStream(docsClass.replace(".", "/") + "-dui-site-members-docs.html")).readAllBytes(), StandardCharsets.UTF_8);
+                        Element webSiteMethodsDocsElement = websiteDocument.getElementById(idPrefix + "-method-docs");
+                        if (nonNull(webSiteMethodsDocsElement)) {
+                            webSiteMethodsDocsElement.html(membersDocs);
                         }
                     }
                 }
-                } catch (IOException e) {
-                    LOGGER.error("Failed to load classes docs : ", e);
-                }
-            });
+            } catch (IOException e) {
+                LOGGER.error("Failed to load classes docs : ", e);
+            }
+        });
+    }
 
-            return websiteDocument.html();
+    private void processSideNav(Document websiteDocument) {
+        Element sideNavElement = websiteDocument.getElementById("dui-site-doc-page-side-nav");
+        if (nonNull(sideNavElement)) {
+            String navElements = sideNavElement.attributes().get("dui-site-data");
+            String sideNavHtml = Arrays.stream(navElements.split(","))
+                    .map(navItem -> "<span class=\"dui dui-labeled-icon dui-reversed dui-site-side-nav-item\" onclick=\"scrollToSection('dui-side-nav-" + navItem.toLowerCase().replace(" ", "-") + "')\">\n" +
+                            "            <i class=\"dui mdi " + getNavIcon(navItem) + "\"></i>\n" +
+                            "            <span class=\"dui dui-mdi-text dui-text-ellipsis\">" + navItem + "</span>\n" +
+                            "        </span>")
+                    .collect(Collectors.joining("\n"));
+            sideNavElement.append(sideNavHtml);
+        }
+    }
 
+    private String getNavIcon(String navItem) {
+        switch (navItem.toLowerCase()) {
+            case "top":
+                return "mdi-arrow-up-thin";
+            default:
+                return "mdi-circle-small";
+        }
     }
 
     private void initEngine(PluginContext pluginContext) {
@@ -132,5 +171,9 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
         void onSuccess(String content);
 
         void onFailed(Throwable exception);
+    }
+
+    public static String capitalizeFirstLetter(String input) {
+        return input.substring(0, 1).toUpperCase() + input.substring(1);
     }
 }

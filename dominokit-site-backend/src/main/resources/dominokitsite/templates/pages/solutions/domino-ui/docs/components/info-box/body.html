@@ -1,6 +1,6 @@
 <div th:fragment="content" class="dui dui-p-16">
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-infobox" dui-site-data="org.dominokit.domino.ui.infoboxes.InfoBox"></div>
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
@@ -21,27 +21,7 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-basic')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Basic</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-hover')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Hover</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-alignment')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Alignment</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Hover,Alignment,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Info box</h1>
@@ -60,29 +40,29 @@
         <li class="dui">Info box info element.</li>
     </ol>
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
 
-    <div id="dui-sample-slot"></div>
+    <div id="dui-demo-sample-slot"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-basic">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
         <span class="dui dui-fg-teal">Basic info box</span>
         <small class="dui">A container to display a piece information with icon and title.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="infobox-basic"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-hover">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-hover">
         <span class="dui dui-fg-teal">Hover effects</span>
         <small class="dui">Info box can have of the predefined hover effects.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="infobox-hover"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-alignment">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-alignment">
         <span class="dui dui-fg-teal">Info box icon and text alignment</span>
         <small class="dui">The icon can be aligned to the left or right.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="infobox-alignment"></div>
 
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-infobox-method-docs', 'InfoBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/infoboxes/InfoBox.html')"></div>
 

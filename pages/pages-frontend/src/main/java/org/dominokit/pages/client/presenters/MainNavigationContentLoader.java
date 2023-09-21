@@ -26,7 +26,8 @@ public class MainNavigationContentLoader implements ContentLoader {
     @Override
     public void loadContent(HistoryToken token, PagesView view) {
         String page = token.paths().get(token.paths().size() - 1);
-        getContent(token.path(), page, content -> {
+        boolean docsContent = token.paths().contains("docs");
+        getContent(token.path(), page, false , content -> {
             view.replaceContent(content, "dui-content-container");
             view.enhancePadding();
             view.registerSlots();

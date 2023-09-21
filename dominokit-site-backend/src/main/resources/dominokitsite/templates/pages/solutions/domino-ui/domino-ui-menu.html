@@ -1,181 +1,536 @@
 <div th:fragment="content" class="dui dui-solution-menu" id="dui-site-left-menu">
-	<div th:replace="fragments/commons/components/menu-search :: content"></div>
-	<div class="dui dui-menu-content">
-		<ul class="dui dui-site-docs-menu">
-			<li class="dui dui-site-docs-menu-item">
-				<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started" aria-expanded="true">
-					<i class="dui mdi mdi-rocket"></i>
-					<span class="dui">Getting started</span>
-				</a>
-				<ul class="dui dui-site-docs-sub-menu">
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started/cli" aria-expanded="true">
-							<span class="dui">Using DominoKit CLI tool</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started/archetype" aria-expanded="true">
-							<span class="dui">Using maven archetypes</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/getting-started/demo" aria-expanded="true">
-							<span class="dui">Demo applications</span>
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="dui dui-site-docs-menu-item">
-				<a class="dui dui-site-menu-link" aria-expanded="true">
-					<i class="dui mdi mdi-view-dashboard"></i>
-					<span class="dui">Layouts</span>
-				</a>
-				<ul class="dui dui-site-docs-sub-menu">
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/app-layout" aria-expanded="true">
-							<span class="dui">Application layout</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/grid-layout" aria-expanded="true">
-							<span class="dui">Grid layout</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/responsive-grids" aria-expanded="true">
-							<span class="dui">Responsive grids</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/flex-layout" aria-expanded="true">
-							<span class="dui">Flex layout</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/layouts/split-panel" aria-expanded="true">
-							<span class="dui">Split panel</span>
-						</a>
-					</li>
-				</ul>
-			</li>
-			<li class="dui dui-site-docs-menu-item">
-				<a class="dui dui-site-menu-link" aria-expanded="true">
-					<i class="dui mdi mdi-view-dashboard"></i>
-					<span class="dui">Components</span>
-				</a>
-				<ul class="dui dui-site-docs-sub-menu">
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/alerts" aria-expanded="true">
-							<span class="dui">Alerts</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/badges" aria-expanded="true">
-							<span class="dui">Badges</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/breadcrumbs" aria-expanded="true">
-							<span class="dui">Breadcrumbs</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/buttons" aria-expanded="true">
-							<span class="dui">Buttons</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/cards" aria-expanded="true">
-							<span class="dui">Cards</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/carousel" aria-expanded="true">
-							<span class="dui">Carousel</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/chips" aria-expanded="true">
-							<span class="dui">Chips</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/collapsible" aria-expanded="true">
-							<span class="dui">Collapsible</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/dialogs" aria-expanded="true">
-							<span class="dui">Dialogs</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/drag-and-drop" aria-expanded="true">
-							<span class="dui">Drag and drop</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/info-box" aria-expanded="true">
-							<span class="dui">Info box</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/labels" aria-expanded="true">
-							<span class="dui">Labels</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/lists" aria-expanded="true">
-							<span class="dui">Lists</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/loaders" aria-expanded="true">
-							<span class="dui">Loaders</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/media-objects" aria-expanded="true">
-							<span class="dui">Media objects</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/menu" aria-expanded="true">
-							<span class="dui">Menu</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/modals" aria-expanded="true">
-							<span class="dui">Modals</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/notifications" aria-expanded="true">
-							<span class="dui">Notifications</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/pagination" aria-expanded="true">
-							<span class="dui">Pagination</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/pre-loaders" aria-expanded="true">
-							<span class="dui">Pre-Loaders</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/progress-bars" aria-expanded="true">
-							<span class="dui">Progress Bars</span>
-						</a>
-					</li>
-					<li class="dui dui-site-docs-sub-menu-item">
-						<a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/docs/components/sliders" aria-expanded="true">
-							<span class="dui">Sliders</span>
-						</a>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+    <div class="dui dui-flex ">
+        <div class="dui dui-site-menu-icons">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-getting-started"
+               href="/solutions/domino-ui/docs/getting-started" aria-expanded="true">
+                <i class="dui mdi mdi-rocket dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+               href="/solutions/domino-ui/docs/layouts/app-layout" aria-expanded="true">
+                <i class="dui mdi mdi-view-dashboard dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+               href="/solutions/domino-ui/docs/components/alerts" aria-expanded="true">
+                <i class="dui mdi mdi-widgets dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+               href="/solutions/domino-ui/docs/forms/overview" aria-expanded="true">
+                <i class="dui mdi mdi-form-textbox dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+               href="/solutions/domino-ui/docs/data-table/basic" aria-expanded="true">
+                <i class="dui mdi mdi-view-list dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-icons"
+               href="/solutions/domino-ui/docs/mdi-icons?tag=all" aria-expanded="true">
+                <i class="dui mdi mdi-flower dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-typography"
+               href="/solutions/domino-ui/docs/typography" aria-expanded="true">
+                <i class="dui mdi mdi-format-font dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-helpers"
+               href="/solutions/domino-ui/docs/helpers" aria-expanded="true">
+                <i class="dui mdi mdi-layers dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-colors"
+               href="/solutions/domino-ui/docs/colors" aria-expanded="true">
+                <i class="dui mdi mdi-format-color-fill dui-clickable"></i>
+            </a>
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-animation"
+               href="/solutions/domino-ui/docs/animations" aria-expanded="true">
+                <i class="dui mdi mdi-animation dui-clickable"></i>
+            </a>
+        </div>
+        <div class="dui dui-site-menu-body" id="dui-site-left-menu-body">
+            <div th:replace="fragments/commons/components/menu-search :: content"></div>
+            <div class="dui dui-menu-content">
+                <ul class="dui dui-site-docs-menu">
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-getting-started">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                           href="/solutions/domino-ui/docs/getting-started" aria-expanded="true">
+                            <i class="dui mdi mdi-rocket"></i>
+                            <span class="dui">Getting started</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-ui/docs/getting-started/cli" aria-expanded="true">
+                                    <span class="dui">Using DominoKit CLI tool</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-ui/docs/getting-started/archetype" aria-expanded="true">
+                                    <span class="dui">Using maven archetypes</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-ui/docs/getting-started/demo" aria-expanded="true">
+                                    <span class="dui">Demo applications</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-layouts">
+                        <a class="dui dui-site-menu-link" aria-expanded="true" dui-sub-menu-id="dui-site-menu-ui-layouts">
+                            <i class="dui mdi mdi-view-dashboard"></i>
+                            <span class="dui">Layouts</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+                                   href="/solutions/domino-ui/docs/layouts/app-layout" aria-expanded="true">
+                                    <span class="dui">Application layout</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+                                   href="/solutions/domino-ui/docs/layouts/grid-layout" aria-expanded="true">
+                                    <span class="dui">Grid layout</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+                                   href="/solutions/domino-ui/docs/layouts/responsive-grids" aria-expanded="true">
+                                    <span class="dui">Responsive grids</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+                                   href="/solutions/domino-ui/docs/layouts/flex-layout" aria-expanded="true">
+                                    <span class="dui">Flex layout</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-layouts"
+                                   href="/solutions/domino-ui/docs/layouts/split-panel" aria-expanded="true">
+                                    <span class="dui">Split panel</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-components">
+                        <a class="dui dui-site-menu-link" aria-expanded="true" dui-sub-menu-id="dui-site-menu-ui-components">
+                            <i class="dui mdi mdi-widgets"></i>
+                            <span class="dui">Components</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/alerts" aria-expanded="true">
+                                    <span class="dui">Alerts</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/badges" aria-expanded="true">
+                                    <span class="dui">Badges</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/breadcrumbs" aria-expanded="true">
+                                    <span class="dui">Breadcrumbs</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/buttons" aria-expanded="true">
+                                    <span class="dui">Buttons</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/cards" aria-expanded="true">
+                                    <span class="dui">Cards</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/carousel" aria-expanded="true">
+                                    <span class="dui">Carousel</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/chips" aria-expanded="true">
+                                    <span class="dui">Chips</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/collapsible" aria-expanded="true">
+                                    <span class="dui">Collapsible</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/dialogs" aria-expanded="true">
+                                    <span class="dui">Dialogs</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/drag-and-drop" aria-expanded="true">
+                                    <span class="dui">Drag and drop</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/info-box" aria-expanded="true">
+                                    <span class="dui">Info box</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/labels" aria-expanded="true">
+                                    <span class="dui">Labels</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/lists" aria-expanded="true">
+                                    <span class="dui">Lists</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/loaders" aria-expanded="true">
+                                    <span class="dui">Loaders</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/media-objects" aria-expanded="true">
+                                    <span class="dui">Media objects</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/menu" aria-expanded="true">
+                                    <span class="dui">Menu</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/modals" aria-expanded="true">
+                                    <span class="dui">Modals</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/notifications" aria-expanded="true">
+                                    <span class="dui">Notifications</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/pagination" aria-expanded="true">
+                                    <span class="dui">Pagination</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/pre-loaders" aria-expanded="true">
+                                    <span class="dui">Pre-Loaders</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/progress-bars" aria-expanded="true">
+                                    <span class="dui">Progress Bars</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/sliders" aria-expanded="true">
+                                    <span class="dui">Sliders</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/spin" aria-expanded="true">
+                                    <span class="dui">Spin</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/tabs" aria-expanded="true">
+                                    <span class="dui">Tabs</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/thumbnails" aria-expanded="true">
+                                    <span class="dui">Thumbnails</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/popover" aria-expanded="true">
+                                    <span class="dui">Tooltip and Popover</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/tree" aria-expanded="true">
+                                    <span class="dui">Tree</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-components"
+                                   href="/solutions/domino-ui/docs/components/waves" aria-expanded="true">
+                                    <span class="dui">Waves</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-forms">
+                        <a class="dui dui-site-menu-link" aria-expanded="true" dui-sub-menu-id="dui-site-menu-ui-forms">
+                            <i class="dui mdi mdi-form-textbox"></i>
+                            <span class="dui">Forms</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/overview" aria-expanded="true">
+                                    <span class="dui">Overview</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/basic" aria-expanded="true">
+                                    <span class="dui">Basic forms</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/advanced" aria-expanded="true">
+                                    <span class="dui">Advanced forms</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/date-picker" aria-expanded="true">
+                                    <span class="dui">Date picker</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/time-picker" aria-expanded="true">
+                                    <span class="dui">Time picker</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/field-decoration" aria-expanded="true">
+                                    <span class="dui">Field decoration</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-forms"
+                                   href="/solutions/domino-ui/docs/forms/steppers" aria-expanded="true">
+                                    <span class="dui">Steppers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-datatable">
+                        <a class="dui dui-site-menu-link" aria-expanded="true" dui-sub-menu-id="dui-site-menu-ui-datatable">
+                            <i class="dui mdi mdi-view-list"></i>
+                            <span class="dui">Data table</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/basic" aria-expanded="true">
+                                    <span class="dui">Basic table</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/column-resize" aria-expanded="true">
+                                    <span class="dui">Column resize</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/column-pin" aria-expanded="true">
+                                    <span class="dui">Column pin</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/drag-drop" aria-expanded="true">
+                                    <span class="dui">Drag and drop</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/column-groups" aria-expanded="true">
+                                    <span class="dui">Column groups</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/editable-table" aria-expanded="true">
+                                    <span class="dui">Editable table</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/empty-state" aria-expanded="true">
+                                    <span class="dui">Empty state</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/fixed-table" aria-expanded="true">
+                                    <span class="dui">Fixed table</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/grouping" aria-expanded="true">
+                                    <span class="dui">Grouping</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/header-bar" aria-expanded="true">
+                                    <span class="dui">Header bar</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/marker" aria-expanded="true">
+                                    <span class="dui">Row marker</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/selection" aria-expanded="true">
+                                    <span class="dui">Selection</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/pagination" aria-expanded="true">
+                                    <span class="dui">Pagination</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/record-details" aria-expanded="true">
+                                    <span class="dui">Record details</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/row-menu" aria-expanded="true">
+                                    <span class="dui">Row menu</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/sort-search" aria-expanded="true">
+                                    <span class="dui">Sort and Search</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/scroll-loading" aria-expanded="true">
+                                    <span class="dui">Scroll loading</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/summary" aria-expanded="true">
+                                    <span class="dui">Table summary</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/top-panel" aria-expanded="true">
+                                    <span class="dui">Top panel</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/tree-eager" aria-expanded="true">
+                                    <span class="dui">Tree - Eager</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/tree-lazy" aria-expanded="true">
+                                    <span class="dui">Tree - Lazy</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-datatable"
+                                   href="/solutions/domino-ui/docs/data-table/mix" aria-expanded="true">
+                                    <span class="dui">Plugins mix</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-icons">
+                        <a class="dui dui-site-menu-link" aria-expanded="true" dui-sub-menu-id="dui-site-menu-ui-icons">
+                            <i class="dui mdi mdi-flower"></i>
+                            <span class="dui">MDI Icons</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu" id="dui-mdi-icons-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-icons"
+                                   href="/solutions/domino-ui/docs/mdi-icons?tag=all" aria-expanded="true">
+                                    <span class="dui">All icons</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-icons"
+                                   href="/solutions/domino-ui/docs/mdi-icons?tag=untagged" aria-expanded="true">
+                                    <span class="dui">Untagged</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-typography">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-typography"
+                           href="/solutions/domino-ui/docs/typography" aria-expanded="true" >
+                            <i class="dui mdi mdi-format-font"></i>
+                            <span class="dui">Typography</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-helpers">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-helpers"
+                           href="/solutions/domino-ui/docs/helpers" aria-expanded="true">
+                            <i class="dui mdi mdi-layers"></i>
+                            <span class="dui">Helper css</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-colors">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-colors"
+                           href="/solutions/domino-ui/docs/colors" aria-expanded="true">
+                            <i class="dui mdi mdi-format-color-fill"></i>
+                            <span class="dui">Colors</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-animation">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor" dui-sub-menu-id="dui-site-menu-ui-animation"
+                           href="/solutions/domino-ui/docs/animations" aria-expanded="true">
+                            <i class="dui mdi mdi-animation"></i>
+                            <span class="dui">Animations</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
 </div>

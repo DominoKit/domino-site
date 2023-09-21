@@ -2,7 +2,7 @@
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel-vertical" dui-site-data="org.dominokit.domino.ui.splitpanel.VSplitPanel"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel-horizontal" dui-site-data="org.dominokit.domino.ui.splitpanel.HSplitPanel"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel" dui-site-data="org.dominokit.domino.ui.splitpanel.SplitPanel"></div>
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui" aria-expanded="true">
@@ -21,35 +21,7 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-horizontal')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Horizontal split</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-vertical')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Vertical split</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-min-max')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Min/Max split</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-multi')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Multiple split</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-combined')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Combined split</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Horizontal split,Vertical split,Min-Max split,Multiple split,Combined split,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Split panel</h1>
@@ -68,36 +40,36 @@
         <li class="dui">Row gaps, each row can have a consistent gap between its columns.</li>
     </ol>
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
-    <div id="dui-sample-slot"></div>
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-horizontal">
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+    <div id="dui-demo-sample-slot"></div>
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-horizontal">
         <span class="dui dui-fg-teal">Horizontal split panel.</span>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-horizontal"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-vertical">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-vertical">
         <span class="dui dui-fg-teal">Vertical split panel.</span>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-vertical"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-min-max">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-min-max-split">
         <span class="dui dui-fg-teal">Split panel Min/Max</span>
         <small class="dui">Split panels with minimum and maximum width/height.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-min-max"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-multi">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-multi">
         <span class="dui dui-fg-teal">Multiple split panels</span>
         <small class="dui">We can have more than 2 split panels.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-multiple"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-combined">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-combined">
         <span class="dui dui-fg-teal">Combined split panels</span>
         <small class="dui">We can mix horizontal and vertical split panels.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-combined"></div>
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-horizontal-method-docs', 'Horizontal split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/HSplitPanel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-vertical-method-docs', 'Vertical split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/VSplitPanel.html')"></div>
 

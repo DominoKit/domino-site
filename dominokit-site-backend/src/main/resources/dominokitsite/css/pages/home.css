@@ -58,6 +58,7 @@
     background-color: var(--color-light-blue);
     padding-top: 6.25em;
     padding-bottom: 6.25em;
+    margin-top: var(--dui-spc-16);
 }
 
 .dk-c-why-dominokit h1 {
@@ -272,7 +273,7 @@
 }
 
 .clients-main {
-    display: flex;
+    display: inline-block;
     text-align: center;
     padding: 2.5em;
 }
@@ -283,91 +284,62 @@
     color: var(--color-black);
     padding: 4em 0 0 0;
 }
-
-.clients-main .client-card-cntr {
-    flex-grow: 1;
-    max-width: 25%;
+.clients-container {
+    min-height: 28em;
+    width: 100%;
+    overflow: hidden;
+}
+.clients-main {
+    min-height: 27em;
+    min-width: 1500px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: absolute;
 }
 
 .client-card {
     transition: all 0.5s;
-    width: 100%;
-    max-width: 22em;
-    height: 31em;
+    width: 300px;
+    height: 400px;
     background: var(--color-white);
     box-shadow: 0 0 6px var(--color-box-shadow);
     border-radius: 4px;
     filter: grayscale(100%) contrast(90%);
-    position: relative;
+    position: absolute;
     padding: 1.25em;
     color: var(--color-purple);
 }
 
-.client-card.active {
+.client-card.dui-active {
     z-index: 10;
     filter: none;
     color: var(--color-grey);
 }
-
-.client-card-0 {
-    left: 18.75em;
-}
-
-.client-card-1 {
-    left: 9.375em;
-}
-
-.client-card-2 {
-}
-
-.client-card-3 {
-    right: 9.375em;
-}
-
-.client-card-4 {
-    right: 18.75em;
-}
-
-.client-card-l-1 {
-    transform: scale(0.9);
-    z-index: 9;
-}
-
-.client-card-l-2 {
+.client-card[dui-data-index='0']{
     transform: scale(0.8);
     z-index: 8;
+    left: 15.5em;
 }
-
-.client-card-l-3 {
-    transform: scale(0.7);
-    z-index: 7;
-}
-
-.client-card-l-4 {
-    transform: scale(0.6);
-    z-index: 6;
-}
-
-.client-card-r-1 {
+.client-card[dui-data-index='1']{
     transform: scale(0.9);
     z-index: 9;
+    left: 27.5em;
 }
-
-.client-card-r-2 {
+.client-card[dui-data-index='2']{
+    transform: scale(1);
+    z-index: 10;
+    left: 39.5em;
+}
+.client-card[dui-data-index='3']{
+    transform: scale(0.9);
+    z-index: 9;
+    left: 51.5em;
+}
+.client-card[dui-data-index='4']{
     transform: scale(0.8);
     z-index: 8;
+    left: 65.5em;
 }
-
-.client-card-r-3 {
-    transform: scale(0.7);
-    z-index: 7;
-}
-
-.client-card-r-4 {
-    transform: scale(0.6);
-    z-index: 6;
-}
-
 .client-card-header {
     text-align: left;
 }
@@ -401,6 +373,7 @@
 
 .dk-c-our-clients-nav {
     padding-bottom: 6.25em;
+    margin-top: var(--dui-spc-16);
 }
 
 .dk-c-our-clients-nav span {
@@ -455,27 +428,9 @@
         padding: 1em 0 1em 0;
     }
 
-    .clients-main {
-        padding: 0;
-        scroll-behavior: auto;
-        overflow-x: auto;
-    }
-
     .clients-main .client-card-cntr {
         max-width: unset;
         margin: 0.3em;
-    }
-
-    .client-card {
-        width: calc(100vw - 1.25em);
-        filter: none;
-        position: static;
-        transform: none;
-        color: var(--color-black);
-    }
-
-    .dk-c-our-clients-nav {
-        display: none;
     }
 
     .dk-c-support-us {

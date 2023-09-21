@@ -12,25 +12,33 @@ import org.dominokit.domino.ui.popover.Popover;
 import org.dominokit.domino.ui.style.BooleanCssClass;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.style.DominoCss;
+import org.dominokit.domino.ui.style.ToggleCssClass;
 import org.dominokit.domino.ui.utils.DominoElement;
 import org.dominokit.domino.ui.utils.ElementsFactory;
+import org.dominokit.domino.ui.utils.SwipeUtil;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static elemental2.dom.DomGlobal.console;
+import static elemental2.dom.DomGlobal.document;
 import static java.util.Objects.nonNull;
 
-public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
+public class NavigationEnhancer implements DominoCss, ElementsFactory {
 
     private static SingleElementCssClass activeCss = SingleElementCssClass.of(dui_active);
     private static SingleElementCssClass menuActiveELementCss = SingleElementCssClass.of(dui_active);
+    private static SingleElementCssClass activeSubMenuCss = SingleElementCssClass.of(dui_active);
+    private static ToggleCssClass sideMenuOpenCss = ToggleCssClass.of(dui_active);
+    private static SingleElementCssClass activeClientCardCss = SingleElementCssClass.of(dui_active);
 
     private static final CssClass dui_site_menu_padded_content = () -> "dui-site-menu-padded-content";
     private static Popover popover;
 
     public static void enhance() {
-        NodeList<Element> navElements = DomGlobal.document.querySelectorAll("[dui-site-section='main-nav']");
+        NodeList<Element> navElements = document.querySelectorAll("[dui-site-section='main-nav']");
         navElements.asList().stream()
                 .map(elements::elementOf)
                 .collect(Collectors.toSet())
@@ -67,10 +75,18 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                     }
                 });
 
+        Element sideMenuButton = document.getElementById("dui-site-sm-nav-menu-button");
+        elements.elementOf(sideMenuButton)
+                .addClickListener(evt -> {
+                    evt.stopPropagation();
+                    evt.preventDefault();
+                    sideMenuOpenCss.apply(document.getElementById("dui-site-sm-nav-side-menu"));
+                });
+        elements.body().addClickListener(evt -> sideMenuOpenCss.remove(document.getElementById("dui-site-sm-nav-side-menu")));
     }
 
     private static void setupSolutionsMenu(DominoElement<Element> element) {
-        Element solutionsMenuElement = DomGlobal.document.querySelector("[dui-site-section='solutions-menu']");
+        Element solutionsMenuElement = document.querySelector("[dui-site-section='solutions-menu']");
 
         if (nonNull(solutionsMenuElement)) {
             dui_hidden.remove(solutionsMenuElement);
@@ -110,7 +126,7 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
     }
 
     public static void enhanceContent() {
-        Element contentContainer = DomGlobal.document.getElementById("dui-content-container");
+        Element contentContainer = document.getElementById("dui-content-container");
         Optional.ofNullable(contentContainer)
                 .ifPresent(container -> {
                     elements.elementOf(container).querySelectorAll("[dui-site-data='nav-anchor']")
@@ -132,7 +148,7 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                             });
                 });
 
-        NodeList<Element> codeBlocks = DomGlobal.document.querySelectorAll("code");
+        NodeList<Element> codeBlocks = document.querySelectorAll("code");
         codeBlocks.asList()
                 .stream()
                 .filter(element -> !element.hasAttribute("dui-processed"))
@@ -140,16 +156,120 @@ public class NavigationBarEnhancer implements DominoCss, ElementsFactory {
                     element.setAttribute("dui-processed", "true");
                     elements.elementOf(element).setInnerHtml(PR.prettyPrintOne(element.textContent.replace("<", "&lt;").replace(">", "&gt;"), null, false));
                 });
+
+
+        NodeList<Element> mainMenuElements = document.querySelectorAll(".dui-site-docs-menu-item");
+        mainMenuElements.asList()
+                .stream()
+                .filter(element -> !element.hasAttribute("dui-processed"))
+                .forEach(element -> {
+                    element.setAttribute("dui-processed", "true");
+                    elements.elementOf(element).addClickListener(evt -> {
+                        Element subMenuElement = element.querySelector(".dui-site-docs-sub-menu");
+                        if(nonNull(subMenuElement)){
+                            activeSubMenuCss.apply(subMenuElement);
+                        }
+                    });
+                });
+
+        Element clientPrev = document.getElementById("nav-client-prev");
+        if(nonNull(clientPrev)){
+            elements.elementOf(clientPrev)
+                    .addClickListener(evt -> {
+                        prevCard();
+                    });
+
+        }
+
+        Element clientNext = document.getElementById("nav-client-next");
+        if(nonNull(clientNext)){
+            elements.elementOf(clientNext)
+                    .addClickListener(evt -> {
+                        nextCard();
+                    });
+
+        }
+
+        document.querySelectorAll(".client-card")
+                .asList()
+                .forEach(element -> {
+                    SwipeUtil.addSwipeListener(SwipeUtil.SwipeDirection.RIGHT, Js.uncheckedCast(element), evt -> {
+                        nextCard();
+                    });
+                });
+
+        document.querySelectorAll(".client-card")
+                .asList()
+                .forEach(element -> {
+                    SwipeUtil.addSwipeListener(SwipeUtil.SwipeDirection.LEFT, Js.uncheckedCast(element), evt -> {
+                        prevCard();
+                    });
+                });
+
+
+        //nav-client-prev
+    }
+
+    private static void prevCard() {
+        NodeList<Element> clientCards = document.querySelectorAll(".client-card");
+        clientCards.asList()
+                .stream()
+                .sorted(Comparator.comparingInt(left -> Integer.parseInt(left.getAttribute("dui-data-index"))))
+                .forEach(element -> {
+                    DominoElement<Element> clientCard = elements.elementOf(element);
+                    int currentIndex = Integer.parseInt(clientCard.getAttribute("dui-data-index"));
+                    if(currentIndex == 2){
+                        dui_active.remove(clientCard);
+                    }
+                    if(currentIndex == 0){
+                        clientCard.setAttribute("dui-data-index", "4");
+                    }else {
+                        int newIndex= currentIndex - 1;
+                        clientCard.setAttribute("dui-data-index", newIndex);
+                        if(newIndex == 2){
+                            activeClientCardCss.apply(clientCard);
+                        }
+                    }
+                });
+    }
+
+    private static void nextCard() {
+        NodeList<Element> clientCards = document.querySelectorAll(".client-card");
+        clientCards.asList()
+                .stream()
+                .sorted(Comparator.comparingInt(left -> Integer.parseInt(left.getAttribute("dui-data-index"))))
+                .forEach(element -> {
+                    DominoElement<Element> clientCard = elements.elementOf(element);
+                    int currentIndex = Integer.parseInt(clientCard.getAttribute("dui-data-index"));
+                    if(currentIndex == 2){
+                        dui_active.remove(clientCard);
+                    }
+                    if(currentIndex == 4){
+                        clientCard.setAttribute("dui-data-index", "0");
+                    }else {
+                        int newIndex= currentIndex + 1;
+                        clientCard.setAttribute("dui-data-index", newIndex);
+                        if(newIndex == 2){
+                            activeClientCardCss.apply(clientCard);
+                        }
+                    }
+                });
     }
 
     public static void enhancePadding() {
-        Element menuElement = DomGlobal.document.body.querySelector("#dui-site-left-menu");
+        Element menuElement = document.body.querySelector("#dui-site-left-menu-body");
         elements.body().addCss(BooleanCssClass.of(dui_site_menu_padded_content, nonNull(menuElement)));
         if (nonNull(menuElement)) {
             String path = ClientApp.make().getHistory().currentToken().path();
             Element activeAnchor = menuElement.querySelector("[href$='" + path + "']");
             if (nonNull(activeAnchor)) {
                 menuActiveELementCss.apply(activeAnchor);
+                String subMenuId = activeAnchor.getAttribute("dui-sub-menu-id");
+                if(nonNull(subMenuId)){
+                    activeSubMenuCss.apply(document.getElementById(subMenuId)
+                            .querySelector(".dui-site-docs-sub-menu"));
+
+                }
             }
         }
     }

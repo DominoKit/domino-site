@@ -4,7 +4,7 @@
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-confirm" dui-site-data="org.dominokit.domino.ui.dialogs.ConfirmationDialog"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-message" dui-site-data="org.dominokit.domino.ui.dialogs.MessageDialog"></div>
 
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
@@ -25,19 +25,7 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-basic')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Basic dialogs</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic dialogs,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Dialogs</h1>
@@ -47,17 +35,17 @@
     <div class="dui dui-site-component-docs" id="dui-dialog-confirm-class-docs"></div>
     <div class="dui dui-site-component-docs" id="dui-dialog-message-class-docs"></div>
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
 
-    <div id="dui-sample-slot"></div>
+    <div id="dui-demo-sample-slot"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-basic">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic-dialogs">
         <span class="dui dui-fg-teal">Basic dialogs</span>
         <small class="dui">Use dialogs to get the user attention and to get his feedback.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="dialogs-basic"></div>
 
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-abstract-method-docs', 'AbstractDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AbstractDialog.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-alert-method-docs', 'AlertMessageDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AlertMessageDialog.html')"></div>

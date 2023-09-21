@@ -14,8 +14,8 @@ public interface ContentLoader {
     boolean canLoad(HistoryToken token);
     void loadContent(HistoryToken token, PagesView view);
 
-    default void getContent(String path, String page, Consumer<String> consumer){
-        LoadContentServiceFactory.INSTANCE.getPageContent(path, page)
+    default void getContent(String path, String page, boolean docsContent, Consumer<String> consumer){
+        LoadContentServiceFactory.INSTANCE.getPageContent(path, page, docsContent)
                 .onSuccess(consumer::accept)
                 .onFailed(failedResponseBean -> {
                     LOGGER.error(failedResponseBean.getBody());

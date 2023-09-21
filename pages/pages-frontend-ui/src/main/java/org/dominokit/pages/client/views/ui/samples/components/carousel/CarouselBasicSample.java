@@ -21,7 +21,7 @@ public class CarouselBasicSample extends BaseDominoElement<HTMLDivElement, Carou
                         .appendChild(Slide.create("/assets/image-gallery/12.jpg"))
                         .appendChild(Slide.create("/assets/image-gallery/19.jpg"))
                         .appendChild(Slide.create("/assets/image-gallery/9.jpg"))
-                        .appendChild(Slide.create("/assets/images/image-gallery/6.jpg"))
+                        .appendChild(Slide.create("/assets/image-gallery/6.jpg"))
                 )
         ;
         init(this);

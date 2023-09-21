@@ -16,6 +16,9 @@ import javax.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
+
+import static java.util.Objects.nonNull;
 
 @AutoService(ServerAppEntryPoint.class)
 public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxContext> {
@@ -49,7 +52,13 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                 .handler(routingContext -> {
                     String path = routingContext.request().getParam("path");
                     String page = routingContext.request().getParam("page");
-                    contentProvider.provideContent("pages/" + path+"/"+page, new ThymeleafIndexPageProvider.ContentConsumer() {
+                    boolean docs= Optional.ofNullable(routingContext.request().getParam("docs"))
+                            .map(Boolean::valueOf)
+                            .orElse(false);
+                    JsonObject templateContext = new JsonObject();
+                    templateContext.put("ctxParamDocs", docs);
+                    templateContext.put("ctxParamTest", "HelloWorld");
+                    contentProvider.provideContent("pages/" + path+"/"+(docs?"body":page), templateContext, new ThymeleafIndexPageProvider.ContentConsumer() {
                         @Override
                         public void onSuccess(String content) {
                             routingContext
@@ -75,30 +84,39 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
             context.router().get("/service/source")
                     .produces(MediaType.TEXT_PLAIN)
                     .handler(routingContext -> {
-                        String path = routingContext.request().getParam("path");
-                        try {
-                            Github github = new RtGithub(configuration.getString("domino_github_token"));
-                            Repo repo = github.repos().get(new Coordinates.Simple("DominoKit", "domino-site"));
-                            InputStream contentStream = repo
-                                    .contents()
-                                    .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
-                                    .raw();
+                        context.vertx().executeBlocking(promise -> {
+                            String path = routingContext.request().getParam("path");
+//                            try {
+//                                Github github = new RtGithub(configuration.getString("domino_github_token"));
+//                                Repo repo = github.repos().get(new Coordinates.Simple("DominoKit", "domino-site"));
+//                                InputStream contentStream = repo
+//                                        .contents()
+//                                        .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
+//                                        .raw();
 
-                            String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
-                            routingContext
-                                    .response()
-                                    .setStatusCode(200)
-                                    .putHeader("Content-type", "text/plain")
-                                    .putHeader("Content-length", content.length() + "")
-                                    .write(content)
-                                    .end();
+//                                String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
+                                String content = "No source";
 
-                        } catch (IOException e) {
-                            routingContext
-                                    .response()
-                                    .write("Failed to load content for path : " + path)
-                                    .setStatusCode(500).end();
-                        }
+                                routingContext
+                                        .response()
+                                        .setStatusCode(200)
+                                        .putHeader("Content-type", "text/plain")
+                                        .putHeader("Content-length", content.length() + "")
+                                        .write(content)
+                                        .end();
+                                promise.complete();
+
+//                            } catch (IOException e) {
+//                                routingContext
+//                                        .response()
+//                                        .write("Failed to load content for path : " + path)
+//                                        .setStatusCode(500).end();
+//                                promise.fail(e);
+//                            }
+                        }, asyncResult -> {
+
+                        });
+
                     });
         });
 

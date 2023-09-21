@@ -9,7 +9,7 @@ import org.dominokit.pages.shared.events.ContentState;
 
 import javax.annotation.PostConstruct;
 
-@Slot("dui-sample-slot")
+@Slot("dui-demo-sample-slot")
 public abstract class SampleProxy extends ViewablePresenter<SampleView> implements SampleView.SampleUiHandlers {
 
     @PostConstruct

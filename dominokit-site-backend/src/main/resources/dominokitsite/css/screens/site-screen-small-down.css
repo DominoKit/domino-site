@@ -1,0 +1,103 @@
+@media screen and (max-width: 992px) {
+    .dui.dui-home-head-banner {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: var(--dui-spc-8);
+    }
+
+    .dui.dui-site-home-banner {
+        width: 200px;
+        margin-bottom: var(--dui-spc-4);
+    }
+
+    .dui.dui-site-home-banner {
+        top: 0px;
+    }
+
+    .dui.dui-site-banner {
+        margin-left: var(--dui-spc-4);
+        margin-right: var(--dui-spc-4);
+    }
+
+    .dui.dui-home-head-banner-sentence {
+        flex-grow: 0;
+    }
+
+    .dui.dui-home-head-banner-sentence-main {
+        font-size: var(--dui-spc-6);
+    }
+
+    .dui.dui-home-head-banner-sentence-sub {
+        font-size: var(--dui-spc-5);
+    }
+
+    .dui.dui-home-head-banner-social {
+        gap: var(--dui-spc-2);
+        padding-top: var(--dui-spc-2);
+        padding-bottom: var(--dui-spc-2);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dui.dui-home-head-banner-social .dui.dui-mdi-text {
+        display: none;
+    }
+
+    .dui.dui-site-section-our-solutions {
+        margin: 0 10% 0 10%;
+    }
+
+
+    .dui.dui-site-section-solution {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: var(--dui-spc-4);
+        padding-right: var(--dui-spc-4);
+        padding-top: var(--dui-spc-4);
+        padding-bottom: var(--dui-spc-4);
+    }
+
+    .dui.dui-site-section-solution.dui-site-reversed {
+        flex-direction: column;
+    }
+
+    .dui.dui-site-solution-img {
+        width: 300px;
+        position: static;
+    }
+
+    .dui.client-card {
+        width: 300px;
+    }
+
+    .dui.client-card[dui-data-index='0']{
+        left: 16em;
+    }
+    .dui.client-card[dui-data-index='1']{
+        left: 28em;
+    }
+    .dui.client-card[dui-data-index='2']{
+        left: 40em;
+    }
+    .dui.client-card[dui-data-index='3']{
+        left: 52em;
+    }
+    .dui.client-card[dui-data-index='4']{
+        left: 64em;
+    }
+
+    .dk-c-support-us__title {
+        font-size: 24px;
+    }
+
+    .dui.blob {
+        top: -500px;
+        left: -500px;
+        width: 1500px;
+    }
+
+}

@@ -16,7 +16,7 @@ public interface LoadContentService {
     @Produces(MediaType.TEXT_HTML)
     @Consumes(MediaType.TEXT_PLAIN)
     @Reader(StringReader.class)
-    String getPageContent(@QueryParam("path") String path, @QueryParam("page") String page);
+    String getPageContent(@QueryParam("path") String path, @QueryParam("page") String page, @QueryParam("docs") boolean docContent);
 
     @GET
     @Path("source")

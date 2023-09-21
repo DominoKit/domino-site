@@ -3,7 +3,7 @@
         <img class="dui dui-prefix-addon dui-order-first dui-w-12 dui-h-12 dui-" src="/assets/logo/128.png">
         <h4 class="dui dui-nav-title">DominoKit</h4>
         <div class="dui dui-nav-body dui-h-full">
-            <div class="dui dui-tabs dui-horizontal dui-h-full">
+            <div class="dui dui-tabs dui-horizontal dui-h-full dui-hide-on-small-and-down">
                 <ul class="dui dui-tabs-nav dui-justify-center dui-h-full dui-border-0">
                     <li class="dui dui-tab-item" dui-site-section="main-nav" dui-site-data="home">
                         <a class="dui dui-tab-anchor" tabindex="0" dui-site-data="nav-anchor" href="/home" aria-expanded="true">
@@ -50,9 +50,13 @@
                 </ul>
             </div>
         </div>
-        <a class="dui dui-postfix-addon dui-order-last-4" tabindex="0" href="https://github.com/DominoKit"
+        <a class="dui dui-postfix-addon dui-order-last-3" tabindex="0" href="https://github.com/DominoKit"
            target="_blank">
             <i class="dui mdi mdi-github  dui-clickable"></i>
+        </a>
+        <a id="dui-site-sm-nav-menu-button" class="dui dui-postfix-addon dui-order-last-4 dui-show-on-small-and-down dui-hide-on-medium-and-up" tabindex="0"
+           target="_blank">
+            <i class="dui mdi mdi-view-headline dui-clickable"></i>
         </a>
     </nav>
     <div class="dui dui-hidden" dui-site-section='solutions-menu'>

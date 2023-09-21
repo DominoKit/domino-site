@@ -5,7 +5,7 @@
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-dropdown" dui-site-data="org.dominokit.domino.ui.button.DropdownButton"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-toolbar" dui-site-data="org.dominokit.domino.ui.button.ButtonsToolbar"></div>
     <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-group" dui-site-data="org.dominokit.domino.ui.button.group.ButtonsGroup"></div>
-    <div id="dui-top"></div>
+    <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
             <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
@@ -26,80 +26,54 @@
         </li>
     </ol>
 
-    <div class="dui dui-flex dui-gap-4 dui-fixed dui-rounded-full dui-elevation-2 dui-p-2 dui-top-20 dui-right-4 dui-bg-black-l-2 dui-fg-white" style="z-index: 1;">
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-top')">
-            <i class="dui mdi mdi-arrow-up-thin"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Top</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-basic')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Basic</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-sizes')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Sizes</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-disabled')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Disabled</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-icons')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Icons</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-groups')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Groups</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-sample-dropdown')">
-            <i class="dui mdi mdi-circle-small"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Drop down</span>
-        </span>
-        <span class="dui dui-labeled-icon dui-reversed dui-clickable" onclick="scrollToSection('dui-docs')">
-            <i class="dui mdi mdi-book-open-page-variant"></i>
-            <span class="dui dui-mdi-text dui-text-ellipsis">Docs</span>
-        </span>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Sizes,Groups,Drop down,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Buttons</h1>
 
+    <h3 class="dui dui-site-docs-subtitle">Base button</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-base-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">Button</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-button-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">LinkButton</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-link-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">DropDownButton</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-dropdown-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">ButtonsToolbar</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-toolbar-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">ButtonsGroup</h3>
     <div class="dui dui-site-component-docs" id="dui-buttons-group-class-docs"></div>
 
 
-    <h2 class="dui dui-site-docs-subtitle">Demo sample</h2>
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
 
-    <div id="dui-sample-slot"></div>
+    <div id="dui-demo-sample-slot"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-basic">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
         <span class="dui dui-fg-teal">Basic buttons</span>
         <small class="dui">Basic buttons with different styles, text and icons.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="buttons-basic"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-sizes">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-sizes">
         <span class="dui dui-fg-teal">Button sizes</span>
         <small class="dui">Buttons can have different predefined sizes.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="buttons-sizes"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-groups">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-groups">
         <span class="dui dui-fg-teal">Buttons groups</span>
         <small class="dui">Buttons can be grouped together.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="buttons-groups"></div>
 
-    <h3 class="dui dui-flex dui-flex-col" id="dui-sample-split-drop">
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-drop-down">
         <span class="dui dui-fg-teal">Dropdown and Split buttons</span>
         <small class="dui">Buttons can have dropdown menu or a split dropdown button.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="buttons-split-drop"></div>
 
-    <div  id="dui-docs"></div>
+    <div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-buttons-base-method-docs', 'BaseButton', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/button/BaseButton.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-buttons-button-method-docs', 'Button', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/button/Button.html')"></div>

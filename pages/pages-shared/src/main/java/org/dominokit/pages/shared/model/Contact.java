@@ -1,5 +1,12 @@
 package org.dominokit.pages.shared.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Contact {
 
     private int index;
@@ -15,6 +22,12 @@ public class Contact {
     private String phone;
     private String address;
     private String about;
+
+    private int depth =0;
+    @JsonIgnore
+    private boolean hasChildren = true;
+
+    private List<Contact> friends = new ArrayList<>();
 
     public Contact() {
     }
@@ -143,6 +156,26 @@ public class Contact {
         return "$"+balance;
     }
 
+    public void setFriends(List<Contact> subList) {
+        this.friends = subList;
+    }
+
+    public List<Contact> getFriends() {
+        return friends;
+    }
+
+    public void addFriend(Contact contact){
+        friends.add(contact);
+    }
+
+    public int getDepth() {
+        return depth;
+    }
+
+    public void setDepth(int depth) {
+        this.depth = depth;
+    }
+
     @Override
     public String toString() {
         return "Contact{" +
@@ -151,4 +184,11 @@ public class Contact {
                 '}';
     }
 
+    public void setHasChildren(boolean hasChildren) {
+        this.hasChildren = hasChildren;
+    }
+
+    public boolean isHasChildren() {
+        return hasChildren;
+    }
 }

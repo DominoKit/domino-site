@@ -1,0 +1,64 @@
+<div th:fragment="content" class="dui dui-p-16">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-thumbnail" dui-site-data="org.dominokit.domino.ui.thumbnails.Thumbnail"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/components/thumbnails" aria-expanded="true">
+                Thumbnails
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Alignment,Content,Title,Detailed,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Thumbnails</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-thumbnail-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic thumbnail</span>
+        <small class="dui">Simple display images.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="thumbnails-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-content">
+        <span class="dui dui-fg-teal">Thumbnails content</span>
+        <small class="dui">Add custom contents to the thumbnail.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="thumbnails-content"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-title">
+        <span class="dui dui-fg-teal">Thumbnail title</span>
+        <small class="dui">Thumbnails can have titles.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="thumbnails-title"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-detailed">
+        <span class="dui dui-fg-teal">Detailed thumbnails</span>
+        <small class="dui">Thumbnails can be customized with detailed content</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="thumbnails-detailed"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-thumbnail-method-docs', 'Thumbnail', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/thumbnails/Thumbnail.html')"></div>
+
+</div>
