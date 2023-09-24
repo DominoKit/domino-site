@@ -1,10 +1,7 @@
 <div th:fragment="content" class="dui dui-m-t-24">
     <div class="dui dui-site-section-our-solutions">
         <h1>Our Solutions</h1>
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-            labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-            rebum. Stet clita kasd gubergren, no sea takimata</p>
+        <p class="dui dui-solutions-description">The Dominokit Toolkit is a versatile Java toolbox, featuring JSON serialization/deserialization, REST client generation, URL manipulation, UI components, and a page life cycle framework. This comprehensive toolkit simplifies development tasks, making it effortless to handle JSON data, integrate with RESTful APIs, manage web navigation, design user interfaces, and ensure smooth application lifecycle management for Java developers.</p>
     </div>
     <div class="dui dui-w-full" id="domino-mvp">
         <div class="dui dui-site-section-solution">
@@ -12,7 +9,7 @@
                 <h1 class="dui dui-fg-teal">Domino MVP</h1>
                 <p class="dui dui-max-w-96">A small, simple and a very lightweight framework for building
                     both simple and complex applications with robust routing and page life cycle.</p>
-                <div class="dui dui-flex dui-gap-2">
+                <div class="dui dui-site-solutions-solution-buttons">
                     <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-mvp/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
                     <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-mvp', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
@@ -32,7 +29,7 @@
                 <h1 class="dui dui-fg-teal">Domino UI</h1>
                 <p class="dui dui-max-w-96">A type safe and feature rich UI components library for java
                     developer without dependencies on external JavaScript.</p>
-                <div class="dui dui-flex dui-gap-2">
+                <div class="dui dui-site-solutions-solution-buttons">
                     <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
                     <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-ui', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
@@ -52,7 +49,7 @@
                 <h1 class="dui dui-fg-teal">Domino Jackson</h1>
                 <p class="dui dui-max-w-96">Annotation processor based JSON library to generates mappers that works on
                     both the JVM and the browser.</p>
-                <div class="dui dui-flex dui-gap-2">
+                <div class="dui dui-site-solutions-solution-buttons">
                     <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-jackson/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
                     <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-jackson', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
@@ -73,7 +70,7 @@
                 <p class="dui dui-max-w-96">A library for generating rest clients from JaxRs compatible
                     interfaces, and the generated clients can be used from both client side and on the
                     server.</p>
-                <div class="dui dui-flex dui-gap-2">
+                <div class="dui dui-site-solutions-solution-buttons">
                     <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
                     <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-rest', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>

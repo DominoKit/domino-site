@@ -22,6 +22,10 @@
     --dui-site-class-docs-bg-darker: #C2DFDFFF;
 }
 
+.dui-site-menu-padded-content {
+    --dui-site-content-padding : var(--dui-spc-80);
+}
+
 /* ================================================================================ */
 .dui-theme-default.dui-site {
     font-family: 'Lato', sans-serif;
@@ -171,6 +175,11 @@ body.dui {
     width: var(--dui-spc-80);
     min-height: calc(100vh - 64px);
     max-height: calc(100vh - 64px);
+    transition: width 0.5s ease-in-out;
+    z-index: 1;
+}
+.dui-site-menu-body {
+    transition: left 0.5s ease-in-out;
 }
 
 .dui-menu-content {
@@ -180,14 +189,14 @@ body.dui {
 
 .dui-solution-doc-content {
     width: 100%;
-    padding-left: var(--dui-spc-80);
+    padding-left: var(--dui-site-content-padding);
     padding-right: var(--dui-spc-48);
     min-height: calc(100vh - 64px);
 }
 
 .dui-site-menu-padded-content .dk-c-footer,
 .dui-site-menu-padded-content .dk-c-support-us {
-    padding-left: var(--dui-spc-80);
+    padding-left: var(--dui-site-content-padding);
     padding-right: 0;
 }
 
@@ -399,17 +408,19 @@ hr.center-diamond:before {
 }
 
 .dui-site-menu-icons {
-    padding: 0 8px 0 8px;
+    padding: 12px 8px 12px 8px;
     width: 48px;
     max-width: 48px;
+    min-width: 48px;
+    height: calc(100vh - 64px);
     display: flex;
     flex-direction: column;
     gap: var(--dui-spc-4);
-    min-height: calc(100vh - 64px);
     justify-content: center;
     background-color: var(--dui-clr-teal);
     align-items: center;
     color: var(--dui-clr-white);
+    transition: height 0.25s ease-in-out;
 }
 
 .dui-site-scroll-fire {
@@ -421,6 +432,7 @@ hr.center-diamond:before {
     flex-direction: column;
     right: 0;
     min-width: var(--dui-spc-48);
+    transition: right 0.5s ease-in-out;
 }
 
 .dui-site-side-nav-item {
@@ -506,6 +518,7 @@ hr.center-diamond:before {
 .dui-site-sm-side-menu ul li a{
     margin: var(--dui-spc-6);
     text-decoration: none;
+    text-align: center;
 }
 .dui-site-sm-side-menu ul li:hover {
     user-select: none;
@@ -557,4 +570,77 @@ hr.center-diamond:before {
 
 .dui-site-section-solution.dui-site-reversed {
     flex-direction: row-reverse;
+}
+
+.dui-solution-title-bar {
+    display: flex;
+    gap: var(--dui-spc-2);
+    align-items: center;
+    padding: var(--dui-spc-4);
+    overflow: hidden;
+}
+
+.dui-solution-title-bar-buttons {
+    display: flex;
+    gap: var(--dui-spc-2);
+    align-items: center;
+    justify-content: end;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.dui-solution-badges {
+    display: flex;
+    gap: var(--dui-spc-2);
+    padding: var(--dui-spc-4);
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.dui.dui-filler {
+    flex-grow: 1;
+}
+
+.dui-site-solution-doc-body {
+    padding: var(--dui-spc-16);
+}
+
+.dui-site-demo-component-code-tab,
+.dui-site-demo-component-sample-tab{
+    min-width: var(--dui-spc-48);
+}
+
+.dui-site-demo-component-colors-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--dui-spc-0_5);
+}
+
+.dui-site-javadocs-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.dui-component-member-signature code {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dk-c-footer__social {
+    margin-top: var(--dui-spc-16);
+}
+
+.dui-site-solutions-solution-buttons {
+    display: flex;
+    gap: var(--dui-spc-2);
+}
+
+.dui-solutions-description {
+    font-size: var(--dui-spc-6);
+    background-color: #0096886b;
+    padding: var(--dui-spc-8);
+    border-radius: var(--dui-spc-4);
 }

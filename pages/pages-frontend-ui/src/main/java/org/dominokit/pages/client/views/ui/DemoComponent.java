@@ -33,17 +33,17 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
 
     public DemoComponent(DemoSample<T> demoSample) {
         this.demoSample = demoSample;
-        this.root = div()
+        this.root = div().addCss(()->"dui-site-demo-component")
                 .appendChild(demoTabs = TabsPanel.create()
                         .withTabsContent((parent, content) -> content.addCss(dui_p_0))
                         .appendChild(sampleTab = Tab.create(Icons.widgets(), "Demo")
-                                .addCss(dui_min_w_48)
+                                .addCss(()-> "dui-site-demo-component-sample-tab")
                                 .appendChild(demoCard = Card.create().addCss(dui_elevation_0)
                                         .withBody((card, body) -> body.addCss(dui_p_0))
                                         .appendChild(NavBar.create("Colors selectors")
-                                                .addCss(dui_h_16, dui_m_x_0, dui_m_y_2)
+                                                .addCss(dui_h_16, dui_m_x_0, dui_m_y_2, ()-> "dui-site-demo-component-colors-nav")
                                                 .appendChild(PostfixAddOn.of(div()
-                                                                .addCss(dui_flex, dui_flex_wrap, dui_gap_0_5)
+                                                                .addCss(()->"dui-site-demo-component-colors-list")
                                                                 .appendChild(themeDiv(dui_bg_red, DominoThemeAccent.RED))
                                                                 .appendChild(themeDiv(dui_bg_pink, DominoThemeAccent.PINK))
                                                                 .appendChild(themeDiv(dui_bg_purple, DominoThemeAccent.PURPLE))
@@ -80,7 +80,7 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                                 )
                         )
                         .appendChild(codeTab = Tab.create(Icons.code_braces(), "Source code")
-                                .addCss(dui_min_w_48)
+                                .addCss(()-> "dui-site-demo-component-code-tab")
                                 .appendChild(codeCard = Card.create().addCss(dui_elevation_0)
                                         .withBody((card, body) -> body
                                                 .addCss(dui_p_0)

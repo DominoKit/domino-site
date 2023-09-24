@@ -18,7 +18,7 @@
 }
 
 .dui-site-menu-padded-content {
-    --dui-site-content-padding : var(--dui-spc-72);
+    --dui-site-content-padding : var(--dui-spc-80);
 }
 
 body.dui-site-theme.dui{

@@ -1,6 +1,5 @@
 package org.dominokit.pages.client.views.ui;
 
-import elemental2.dom.DomGlobal;
 import elemental2.dom.Element;
 import elemental2.dom.HTMLElement;
 import elemental2.dom.NodeList;
@@ -22,7 +21,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static elemental2.dom.DomGlobal.console;
 import static elemental2.dom.DomGlobal.document;
 import static java.util.Objects.nonNull;
 
@@ -31,7 +29,9 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
     private static SingleElementCssClass activeCss = SingleElementCssClass.of(dui_active);
     private static SingleElementCssClass menuActiveELementCss = SingleElementCssClass.of(dui_active);
     private static SingleElementCssClass activeSubMenuCss = SingleElementCssClass.of(dui_active);
-    private static ToggleCssClass sideMenuOpenCss = ToggleCssClass.of(dui_active);
+    private static ToggleCssClass rightSideMenuOpenCss = ToggleCssClass.of(dui_active);
+    private static ToggleCssClass leftSideMenuOpenCss = ToggleCssClass.of(dui_active);
+    private static ToggleCssClass rightSideDocsMenuOpenCss = ToggleCssClass.of(dui_active);
     private static SingleElementCssClass activeClientCardCss = SingleElementCssClass.of(dui_active);
 
     private static final CssClass dui_site_menu_padded_content = () -> "dui-site-menu-padded-content";
@@ -69,6 +69,8 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                                     }
                                     popover.close();
                                     ClientApp.make().getHistory().fireState(StateToken.of(href));
+                                    Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                                                    .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
                                 }
                             }
                         });
@@ -80,9 +82,43 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                 .addClickListener(evt -> {
                     evt.stopPropagation();
                     evt.preventDefault();
-                    sideMenuOpenCss.apply(document.getElementById("dui-site-sm-nav-side-menu"));
+                    rightSideMenuOpenCss.apply(document.getElementById("dui-site-sm-nav-side-menu"));
                 });
-        elements.body().addClickListener(evt -> sideMenuOpenCss.remove(document.getElementById("dui-site-sm-nav-side-menu")));
+        elements.body().addClickListener(evt -> rightSideMenuOpenCss.remove(document.getElementById("dui-site-sm-nav-side-menu")));
+
+        Optional.ofNullable(document.getElementById("dui-site-docs-left-menu-button"))
+                        .ifPresent(element -> {
+                            elements.elementOf(element)
+                                    .addClickListener(evt -> {
+                                        evt.stopPropagation();
+                                        evt.preventDefault();
+                                        leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
+                                    })
+                                    .setAttribute("dui-processed", true);
+                        });
+
+        elements.body().addClickListener(evt -> {
+            Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                            .ifPresent(element -> leftSideMenuOpenCss.remove(element));
+        });
+
+        Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav-button"))
+                        .ifPresent(element -> {
+                            elements.elementOf(element)
+                                    .addClickListener(evt -> {
+                                        evt.stopPropagation();
+                                        evt.preventDefault();
+                                        rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
+                                    })
+                                    .setAttribute("dui-processed", true);
+                        });
+
+        elements.body().addClickListener(evt -> {
+            Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav"))
+                            .ifPresent(element -> rightSideDocsMenuOpenCss.remove(element));
+        });
+
+
     }
 
     private static void setupSolutionsMenu(DominoElement<Element> element) {
@@ -112,6 +148,8 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                             }
                             popover.close();
                             ClientApp.make().getHistory().fireState(StateToken.of(href));
+                            Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                                    .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
                         }
                     });
                 }
@@ -143,6 +181,8 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                                             href = href.substring(1);
                                         }
                                         ClientApp.make().getHistory().fireState(StateToken.of(href));
+                                        Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                                                .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
                                     }
                                 });
                             });
@@ -165,15 +205,16 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                 .forEach(element -> {
                     element.setAttribute("dui-processed", "true");
                     elements.elementOf(element).addClickListener(evt -> {
+                        evt.stopPropagation();
                         Element subMenuElement = element.querySelector(".dui-site-docs-sub-menu");
-                        if(nonNull(subMenuElement)){
+                        if (nonNull(subMenuElement)) {
                             activeSubMenuCss.apply(subMenuElement);
                         }
                     });
                 });
 
         Element clientPrev = document.getElementById("nav-client-prev");
-        if(nonNull(clientPrev)){
+        if (nonNull(clientPrev)) {
             elements.elementOf(clientPrev)
                     .addClickListener(evt -> {
                         prevCard();
@@ -182,7 +223,7 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
         }
 
         Element clientNext = document.getElementById("nav-client-next");
-        if(nonNull(clientNext)){
+        if (nonNull(clientNext)) {
             elements.elementOf(clientNext)
                     .addClickListener(evt -> {
                         nextCard();
@@ -206,8 +247,34 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                     });
                 });
 
+        Optional.ofNullable(document.getElementById("dui-site-docs-left-menu-button"))
+                        .ifPresent(element -> {
+                            elements.elementOf(element)
+                                    .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
+                                        self
+                                                .setAttribute("dui-processed", true)
+                                                .addClickListener(evt -> {
+                                                    evt.stopPropagation();
+                                                    evt.preventDefault();
+                                                    leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
+                                                });
+                                    });
+                        });
 
-        //nav-client-prev
+        Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav-button"))
+                        .ifPresent(element -> {
+                            elements.elementOf(element)
+                                    .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
+                                        self
+                                                .setAttribute("dui-processed", true)
+                                                .addClickListener(evt -> {
+                                                    evt.stopPropagation();
+                                                    evt.preventDefault();
+                                                    rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
+                                                });
+                                    });
+                        });
+
     }
 
     private static void prevCard() {
@@ -218,15 +285,15 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                 .forEach(element -> {
                     DominoElement<Element> clientCard = elements.elementOf(element);
                     int currentIndex = Integer.parseInt(clientCard.getAttribute("dui-data-index"));
-                    if(currentIndex == 2){
+                    if (currentIndex == 2) {
                         dui_active.remove(clientCard);
                     }
-                    if(currentIndex == 0){
+                    if (currentIndex == 0) {
                         clientCard.setAttribute("dui-data-index", "4");
-                    }else {
-                        int newIndex= currentIndex - 1;
+                    } else {
+                        int newIndex = currentIndex - 1;
                         clientCard.setAttribute("dui-data-index", newIndex);
-                        if(newIndex == 2){
+                        if (newIndex == 2) {
                             activeClientCardCss.apply(clientCard);
                         }
                     }
@@ -241,15 +308,15 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                 .forEach(element -> {
                     DominoElement<Element> clientCard = elements.elementOf(element);
                     int currentIndex = Integer.parseInt(clientCard.getAttribute("dui-data-index"));
-                    if(currentIndex == 2){
+                    if (currentIndex == 2) {
                         dui_active.remove(clientCard);
                     }
-                    if(currentIndex == 4){
+                    if (currentIndex == 4) {
                         clientCard.setAttribute("dui-data-index", "0");
-                    }else {
-                        int newIndex= currentIndex + 1;
+                    } else {
+                        int newIndex = currentIndex + 1;
                         clientCard.setAttribute("dui-data-index", newIndex);
-                        if(newIndex == 2){
+                        if (newIndex == 2) {
                             activeClientCardCss.apply(clientCard);
                         }
                     }
@@ -265,7 +332,7 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
             if (nonNull(activeAnchor)) {
                 menuActiveELementCss.apply(activeAnchor);
                 String subMenuId = activeAnchor.getAttribute("dui-sub-menu-id");
-                if(nonNull(subMenuId)){
+                if (nonNull(subMenuId)) {
                     activeSubMenuCss.apply(document.getElementById(subMenuId)
                             .querySelector(".dui-site-docs-sub-menu"));
 

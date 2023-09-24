@@ -136,6 +136,7 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
     private void processSideNav(Document websiteDocument) {
         Element sideNavElement = websiteDocument.getElementById("dui-site-doc-page-side-nav");
         if (nonNull(sideNavElement)) {
+
             String navElements = sideNavElement.attributes().get("dui-site-data");
             String sideNavHtml = Arrays.stream(navElements.split(","))
                     .map(navItem -> "<span class=\"dui dui-labeled-icon dui-reversed dui-site-side-nav-item\" onclick=\"scrollToSection('dui-side-nav-" + navItem.toLowerCase().replace(" ", "-") + "')\">\n" +
@@ -143,7 +144,9 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
                             "            <span class=\"dui dui-mdi-text dui-text-ellipsis\">" + navItem + "</span>\n" +
                             "        </span>")
                     .collect(Collectors.joining("\n"));
-            sideNavElement.append(sideNavHtml);
+
+            String sideDocsNavButton= "<span id=\"dui-site-doc-page-side-nav-button\" class=\"dui dui-labeled-icon dui-reversed dui-site-side-nav-item dui-show-on-small-and-down dui-hide-on-medium-and-up\" > <i class=\"dui mdi mdi-gamepad-circle-left\"></i> <span class=\"dui dui-mdi-text dui-text-ellipsis\"></span> </span>\n";
+            sideNavElement.append(sideDocsNavButton + sideNavHtml);
         }
     }
 

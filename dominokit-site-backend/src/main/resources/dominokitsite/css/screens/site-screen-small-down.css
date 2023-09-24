@@ -1,3 +1,16 @@
+@media screen and (max-width: 500px) {
+    .dui.dui-home-nav-bar > h4 {
+        display: none;
+    }
+
+    .dk-c-footer__menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 @media screen and (max-width: 992px) {
     .dui.dui-home-head-banner {
         flex-direction: column-reverse;
@@ -74,19 +87,23 @@
         width: 300px;
     }
 
-    .dui.client-card[dui-data-index='0']{
+    .dui.client-card[dui-data-index='0'] {
         left: 16em;
     }
-    .dui.client-card[dui-data-index='1']{
+
+    .dui.client-card[dui-data-index='1'] {
         left: 28em;
     }
-    .dui.client-card[dui-data-index='2']{
+
+    .dui.client-card[dui-data-index='2'] {
         left: 40em;
     }
-    .dui.client-card[dui-data-index='3']{
+
+    .dui.client-card[dui-data-index='3'] {
         left: 52em;
     }
-    .dui.client-card[dui-data-index='4']{
+
+    .dui.client-card[dui-data-index='4'] {
         left: 64em;
     }
 
@@ -96,8 +113,147 @@
 
     .dui.blob {
         top: -500px;
-        left: -500px;
-        width: 1500px;
+        left: -1000px;
+        width: 3000px;
+    }
+
+    .dui.dui-solution-title-bar {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .dui.dui-solution-title-bar h1 {
+        text-align: center;
+    }
+
+    .dui.dui-solution-title-bar-buttons {
+        justify-content: center;
+    }
+
+    .dui.dui-solution-badges {
+        justify-content: center;
+    }
+
+    .dui.feature-block {
+        text-align: center;
+    }
+
+    .dui.feature-block:before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dui.dui-site-menu-padded-content {
+        --dui-site-content-padding: 0;
+    }
+
+    .dui.dui-solution-doc-content {
+        padding-right: 0;
+    }
+
+    .dui-site-solution-doc-body > .dui-breadcrumb {
+        display: none;
+    }
+
+    .dui.dui-site-menu-body {
+        position: absolute;
+        left: -300px;
+    }
+
+    .dui.dui-site-menu-icons {
+        z-index: 1;
+    }
+
+    .dui.dui-solution-menu {
+        width: 0px;
+    }
+
+    .dui.dui-solution-menu.dui-active .dui.dui-site-menu-body {
+        left: 49px;
+    }
+
+    .dui.dui-solution-menu.dui-active {
+        width: var(--dui-spc-80);
+    }
+
+    .dui.dui-site-menu-icons > a,
+    .dui.dui-site-menu-icons > .dui-filler {
+        display: none;
+    }
+
+    .dui.dui-solution-menu.dui-active .dui-site-menu-icons > .dui-filler,
+    .dui.dui-solution-menu.dui-active .dui-site-menu-icons > a {
+        display: block;
+    }
+
+    .dui.dui-site-menu-icons {
+        height: 49px;
+        border-bottom-right-radius: var(--dui-spc-1);
+        justify-content: start;
+    }
+
+    .dui.dui-solution-menu.dui-active .dui.dui-site-menu-icons {
+        height: calc(100vh - 64px);
+        border-bottom-right-radius: 0;
+    }
+
+    .dui.dui-site-code {
+        min-height: 100px;
+        padding-top: 34px;
+    }
+
+    .dui.dui-site-component-docs pre{
+        white-space: break-spaces;
+    }
+
+    .dui.dui-site-scroll-fire {
+        top: 70px;
+        right: -152px;
+    }
+
+    .dui.dui-site-scroll-fire.dui-active {
+        right: 0px;
+    }
+
+    .dui.dui-site-solution-doc-body {
+        padding: var(--dui-spc-4) var(--dui-spc-16) var(--dui-spc-16) var(--dui-spc-16);
+    }
+
+
+    .dui.dui-site-demo-component-code-tab,
+    .dui.dui-site-demo-component-sample-tab{
+        min-width: auto;
+    }
+
+    .dui-site-demo-component-code-tab .dui-tab-header-text,
+    .dui-site-demo-component-sample-tab .dui-tab-header-text{
+        display: none;
+    }
+
+    .dui.dui-site-demo-component-colors-nav .dui-nav-body,
+    .dui.dui-site-demo-component-colors-nav .dui-nav-title{
+        display: none;
+    }
+
+    .dui-site-demo-component-colors-list{
+        justify-content: center;
+    }
+
+    .dui.dui-site-javadocs-header {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .dk-c-footer__main {
+        padding: var(--dui-spc-8) var(--dui-spc-8);
+    }
+
+    .dk-c-footer__copyrights {
+        padding: var(--dui-spc-8);
+    }
+
+    .dui-site-solutions-solution-buttons {
+        justify-content: center;
     }
 
 }
