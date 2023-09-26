@@ -54,15 +54,17 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
             if (!path.equals("/") && !path.equals("/home") && !path.contains("css/")) {
                 templateName = requestPath;
             }
-            engine.render(new JsonObject(), templateName, event -> {
+
+            engine.render(TemplatesContext.get(), templateName, event -> {
                 if (event.succeeded()) {
                     String content = event.result().toString();
                     Document websiteDocument = Jsoup.parse(content);
                     processJavaDocs(websiteDocument);
                     processSideNav(websiteDocument);
                     processIconsMenu(websiteDocument);
+                    content = websiteDocument.html();
                     response.putHeader("Content-length", content.length() + "")
-                            .write(websiteDocument.html());
+                            .write(content);
                 }
                 response.end();
             });

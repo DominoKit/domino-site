@@ -1,0 +1,116 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/getting-started/quick-start" aria-expanded="true">
+                Quick start
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Quick start</h1>
+    <h2 class="dui dui-site-docs-subtitle">Prerequisites</h2>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">Java 8 or higher.</li>
+        <li class="dui">Maven 3.6.0 or higher.</li>
+    </ul>
+
+    <p class="dui dui-leading-6">Adding domino-rest to your GWT project is quite simple, just follow these steps to get started with using domino-rest :</p>
+    <h2 class="dui dui-site-docs-subtitle">Steps</h2>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>Add the library and processors dependencies to your project</span>
+            <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_dependencies}|)"></div>
+        </li>
+        <li class="dui">
+            <span>If you are using domino-rest with GWT then you will need to add the following inherit directive to your project .gwt.xml file</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('&lt;inherits name=&quot;org.dominokit.rest.Rest&quot;/&gt;')"></div>
+        </li>
+        <li class="dui">
+            <span>In your application entry point or main class initialize domino-rest: </span>
+            <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.initDefaults();')"></div>
+        </li>
+        <li class="dui">
+            <span>Assuming you have the following POJO: </span>
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+public class Movie {
+
+    @PathParam(&quot;name&quot;)
+    private String name;
+    private int rating;
+    private String bio;
+    private String releaseDate;
+
+    // setters and getters
+}')"></div>
+            <p class="dui dui-leading-6">A POJO used in the service definition as a response or request needs to be annotated with <b>@JSONMapper</b> otherwise domino-rest will assume it will be serialized/deserialized as a JSON using domino-jackson defaults.</p>
+        </li>
+
+        <li class="dui">
+            <span>Write the service definition interface :</span>
+            <p class="dui dui-leading-6">Defining a service and generating the REST cliend can as easy as annotating a JAX-RS interface with <b>@RequestFactory</b>, once the interface is compiled domino-rest processor will generate a factory class that we can use to make REST requests.</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
+public interface MoviesService {
+
+    @Path(&quot;library/movies/:movieName&quot;)
+    @GET
+    Movie getMovieByName(@PathParam(&quot;movieName&quot;) String movieName);
+
+    @Path(&quot;library/movies&quot;)
+    @GET
+    List&lt;Movie&gt; listMovies();
+
+    @Path(&quot;library/movies/:name&quot;)
+    @PUT
+    void updateMovie(@BeanParam @RequestBody Movie movie);
+}')"></div>
+        </li>
+        <li class="dui">
+            <span>Using the generated clients :</span>
+            <p class="dui dui-leading-6">The generated client class will be named with the service interface name + <b>Factory</b>, get the instance and call the service method :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('MoviesServiceFactory.INSTANCE
+    .getMovieByName(&quot;hulk&quot;)
+    .onSuccess(movie -&gt; {
+        //do something on success
+    })
+    .onFailed(failedResponse -&gt; {
+        //do something on error
+    })
+    .send();
+
+MoviesServiceFactory.INSTANCE
+    .listMovies()
+    .onSuccess(movies -&gt; {
+        //do something on success
+    })
+    .onFailed(failedResponse -&gt; {
+        //do something on error
+    })
+    .send();
+
+MoviesServiceFactory.INSTANCE
+    .updateMovie(movie)
+    .onSuccess(aVoid -&gt; {
+        //do something on success
+    })
+    .onFailed(failedResponse -&gt; {
+        //do something on error
+    })
+    .send();')"></div>
+        </li>
+    </ul>
+</div>

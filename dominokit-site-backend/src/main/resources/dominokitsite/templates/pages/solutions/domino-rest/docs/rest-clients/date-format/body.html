@@ -1,0 +1,31 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/rest-clients/date-format" aria-expanded="true">
+                Date format
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Date format</h1>
+
+    <p class="dui dui-leading-6">If we have a <b>@QueryParam</b>, <b>@PathParam</b> or <b>@HeaderParam</b> and the type of parameter is Date then we can use <b>@DateFormat</b> annotation provided by domino-rest to specify the pattern to format the value of the parameter, if <b>@DateFormat</b> is not specified we <b>String.valueOf</b> will be used.</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('    @GET
+    @Path(&quot;someService/{starting-date}&quot;)
+    String getByDate(@QueryParam(&quot;birth-date&quot;) @DateFormat(&quot;dd-MM-yyyy&quot;) Date birthDate,
+                     @PathParam(&quot;starting-date&quot;) @DateFormat(&quot;d-M-yy&quot;) Date startingDate);')"></div>
+
+</div>

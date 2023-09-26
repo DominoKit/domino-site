@@ -179,6 +179,7 @@ body.dui {
     z-index: 1;
 }
 .dui-site-menu-body {
+    min-width: 270px;
     transition: left 0.5s ease-in-out;
 }
 
@@ -643,4 +644,15 @@ hr.center-diamond:before {
     background-color: #0096886b;
     padding: var(--dui-spc-8);
     border-radius: var(--dui-spc-4);
+}
+
+.dui.mdi.dui-site-solution-quick-info-icon:before{
+    font-size: 40px;
+    color: #14c397;
+}
+
+code.dui-inlined {
+    background-color: var(--dui-clr-grey-l-3);
+    padding: 3px;
+    border-radius: 3px;
 }

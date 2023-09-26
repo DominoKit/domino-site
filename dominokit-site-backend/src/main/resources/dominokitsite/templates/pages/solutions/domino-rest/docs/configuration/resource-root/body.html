@@ -1,0 +1,32 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/configuration"
+               aria-expanded="true">
+                Configuration
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/configuration/resource-root" aria-expanded="true">
+                Resource root
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Resource root</h1>
+
+    <p class="dui dui-leading-6">By default, when a service is mapped using the default service root it will be mapped to the resource root as <b>service</b> meaning that it will be mapped to an endpoint path starts with <b>service</b>.
+        we can override this using <b>DominoRestConfig</b></p>
+    <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.getInstance()
+                .setDefaultResourceRootPath(&quot;endpoint&quot;);')"></div>
+
+    <p class="dui dui-leading-6">With this configuration when a service is mapped to default service root it will be mapped to an endpoint with a path starting with the specified resource root in the config, example http://localhost:8080/endpoint/{relative resource path}</p>
+    <p class="dui dui-leading-6">The resource root path will only work with default service root, and will be ignored for services that override the service root or when we override the service root globally.</p>
+</div>

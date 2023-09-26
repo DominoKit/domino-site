@@ -1,0 +1,42 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/configuration"
+               aria-expanded="true">
+                Configuration
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/configuration/resource-classes" aria-expanded="true">
+                Resource classes
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Locating resource classes</h1>
+
+    <p class="dui dui-leading-6">You set up which JAX-RS resource classes to be used for generating REST clients utilizing different mechanism provided by Domino-rest :</p>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>If you have access to the resource interface source code and can modify it, then you can just annotate it with <b>@RequestFactory</b>.</span>
+        </li>
+        <li class="dui">
+            <span>You cant change the interface source code, but you can extend it, then you extend the resource interface and annotate the new interface with <b>@RequestFactory</b>.</span>
+        </li>
+        <li class="dui">
+            <span>Use a package-info class and list the resource interfaces using the <b>@ResourceList</b> annotation, example :</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('@ResourceList({UserResource.class, MoviesResource.IntX.class})
+package com.foo.bar;
+
+import org.dominokit.domino.rest.shared.request.service.annotations.ResourceList;')"></div>
+        </li>
+    </ul>
+</div>

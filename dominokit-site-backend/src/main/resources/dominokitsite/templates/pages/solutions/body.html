@@ -3,35 +3,16 @@
         <h1>Our Solutions</h1>
         <p class="dui dui-solutions-description">The Dominokit Toolkit is a versatile Java toolbox, featuring JSON serialization/deserialization, REST client generation, URL manipulation, UI components, and a page life cycle framework. This comprehensive toolkit simplifies development tasks, making it effortless to handle JSON data, integrate with RESTful APIs, manage web navigation, design user interfaces, and ensure smooth application lifecycle management for Java developers.</p>
     </div>
-    <div class="dui dui-w-full" id="domino-mvp">
-        <div class="dui dui-site-section-solution">
-            <div class="dui">
-                <h1 class="dui dui-fg-teal">Domino MVP</h1>
-                <p class="dui dui-max-w-96">A small, simple and a very lightweight framework for building
-                    both simple and complex applications with robust routing and page life cycle.</p>
-                <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-mvp/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-mvp', 'mdi-book-open-page-variant', 'Learn more')"></div>
-                </div>
-            </div>
-            <div class="dui dui-site-solution-pic dui-relative">
-                <div class="dui blob">
-                    <img src="/assets/blob-1.svg">
-                </div>
-                <img src="assets/ill_domino_mvp.svg" class="dui dui-absolute dui-top-0 dui-site-solution-img"/>
-            </div>
-        </div>
-    </div>
 
     <div class="dui dui-w-full" id="domino-ui">
-        <div class="dui dui-site-section-solution dui-site-reversed">
+        <div class="dui dui-site-section-solution">
             <div class="dui">
                 <h1 class="dui dui-fg-teal">Domino UI</h1>
                 <p class="dui dui-max-w-96">A type safe and feature rich UI components library for java
                     developer without dependencies on external JavaScript.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-ui', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-ui', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -44,14 +25,14 @@
     </div>
 
     <div class="dui dui-w-full" id="domino-jackson">
-        <div class="dui dui-site-section-solution">
+        <div class="dui dui-site-section-solution dui-site-reversed">
             <div class="dui">
                 <h1 class="dui dui-fg-teal">Domino Jackson</h1>
                 <p class="dui dui-max-w-96">Annotation processor based JSON library to generates mappers that works on
                     both the JVM and the browser.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-jackson/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-jackson', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-jackson/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-jackson', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -64,15 +45,15 @@
     </div>
 
     <div class="dui dui-w-full" id="domino-rest">
-        <div class="dui dui-site-section-solution dui-site-reversed">
+        <div class="dui dui-site-section-solution">
             <div class="dui">
                 <h1 class="dui dui-fg-teal">Domino REST</h1>
                 <p class="dui dui-max-w-96">A library for generating rest clients from JaxRs compatible
                     interfaces, and the generated clients can be used from both client side and on the
                     server.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('solutions/domino-rest', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-rest', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -80,6 +61,27 @@
             </div>
         </div>
     </div>
+
+    <div class="dui dui-w-full" id="domino-mvp">
+        <div class="dui dui-site-section-solution dui-site-reversed">
+            <div class="dui">
+                <h1 class="dui dui-fg-teal">Domino MVP</h1>
+                <p class="dui dui-max-w-96">A small, simple and a very lightweight framework for building
+                    both simple and complex applications with robust routing and page life cycle.</p>
+                <div class="dui dui-site-solutions-solution-buttons">
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-mvp/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-mvp', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                </div>
+            </div>
+            <div class="dui dui-site-solution-pic dui-relative">
+                <div class="dui blob">
+                    <img src="/assets/blob-1.svg">
+                </div>
+                <img src="assets/ill_domino_mvp.svg" class="dui dui-absolute dui-top-8 dui-site-solution-img"/>
+            </div>
+        </div>
+    </div>
+
 
     <div class="dk-c-why-dominokit">
         <h1>Why choose DominoKit?</h1>
@@ -120,7 +122,7 @@
                         </div>
                     </div>
                     <h2>Light Speed Development</h2>
-                    <p>Get what you want in seconds</p>
+                    <p>Productivity is key, develop and ship faster than ever.</p>
                 </div>
                 <div class="why-col">
                     <div class="why-icon">
@@ -238,7 +240,7 @@
                         </div>
                     </div>
                     <h2>Maintainable</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur</p>
+                    <p>Not just typesafe, but also readable and well-supported</p>
                 </div>
                 <div class="why-col">
                     <div class="why-icon">
@@ -277,7 +279,7 @@
                         </div>
                     </div>
                     <h2>Full Java Stack for Front-end Development</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur</p>
+                    <p>You will be covered by tools built with your favorite language for the frontend</p>
                 </div>
                 <div class="why-col">
                     <div class="why-icon">
@@ -314,7 +316,7 @@
                         </div>
                     </div>
                     <h2>Completely Open Source</h2>
-                    <p>Lorem ipsum dolor sit amet, consetetur</p>
+                    <p>All Dominokit tools are free and open source under apache 2 license</p>
                 </div>
             </div>
         </div>
@@ -335,13 +337,13 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
+                        <img src="https://thispersondoesnotexist.com/">
                     </div>
                     <div class="client-card-name">
-                        <h3>Flavio Castro 0</h3>
+                        <h3>Person name</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Tech Leader / Architect @Ardan1</h4>
+                        <h4>Job title @ company</h4>
                     </div>
                     <div class="client-card-comment">
                         <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
@@ -358,13 +360,13 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
+                        <img src="https://thispersondoesnotexist.com/">
                     </div>
                     <div class="client-card-name">
-                        <h3>Flavio Castro 1</h3>
+                        <h3>Person name</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Tech Leader / Architect @Ardan1</h4>
+                        <h4>Job title @ company</h4>
                     </div>
                     <div class="client-card-comment">
                         <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
@@ -381,13 +383,13 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
+                        <img src="https://thispersondoesnotexist.com/">
                     </div>
                     <div class="client-card-name">
-                        <h3>Flavio Castro</h3>
+                        <h3>Person name</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Tech Leader / Architect @Ardan1</h4>
+                        <h4>Job title @ company</h4>
                     </div>
                     <div class="client-card-comment">
                         <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
@@ -404,13 +406,13 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
+                        <img src="https://thispersondoesnotexist.com/">
                     </div>
                     <div class="client-card-name">
-                        <h3>Flavio Castro</h3>
+                        <h3>Person name</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Tech Leader / Architect @Ardan1</h4>
+                        <h4>Job title @ company</h4>
                     </div>
                     <div class="client-card-comment">
                         <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
@@ -427,13 +429,13 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://secure.gravatar.com/avatar/7ec73ac46e7215d35633a18d134f44e7">
+                        <img src="https://thispersondoesnotexist.com/">
                     </div>
                     <div class="client-card-name">
-                        <h3>Flavio Castro</h3>
+                        <h3>Person name</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Tech Leader / Architect @Ardan1</h4>
+                        <h4>Job title @ company</h4>
                     </div>
                     <div class="client-card-comment">
                         <p>“After years working with GWT, Domino-ui came to the rescue, making the developers

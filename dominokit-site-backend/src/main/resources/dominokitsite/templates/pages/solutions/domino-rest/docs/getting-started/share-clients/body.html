@@ -1,0 +1,64 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/getting-started/share-clients" aria-expanded="true">
+                Sharing clients
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Sharing REST clients</h1>
+
+
+    <p class="dui dui-leading-6">Domino-rest works in both the browser and in a pure JVM, and the same generated rest-client can be used on both sides, so there is no need to generate different clients for the browser and JVM, this also includes Android applications - for android applications please check out <a class="dui" href="https://github.com/DominoKit/domino-rest-android" target="_blank" tabindex="0" aria-expanded="true">domino-rest-android</a>.</p>
+    <p class="dui dui-leading-6">Now assuming we have GWT or J2CL web application that is split into three modules, <b>frontend</b>, <b>backend</b> and a <b>shared</b> module to share code between the other tow, then you can use domino-rest in three different modes, switching between the different modes is a matter of what/where dependencies are defined and where the service definition interface is located :</p>
+
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>Frontend only -browser- mode :</span>
+            <p class="dui dui-leading-6">In this mode the generated rest clients will only be available for the frontend module, and they are not shared with the backend module.</p>
+            <p class="dui dui-leading-6">To define the interface and use the generated rest-client from frontend code only define the following dependencies in the frontend module, then define the interface inside the frontend module :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_frontend_dependencies}|)"></div>
+        </li>
+        <li class="dui">
+            <span>Backend only -JVM- mode :</span>
+            <p class="dui dui-leading-6">In this mode the generated rest clients will only be available for the backend module, and they are not shared with the frontend module.</p>
+            <p class="dui dui-leading-6">To define the interface and use the generated rest-client from backend code only define the following dependencies in the backend module, then define the interface inside the backend module :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_backend_dependencies}|)"></div>
+        </li>
+        <li class="dui">
+            <span>Shared clients between frontend and backend mode :</span>
+            <p class="dui dui-leading-6">In this mode the same generated rest clients will be shared and usable from both modules, the frontend and the backend.</p>
+            <p class="dui dui-leading-6">To define the interface and use the generated rest-client from both frontend and backend modules define the dependencies as the following then define the interface inside the shared module :</p>
+            <ul class="dui dui-site-docs-list">
+                <li class="dui">
+                    <span class="dui">In the frontend module :</span>
+                    <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_shared_frontend_dependencies}|)"></div>
+                </li>
+                <li class="dui">
+                    <span class="dui">In the backend module :</span>
+                    <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_shared_backend_dependencies}|)"></div>
+                </li>
+                <li class="dui">
+                    <span class="dui">In the shared module :</span>
+                    <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_shared_dependencies}|)"></div>
+                </li>
+            </ul>
+            <p class="dui dui-leading-6">With this setup as the both the frontend and the backend modules depends on the shared module the generated REST clients in the shred module will be available and usable from both sides.</p>
+        </li>
+    </ul>
+</div>

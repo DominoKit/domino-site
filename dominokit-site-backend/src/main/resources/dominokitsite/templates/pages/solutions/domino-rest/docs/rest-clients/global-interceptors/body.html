@@ -1,0 +1,64 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/rest-clients/global-interceptors" aria-expanded="true">
+                Global interceptors
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Global interceptors</h1>
+
+    <p class="dui dui-leading-6">Global interceptors allows us to intercept the requests/responses of domino-rest and modify the requests before they are sent to the server, or the response after it is received from the server.</p>
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <h4>Intercepting requests</h4>
+            <p class="dui dui-leading-6">In many cases we might need to intercept all rest requests to add some extra headers, like security headers or authentication tokens, and it would be painful to do this for each request one at a time.
+                and for this domino-rest allow defining global interceptors that can intercept all requests using <b>DominoRestConfig</b>. Example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('public class TokenInterceptor implements RequestInterceptor {
+    @Override
+    public void interceptRequest(ServerRequest request, ContextAggregator.ContextWait&lt;ServerRequest&gt; contextWait) {
+        request.setHeader(&quot;Authorization&quot;, &quot;some token goes here&quot;);
+        contextWait.complete(request);
+    }
+}')"></div>
+            <p class="dui dui-leading-6">The request interceptors are blocking which allows us to do some other rest calls or async operation before resuming the request, requests will resume only after all interceptors calls the <b>complete</b> method of the <b>contextWait</b> received in the argument.</p>
+
+        </li>
+        <li class="dui">
+            <h4>Intercepting responses</h4>
+            <p class="dui dui-leading-6">We can use response interceptors to intercepts generic responses, like authentication or errors,
+                and we can add as many response interceptors as we want. those interceptors will be called before calling the actual request success or fail handlers, except that we can skip the fail handler from the interceptor. Example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.getInstance()
+	.addResponseInterceptor(new ResponseInterceptor() {
+		@Override
+		public void interceptOnSuccess(ServerRequest serverRequest, String body) {
+			//do something with the success response
+		}
+
+		@Override
+		public void interceptOnFailed(ServerRequest serverRequest, FailedResponseBean failedResponse) {
+			if(failedResponse.getStatusCode()==401){
+				serverRequest.skipFailHandler();
+			}
+			//do something with the failed response, maybe forward to login page.
+		}
+	});')"></div>
+            <p class="dui dui-leading-6">Both methods of the <b>ResponseInterceptor</b> are default to do nothing.</p>
+        </li>
+    </ul>
+
+</div>

@@ -1,0 +1,64 @@
+<div th:fragment="content" class="dui">
+    <div class="dui dui-solution-title-bar">
+        <h1 class="dui dui-fg-teal dui-grow-1"><span class="dui dui-block">Domino REST</span>
+            <small>
+                <a href="https://github.com/DominoKit/domino-rest"><img
+                        src="https://img.shields.io/github/stars/DominoKit/domino-rest?style=social"
+                        alt="stars - domino-rest"></a>
+            <a href="https://github.com/DominoKit/domino-rest"><img
+                    src="https://img.shields.io/github/forks/DominoKit/domino-rest?style=social" alt="forks - domino-rest"></a>
+
+            </small>
+        </h1>
+        <div class="dui dui-solution-title-bar-buttons">
+            <div th:replace="fragments/commons/components/external-link :: content('https://github.com/DominoKit/domino-rest', 'mdi-github', 'View on Github')"></div>
+            <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+        </div>
+    </div>
+    <p class="dui dui-p-x-4 dui-m-0">Domino-rest generates REST clients from JaxRs interfaces for both browser (GWT) and server use. It leverages <a class="dui" href="/solutions/domino-jackson" tabindex="0" dui-site-data="nav-anchor">Domino-jackson</a> for serialization and relies on annotation processing (APT) for streamlined code generation.</p>
+    <div class="dui dui-solution-badges">
+
+        <a href="https://github.com/DominoKit/domino-rest/actions?query=workflow:%22Deploy%22"><img
+                src="https://github.com/DominoKit/domino-rest/workflows/Deploy/badge.svg" alt="Deploy"></a>
+        <a href="https://github.com/DominoKit/domino-rest/releases/"><img
+                src="https://img.shields.io/github/release/DominoKit/domino-rest?include_prereleases=&sort=semver&color=14c398"
+                alt="GitHub release"></a>
+        <a href="#license"><img src="https://img.shields.io/badge/License-_Apache_2.0-14c398" alt="License"></a>
+
+        <a href="https://discord.gg/35UG3FhfHq"><img
+                src="https://img.shields.io/badge/Discord-Join_chat-14c398?logo=discord&logoColor=white"
+                alt="Discord - Join chat"></a>
+        <a href="https://matrix.to/#/#DominoKit_domino:gitter.im"><img
+                src="https://img.shields.io/badge/Element-Join_chat-14c398?logo=element&logoColor=white"
+                alt="Element - Join chat"></a>
+    </div>
+    <div class="dui dui-p-x-4 dui-p-t-4">
+        <img class="dui dui-image-responsive dui-rounded" alt="domino jackson banner" src="/assets/domino-rest-banner.svg" width="100%" height="500" style="max-height: 500px; background-color: #161717;">
+    </div>
+
+    <div class="dui dui-p-4">
+        <div class="feature-blocks">
+            <div class="dui feature-block">
+                <i class="dui mdi mdi-application-braces dui-site-solution-quick-info-icon"></i>
+                <h1>REST client generation</h1>
+                <p>
+                    Utilizing java annotation processors to generate REST clients from JAX-RS interfaces with fluent API and callbacks.
+                </p>
+            </div>
+            <div class="dui feature-block">
+                <i class="dui mdi mdi-code-json dui-site-solution-quick-info-icon"></i>
+                <h1>Auto JSON mapping</h1>
+                <p>
+                    Your data beans are automatically mapped to/from JSON for you utilizing domino-jackson capabilities.
+                </p>
+            </div>
+            <div class="dui feature-block">
+                <i class="dui mdi mdi-file-code dui-site-solution-quick-info-icon"></i>
+                <h1>Rich reusable REST Clients</h1>
+                <p>
+                    The generated clients are rich in terms of configuration and parametrization and can be shred between frontend and JVM sides.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

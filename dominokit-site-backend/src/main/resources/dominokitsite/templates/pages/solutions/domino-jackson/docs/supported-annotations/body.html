@@ -1,0 +1,35 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson"
+               aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-jackson/docs/supported-annotations" aria-expanded="true">
+                Supported annotations
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Supported annotations</h1>
+
+    <p class="dui dui-leading-6">All the following Jackson annotations are supported as listed, we are expanding the list as we release new versions :</p>
+    <ul class="dui dui-site-docs-list">
+        <li class="dui"><pre>@JsonIgnoreProperties(ignoreUnknown = true)</pre></li>
+        <li class="dui"><pre>@JsonIgnore</pre></li>
+        <li class="dui"><pre>@JsonProperty</pre></li>
+        <li class="dui"><pre>@JsonFormat</pre></li>
+        <li class="dui"><pre>@JsonInclude</pre></li>
+        <li class="dui"><pre>@JsonDeserialize(builder = SomeBuilder.class)</pre></li>
+        <li class="dui"><pre>@JsonPOJOBuilder(buildMethodName = "create")</pre></li>
+        <li class="dui"><pre>@JsonIdentityInfo</pre> this is a limited support as <b>@JsonIdentityReference</b> is not yet supported, but should work for common use cases.</li>
+        <li class="dui"><pre>@JsonTypeInfo</pre> with partial support check <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+                                                                               href="/solutions/domino-jackson/docs/polymorphism" aria-expanded="true">
+            Polymorphism documentation
+        </a> for more details.</li>
+        <li class="dui"><pre>@JsonSubTypes</pre></li>
+    </ul>
+</div>

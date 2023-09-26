@@ -1,0 +1,40 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/rest-clients/request-body" aria-expanded="true">
+                Request body
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Request body</h1>
+
+    <p class="dui dui-leading-6">In case of <b>POST</b>, <b>PUT</b>, <b>PATCH</b> http requests we normally sends a body in the request,
+        in domino-rest the body of the request is determined from the call argument using one of the following in order :</p>
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>A method argument is annotated with <b>@RequestBody</b>.</span>
+        </li>
+        <li class="dui">
+            <span>The type of a method argument is annotated with <b>@RequestBody</b>.</span>
+        </li>
+        <li class="dui">
+            <span>The last argument in the method that is not annotated with <b>@QueryParam</b>, <b>@HeaderParam</b> or <b>@PathParam</b>.</span>
+        </li>
+
+    </ul>
+
+</div>

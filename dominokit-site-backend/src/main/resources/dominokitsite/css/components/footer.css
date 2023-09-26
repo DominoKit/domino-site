@@ -14,7 +14,7 @@
     flex-grow: 1;
     text-align: left;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .dk-c-footer__menu-section {

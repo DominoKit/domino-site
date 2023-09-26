@@ -55,9 +55,10 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                     boolean docs= Optional.ofNullable(routingContext.request().getParam("docs"))
                             .map(Boolean::valueOf)
                             .orElse(false);
-                    JsonObject templateContext = new JsonObject();
+
+                    JsonObject templateContext = TemplatesContext.get();
                     templateContext.put("ctxParamDocs", docs);
-                    templateContext.put("ctxParamTest", "HelloWorld");
+
                     contentProvider.provideContent("pages/" + path+"/"+(docs?"body":page), templateContext, new ThymeleafIndexPageProvider.ContentConsumer() {
                         @Override
                         public void onSuccess(String content) {

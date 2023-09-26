@@ -1,0 +1,123 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/docs/configuration"
+               aria-expanded="true">
+                Configuration
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/docs/configuration/service-root" aria-expanded="true">
+                Service root
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Service root</h1>
+
+    <p class="dui dui-leading-6">When using doing rest we are not limited to calling a single API from our API server, at the end they could have multiple API servers and each can expose a different set of endpoints and each could be deployed in a different location,
+        thus Domino-rest provides enough tools and mechanisms to deal with such scenarios without scattering the root or base urls of those API server all over the source code as listed below</p>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>Default service root :</span>
+            <p class="dui dui-leading-6">When service root it not defined Domino-rest will assume that the service root is the same base url (Host and Port) from where it is being used.</p>
+            <p class="dui dui-leading-6">Then if the application is deployed at <b>localhost:8080</b> then all calls made by domino-rest clients will use <b>localhost:8080</b> as the base or root service url, and <b>service</b> as a root path, for example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('http://localhost:8080/service/{path to service}')"></div>
+        </li>
+        <li class="dui">
+            <span>Global service root :</span>
+            <p class="dui dui-leading-6">We can define a service root that is different from were the application is deployed and then all requests will be made to that base or root url, the configuration is available using the <b>DominoRestConfig</b> class</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig
+   .getInstance()
+   .setDefaultServiceRoot(&quot;http://127.0.0.1:9090/&quot;);')"></div>
+            <p class="dui dui-leading-6">If we defined a global service root we override the default one for all request so our request for the above example will become :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('http://127.0.0.1:9090/{path to service}')"></div>
+        </li>
+        <li class="dui">
+            <span>Service root per service :</span>
+            <p class="dui dui-leading-6">When we annotate a service using <b>@ServiceFactory</b> we can also specify the service root for that specific service or resource, the service root defined in this way will take priority over the default or the global service root, for example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory(serviceRoot = &quot;http://localhost:7070/library/&quot;)
+public interface MoviesService {
+
+   @Path(&quot;movies/:movieName&quot;)
+   @GET
+   Movie getMovieByName(@PathParam(&quot;movieName) String movieName);
+
+   @Path(&quot;movies&quot;)
+   @GET
+   List&lt;Movie&gt; listMovies();
+
+   @Path(&quot;movies/:name&quot;)
+   @PUT
+   void updateMovie(@BeanParam @RequestBody Movie movie);
+}')"></div>
+            <p class="dui dui-leading-6">So now even if we define a global service root as stated above making calls using the client generated from this service will always make the request to <b>http://localhost:7070/library/{path to service}</b> instead of using the global one.</p>
+        </li>
+
+        <li class="dui">
+            <span>Dynamic service root routing :</span>
+            <p class="dui dui-leading-6">Instead of fixed service mapping for each service, or using one global service mapping for all service domino-rest allows mapping each service to a different root based on some matching conditions.
+               for example we want all services that has a path starts with <b>movies</b> to map to <b>http://localhost:7070/library/</b> while all services with paths starts with <b>books</b> map to <b>http://localhost:9090</b> and so on.
+            this is could also be very useful when the service roots are not fixed and could be defined as system properties or coming from some sort of configuration.</p>
+            <p class="dui dui-leading-6">We can use the <b>DominoRestConfig</b> class to define our routing rules, for example : </p>
+            <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.getInstance()
+    .addDynamicServiceRoot(DynamicServiceRoot
+            .pathMatcher(path -&gt; path.startsWith(&quot;movies&quot;))
+            .serviceRoot(() -&gt; &quot;http://localhost:7070/library/&quot;)
+    )
+    .addDynamicServiceRoot(DynamicServiceRoot
+            .pathMatcher(path -&gt; path.startsWith(&quot;books&quot;))
+            .serviceRoot(() -&gt; &quot;http://localhost:9090&quot;)
+    );')"></div>
+            <p class="dui dui-leading-6">With this configuration when we have a service that does not match any of the specified rules it will fall back to use the global or default service root.</p>
+            <p class="dui dui-leading-6">And such configuration will also help us remove the hard coded host and port from our services/resources definitions, for example we can rewrite the following resource :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory(serviceRoot = &quot;http://localhost:7070/&quot;)
+public interface MoviesService {
+
+    @Path(&quot;library/movies/:movieName&quot;)
+    @GET
+    Movie getMovieByName(@PathParam(&quot;movieName&quot;) String movieName);
+
+    @Path(&quot;library/movies&quot;)
+    @GET
+    List&lt;Movie&gt; listMovies();
+
+    @Path(&quot;library/movies/:name&quot;)
+    @PUT
+    void updateMovie(@BeanParam @RequestBody Movie movie);
+}')"></div>
+            <p class="dui dui-leading-6">To be like this :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
+@Path(&quot;library/&quot;)
+public interface MoviesService {
+
+    @Path(&quot;movies/:movieName&quot;)
+    @GET
+    Movie getMovieByName(@PathParam(&quot;movieName&quot;) String movieName);
+
+    @Path(&quot;movies&quot;)
+    @GET
+    List&lt;Movie&gt; listMovies();
+
+    @Path(&quot;movies/:name&quot;)
+    @PUT
+    void updateMovie(@BeanParam @RequestBody Movie movie);
+}')"></div>
+            <p class="dui dui-leading-6">Then define a dynamic routing as the following :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.getInstance()
+    .addDynamicServiceRoot(DynamicServiceRoot
+            .pathMatcher(path -&gt; path.startsWith(&quot;library&quot;))
+            .serviceRoot(() -&gt; &quot;http://localhost:7070/library/&quot;)
+    )')"></div>
+            <p class="dui dui-leading-6">With this we removed the hard coded host and port from the service definition but our methods still maps to the correct API server, for example the <b>getMovieByName</b> method will now map to <b>http://localhost:7070/library/movies/{movie name}</b></p>
+        </li>
+    </ul>
+</div>
