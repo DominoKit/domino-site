@@ -1,0 +1,71 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-token-filter"
+         dui-site-data="org.dominokit.domino.history.TokenFilter"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/docs/wildcards"
+               aria-expanded="true">
+                Wildcards
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Wildcards</h1>
+    <p class="dui dui-leading-6">
+        Token filters allow us to listen to specific changes in the URL, and when a filter returns true a listener that is associated with the filter will be called,
+        in which we receive a state that represent the current URL allowing us to make some check and do some logic based on the URL new value. so what if we have some common logic between different matches for similar URLs and we dont want to duplicate the listeners? for example,
+        We want to a payment record, but based on the user department he might see a different view with different kind of details of that payment, accountant department vs audit department vs reporting department, in this case we could something like this :
+    </p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.startsWithPathFilter(&quot;payments/accountant&quot;), state -&gt; {
+    String paymentId = state.token().getQueryParameter(&quot;paymentId&quot;).get(0);
+    viewPayment(&quot;accountant&quot;, paymentId);
+});
+
+stateHistory.listen(TokenFilter.startsWithPathFilter(&quot;payments/audit&quot;), state -&gt; {
+    String paymentId = state.token().getQueryParameter(&quot;paymentId&quot;).get(0);
+    viewPayment(&quot;audit&quot;, paymentId);
+});
+
+stateHistory.listen(TokenFilter.startsWithPathFilter(&quot;payments/reporting&quot;), state -&gt; {
+    String paymentId = state.token().getQueryParameter(&quot;paymentId&quot;).get(0);
+    viewPayment(&quot;reporting&quot;, paymentId);
+});')"></div>
+
+    <p class="dui dui-leading-6">Now even though this can work, but in case we have a new department we will not only need to change the implementation of the <b>viewPayment</b> method,
+        but also will need to add a new listener to call the method with the new department, which indeed not something we want to have in our code,
+        domino-rest have the solution for this by allowing the use of expressions in the token filters matching tokens, so for example we can write the above like the following instead: </p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.startsWithPathFilter(&quot;payments/:department&quot;), state -&gt; {
+    List&lt;String&gt; paymentId = state.token().getQueryParameter(&quot;paymentId&quot;);
+    String department = state.normalizedToken().getPathParameter(&quot;department&quot;);
+    viewPayment(department, paymentId);
+});')"></div>
+
+    <p class="dui dui-leading-6">Now instead of a specific token in the filter matching string we have a string with an expression <code class="dui dui-inlined">:department</code>,
+        then from the state we used the <b>normalizedToken</b> to get the actual value of the department received from the new URL value, and notice how the key we used matches the expression in the token without the <b>:</b>. So what is a normalized token?</p>
+
+    <p class="dui dui-leading-6">A NormalizedToken is a version of the state that has been produced from the matching of the new URL value with the string token specified by the token filter,
+        then it try to actually match each expression and assign its value from the URL, in the example above, if we matched <code class="dui dui-inlined">payments/:department</code> with <code class="dui dui-inlined">payments/accountant</code> for example,
+        then the first path element is not an expression is a true match between both the tokens, then the <b>:department</b> which is the second path element is matched with <b>accountant</b>,
+        and since it an expression it will be a true match then will be added to the normalized token and a path parameter with the key <b>department</b> and value <b>accountant</b></p>
+
+    <p class="dui dui-leading-6">This kind of expression matching works great for most of the cases, but it cant be applied for all kind of filters, for example a <b>containsPath</b> filter will be very hard to match with expressions,
+    this is because we are matching any part of the URL that could be in the start, the end the middle or anywhere in the URL so we cant just assume the value of the expression will match what could be randomly located in the URL,
+        this kind of filters like the containsPath one are deemed to have this kind of restriction, and we implement our own custom TokenFilters we need also to keep in mind that our implementation might not support the use of expression.</p>
+
+    <p class="dui dui-leading-6">Last but least expressions also works for fragments, which is very useful for within same page navigation,
+        for example we can force the page to scroll to a specific section by change the fragments part of the url while listening to the change with expressions, for example :</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.startsWithFragment(&quot;:section&quot;), state -&gt; {
+    String section = state.normalizedToken().getFragmentParameter(&quot;section&quot;);
+    scrollTo(section);
+});')"></div>
+
+</div>

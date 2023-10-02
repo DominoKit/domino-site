@@ -1,0 +1,35 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-history/docs/getting-started/setup" aria-expanded="true">
+                Setup
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Setup</h1>
+
+    <p class="dui dui-leading-6">Domino history is a simple wrapper over the browser history API, and thus all you need is a single dependency to be added to your project:</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content(|${domino_history_dependencies}|)"></div>
+    <p class="dui dui-leading-6">In case you are using GWT you will also need to add the following inherit directive:</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('&lt;inherits name=&quot;org.dominokit.domino.client.history.History&quot;/&gt;')"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-history/docs/getting-started/basic-usage', 'mdi-arrow-right-thin', 'Next, check basic usage guide.')"></div>
+    </div>
+
+</div>

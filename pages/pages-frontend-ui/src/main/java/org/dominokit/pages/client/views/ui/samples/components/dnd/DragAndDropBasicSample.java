@@ -62,8 +62,8 @@ public class DragAndDropBasicSample extends BaseDominoElement<HTMLDivElement, Dr
 
 
         this.element = div().addCss(dui_p_2)
-                .appendChild(div().addCss(dui_flex, dui_justify_evenly)
-                        .appendChild(div()
+                .appendChild(Row.create()
+                        .span6(div()
                                 .appendChild(div().addCss(dui_flex, dui_flex_col)
                                         .appendChild(div().addCss(dui_font_size_4)
                                                 .appendChild(text("Drag zone"))
@@ -71,7 +71,7 @@ public class DragAndDropBasicSample extends BaseDominoElement<HTMLDivElement, Dr
                                         .appendChild(div().appendChild(dragArea))
                                 )
                         )
-                        .appendChild(div()
+                        .span6(div()
                                 .appendChild(div().addCss(dui_flex, dui_flex_col)
                                         .appendChild(div().addCss(dui_font_size_4)
                                                 .appendChild(text("Drop zone"))

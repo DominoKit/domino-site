@@ -59,7 +59,7 @@
     }
 
     .dui.dui-site-section-our-solutions {
-        margin: 0 10% 0 10%;
+        margin: 0 var(--dui-spc-4) 0 var(--dui-spc-4);
     }
 
 
@@ -187,7 +187,7 @@
     }
 
     .dui.dui-site-menu-icons {
-        height: 49px;
+        height: 0;
         border-bottom-right-radius: var(--dui-spc-1);
         justify-content: start;
     }
@@ -211,12 +211,23 @@
         right: -152px;
     }
 
+    .dui.dui-site-scroll-fire .dui-site-side-nav-item:not(.dui-site-doc-page-side-nav-button) {
+        animation: hideatend 0.5s ease-in-out;
+        visibility: hidden;
+    }
+
+
+    .dui.dui-site-scroll-fire.dui-active .dui-site-side-nav-item:not(.dui-site-doc-page-side-nav-button) {
+        visibility: visible;
+        animation: showatstart 0.5s ease-in-out;
+    }
+
     .dui.dui-site-scroll-fire.dui-active {
-        right: 0px;
+        right: 0;
     }
 
     .dui.dui-site-solution-doc-body {
-        padding: var(--dui-spc-4) var(--dui-spc-16) var(--dui-spc-16) var(--dui-spc-16);
+        padding: var(--dui-spc-8) var(--dui-spc-4) var(--dui-spc-4) var(--dui-spc-4);
     }
 
 
@@ -256,4 +267,7 @@
         justify-content: center;
     }
 
+    .dui.dui-home-nav-bar {
+        --dui-nav-bar-padding: 0 var(--dui-spc-2);
+    }
 }

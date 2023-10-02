@@ -6,6 +6,7 @@ import org.dominokit.domino.ui.button.DropdownButton;
 import org.dominokit.domino.ui.button.LinkButton;
 import org.dominokit.domino.ui.button.group.ButtonsGroup;
 import org.dominokit.domino.ui.elements.DivElement;
+import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.Menu;
 import org.dominokit.domino.ui.menu.MenuItem;
@@ -26,8 +27,8 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
     public ButtonsDropDownSample() {
         this.element = div().addCss(dui_p_2, dui_flex, dui_flex_col, dui_gap_4, dui_justify_center)
                 .appendChild(BlockHeader.create("DROPDOWN BUTTONS").addCss(dui_text_center))
-                .appendChild(div().addCss(dui_flex, dui_justify_center, dui_gap_2)
-                        .appendChild(ButtonsGroup.create()
+                .appendChild(Row.create()
+                        .span3(ButtonsGroup.create()
                                 .appendChild(Button.create("1"))
                                 .appendChild(Button.create("2"))
                                 .appendChild(DropdownButton.create(
@@ -39,7 +40,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_m_1)
                         )
-                        .appendChild(ButtonsGroup.create()
+                        .span3(ButtonsGroup.create()
                                 .appendChild(Button.create("1"))
                                 .appendChild(Button.create("2"))
                                 .appendChild(DropdownButton.create(
@@ -51,7 +52,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_primary, dui_m_1)
                         )
-                        .appendChild(ButtonsGroup.create()
+                        .span3(ButtonsGroup.create()
                                 .appendChild(Button.create("1"))
                                 .appendChild(Button.create("2"))
                                 .appendChild(DropdownButton.create(
@@ -63,7 +64,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_accent, dui_m_1)
                         )
-                        .appendChild(ButtonsGroup.create()
+                        .span3(ButtonsGroup.create()
                                 .appendChild(Button.create("1"))
                                 .appendChild(Button.create("2"))
                                 .appendChild(DropdownButton.create(
@@ -77,8 +78,8 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                         )
                 )
                 .appendChild(BlockHeader.create("DROPDOWN DIRECTION").addCss(dui_text_center))
-                .appendChild(div().addCss(dui_flex, dui_justify_center, dui_gap_2)
-                        .appendChild(DropdownButton.create(
+                .appendChild(Row.create()
+                        .span2(DropdownButton.create(
                                         LinkButton.create("TOP MIDDLE").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -86,7 +87,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                                 .setDropDirection(TOP_MIDDLE)
                                 )
                         )
-                        .appendChild(DropdownButton.create(
+                        .span2(DropdownButton.create(
                                         LinkButton.create("BOTTOM MIDDLE").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -94,7 +95,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                                 .setDropDirection(BOTTOM_MIDDLE)
                                 )
                         )
-                        .appendChild(DropdownButton.create(
+                        .span2(DropdownButton.create(
                                         LinkButton.create("TOP LEFT").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -102,7 +103,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                                 .setDropDirection(TOP_LEFT)
                                 )
                         )
-                        .appendChild(DropdownButton.create(
+                        .span2(DropdownButton.create(
                                         LinkButton.create("TOP RIGHT").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -110,7 +111,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                                 .setDropDirection(TOP_RIGHT)
                                 )
                         )
-                        .appendChild(DropdownButton.create(
+                        .span2(DropdownButton.create(
                                         LinkButton.create("BOTTOM LEFT").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -118,7 +119,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                                 .setDropDirection(BOTTOM_LEFT)
                                 )
                         )
-                        .appendChild(DropdownButton.create(
+                        .span2(DropdownButton.create(
                                         LinkButton.create("BOTTOM RIGHT").addCss(dui_m_1),
                                         Menu.create()
                                                 .appendChild(MenuItem.create("Action"))
@@ -128,8 +129,8 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                         )
                 )
                 .appendChild(BlockHeader.create("SPLIT BUTTONS").addCss(dui_text_center))
-                .appendChild(div().addCss(dui_flex, dui_justify_center, dui_gap_2)
-                        .appendChild(ButtonsGroup.create(
+                .appendChild(Row.create()
+                        .span3(ButtonsGroup.create(
                                         Button.create("DEFAULT").addCss(dui_w_28),
                                         DropdownButton.create(
                                                 Button.create(Icons.chevron_down()),
@@ -140,7 +141,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_m_1)
                         )
-                        .appendChild(ButtonsGroup.create(
+                        .span3(ButtonsGroup.create(
                                         Button.create(Icons.home()),
                                         DropdownButton.create(
                                                 Button.create(Icons.chevron_down()),
@@ -151,7 +152,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_m_1)
                         )
-                        .appendChild(ButtonsGroup.create(
+                        .span3(ButtonsGroup.create(
                                         Button.create("DEFAULT"),
                                         DropdownButton.create(
                                                 Button.create(Icons.chevron_down()),
@@ -162,7 +163,7 @@ public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, But
                                         )
                                 ).addCss(dui_m_1, dui_primary)
                         )
-                        .appendChild(ButtonsGroup.create(
+                        .span3(ButtonsGroup.create(
                                         Button.create("DEFAULT"),
                                         DropdownButton.create(
                                                 Button.create(Icons.chevron_down()),

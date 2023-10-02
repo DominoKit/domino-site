@@ -18,6 +18,7 @@
         <domino.history.version>1.0.0</domino.history.version>
         <domino.rest.version>1.0.0</domino.rest.version>
         <domino.ui.version>HEAD-SNAPSHOT</domino.ui.version>
+        <domino.history.version>HEAD-SNAPSHOT</domino.history.version>
         <domino.jackson.version>1.0.0</domino.jackson.version>
         <domino.mvp.version>HEAD-SNAPSHOT</domino.mvp.version>
     </properties>

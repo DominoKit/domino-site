@@ -40,7 +40,7 @@ public class CollapsibleCardsSample extends BaseDominoElement<HTMLDivElement, Co
                                 .appendChild(Card.create("Card Title", "Description text here...")
                                         .setCollapsible(true)
                                         .setHeaderPosition(HeaderPosition.BOTTOM)
-                                        .addCss(dui_accent, dui_absolute)
+                                        .addCss(dui_accent)
                                         .appendChild(text(SAMPLE_CONTENT))
                                         .withHeader((card, header) -> {
                                             header.appendChild(PostfixAddOn.of(Icons.dots_vertical()

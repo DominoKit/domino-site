@@ -147,7 +147,7 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
                             "        </span>")
                     .collect(Collectors.joining("\n"));
 
-            String sideDocsNavButton= "<span id=\"dui-site-doc-page-side-nav-button\" class=\"dui dui-labeled-icon dui-reversed dui-site-side-nav-item dui-show-on-small-and-down dui-hide-on-medium-and-up\" > <i class=\"dui mdi mdi-gamepad-circle-left\"></i> <span class=\"dui dui-mdi-text dui-text-ellipsis\"></span> </span>\n";
+            String sideDocsNavButton= "<span id=\"dui-site-doc-page-side-nav-button\" class=\"dui dui-site-doc-page-side-nav-button dui-labeled-icon dui-reversed dui-site-side-nav-item dui-show-on-small-and-down dui-hide-on-medium-and-up\" > <i class=\"dui mdi mdi-gamepad-circle-left\"></i> <span class=\"dui dui-mdi-text dui-text-ellipsis\"></span> </span>\n";
             sideNavElement.append(sideDocsNavButton + sideNavHtml);
         }
     }

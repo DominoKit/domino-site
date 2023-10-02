@@ -25,40 +25,36 @@ public class CardLogoSample extends BaseDominoElement<HTMLDivElement, CardLogoSa
     public CardLogoSample() {
         this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
-                        .appendChild(Column.span4()
-                                .appendChild(Card.create("Card Title", "Description text here...")
-                                        .setCollapsible(true)
-                                        .appendChild(text(SAMPLE_CONTENT))
-                                        .withHeader((card, header) -> {
-                                            header
-                                                    .setLogo(img("http://placehold.jp/3d4070/ffffff/36x36.png"))
-                                                    .appendChild(PostfixAddOn.of(Icons.dots_horizontal()
-                                                            .clickable()
-                                                            .addClickListener(evt -> Notification.create("More action selected").show())
-                                                    ))
-                                                    .appendChild(PrefixAddOn.of(Icons.dots_vertical().clickable()));
-                                        })
-                                )
+                        .span4(Card.create("Card Title", "Description text here...")
+                                .setCollapsible(true)
+                                .appendChild(text(SAMPLE_CONTENT))
+                                .withHeader((card, header) -> {
+                                    header
+                                            .setLogo(img("http://placehold.jp/3d4070/ffffff/36x36.png"))
+                                            .appendChild(PostfixAddOn.of(Icons.dots_horizontal()
+                                                    .clickable()
+                                                    .addClickListener(evt -> Notification.create("More action selected").show())
+                                            ))
+                                            .appendChild(PrefixAddOn.of(Icons.dots_vertical().clickable()));
+                                })
                         )
-                        .appendChild(Column.span4().addCss(dui_relative)
-                                .appendChild(Card.create("Card Title", "Description text here...")
-                                        .setCollapsible(true)
-                                        .setHeaderPosition(HeaderPosition.BOTTOM)
-                                        .addCss(dui_accent, dui_absolute)
-                                        .appendChild(text(SAMPLE_CONTENT))
-                                        .withHeader((card, header) -> {
-                                            header
-                                                    .setLogo(img("http://placehold.jp/3d4070/ffffff/36x36.png").addCss(dui_rounded_full))
-                                                    .appendChild(PostfixAddOn.of(Icons.dots_horizontal()
-                                                            .clickable()
-                                                            .addClickListener(evt -> Notification.create("More action selected").show())
-                                                    ))
-                                                    .appendChild(PrefixAddOn.of(Icons.dots_vertical().clickable()));
-                                        })
-                                )
+                        .span4(Card.create("Card Title", "Description text here...")
+                                .setCollapsible(true)
+                                .setHeaderPosition(HeaderPosition.BOTTOM)
+                                .addCss(dui_accent)
+                                .appendChild(text(SAMPLE_CONTENT))
+                                .withHeader((card, header) -> {
+                                    header
+                                            .setLogo(img("http://placehold.jp/3d4070/ffffff/36x36.png").addCss(dui_rounded_full))
+                                            .appendChild(PostfixAddOn.of(Icons.dots_horizontal()
+                                                    .clickable()
+                                                    .addClickListener(evt -> Notification.create("More action selected").show())
+                                            ))
+                                            .appendChild(PrefixAddOn.of(Icons.dots_vertical().clickable()));
+                                })
+
                         )
-                        .appendChild(Column.span4()
-                                .appendChild(Card.create("Card Title", "Description text here...")
+                        .span4(Card.create("Card Title", "Description text here...")
                                         .setCollapsible(true)
                                         .setHeaderPosition(HeaderPosition.BOTTOM)
                                         .addCss(dui_teal)
@@ -72,7 +68,6 @@ public class CardLogoSample extends BaseDominoElement<HTMLDivElement, CardLogoSa
                                                     ))
                                                     .appendChild(PrefixAddOn.of(Icons.dots_vertical().clickable()));
                                         })
-                                )
                         )
                 )
         ;

@@ -1,0 +1,44 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-token-filter"
+         dui-site-data="org.dominokit.domino.history.TokenFilter"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/docs/interceptors"
+               aria-expanded="true">
+                Interceptors
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Interceptors</h1>
+    <p class="dui dui-leading-6">
+        In some cases we might need to intercept a routing that happening in the application and prevent it based on some logic or needed behavior,
+        for example the user is editing a large form, and he is navigating away from that form before saving his changes, which might be a risky operation,
+        and so we need to show the user a confirmation if he actually meant to navigate out without saving his, or might even ask him to save the changes,
+        then the user can choose between ignoring the message and continue to navigate away without saving or cancel the navigation and save his work before he navigates again.
+    </p>
+
+    <p class="dui dui-leading-6">In domino-history we have the concept of interceptors to help us deal with such use cases, interceptors work in a similar way of java servlets filters,
+        meaning the interceptors in domino-history work in a chain, every interceptor can either cancel the routing or call the next interceptor to continue the chain until one interceptor cancel the routing event or no interceptors remains</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.addInterceptor((tokenEvent, chain) -&gt; {
+    if(tokenEvent.getParsedToken().hasQueryParameter(&quot;editing&quot;)
+            &amp;&amp; Boolean.parseBoolean(tokenEvent.getParsedToken().getQueryParameter(&quot;editing&quot;).get(0))){
+        view.showConfirmation()
+                .onOk(()-&gt; chain.next())
+                .onCancel(()-&gt; tokenEvent.cancel())
+                .showMessage();
+    }
+});')"></div>
+
+    <p class="dui dui-leading-6">In the above example assuming a view can show a confirmation message, we have our interceptor check if the user is still editing the page and based on his decision we decide to continue or cancel the navigation.</p>
+    <p class="dui dui-leading-6">Interceptors in domino-history can be dynamically added or removed to StateHistory instance, this means you can for example add or register an interceptor when a view or page is activated, then when it is deactivated it can be removed,
+    this is helpful when you have a framework that controls your views life-cycle and you dont to keep all interceptors running all the time but instead only for the current activated view, to remove an interceptor we simply use the <b>removeInterceptor</b> method in s <b>StateHistory</b> instance.</p>
+
+</div>

@@ -1,0 +1,19 @@
+<div th:fragment="content" class="dui dui-solution-menu" id="dui-site-left-menu">
+    <div class="dui dui-flex ">
+        <div class="dui dui-site-menu-body" id="dui-site-left-menu-body">
+            <div th:replace="fragments/commons/components/menu-search :: content"></div>
+            <div class="dui dui-menu-content">
+                <ul class="dui dui-site-docs-menu">
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-getting-started">
+                        <a class="dui dui-site-menu-link" tabindex="0" dui-site-data="nav-anchor"
+                           dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                           href="/solutions/domino-mvp/docs/getting-started" aria-expanded="true">
+                            <i class="dui mdi mdi-rocket"></i>
+                            <span class="dui">Getting started</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

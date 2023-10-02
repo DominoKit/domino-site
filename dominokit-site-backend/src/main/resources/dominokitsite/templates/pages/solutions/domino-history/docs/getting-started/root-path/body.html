@@ -1,0 +1,45 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-history/docs/getting-started/root-path" aria-expanded="true">
+                Root path
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Root path</h1>
+
+    <p class="dui dui-leading-6">In some cases we might need to support navigation for different modules in the same app, or maybe the web page is hosting different applications, and eah application need to have its own routing,
+    and each application assumes a different base path in the URL, for example a customer relationship application path always starts with <b>http://localhost:8080/customers/...</b> meanwhile the ticketing application always starts with the path <b>http://localhost:8080/tickets</b>,
+        then the internal navigation and routing for each app will omit this root or base path from its routing tokens, In domino-history we can achieve this by creating new StateHistory instances with the desired root or base path, Example :
+    </p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('//Assuming we start with the URL http://localhost:8080
+StateHistory customersRouter = new StateHistory(&quot;customers&quot;);
+StateHistory ticketsRouter = new StateHistory(&quot;tickets&quot;);
+
+customersRouter.pushState(StateToken.of(&quot;profiles/customer-1&quot;));
+//Result : http://localhost:8080/customers/profiles/customer-1
+
+ticketsRouter.pushState(StateToken.of(&quot;open/ticket-3&quot;));
+//Result : http://localhost:8080/tickets/open/ticket-3')"></div>
+
+    <p class="dui dui-leading-6">Same thing if we try to read the current token with a StateHistory instance with a root path</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('List&lt;String&gt; paths = customersRouter.currentToken().paths();
+//Result : paths will contain only &quot;profiles&quot; and &quot;customer-1&quot;')"></div>
+
+</div>
