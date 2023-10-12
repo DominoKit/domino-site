@@ -41,13 +41,13 @@ public class CollapsibleStrategySample extends BaseDominoElement<HTMLDivElement,
                         .textContent(SAMPLE_CONTENT));
 
         Collapsible heightCollapsible = Collapsible.create(heightDiv)
-                .setStrategy(new HeightCollapseStrategy(CollapseDuration._300ms));
+                .setStrategy(new HeightCollapseStrategy(CollapsibleDuration._300ms));
 
         Collapsible displayCollapsible = Collapsible.create(displayDiv)
                 .setStrategy(new DisplayCollapseStrategy());
 
         Collapsible animationCollapsible = Collapsible.create(animationDiv)
-                .setStrategy(new AnimationCollapseStrategy(Transition.FADE_IN, Transition.FADE_OUT, CollapseDuration._500ms));
+                .setStrategy(new AnimationCollapseStrategy(Transition.FADE_IN, Transition.FADE_OUT, CollapsibleDuration._500ms));
 
         Button heightCollapseButton = Button.create("Height collapse");
         heightCollapseButton.getClickableElement().addEventListener("click", evt -> heightCollapsible.toggleCollapse());

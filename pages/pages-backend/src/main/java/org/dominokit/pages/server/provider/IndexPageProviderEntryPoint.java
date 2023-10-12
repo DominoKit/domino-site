@@ -87,13 +87,13 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                     .handler(routingContext -> {
                         context.vertx().executeBlocking(promise -> {
                             String path = routingContext.request().getParam("path");
-//                            try {
-//                                Github github = new RtGithub(configuration.getString("domino_github_token"));
-//                                Repo repo = github.repos().get(new Coordinates.Simple("DominoKit", "domino-site"));
-//                                InputStream contentStream = repo
-//                                        .contents()
-//                                        .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
-//                                        .raw();
+                            try {
+                                Github github = new RtGithub(configuration.getString("domino_github_token"));
+                                Repo repo = github.repos().get(new Coordinates.Simple("DominoKit", "domino-site"));
+                                InputStream contentStream = repo
+                                        .contents()
+                                        .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
+                                        .raw();
 
 //                                String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
                                 String content = "No source";
@@ -107,13 +107,13 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                                         .end();
                                 promise.complete();
 
-//                            } catch (IOException e) {
-//                                routingContext
-//                                        .response()
-//                                        .write("Failed to load content for path : " + path)
-//                                        .setStatusCode(500).end();
-//                                promise.fail(e);
-//                            }
+                            } catch (IOException e) {
+                                routingContext
+                                        .response()
+                                        .write("Failed to load content for path : " + path)
+                                        .setStatusCode(500).end();
+                                promise.fail(e);
+                            }
                         }, asyncResult -> {
 
                         });

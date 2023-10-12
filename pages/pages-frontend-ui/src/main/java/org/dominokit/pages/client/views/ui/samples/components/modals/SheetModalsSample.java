@@ -20,6 +20,8 @@ import org.dominokit.domino.ui.utils.FooterContent;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
+import static org.dominokit.domino.ui.dialogs.DialogStyles.*;
+
 public class SheetModalsSample extends BaseDominoElement<HTMLDivElement, SheetModalsSample> {
 
     private static final String SAMPLE_CONTENT = "Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.";
@@ -75,7 +77,7 @@ public class SheetModalsSample extends BaseDominoElement<HTMLDivElement, SheetMo
                 });
 
         Dialog rightSheetDialog = Dialog.create()
-                .setType(DialogType.RIGHT_SHEET)
+                .addCss(dui_right_sheet)
                 .withHeader((dialog, header) ->
                         header.appendChild(NavBar.create("SHEET DIALOG")
                                 .addCss(dui_h_8, dui_p_0)
@@ -118,7 +120,7 @@ public class SheetModalsSample extends BaseDominoElement<HTMLDivElement, SheetMo
                 });
 
         Dialog topSheetDialog = Dialog.create()
-                .setType(DialogType.TOP_SHEET)
+                .addCss(dui_top_sheet)
                 .withHeader((dialog, header) ->
                         header.appendChild(NavBar.create("SHEET DIALOG")
                                 .addCss(dui_h_8, dui_p_0)
@@ -161,7 +163,7 @@ public class SheetModalsSample extends BaseDominoElement<HTMLDivElement, SheetMo
                 });
 
         Dialog bottomSheetDialog = Dialog.create()
-                .setType(DialogType.BOTTOM_SHEET)
+                .addCss(dui_bottom_sheet)
                 .withHeader((dialog, header) ->
                         header.appendChild(NavBar.create("SHEET DIALOG")
                                 .addCss(dui_h_8, dui_p_0)

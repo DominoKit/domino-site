@@ -307,6 +307,11 @@ h2.dui-site-docs-subtitle {
     white-space-collapse: preserve;
 }
 
+
+.dui.dui-site-component-docs pre {
+    text-wrap: wrap;
+}
+
 #dui-site-component-docs-class,
 .dui-site-component-docs:empty {
     display: none;
