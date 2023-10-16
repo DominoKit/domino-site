@@ -270,4 +270,8 @@
     .dui.dui-home-nav-bar {
         --dui-nav-bar-padding: 0 var(--dui-spc-2);
     }
+
+    .dui.dui-donation-buttons {
+        flex-direction: column;
+    }
 }

@@ -1,12 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.forms.datepicker;
 
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.pages.client.presenters.samples.forms.BasicFormsProxy;
 import org.dominokit.pages.client.presenters.samples.forms.DatePickerProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.forms.basic.*;
 
 @UiView(presentable = DatePickerProxy.class)
 public class DatePickerViewImpl extends SampleViewImpl {

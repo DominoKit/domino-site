@@ -95,8 +95,8 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                                         .get("pages/pages-frontend-ui/src/main/java/" + path.replace(".", "/")+".java", context.config().getString("samples.branch"))
                                         .raw();
 
-//                                String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
-                                String content = "No source";
+                                String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
+//                                String content = "No source";
 
                                 routingContext
                                         .response()

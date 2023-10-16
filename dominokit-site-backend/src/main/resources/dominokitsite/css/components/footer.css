@@ -63,16 +63,16 @@
     flex-direction: column;
 }
 
-.dk-c-footer__link {
+.dui.dk-c-footer__link {
     display: inline-block;
-    color: var(--color-grey);
+    color: var(--dui-clr-grey);
     min-width: 6.25em;
     line-height: 2.5em;
     cursor: pointer;
 }
 
 .dk-c-footer__link:hover {
-    color: var(--color-white);
+    color: var(--dui-clr-white);
 }
 
 @media only screen and (max-width: 600px) {

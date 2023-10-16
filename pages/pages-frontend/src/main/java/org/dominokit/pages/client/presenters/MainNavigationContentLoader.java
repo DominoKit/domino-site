@@ -17,6 +17,7 @@ public class MainNavigationContentLoader implements ContentLoader {
          || token.endsWithPath("solutions/domino-jackson")
          || token.endsWithPath("solutions/domino-rest")
          || token.endsWithPath("solutions/domino-history")
+         || token.endsWithPath("support/donation")
          || token.endsWithPath("resources")
          || token.endsWithPath("news")
          || token.endsWithPath("about-us")

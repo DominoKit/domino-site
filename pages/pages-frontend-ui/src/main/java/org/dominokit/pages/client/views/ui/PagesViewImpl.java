@@ -55,7 +55,6 @@ public class PagesViewImpl extends BaseNoContentView implements PagesView, Domin
         elementOf(mainBody).setInnerHtml(content);
         DomGlobal.setTimeout(p0 -> {
             enhanceContent();
-            ElementUtil.scrollTop();
         }, 0);
     }
 

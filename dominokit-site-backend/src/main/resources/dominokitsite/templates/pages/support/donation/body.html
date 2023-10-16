@@ -1,0 +1,47 @@
+<div th:fragment="content" class="dui dui-donation-buttons">
+    <div class="dui dui-rounded-xl dui-elevation-1 dui-bg-yellow-d-1 dui-cursor-pointer"
+         th:fragment="content">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <div class="dui dui-flex dui-justify-center dui-p-4 dui-bg-teal-l-5 dui-rounded-tl-xl dui-rounded-tr-xl dui-elevation-1">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="lc" value="US">
+                <input type="hidden" name="hosted_button_id" value="AW5YG4LTTYNPS">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+                       name="submit" title="PayPal - The safer, easier way to pay online!"
+                       alt="Donate with PayPal button">
+                <img alt="" border="0" src="https://www.paypal.com/en_JO/i/scr/pixel.gif" width="1" height="1">
+
+            </div>
+
+            <div class="dui dui-flex dui-flex-col dui-items-center">
+                <div class="dui dui-font-size-8 dui-font-bold dui-p-x-4 dui-m-y-4">PAYPAL</div>
+            </div>
+        </form>
+    </div>
+
+    <div class="dui dui-rounded-xl dui-elevation-1 dui-bg-yellow-d-1 dui-cursor-pointer"
+         th:fragment="content">
+            <div class="dui dui-flex dui-justify-center dui-p-4 dui-bg-teal-l-5 dui-rounded-tl-xl dui-rounded-tr-xl dui-elevation-1">
+                <a href="https://www.patreon.com/bePatron?u=30748189" class="d-patreon"><img src="/assets/patreon.png" alt="patreon" width="48px" height="48px"></a>
+
+            </div>
+
+            <div class="dui dui-flex dui-flex-col dui-items-center">
+                <div class="dui dui-font-size-8 dui-font-bold dui-p-x-4 dui-m-y-4">PATREON</div>
+            </div>
+    </div>
+
+    <div class="dui dui-rounded-xl dui-elevation-1 dui-bg-yellow-d-1 dui-cursor-pointer"
+         th:fragment="content">
+            <div class="dui dui-flex dui-justify-center dui-p-4 dui-bg-teal-l-5 dui-rounded-tl-xl dui-rounded-tr-xl dui-elevation-1">
+                <a href="https://opencollective.com/dominokit/donate" target="_blank">
+                    <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width=300 />
+                </a>
+
+            </div>
+
+            <div class="dui dui-flex dui-flex-col dui-items-center">
+                <div class="dui dui-font-size-8 dui-font-bold dui-p-x-4 dui-m-y-4 dui-fg-grey-d-4">OPEN COLLECTIVE</div>
+            </div>
+    </div>
+</div>

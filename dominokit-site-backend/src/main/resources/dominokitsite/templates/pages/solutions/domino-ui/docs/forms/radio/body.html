@@ -1,0 +1,52 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio-group" dui-site-data="org.dominokit.domino.ui.forms.RadioGroup"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio" dui-site-data="org.dominokit.domino.ui.forms.Radio"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Forms
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/forms/radio" aria-expanded="true">
+                Radio
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Basic radio button</h1>
+
+    <h3 class="dui dui-site-docs-title">Radio group</h3>
+    <div class="dui dui-site-component-docs" id="dui-radio-group-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">Radio</h3>
+    <div class="dui dui-site-component-docs" id="dui-radio-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Radio</span>
+        <small class="dui">Select only one option from a group.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="radio-sample"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-radio-group-method-docs', 'RadioGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/RadioGroup.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-radio-method-docs', 'Radio', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/Radio.html')"></div>
+
+
+</div>

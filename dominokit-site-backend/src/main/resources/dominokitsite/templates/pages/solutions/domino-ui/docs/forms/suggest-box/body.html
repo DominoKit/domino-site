@@ -1,0 +1,65 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-abstract-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.AbstractSuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-single-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.SuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-multi-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.MultiSuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tag-box" dui-site-data="org.dominokit.domino.ui.forms.suggest.TagBox"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Forms
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/forms/suggest-box" aria-expanded="true">
+                Suggest Box
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Suggest box,Tags box,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Suggest box</h1>
+
+    <h3 class="dui dui-site-docs-title">Abstract suggest</h3>
+    <div class="dui dui-site-component-docs" id="dui-abstract-suggest-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Single suggest</h3>
+    <div class="dui dui-site-component-docs" id="dui-single-suggest-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Multi suggest</h3>
+    <div class="dui dui-site-component-docs" id="dui-multi-suggest-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Tags box</h3>
+    <div class="dui dui-site-component-docs" id="dui-tag-box-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-suggest-box">
+        <span class="dui dui-fg-teal">Suggest box</span>
+        <small class="dui">Optionally select one or more suggested values.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="suggest-box-sample"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-tags-box">
+        <span class="dui dui-fg-teal">Tags box</span>
+        <small class="dui">Input multi value data as tags.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tag-box-sample"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-abstract-suggest-method-docs', 'AbstractSuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSuggestBox.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-single-suggest-method-docs', 'SuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/SuggestBox.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-multi-suggest-method-docs', 'MultiSuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/MultiSuggestBox.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-tag-box-method-docs', 'TagBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/TagBox.html')"></div>
+
+
+</div>

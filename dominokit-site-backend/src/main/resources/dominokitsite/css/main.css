@@ -674,3 +674,15 @@ code.dui-inlined {
 code span {
     white-space: pre;
 }
+
+.dui-donation-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--dui-spc-4);
+    margin: var(--dui-spc-12) var(--dui-spc-4) var(--dui-spc-12) var(--dui-spc-4);
+}
+
+.dui.dui-hide-left-menu #dui-site-docs-left-menu-button.dui.dui-show-on-small-and-down {
+    display: none;
+}

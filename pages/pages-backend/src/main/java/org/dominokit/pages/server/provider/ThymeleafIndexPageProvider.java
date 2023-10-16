@@ -55,6 +55,7 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
                 templateName = requestPath;
             }
 
+            LOGGER.info("-------------> Loading page: "+templateName);
             engine.render(TemplatesContext.get(), templateName, event -> {
                 if (event.succeeded()) {
                     String content = event.result().toString();

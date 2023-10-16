@@ -13,6 +13,7 @@ import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.style.DominoCss;
 import org.dominokit.domino.ui.style.ToggleCssClass;
 import org.dominokit.domino.ui.utils.DominoElement;
+import org.dominokit.domino.ui.utils.ElementUtil;
 import org.dominokit.domino.ui.utils.ElementsFactory;
 import org.dominokit.domino.ui.utils.SwipeUtil;
 
@@ -69,8 +70,11 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                                     }
                                     popover.close();
                                     ClientApp.make().getHistory().fireState(StateToken.of(href));
-                                    Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                                    if (anchorElement.hasAttribute("dui-side-menu-link")) {
+                                        Optional.ofNullable(document.getElementById("dui-site-left-menu"))
                                                     .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
+                                    }
+                                    ElementUtil.scrollTop();
                                 }
                             }
                         });
@@ -87,35 +91,35 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
         elements.body().addClickListener(evt -> rightSideMenuOpenCss.remove(document.getElementById("dui-site-sm-nav-side-menu")));
 
         Optional.ofNullable(document.getElementById("dui-site-docs-left-menu-button"))
-                        .ifPresent(element -> {
-                            elements.elementOf(element)
-                                    .addClickListener(evt -> {
-                                        evt.stopPropagation();
-                                        evt.preventDefault();
-                                        leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
-                                    })
-                                    .setAttribute("dui-processed", true);
-                        });
+                .ifPresent(element -> {
+                    elements.elementOf(element)
+                            .addClickListener(evt -> {
+                                evt.stopPropagation();
+                                evt.preventDefault();
+                                leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
+                            })
+                            .setAttribute("dui-processed", true);
+                });
 
         elements.body().addClickListener(evt -> {
             Optional.ofNullable(document.getElementById("dui-site-left-menu"))
-                            .ifPresent(element -> leftSideMenuOpenCss.remove(element));
+                    .ifPresent(element -> leftSideMenuOpenCss.remove(element));
         });
 
         Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav-button"))
-                        .ifPresent(element -> {
-                            elements.elementOf(element)
-                                    .addClickListener(evt -> {
-                                        evt.stopPropagation();
-                                        evt.preventDefault();
-                                        rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
-                                    })
-                                    .setAttribute("dui-processed", true);
-                        });
+                .ifPresent(element -> {
+                    elements.elementOf(element)
+                            .addClickListener(evt -> {
+                                evt.stopPropagation();
+                                evt.preventDefault();
+                                rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
+                            })
+                            .setAttribute("dui-processed", true);
+                });
 
         elements.body().addClickListener(evt -> {
             Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav"))
-                            .ifPresent(element -> rightSideDocsMenuOpenCss.remove(element));
+                    .ifPresent(element -> rightSideDocsMenuOpenCss.remove(element));
         });
 
 
@@ -150,6 +154,7 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                             ClientApp.make().getHistory().fireState(StateToken.of(href));
                             Optional.ofNullable(document.getElementById("dui-site-left-menu"))
                                     .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
+                            ElementUtil.scrollTop();
                         }
                     });
                 }
@@ -181,14 +186,18 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                                             href = href.substring(1);
                                         }
                                         ClientApp.make().getHistory().fireState(StateToken.of(href));
-                                        Optional.ofNullable(document.getElementById("dui-site-left-menu"))
-                                                .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
+
+                                        if (anchorElement.hasAttribute("dui-side-menu-link")) {
+                                            Optional.ofNullable(document.getElementById("dui-site-left-menu"))
+                                                    .ifPresent(menu -> leftSideMenuOpenCss.apply(menu));
+                                        }
+                                        ElementUtil.scrollTop();
                                     }
                                 });
                             });
                 });
 
-        NodeList<Element> codeBlocks = document.querySelectorAll("code");
+        NodeList<Element> codeBlocks = document.querySelectorAll("code:not(.dui-site-component-docs pre code)");
         codeBlocks.asList()
                 .stream()
                 .filter(element -> !element.hasAttribute("dui-processed"))
@@ -196,7 +205,6 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                     element.setAttribute("dui-processed", "true");
                     elements.elementOf(element).setInnerHtml(PR.prettyPrintOne(element.textContent.replace("<", "&lt;").replace(">", "&gt;"), null, false));
                 });
-
 
         NodeList<Element> mainMenuElements = document.querySelectorAll(".dui-site-docs-menu-item");
         mainMenuElements.asList()
@@ -248,32 +256,32 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
                 });
 
         Optional.ofNullable(document.getElementById("dui-site-docs-left-menu-button"))
-                        .ifPresent(element -> {
-                            elements.elementOf(element)
-                                    .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
-                                        self
-                                                .setAttribute("dui-processed", true)
-                                                .addClickListener(evt -> {
-                                                    evt.stopPropagation();
-                                                    evt.preventDefault();
-                                                    leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
-                                                });
-                                    });
-                        });
+                .ifPresent(element -> {
+                    elements.elementOf(element)
+                            .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
+                                self
+                                        .setAttribute("dui-processed", true)
+                                        .addClickListener(evt -> {
+                                            evt.stopPropagation();
+                                            evt.preventDefault();
+                                            leftSideMenuOpenCss.apply(document.getElementById("dui-site-left-menu"));
+                                        });
+                            });
+                });
 
         Optional.ofNullable(document.getElementById("dui-site-doc-page-side-nav-button"))
-                        .ifPresent(element -> {
-                            elements.elementOf(element)
-                                    .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
-                                        self
-                                                .setAttribute("dui-processed", true)
-                                                .addClickListener(evt -> {
-                                                    evt.stopPropagation();
-                                                    evt.preventDefault();
-                                                    rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
-                                                });
-                                    });
-                        });
+                .ifPresent(element -> {
+                    elements.elementOf(element)
+                            .applyIf(e -> !e.hasAttribute("dui-processed"), self -> {
+                                self
+                                        .setAttribute("dui-processed", true)
+                                        .addClickListener(evt -> {
+                                            evt.stopPropagation();
+                                            evt.preventDefault();
+                                            rightSideDocsMenuOpenCss.apply(document.getElementById("dui-site-doc-page-side-nav"));
+                                        });
+                            });
+                });
 
     }
 

@@ -1,0 +1,57 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-abstract-select" dui-site-data="org.dominokit.domino.ui.forms.suggest.AbstractSelect"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-select" dui-site-data="org.dominokit.domino.ui.forms.suggest.Select"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-multi-select" dui-site-data="org.dominokit.domino.ui.forms.suggest.MultiSelect"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Forms
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/docs/forms/select" aria-expanded="true">
+                Select
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Select</h1>
+
+    <h3 class="dui dui-site-docs-title">Abstract select</h3>
+    <div class="dui dui-site-component-docs" id="dui-abstract-select-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">Single select</h3>
+    <div class="dui dui-site-component-docs" id="dui-select-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">Multi select</h3>
+    <div class="dui dui-site-component-docs" id="dui-multi-select-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-single">
+        <span class="dui dui-fg-teal">Select</span>
+        <small class="dui">Works in single or multi selection modes.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="select-sample"></div>
+
+    <div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-abstract-select-method-docs', 'AbstractSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSelect.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-select-method-docs', 'Select', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/Select.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-multi-select-method-docs', 'MultiSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/MultiSelect.html')"></div>
+
+
+</div>

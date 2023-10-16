@@ -1,12 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.forms.steppers;
 
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.pages.client.presenters.samples.forms.BasicFormsProxy;
 import org.dominokit.pages.client.presenters.samples.forms.SteppersProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.forms.basic.*;
 
 @UiView(presentable = SteppersProxy.class)
 public class SteppersViewImpl extends SampleViewImpl {

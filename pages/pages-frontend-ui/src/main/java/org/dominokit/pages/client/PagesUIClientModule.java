@@ -1,9 +1,12 @@
 package org.dominokit.pages.client;
 
 import com.google.gwt.core.client.EntryPoint;
+import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.ModuleConfigurator;
 import org.dominokit.domino.api.client.annotations.ClientModule;
 
+import org.dominokit.domino.history.TokenFilter;
+import org.dominokit.domino.ui.utils.ElementsFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
