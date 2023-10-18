@@ -1,2 +1,6 @@
 @media screen and (min-width: 1800px){
+    body.dui {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
 }

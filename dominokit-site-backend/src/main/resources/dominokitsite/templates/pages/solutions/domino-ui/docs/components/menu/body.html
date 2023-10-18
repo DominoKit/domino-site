@@ -107,7 +107,11 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="menu-nested"></div>
 
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-menu-method-docs', 'Menu', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/menu/Menu.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-menu-item-method-docs', 'MenuItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/menu/MenuItem.html')"></div>

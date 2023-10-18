@@ -70,7 +70,12 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="alerts-links"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-alert-method-docs', 'Alert', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/alerts/Alert.html')"></div>
 

@@ -96,7 +96,6 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                                         .raw();
 
                                 String content = new String(contentStream.readAllBytes(), StandardCharsets.UTF_8);
-//                                String content = "No source";
 
                                 routingContext
                                         .response()

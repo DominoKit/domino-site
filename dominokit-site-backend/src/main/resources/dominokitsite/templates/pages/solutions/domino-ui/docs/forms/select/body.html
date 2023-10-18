@@ -47,7 +47,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="select-sample"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-abstract-select-method-docs', 'AbstractSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSelect.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-select-method-docs', 'Select', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/Select.html')"></div>

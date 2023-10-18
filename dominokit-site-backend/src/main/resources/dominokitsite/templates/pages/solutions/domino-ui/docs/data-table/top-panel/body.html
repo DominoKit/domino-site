@@ -38,7 +38,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-top-panel"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-top-panel-method-docs', 'TopPanelPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/header/TopPanelPlugin.html')"></div>
 

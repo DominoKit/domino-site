@@ -34,6 +34,7 @@
 body.dui {
     position: relative;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .dui-tab-anchor {
@@ -136,10 +137,22 @@ body.dui {
     background-color: var(--dui-clr-yellow-l-4);
 }
 
+.dui-site-blob-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
 .blob {
-    position: fixed;
-    top: -1500px;
-    left: -800px;
+    position: absolute;
+    top: -400px;
+    left: -1000px;
     fill: #023F92;
     width: 5000px;
     z-index: -1;
@@ -685,4 +698,8 @@ code span {
 
 .dui.dui-hide-left-menu #dui-site-docs-left-menu-button.dui.dui-show-on-small-and-down {
     display: none;
+}
+
+body.dui {
+    overflow-x: hidden;
 }

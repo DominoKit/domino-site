@@ -53,7 +53,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="spin-vertical"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
 <!--    <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-method-docs', 'SpingSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/SpinSelect.html')"></div>-->
     <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-item-method-docs', 'SpingItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/SpinItem.html')"></div>

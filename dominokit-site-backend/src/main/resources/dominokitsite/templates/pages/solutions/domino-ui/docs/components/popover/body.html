@@ -52,7 +52,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="popovers-popover"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-base-popover-method-docs', 'BasePopover', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/popover/BasePopover.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-popover-method-docs', 'Popover', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/popover/Popover.html')"></div>

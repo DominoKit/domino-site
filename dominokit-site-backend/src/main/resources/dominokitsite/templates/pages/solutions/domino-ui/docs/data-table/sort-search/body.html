@@ -41,7 +41,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-sort-search"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-header-filter-method-docs', 'ColumnHeaderFilterPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/column/ColumnHeaderFilterPlugin.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-sort-method-docs', 'SortPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/SortPlugin.html')"></div>

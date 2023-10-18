@@ -54,7 +54,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-pagination-advanced"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-pagination-simple-method-docs', 'SimplePaginationPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/SimplePaginationPlugin.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-pagination-scrolling-method-docs', 'ScrollingPaginationPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/ScrollingPaginationPlugin.html')"></div>

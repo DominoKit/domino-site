@@ -78,7 +78,11 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tabs-vertical"></div>
 
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tabs-panel-method-docs', 'TabsPanel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tabs/TabsPanel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tab-method-docs', 'Tab', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tabs/Tab.html')"></div>

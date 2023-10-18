@@ -80,7 +80,10 @@
         <small class="dui">Responsive grid with 32 columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="responsive-grids-32-columns"></div>
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+<div  id="dui-side-nav-docs"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-row-method-docs', 'Row', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Row.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-grids-column-method-docs', 'Column', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/grid/Column.html')"></div>
 

@@ -55,7 +55,9 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tree-featured"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+        <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-method-docs', 'Tree', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tree/Tree.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-item-method-docs', 'TreeItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tree/TreeItem.html')"></div>

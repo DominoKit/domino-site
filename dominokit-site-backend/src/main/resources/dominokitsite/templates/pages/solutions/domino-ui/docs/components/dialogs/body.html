@@ -48,7 +48,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="dialogs-basic"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-abstract-method-docs', 'AbstractDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AbstractDialog.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-alert-method-docs', 'AlertMessageDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AlertMessageDialog.html')"></div>

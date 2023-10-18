@@ -49,7 +49,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="lists-multi-select"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-list-group-method-docs', 'ListGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/lists/ListGroup.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-list-item-method-docs', 'ListItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/lists/ListItem.html')"></div>

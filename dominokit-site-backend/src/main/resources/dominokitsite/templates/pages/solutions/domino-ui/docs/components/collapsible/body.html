@@ -75,7 +75,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-accordion-multi-open"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-method-docs', 'Collapsible', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/Collapsible.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-handlers-method-docs', 'CollapsibleHandlers', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/CollapsibleHandlers.html')"></div>

@@ -1,6 +1,6 @@
 <head th:fragment="head">
 	<meta charset=UTF-8>
-	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 	<title>DominoKit</title>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -8,7 +8,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 	<link href="/css/domino-ui/domino-ui.css" rel="stylesheet" type="text/css">
 	<link type="text/css" rel="stylesheet" href="/css/main.css">
-<!--	<link type="text/css" rel="stylesheet" href="/css/javadocs.css">-->
 
 	<script src="/js/prettify.js"></script>
 	<script src="/dominokitsite.nocache.js"></script>
@@ -20,5 +19,17 @@
 			let elementById = document.getElementById(elementId);
 			elementById.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
 		}
+
+		function openLeftMenu(){
+			let leftMenu = document.getElementById("dui-site-left-menu");
+			if(leftMenu && !leftMenu.classList.contains("dui-active")){
+				leftMenu.classList.add("dui-active");
+			}
+		}
+
+		document.addEventListener('touchmove', function (event) {
+			if (event.scale !== 1) { event.preventDefault(); }
+		}, false);
+
 	</script>
 </head>

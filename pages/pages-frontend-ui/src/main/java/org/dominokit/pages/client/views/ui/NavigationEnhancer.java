@@ -131,7 +131,7 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
         if (nonNull(solutionsMenuElement)) {
             dui_hidden.remove(solutionsMenuElement);
             DominoElement<HTMLElement> anchorElement = element.querySelector("[dui-site-data='nav-anchor']");
-            popover = Popover.create(Js.<HTMLElement>uncheckedCast(anchorElement.element()))
+            popover = Popover.create(Js.<HTMLElement>uncheckedCast(anchorElement.parent().element()))
                     .addCss("dui-site-solutions-menu")
                     .appendChild(solutionsMenuElement)
                     .setOpenOnClick(false)

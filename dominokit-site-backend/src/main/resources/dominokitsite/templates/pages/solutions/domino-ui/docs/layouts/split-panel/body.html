@@ -72,7 +72,11 @@
         <small class="dui">We can mix horizontal and vertical split panels.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-combined"></div>
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-method-docs', 'Split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/SplitPanel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-horizontal-method-docs', 'Horizontal split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/HSplitPanel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-vertical-method-docs', 'Vertical split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/VSplitPanel.html')"></div>

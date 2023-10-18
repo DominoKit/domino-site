@@ -52,7 +52,11 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="sliders-picker"></div>
 
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-slider-method-docs', 'Slider', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/sliders/Slider.html')"></div>
 

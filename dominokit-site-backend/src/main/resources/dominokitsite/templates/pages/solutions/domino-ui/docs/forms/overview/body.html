@@ -206,7 +206,11 @@
     </ul>
 
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-AbstractFormElement-method-docs', 'AbstractFormElement', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/AbstractFormElement.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-AbstractSuggestBox-method-docs', 'AbstractSuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSuggestBox.html')"></div>

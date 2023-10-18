@@ -54,7 +54,11 @@
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tag-box-sample"></div>
 
-    <div  id="dui-side-nav-docs"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-abstract-suggest-method-docs', 'AbstractSuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSuggestBox.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-single-suggest-method-docs', 'SuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/SuggestBox.html')"></div>

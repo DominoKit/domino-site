@@ -42,6 +42,11 @@
     <h2 class="dui dui-site-docs-subtitle">Examples</h2>
     <div id="dui-demo-sample-slot"></div>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="app-layout"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
     <div th:replace="fragments/commons/components/javadocs :: content('dui-app-layout-method-docs', '', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/layout/AppLayout.html')"></div>
 
 </div>

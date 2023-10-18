@@ -12,6 +12,10 @@
 }
 
 @media screen and (max-width: 992px) {
+
+    .dui-site .dui.dui-home-nav-bar > h4 {
+        display: block;
+    }
     .dui.dui-home-head-banner {
         flex-direction: column-reverse;
         justify-content: center;
@@ -112,9 +116,10 @@
     }
 
     .dui.blob {
-        top: -500px;
-        left: -1000px;
-        width: 3000px;
+        top: 0;
+        left: 0;
+        width: 1500px;
+        transform-origin: 20% 30%;
     }
 
     .dui.dui-solution-title-bar {
