@@ -1,0 +1,99 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card" dui-site-data="org.dominokit.domino.ui.cards.Card"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card-header" dui-site-data="org.dominokit.domino.ui.cards.CardHeader"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/cards" aria-expanded="true">
+                Cards
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,No header,Headers,Colored,Collapsible,With logo,Sub-header,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Cards</h1>
+
+    <h3 class="dui dui-site-docs-title">Card</h3>
+    <div class="dui dui-site-component-docs" id="dui-card-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/card-anatomy.png"
+         class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive"
+         alt="alerts-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">Card header, Optional and can also be positioned at the bottom of the card.</li>
+        <li class="dui">Card body, the card main content container.</li>
+        <li class="dui">Card title, Optional.</li>
+        <li class="dui">Card description, Optional.</li>
+        <li class="dui">Card header postfix elements, Optional, collapsible cards will have a collapse postfix action by default.</li>
+        <li class="dui">Card prefix elements, Optional, Will be positioned before the title.</li>
+        <li class="dui">Card logo, Optional will be placed before the header prefix elements.</li>
+        <li class="dui">Card sub-header, Optional, Will show below the header if the header at the top or at the top of the header if the header at the bottom.</li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-no-header">
+        <span class="dui dui-fg-teal">Cards without header</span>
+        <small class="dui">Cards without header can work as a general purpose containers</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-no-header"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-headers">
+        <span class="dui dui-fg-teal">Cars with headers</span>
+        <small class="dui">Cards with headers can provide more context and actions for the card content</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-headers"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-colored">
+        <span class="dui dui-fg-teal">Colored cards</span>
+        <small class="dui">The card header and body colors are both customizable</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-colored"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-collapsible">
+        <span class="dui dui-fg-teal">Collapsible cards</span>
+        <small class="dui">Cards allow the expand and collapse of the card body.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-collapsible"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-with-logo">
+        <span class="dui dui-fg-teal">Card header logo</span>
+        <small class="dui">A logo image can be used in the card header.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-logo"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-sub-header">
+        <span class="dui dui-fg-teal">Cards with sub-header</span>
+        <small class="dui">Cards can have an extra sub-header to provide more context.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-subheader"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-card-method-docs', 'Card', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/cards/Card.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-card-header-method-docs', 'CardHeader', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/cards/CardHeader.html')"></div>
+
+</div>

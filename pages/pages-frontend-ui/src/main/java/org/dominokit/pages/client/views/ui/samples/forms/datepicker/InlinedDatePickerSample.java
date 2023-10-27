@@ -21,9 +21,11 @@ public class InlinedDatePickerSample extends BaseDominoElement<HTMLDivElement, I
     public InlinedDatePickerSample() {
         this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
-                        .span4(Calendar.create())
-                        .span4(Calendar.create(new DateTimeFormatInfoImpl_ar()))
-                        .span4(Calendar.create(new DateTimeFormatInfoImpl_es()))
+                        .span6(Calendar.create())
+                        .span6(Calendar.create(new DateTimeFormatInfoImpl_ar()))
+                )
+                .appendChild(Row.create()
+                        .span6(Calendar.create(new DateTimeFormatInfoImpl_es()))
                 )
         ;
         init(this);

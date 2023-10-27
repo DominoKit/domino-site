@@ -21,10 +21,10 @@ public class SplitPanelHorizontal extends BaseDominoElement<HTMLDivElement, Spli
                 .appendChild(HSplitPanel.create()
                         .appendChild(SplitPanel.create()
                                 .setWidth("50%")
-                                .appendChild(div().addCss(demo_split_div, dui_bg_accent_l_2)))
+                                .appendChild(div().appendChild(span().textContent("left")).addCss(demo_split_div, dui_bg_accent_l_2)))
                         .appendChild(SplitPanel.create()
                                 .setWidth("50%")
-                                .appendChild(div().addCss(demo_split_div, dui_bg_accent_d_2)))
+                                .appendChild(div().appendChild(span().textContent("left")).addCss(demo_split_div, dui_bg_accent_d_2)))
                         .addCss(dui_h_96, dui_w_full)
                 );
 

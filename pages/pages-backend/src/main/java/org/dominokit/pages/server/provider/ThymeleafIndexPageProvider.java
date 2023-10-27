@@ -81,8 +81,8 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
 
             MdiTags.TAGS.forEach(tag -> {
                 iconsMenu.append("<li class=\"dui dui-site-docs-sub-menu-item\">\n" +
-                        "\t\t\t\t\t\t<a class=\"dui dui-site-menu-link\" tabindex=\"0\" dui-site-data=\"nav-anchor\" href=\"/solutions/domino-ui/docs/mdi-icons?tag=" + tagToLinkParam(tag) + "\" aria-expanded=\"true\">\n" +
-                        "\t\t\t\t\t\t\t<span class=\"dui\">" + tag + "</span>\n" +
+                        "\t\t\t\t\t\t<a class=\"dui dui-site-menu-link\" tabindex=\"0\" dui-site-data=\"nav-anchor\" href=\"/solutions/domino-ui/v2/docs/mdi-icons?tag=" + tagToLinkParam(tag) + "\" aria-expanded=\"true\">\n" +
+                        "\t\t\t\t\t\t\t<span class=\"dui dui-site-menu-item-text\">" + tag + "</span>\n" +
                         "\t\t\t\t\t\t</a>\n" +
                         "\t\t\t\t\t</li>");
             });

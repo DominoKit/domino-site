@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "TablePaginationDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/data-table/pagination", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/data-table/pagination", reRouteActivated = true)
 public class TablepaginationProxy extends SampleProxy {
 
 }

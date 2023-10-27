@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "SpinDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/spin", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/spin", reRouteActivated = true)
 public class SpinProxy extends SampleProxy {
 
 }

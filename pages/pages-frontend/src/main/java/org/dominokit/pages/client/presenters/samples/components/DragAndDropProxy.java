@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "DragAndDropDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/drag-and-drop", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/drag-and-drop", reRouteActivated = true)
 public class DragAndDropProxy extends SampleProxy {
 
 }

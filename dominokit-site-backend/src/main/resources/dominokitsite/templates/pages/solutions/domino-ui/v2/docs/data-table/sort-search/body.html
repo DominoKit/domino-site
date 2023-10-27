@@ -1,0 +1,54 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-header-filter" dui-site-data="org.dominokit.domino.ui.datatable.plugins.column.ColumnHeaderFilterPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-sort" dui-site-data="org.dominokit.domino.ui.datatable.plugins.pagination.SortPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-sort-config" dui-site-data="org.dominokit.domino.ui.datatable.plugins.pagination.SortPluginConfig"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Data table
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/data-table/sort-search" aria-expanded="true">
+                Sort and Search
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Sort and Search,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Sort and Search</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-datatable-header-filter-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-sort-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-sort-and-search">
+        <span class="dui dui-fg-teal">Sort and Search</span>
+        <small class="dui">Make columns sortable and adds search filters.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-sort-search"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-header-filter-method-docs', 'ColumnHeaderFilterPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/column/ColumnHeaderFilterPlugin.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-sort-method-docs', 'SortPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/SortPlugin.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-sort-config-method-docs', 'SortPluginConfig', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/SortPluginConfig.html')"></div>
+
+</div>

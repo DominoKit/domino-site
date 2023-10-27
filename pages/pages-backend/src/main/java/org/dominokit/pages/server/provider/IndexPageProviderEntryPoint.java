@@ -102,6 +102,7 @@ public class IndexPageProviderEntryPoint implements ServerAppEntryPoint<VertxCon
                                         .setStatusCode(200)
                                         .putHeader("Content-type", "text/plain")
                                         .putHeader("Content-length", content.length() + "")
+                                        .putHeader("Cache-Control", "max-age=86400")
                                         .write(content)
                                         .end();
                                 promise.complete();

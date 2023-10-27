@@ -1,0 +1,40 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-history-token"
+         dui-site-data="org.dominokit.domino.history.HistoryToken"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1/docs/history-token"
+               aria-expanded="true">
+                History token
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">History token</h1>
+    <p class="dui dui-leading-6">
+        History tokens are the parsed and processed version of the browser URL in domino-history, once we obtain a
+        HistoryToken for a URL we can use that token to alter and change that URL different parts,
+        to obtain a HistoryToken of the current browser URL we use a <b>HistoryState.currentToken()</b> method, then we
+        can use the obtained <b>HistoryToken</b> read the URL information or to forge a new URL with our desired
+        changes.
+
+    </p>
+    <p class="dui dui-leading-6">
+        With Domino-History, developers can effortlessly extract and modify URL components, such as query parameters,
+        fragments, and path segments, making it a versatile choice for building modern web applications. Whether you're
+        building a single-page application (SPA), a content management system, or an e-commerce platform, this library
+        empowers you to take control of the browser's URL, providing a seamless and interactive user journey.</p>
+
+    <p class="dui dui-leading-6">The API below explains what we can do with HistoryToken once obtained :</p>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-history-token-method-docs', 'HistoryToken', 'https://www.javadoc.io/doc/org.dominokit/domino-history-shared/latest/index.html')"></div>
+
+</div>

@@ -1,0 +1,81 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-token-filter"
+         dui-site-data="org.dominokit.domino.history.TokenFilter"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1/docs/token-filters"
+               aria-expanded="true">
+                Token filters
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Token filters</h1>
+    <p class="dui dui-leading-6">
+        As we discussed in previous parts of this documentation, we can use domino-history to listen for the changes applied to the URL throw the <b>StateHistory.fireState(...)</b> function,
+        But in most of the cases in a listener we will be interested in specific changes and any change that is applied, because most likely we are listening to those changes to take actions based on the change or the new URL value,
+        Domino-history API provide a way to actually filter what changes to the URL will trigger a specific listener, this is achieved through <b>TokenFilters</b>.
+
+    </p>
+    <p class="dui dui-leading-6">
+        A <b>TokenFilter</b> works like a condition we check over the new URL value after it is changed, and if the condition pass we call the listener associated with the TokenFilter,
+        When we define a listener without a TokenFilter we are actually using a default TokenFilter which is the `AnyTokenFilter` and this filter simply return always <b>True</b> since it just means any change.
+    </p>
+    <p class="dui dui-leading-6">Domino-history comes with a long list of a ready to use built-in token filters that we will list below, but it is not limited to those filters,
+        the user can still implement his own filters, this because the TokenFilter is an interface and any implementation of this interface is acceptable. For example the following custom TokenFilter :</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('
+import org.dominokit.domino.history.HistoryToken;
+import org.dominokit.domino.history.TokenFilter;
+
+public class UserTokenFilter implements TokenFilter {
+
+    private final UserContext userContext;
+
+    public UserTokenFilter(UserContext userContext) {
+        this.userContext = userContext;
+    }
+
+
+    @Override
+    public boolean filter(HistoryToken token) {
+        if(token.containsPath(&quot;secure&quot;)){
+            return userContext.isUserLoggedIn();
+        }
+        return true;
+    }
+
+    public static class UserContext {
+
+        public boolean isUserLoggedIn(){
+            //Some actual checks goes here to check if the user is actually logged in or not and return true or false based on that
+            return true;
+        }
+
+    }
+}')"></div>
+
+    <p class="dui dui-leading-6">Then we can use it just like any other token filter:</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(new UserTokenFilter(new UserTokenFilter.UserContext()), state -&gt; {
+   //Do something if a logged-in user navigated to a secure path
+});')"></div>
+
+    <p class="dui dui-leading-6">Here the TokenFilter checks if the user is trying to navigate to a secure path, then it assumes the user should be logged in to return true or else will return false,
+    but if the path isn't secure it won't check for a user login and will just return true.</p>
+
+    <p class="dui dui-leading-6">There is no restriction on what you can with a custom TokenFilter, except as we will discuss later for the use with wildcards when try to normalize a token to match the expressions with the matching values from the token.</p>
+
+    <p class="dui dui-leading-6">Below is a list of the built-in token filters:</p>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-token-filter-method-docs', 'HistoryToken', 'https://www.javadoc.io/doc/org.dominokit/domino-history-shared/latest/index.html')"></div>
+
+</div>

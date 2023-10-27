@@ -1,0 +1,54 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1"
+               aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-jackson/v1/docs/registry" aria-expanded="true">
+                Mappers registry
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Mappers registry</h1>
+
+    <p class="dui dui-leading-6">In some cases, You might need to store all generated mappers and load or use them dynamically.</p>
+
+    <p class="dui dui-leading-6">Domino-jackson includes a mechanism that allows this kind of mapper registration to happen automatically through some code generation, then the registry can be used to look-up the mapper using the pojo full qualified type of the bean, this feature is called <b>JSONRegistration</b>.</p>
+
+    <p class="dui dui-leading-6">to use <b>JSONRegistration</b> you need to annotate a package-info class with <b>@JSONRegistration</b> , example :</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('@JSONRegistration(&quot;SomeName&quot;)
+package com.foo.bar;
+
+import org.dominokit.jacksonapt.annotation.JSONRegistration;')"></div>
+
+    <p class="dui dui-leading-6">This will generate a class that register all generated mappers from all domino-jackson annotated beans in this package.</p>
+
+    <p class="dui dui-leading-6">Use the registration as the following :</P>
+
+    <p class="dui dui-leading-6">Assuming we have the above <b>JSONRegistration</b> and we have the following mappers</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+public interface PersonMapper extends ObjectMapper&lt;Person&gt; {}
+
+@JSONMapper
+interface ListOfMapMapper extends ObjectMapper&lt;List&lt;Map&lt;Integer, SimpleBeanObject&gt;&gt;&gt; {}')"></div>
+
+    <p class="dui dui-leading-6">Then the following example show how we can access those mappers dynamically :</p>
+
+    <div th:replace="fragments/commons/components/inline-code :: content('JsonRegistry testJsonRegistry = SomeNameJsonRegistry.getInstance();
+
+testJsonRegistry.getMapper(TypeToken.of(Person.class));
+
+testJsonRegistry.getMapper(
+        	new TypeToken&lt;List&lt;Map&lt;Integer, SimpleBeanObject&gt;&gt;&gt;(
+        		List.class,
+        		new TypeToken&lt;Map&lt;Integer, SimpleBeanObject&gt;&gt;(
+        			Map.class,
+        			TypeToken.of(Integer.class),
+        			TypeToken.of(SimpleBeanObject.class)){}){});')"></div>
+</div>

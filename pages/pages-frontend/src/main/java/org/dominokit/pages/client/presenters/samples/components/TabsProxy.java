@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "TabsDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/tabs", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/tabs", reRouteActivated = true)
 public class TabsProxy extends SampleProxy {
 
 }

@@ -54,6 +54,7 @@ public class CustomItemSample extends BaseDominoElement<HTMLDivElement, CustomIt
                                                 .addCss(dui_hover_disabled)
                                                 .setKey("custom-key")
                                                 .withValue("custom-value")
+                                                .setSelectable(false)
                                                 .appendChild(div().addCss(dui_flex, dui_justify_center, dui_gap_6)
                                                         .appendChild(Icons.content_cut().addCss(dui_font_size_5).setTooltip("Cut").clickable())
                                                         .appendChild(Icons.content_copy().addCss(dui_font_size_5).setTooltip("Copy").clickable())

@@ -1,0 +1,56 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1"
+               aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-jackson/v1/docs/inheritance" aria-expanded="true">
+                Inheritance
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Inheritance</h1>
+
+    <p class="dui dui-leading-6">Domino jackson support supports the serialization and deserialization of the super classes fields :</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('public abstract class BasePojo {
+
+    private int id;
+    private String name;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}')"></div>
+    <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+public class ChildPojo extends BasePojo {
+
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}')"></div>
+
+    <p class="dui dui-leading-6">The fields <b>id</b> and <b>name</b> from the super class will be included in the serialization and deserialization of the children classes, and the inheritance tree can be as deep as needed.</p>
+</div>

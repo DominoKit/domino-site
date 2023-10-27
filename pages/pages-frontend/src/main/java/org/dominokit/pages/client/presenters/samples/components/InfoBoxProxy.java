@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "InfoBoxDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/info-box", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/info-box", reRouteActivated = true)
 public class InfoBoxProxy extends SampleProxy {
 
 }

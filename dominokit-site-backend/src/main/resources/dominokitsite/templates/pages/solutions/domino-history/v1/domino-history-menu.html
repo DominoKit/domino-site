@@ -1,0 +1,74 @@
+<div th:fragment="content" class="dui dui-solution-menu" id="dui-site-left-menu">
+    <div class="dui dui-flex ">
+        <div class="dui dui-site-menu-icons">
+            <div class="dui dui-filler"></div>
+        </div>
+        <div class="dui dui-site-menu-body" id="dui-site-left-menu-body">
+            <div th:replace="fragments/commons/components/menu-search :: content"></div>
+            <div class="dui dui-menu-content">
+                <ul class="dui dui-site-docs-menu">
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-getting-started">
+                        <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                           dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                           href="/solutions/domino-history/v1/docs/getting-started" aria-expanded="true">
+                            <i class="dui mdi mdi-rocket"></i>
+                            <span class="dui">Getting started</span>
+                        </a>
+                        <ul class="dui dui-site-docs-sub-menu">
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                                   dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-history/v1/docs/getting-started/quick-start" aria-expanded="true">
+                                    <span class="dui">Quick-start</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                                   dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-history/v1/docs/getting-started/basic-usage" aria-expanded="true">
+                                    <span class="dui">Basic usage</span>
+                                </a>
+                            </li>
+                            <li class="dui dui-site-docs-sub-menu-item">
+                                <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                                   dui-sub-menu-id="dui-site-menu-ui-getting-started"
+                                   href="/solutions/domino-history/v1/docs/getting-started/root-path" aria-expanded="true">
+                                    <span class="dui">Root path</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-history-token">
+                        <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                           href="/solutions/domino-history/v1/docs/history-token" aria-expanded="true">
+                            <i class="dui mdi mdi-history"></i>
+                            <span class="dui">History token</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-token-filters">
+                        <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                           href="/solutions/domino-history/v1/docs/token-filters" aria-expanded="true">
+                            <i class="dui mdi mdi-filter-settings"></i>
+                            <span class="dui">Token filters</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-wildcards">
+                        <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                           href="/solutions/domino-history/v1/docs/wildcards" aria-expanded="true">
+                            <i class="dui mdi mdi-asterisk"></i>
+                            <span class="dui">Wildcard</span>
+                        </a>
+                    </li>
+                    <li class="dui dui-site-docs-menu-item" id="dui-site-menu-ui-interceptors">
+                        <a class="dui dui-site-menu-link" tabindex="0"  dui-side-menu-link="true" dui-site-data="nav-anchor"
+                           href="/solutions/domino-history/v1/docs/interceptors" aria-expanded="true">
+                            <i class="dui mdi mdi-transit-connection-variant"></i>
+                            <span class="dui">Interceptors</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

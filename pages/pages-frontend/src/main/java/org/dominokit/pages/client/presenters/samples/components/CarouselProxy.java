@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "CarouselDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/carousel", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/carousel", reRouteActivated = true)
 public class CarouselProxy extends SampleProxy {
 
 }

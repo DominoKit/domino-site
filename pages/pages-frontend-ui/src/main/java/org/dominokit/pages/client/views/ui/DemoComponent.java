@@ -33,6 +33,7 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
 
     public DemoComponent(DemoSample<T> demoSample) {
         this.demoSample = demoSample;
+        codeCard = Card.create().addCss(dui_elevation_0);
         this.root = div().addCss(()->"dui-site-demo-component")
                 .appendChild(demoTabs = TabsPanel.create()
                         .withTabsContent((parent, content) -> content.addCss(dui_p_0))
@@ -81,22 +82,26 @@ public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTM
                         )
                         .appendChild(codeTab = Tab.create(Icons.code_braces(), "Source code")
                                 .addCss(()-> "dui-site-demo-component-code-tab")
-                                .appendChild(codeCard = Card.create().addCss(dui_elevation_0)
-                                        .withBody((card, body) -> body
-                                                .addCss(dui_p_0)
-                                        )
-                                        .apply(card -> {
-                                            LoadContentServiceFactory.INSTANCE
-                                                    .getSourceCode(demoSample.getSampleClass().getCanonicalName())
-                                                    .onSuccess(code -> {
-                                                        card.appendChild(DemoCode.create(code));
-                                                    })
-                                                    .onFailed(failedResponseBean -> {
+                                .apply(self -> {
+                                    self.appendChild(codeCard
+                                            .withBody((card, body) -> body
+                                                    .addCss(dui_p_0)
+                                            )
+                                    );
+                                    self.addActivationHandler((tab, active) -> {
+                                        LoadContentServiceFactory.INSTANCE
+                                                .getSourceCode(demoSample.getSampleClass().getCanonicalName())
+                                                .onSuccess(code -> {
+                                                    codeCard.appendChild(DemoCode.create(code));
+                                                })
+                                                .onFailed(failedResponseBean -> {
+                                                    codeCard.appendChild(DemoCode.create("Failed to load code."));
+                                                })
+                                                .send();
+                                    });
+                                })
 
-                                                    })
-                                                    .send();
-                                        })
-                                ))
+                        )
                 )
         ;
         init(this);

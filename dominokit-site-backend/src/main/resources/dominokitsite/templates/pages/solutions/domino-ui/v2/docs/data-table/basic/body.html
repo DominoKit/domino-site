@@ -1,0 +1,55 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-basic" dui-site-data="org.dominokit.domino.ui.datatable.DataTable"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-config" dui-site-data="org.dominokit.domino.ui.datatable.TableConfig"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-column-config" dui-site-data="org.dominokit.domino.ui.datatable.TableConfig"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Data table
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/data-table/basic" aria-expanded="true">
+                Basic table
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Basic table</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-datatable-basic-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-config-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-column-config-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic table</span>
+        <small class="dui">By default a table will auto-fit columns and allow custom cell content.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-basic"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-basic-method-docs', 'DataTable', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/DataTable.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-config-method-docs', 'TableConfig', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/TableConfig.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-column-config-method-docs', 'ColumnConfig', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/ColumnConfig.html')"></div>
+
+</div>

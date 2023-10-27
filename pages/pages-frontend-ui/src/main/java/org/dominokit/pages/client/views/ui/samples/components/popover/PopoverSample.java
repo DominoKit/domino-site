@@ -24,7 +24,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
         this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
                         .span3(Button.create("POPOVER ON RIGHT")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -39,7 +38,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER ON TOP")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -54,7 +52,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER ON BOTTOM")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -69,7 +66,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER ON LEFT")
-                                .addCss(dui_bg_accent, dui_fg)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -86,7 +82,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                 )
                 .appendChild(Row.create()
                         .span3(Button.create("POPOVER BOTTOM LEFT")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -101,7 +96,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER BOTTOM MIDDLE")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -116,7 +110,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER BOTTOM RIGHT")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -131,7 +124,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER LEFT DOWN")
-                                .addCss(dui_bg_accent, dui_fg)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -148,7 +140,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                 )
                 .appendChild(Row.create()
                         .span3(Button.create("POPOVER LEFT MIDDLE")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -163,7 +154,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER LEFT UP")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -178,7 +168,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER RIGHT DOWN")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -193,7 +182,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER RIGHT MIDDLE")
-                                .addCss(dui_bg_accent, dui_fg)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -210,7 +198,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                 )
                 .appendChild(Row.create()
                         .span3(Button.create("POPOVER RIGHT UP")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -225,7 +212,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER TOP LEFT")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -240,7 +226,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER TOP MIDDLE")
-                                .addCss(dui_bg_accent)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
@@ -255,7 +240,6 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                 })
                         )
                         .span3(Button.create("POPOVER TOP RIGHT")
-                                .addCss(dui_bg_accent, dui_fg)
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)

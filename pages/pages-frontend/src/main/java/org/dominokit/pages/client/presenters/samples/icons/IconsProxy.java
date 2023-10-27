@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @PresenterProxy(name = "IconsDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/mdi-icons", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/mdi-icons", reRouteActivated = true)
 @Slot("dui-demo-sample-slot")
 public class IconsProxy extends ViewablePresenter<IconsView> implements IconsView.IconsUiHandlers {
 

@@ -23,7 +23,11 @@
 		function openLeftMenu(){
 			let leftMenu = document.getElementById("dui-site-left-menu");
 			if(leftMenu && !leftMenu.classList.contains("dui-active")){
+				leftMenu.setAttribute("opened", "true")
+
+				console.info("1"+leftMenu.classList);
 				leftMenu.classList.add("dui-active");
+				console.info("2"+leftMenu.classList);
 			}
 		}
 

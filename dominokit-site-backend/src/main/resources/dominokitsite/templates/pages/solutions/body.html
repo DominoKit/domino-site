@@ -1,10 +1,10 @@
 <div th:fragment="content" class="dui dui-m-t-24">
 
-        <div class="dui dui-site-blob-container">
-            <img src="/assets/blob-2.svg" class="blob blob-reverse">
-            <img src="/assets/blob-4.svg" class="blob blob-reverse">
-            <img src="/assets/blob-1.svg" class="blob">
-        </div>
+    <div class="dui dui-site-blob-container">
+        <img src="/assets/blob-2.svg" class="blob blob-reverse">
+        <img src="/assets/blob-4.svg" class="blob blob-reverse">
+        <img src="/assets/blob-1.svg" class="blob">
+    </div>
 
     <div class="dui dui-site-section-our-solutions">
         <h1>Our Solutions</h1>
@@ -22,8 +22,8 @@
                 <p class="dui dui-max-w-96">A type safe and feature rich UI components library for java
                     developer without dependencies on external JavaScript.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-ui/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-ui', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-ui/v2/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-ui/v2', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -40,8 +40,8 @@
                 <p class="dui dui-max-w-96">Annotation processor based JSON library to generates mappers that works on
                     both the JVM and the browser.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-jackson/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-jackson', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-jackson/v1/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-jackson/v1', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -59,8 +59,8 @@
                     interfaces, and the generated clients can be used from both client side and on the
                     server.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-rest/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-rest', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-rest/v1/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-rest/v1', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -77,8 +77,8 @@
                 <p class="dui dui-max-w-96">A library for manipulating the browser URL, providing listeners and filter
                     for URL changes and variables expression mapping.</p>
                 <div class="dui dui-site-solutions-solution-buttons">
-                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-history/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
-                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-history', 'mdi-book-open-page-variant', 'Learn more')"></div>
+                    <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-history/v1/docs/getting-started', 'mdi-rocket', 'Getting started')"></div>
+                    <div th:replace="fragments/commons/components/white-link :: content('/solutions/domino-history/v1', 'mdi-book-open-page-variant', 'Learn more')"></div>
                 </div>
             </div>
             <div class="dui dui-site-solution-pic dui-relative">
@@ -361,22 +361,20 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://thispersondoesnotexist.com/">
+                        <img src="assets/clients/Flavio Castro.jpeg">
                     </div>
                     <div class="client-card-name">
-                        <h3>Person name</h3>
+                        <h3>Flavio Castro</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Job title @ company</h4>
+                        <h4>Tech Leader / Architect @ Ardan1</h4>
                     </div>
                     <div class="client-card-comment">
-                        <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-                            lives
-                            easier
-                            while providing a better and faster experience to the users”</p>
+                        <p>“After many years of using GWT, Domino-ui emerged as a savior, simplifying the developers'
+                            tasks and offering a superior and quicker experience for users.”</p>
                     </div>
                     <div class="client-card-logo">
-                        <!--                        <img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+                        <img src="/assets/clients/ardan1.jpeg" alt="Ardan1">
                     </div>
                 </div>
                 <div d-client-card="1" dui-data-index="1" class="dui client-card">
@@ -384,22 +382,19 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://thispersondoesnotexist.com/">
+                        <img src="assets/clients/DeanZarras-135x135 - Dean Zarras.png">
                     </div>
                     <div class="client-card-name">
-                        <h3>Person name</h3>
+                        <h3>Dean Zarras</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Job title @ company</h4>
+                        <h4>Managing Director @ Goldman Sachs</h4>
                     </div>
                     <div class="client-card-comment">
-                        <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-                            lives
-                            easier
-                            while providing a better and faster experience to the users”</p>
+                        <p>“Using DominoKit has been a pleasure. It has allowed me to rapidly construct rich and complex
+                            UI/UX products in an intuitive manner, all leveraging my many years of Java experience.”</p>
                     </div>
                     <div class="client-card-logo">
-                        <!--                        <img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
                     </div>
                 </div>
                 <div d-client-card="2" dui-data-index="2" class="dui client-card dui-active">
@@ -407,22 +402,21 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://thispersondoesnotexist.com/">
+                        <img src="/assets/clients/Frank-Hossfeld.jpg" alt="Frank Hossfeld">
                     </div>
                     <div class="client-card-name">
-                        <h3>Person name</h3>
+                        <h3>Frank Hossfeld</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Job title @ company</h4>
+                        <h4>Software Developer / Owner @ Nalu Solutions GmbH</h4>
                     </div>
                     <div class="client-card-comment">
-                        <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-                            lives
-                            easier
-                            while providing a better and faster experience to the users”</p>
+                        <p>“DominoKit provides all the essentials for creating attractive and secure applications. When
+                            you use it, it's evident that the DominoKit Team is passionate about their work. Plus, the
+                            support is outstanding!”</p>
                     </div>
                     <div class="client-card-logo">
-                        <!--                        <img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+                        <img src="/assets/clients/nalu_solutions.png" alt="Nalu Solutions GmbH">
                     </div>
                 </div>
                 <div d-client-card="3" dui-data-index="3" class="dui client-card">
@@ -430,22 +424,20 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://thispersondoesnotexist.com/">
+                        <img src="/assets/clients/JIMG_0049 - Peter Carlson.JPG" alt="Peter Carlson">
                     </div>
                     <div class="client-card-name">
-                        <h3>Person name</h3>
+                        <h3>Peter Carlson</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Job title @ company</h4>
+                        <h4>Programmer @ CarePlacement</h4>
                     </div>
                     <div class="client-card-comment">
-                        <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-                            lives
-                            easier
-                            while providing a better and faster experience to the users”</p>
+                        <p>“DominoKit simplified our shift from Java Swing to web. It offers a contemporary appearance
+                            and its controls are user-friendly. Additionally, the support is prompt.”</p>
                     </div>
                     <div class="client-card-logo">
-                        <!--                        <img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+                        <img src="/assets/clients/logo - Peter Carlson.png" alt="CarePlacement">
                     </div>
                 </div>
                 <div d-client-card="4" dui-data-index="4" class="dui client-card">
@@ -453,22 +445,20 @@
                         <img src="assets/ic_testmonials_quotes.svg">
                     </div>
                     <div class="client-card-image">
-                        <img src="https://thispersondoesnotexist.com/">
+                        <img src="/assets/clients/Philipp Kohl.jpg" alt="Philipp Kohl">
                     </div>
                     <div class="client-card-name">
-                        <h3>Person name</h3>
+                        <h3>Philipp Kohl</h3>
                     </div>
                     <div class="client-card-title">
-                        <h4>Job title @ company</h4>
+                        <h4>Software Developer @ Nalu Services GmbH</h4>
                     </div>
                     <div class="client-card-comment">
-                        <p>“After years working with GWT, Domino-ui came to the rescue, making the developers
-                            lives
-                            easier
-                            while providing a better and faster experience to the users”</p>
+                        <p>“Domino UI's intuitive API and adaptable widgets allow us to easily create contemporary,
+                            sturdy, and visually captivating applications.”</p>
                     </div>
                     <div class="client-card-logo">
-                        <!--                        <img src="https://scontent.famm9-1.fna.fbcdn.net/v/t1.18169-9/599303_325359144222963_238474371_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_eui2=AeHurVwJ2dKMjB9nwrVAvpm7r8C-w2p94iqvwL7Dan3iKhV6UpTEmZfp4XdPMBCG1fQ&_nc_ohc=cKhSTUHGujUAX8JjnNB&_nc_ht=scontent.famm9-1.fna&oh=ff4c5760c860f82d82ba75b8ce191624&oe=6095D2C3">-->
+                        <img src="/assets/clients/nalu_services - Philipp Kohl.png" alt="Nalu Services GmbH">
                     </div>
                 </div>
             </div>

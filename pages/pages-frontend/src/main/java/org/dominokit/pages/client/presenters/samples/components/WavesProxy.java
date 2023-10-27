@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "WavesDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/waves", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/waves", reRouteActivated = true)
 public class WavesProxy extends SampleProxy {
 
 }

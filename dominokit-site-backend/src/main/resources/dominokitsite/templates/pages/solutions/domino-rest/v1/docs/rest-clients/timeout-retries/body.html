@@ -1,0 +1,46 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/v1/docs/rest-clients/timeout-retries" aria-expanded="true">
+                Time-out and Retries
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Time-out and Retries</h1>
+
+    <p class="dui dui-leading-6">Sometimes requests might time-out due to network latency or other reasons, and we don't want our requests to fail directly but rather want to retry several times before we end up failing the request.
+        in domino-rest we can use the <b>@Retries</b> annotation to define a timeout with maximum retries count.</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
+public interface MoviesService {
+
+    @Path(&quot;library/movies/:movieName&quot;)
+    @GET
+    Movie getMovieByName(@PathParam(&quot;movieName&quot;) String movieName);
+
+    @Path(&quot;library/movies&quot;)
+    @GET
+    List&lt;Movie&gt; listMovies();
+
+    @Path(&quot;library/movies/:name&quot;)
+    @PUT
+    @SuccessCodes({200})
+    @Retries(timeout=3000, maxRetries=5)
+    void updateMovie(@BeanParam @RequestBody Movie movie);
+}')"></div>
+    <p class="dui dui-leading-6">The <b>updateMovie</b> request will time-out if the response not returned within 3000 milliseconds but will try 5 times before it actually fail.</p>
+    <p class="dui dui-leading-6">We can also set a global timeout and max retries in a global interceptor which is documented in other parts of this wiki.</p>
+</div>

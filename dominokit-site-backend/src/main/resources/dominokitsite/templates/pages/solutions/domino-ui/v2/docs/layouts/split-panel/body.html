@@ -1,0 +1,84 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel-vertical" dui-site-data="org.dominokit.domino.ui.splitpanel.VSplitPanel"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel-horizontal" dui-site-data="org.dominokit.domino.ui.splitpanel.HSplitPanel"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-split-panel" dui-site-data="org.dominokit.domino.ui.splitpanel.SplitPanel"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Layouts
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/layouts/responsive-grids" aria-expanded="true">
+                Split panel
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Horizontal split,Vertical split,Min-Max split,Multiple split,Combined split,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Split panel</h1>
+
+    <h3 class="dui dui-site-docs-title">Split panel</h3>
+    <div class="dui dui-site-component-docs" id="dui-split-panel-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Vertical split panel</h3>
+    <div class="dui dui-site-component-docs" id="dui-split-panel-vertical-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Horizontal split panel</h3>
+    <div class="dui dui-site-component-docs" id="dui-split-panel-horizontal-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/split-panel-anatomy.png" class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive" alt="split-panel-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">Left side panel, or for vertical split the top panel.</li>
+        <li class="dui">Right side panel, or for vertical split the bottom panel.</li>
+        <li class="dui">Row gaps, each row can have a consistent gap between its columns.</li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+    <div id="dui-demo-sample-slot"></div>
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-horizontal-split">
+        <span class="dui dui-fg-teal">Horizontal split panel.</span>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-horizontal"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-vertical-split">
+        <span class="dui dui-fg-teal">Vertical split panel.</span>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-vertical"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-min-max-split">
+        <span class="dui dui-fg-teal">Split panel Min/Max</span>
+        <small class="dui">Split panels with minimum and maximum width/height.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-min-max"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-multiple-split">
+        <span class="dui dui-fg-teal">Multiple split panels</span>
+        <small class="dui">We can have more than 2 split panels.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-multiple"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-combined-split">
+        <span class="dui dui-fg-teal">Combined split panels</span>
+        <small class="dui">We can mix horizontal and vertical split panels.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="split-panel-combined"></div>
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-method-docs', 'Split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/SplitPanel.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-horizontal-method-docs', 'Horizontal split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/HSplitPanel.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-split-panel-vertical-method-docs', 'Vertical split panel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/splitpanel/VSplitPanel.html')"></div>
+
+</div>

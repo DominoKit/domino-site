@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "SelectDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/forms/select", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/forms/select", reRouteActivated = true)
 public class SelectProxy extends SampleProxy {
 
 }

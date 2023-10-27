@@ -3,9 +3,12 @@
 		What's new?
 	</div>
 	<div class="news-main">
-		<div th:replace="fragments/commons/components/card :: content('https://demo.dominokit.org/', '/assets/domino-logo-2048.png', 'HOT TOPIC!', 'New site! New beginning! check it out!', 'April 12, 2022')"></div>
-		<div th:replace="fragments/commons/components/card :: content('https://demo.dominokit.org/', '/assets/release-plan.jpeg', 'UPDATE', 'Domino UI 1.0 has been released!', 'April 12, 2022')"></div>
-		<div th:replace="fragments/commons/components/card :: content('https://demo.dominokit.org/', '/assets/social-media.jpg', 'SOCIAL MEDIA', 'We\'re on social media!', 'April 12, 2022')"></div>
-		<div th:replace="fragments/commons/components/card :: content('https://github.com/DominoKit', '/assets/github.png', 'SUPPORT', 'Make contributions on our projects and join our family!', 'April 12, 2022')"></div>
+		<div th:replace="fragments/commons/components/card :: content('/assets/domino-logo-2048.png', 'HOT TOPIC!', 'New site! New beginning!', 'October 25, 2023')"></div>
+		<div th:replace="fragments/commons/components/link-card :: content('https://github.com/DominoKit/domino-ui/discussions/839', '/assets/release-plan.jpeg', 'UPDATE', 'Domino UI 1.0.3 has been released!', 'October 25, 2023')"></div>
+		<div th:replace="fragments/commons/components/link-card :: content('https://github.com/DominoKit/domino-ui/discussions/836', '/assets/release-plan.jpeg', 'UPDATE', 'Domino UI 2.0.0-RC3 has been released!', 'October 25, 2023')"></div>
+		<div th:replace="fragments/commons/components/link-card :: content('https://github.com/DominoKit/domino-ui/discussions/798', '/assets/release-plan.jpeg', 'UPDATE', 'Domino UI 1.0 has been released!', 'October 25, 2023')"></div>
+		<div th:replace="fragments/commons/components/social-media-card :: content('/assets/social-media.jpg', 'SOCIAL MEDIA', 'We\'re on social media!', 'October 25, 2023')">
+		</div>
+		<div th:replace="fragments/commons/components/link-card :: content('https://github.com/DominoKit', '/assets/github.png', 'SUPPORT', 'Make contributions on our projects and join our family!', 'October 25, 2023')"></div>
 	</div>
 </div>

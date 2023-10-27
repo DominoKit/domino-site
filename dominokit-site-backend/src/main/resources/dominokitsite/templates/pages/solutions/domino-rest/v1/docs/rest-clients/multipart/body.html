@@ -1,0 +1,118 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/v1/docs/rest-clients/multipart" aria-expanded="true">
+                Multipart forms
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Multipart forms</h1>
+
+    <h4 class="dui">Multipart params</h4>
+    <p class="dui dui-leading-6">For defining a multipart form data, the content type of the request should be <b>multipart/form-data</b>.
+        Once domino-rest finds out that this request is a multipart form data request, it will try to search for <b>javax.ws.rs.FormData</b> fields which indicates the parts of the request. Example</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.Consumes;
+
+@RequestFactory
+public interface MultipartService {
+
+  @POST
+  @Path(&quot;upload&quot;)
+  @Consumes(MediaType.MULTIPART_FORM_DATA)
+  void textMultipart(@FormParam(&quot;id&quot;) String id, @FormParam(&quot;file&quot;) byte[] fileContent);
+}')"></div>
+    <p class="dui dui-leading-6">This will generate a request with two parts, one contains the <b>id</b> and the other contains the binary content of the file with a name <b>file</b>.</p>
+
+    <h4 class="dui">Sending JSONs</h4>
+    <p class="dui dui-leading-6">When sending objects that has <b>ObjectMapper</b>, domino-rest uses domino-jackson to serialize the object into JSON and use if for the form data. Same goes when defining a <b>javax.ws.rs.FormData</b> that has a serializable object as follows:</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.Consumes;
+
+@RequestFactory
+public interface MultipartService {
+
+  @POST
+  @Path(&quot;test&quot;)
+  @Consumes(MediaType.MULTIPART_FORM_DATA)
+  void objectMultipart(
+      @FormParam(&quot;sampleObjectJson&quot;) SampleObject sampleObject,
+      @FormParam(&quot;file&quot;) byte[] fileContent);
+}')"></div>
+    <p class="dui dui-leading-6">The <b>SampleObject</b> will be sent as a json inside the part <b>sampleObjectJson</b>.</p>
+
+    <h4 class="dui">Multipart context</h4>
+    <p class="dui dui-leading-6">Sometimes, multipart form data request has a lot of parts, these parts can be grouped using <b>@Multipart</b> as follows:</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('import javax.ws.rs.FormParam;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.Consumes;
+
+@RequestFactory
+public interface MultipartService {
+
+  @POST
+  @Path(&quot;test&quot;)
+  @Consumes(MediaType.MULTIPART_FORM_DATA)
+  void wrapperMultipart(@Multipart SampleMultipartRequest request);
+}')"></div>
+    <p class="dui dui-leading-6">Where the <b>SampleMultipartRequest</b> is defined like this:</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('import javax.ws.rs.FormParam;
+
+public class SampleMultipartRequest {
+
+  @FormParam(&quot;sampleObjectJson&quot;)
+  private SampleObject sampleObject;
+
+  @FormParam(&quot;file&quot;)
+  private byte[] fileContent;
+
+  @FormParam(&quot;size&quot;)
+  private int size;
+
+  public SampleObject getSampleObject() {
+    return sampleObject;
+  }
+
+  public void setSampleObject(SampleObject sampleObject) {
+    this.sampleObject = sampleObject;
+  }
+
+  public byte[] getFileContent() {
+    return fileContent;
+  }
+
+  public void setFileContent(byte[] fileContent) {
+    this.fileContent = fileContent;
+  }
+
+  public int getSize() {
+    return size;
+  }
+
+  public void setSize(int size) {
+    this.size = size;
+  }
+}')"></div>
+</div>

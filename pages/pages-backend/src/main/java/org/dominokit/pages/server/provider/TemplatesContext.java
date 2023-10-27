@@ -92,7 +92,7 @@ public class TemplatesContext {
         context.put("domino_history_dependencies", "<dependency>\n" +
                 "  <groupId>org.dominokit</groupId>\n" +
                 "  <artifactId>domino-history-client</artifactId>\n" +
-                "  <version>1.0.0</version>\n" +
+                "  <version>1.0.1</version>\n" +
                 "</dependency>");
         return context;
     }

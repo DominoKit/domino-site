@@ -2,9 +2,6 @@
   <configuration default="false" name="backend-dev" type="Application" factoryName="Application">
     <option name="ALTERNATIVE_JRE_PATH" value="11" />
     <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-    <envs>
-      <env name="domino_github_token" value="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" />
-    </envs>
     <option name="MAIN_CLASS_NAME" value="org.dominokit.domino.api.server.DominoLauncher" />
     <module name="dominokit-site-backend" />
     <option name="PROGRAM_PARAMETERS" value="run org.dominokit.domino.api.server.StartupVerticle -conf target/classes/config.json -Dvertx.options.fileResolverCachingEnabled=false -Ddomino.webroot.location=../target/gwt/launcherDir/dominokitsite" />

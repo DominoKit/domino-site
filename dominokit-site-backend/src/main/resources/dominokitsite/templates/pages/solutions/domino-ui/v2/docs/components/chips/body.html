@@ -1,0 +1,77 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip" dui-site-data="org.dominokit.domino.ui.chips.Chip"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip-group" dui-site-data="org.dominokit.domino.ui.chips.ChipsGroup"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/chips" aria-expanded="true">
+                Chips
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Removable,Images,Letters,Selectable,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Chip</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-chip-class-docs"></div>
+
+    <h1 class="dui dui-site-docs-title">Chips group</h1>
+    <div class="dui dui-site-component-docs" id="dui-chip-group-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic chips</span>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-removable">
+        <span class="dui dui-fg-teal">Removable chips</span>
+        <small class="dui">Chips with a remove action.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-removable"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-images">
+        <span class="dui dui-fg-teal">Chips with images</span>
+        <small class="dui">Chips can have images or icons</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-images"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-letters">
+        <span class="dui dui-fg-teal">Chips with letters</span>
+        <small class="dui dui-font-">Chips can have text letters</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-letters"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-selectable">
+        <span class="dui dui-fg-teal">Selectable chips</span>
+        <small class="dui">Chips can be grouped and selected with listeners.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-selectable"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-chip-method-docs', 'Chip', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/chips/Chip.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-chip-group-method-docs', 'ChipGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/chips/ChipsGroup.html')"></div>
+
+</div>

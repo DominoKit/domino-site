@@ -1,0 +1,63 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1"
+               aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-jackson/v1/docs/generics" aria-expanded="true">
+                Generics
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Generics</h1>
+
+    <p class="dui dui-leading-6">Domino-jackson can process generics types as long as the type information are available for the processor for example :</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('public abstract class BaseGenericType&lt;T, V&gt; {
+
+    private T field1;
+    private V field2;
+
+    public T getField1() {
+        return field1;
+    }
+
+    public void setField1(T field1) {
+        this.field1 = field1;
+    }
+
+    public V getField2() {
+        return field2;
+    }
+
+    public void setField2(V field2) {
+        this.field2 = field2;
+    }
+}')"></div>
+
+    <p class="dui dui-leading-6">Then when a child class extends from that type, it can provide the specific generics types for domino-jackson</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
+
+    private String field3;
+
+    public String getField3() {
+        return field3;
+    }
+
+    public void setField3(String field3) {
+        this.field3 = field3;
+    }
+}')"></div>
+
+    <p class="dui dui-leading-6">This allows domino-jackson to generate a correct mapper for this pojo and will use the correct String and Integer types for <b>field1</b> and <b>field2</b> from the base class.</p>
+
+    <p class="dui dui-leading-6">notice that annotating the Base class with JSONMapper wont work, as the type information is not available for the processor.</p>
+    <p class="dui dui-leading-6">defining the mapper using an interface like this should work</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+interface GenericMapper extend ObjectMapper&lt;BaseGenericType&lt;T, V&gt;&gt;{}')"></div>
+</div>

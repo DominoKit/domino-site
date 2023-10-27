@@ -1,0 +1,28 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1" aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1/docs/getting-started" aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Introduction</h1>
+    <p class="dui dui-leading-6">
+        Domino-jackson, a versatile JSON mapping library, effortlessly supports client-side technologies like <a href="http://www.gwtproject.org/" target="_blank" tabindex="0" aria-expanded="true">GWT</a> and <a href="https://github.com/google/j2cl" target="_blank" tabindex="0" aria-expanded="true">J2CL</a>, as well as traditional JVM environments like Android. This future-proofed library fosters code sharing and testing ease between client and server components, offering developers standard Jackson annotations for flexible data representation.
+        </p>
+    <p class="dui dui-leading-6">
+        Domino-jackson excels in its adaptability. It harmoniously integrates with a range of environments, enabling consistent JSON mapping using standard Jackson annotations. Developers working on client-side or JVM-based projects benefit from its seamless compatibility and customization capabilities, making it an indispensable tool for Java development across diverse settings.</p>
+
+    <div class="dui dui-flex dui-justify-center">
+        <img src="/assets/ill_domino_jackson.svg" class="dui dui-image-responsive dui-m-y-24"/>
+    </div>
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-jackson/v1/docs/getting-started/quick-start', 'mdi-arrow-right-thin', 'Check quick start guide.')"></div>
+    </div>
+</div>

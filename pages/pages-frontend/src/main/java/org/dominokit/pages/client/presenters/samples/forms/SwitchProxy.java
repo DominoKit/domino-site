@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "SwitchDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/forms/switch", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/forms/switch", reRouteActivated = true)
 public class SwitchProxy extends SampleProxy {
 
 }

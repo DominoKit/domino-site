@@ -15,7 +15,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <vertx.version>3.9.0</vertx.version>
-        <domino.history.version>1.0.0</domino.history.version>
+        <domino.history.version>1.0.1</domino.history.version>
         <domino.rest.version>1.0.0</domino.rest.version>
         <domino.ui.version>HEAD-SNAPSHOT</domino.ui.version>
         <domino.history.version>HEAD-SNAPSHOT</domino.history.version>
@@ -53,7 +53,6 @@
             <dependency>
                 <groupId>org.dominokit</groupId>
                 <artifactId>domino-history-shared</artifactId>
-                <version>HEAD-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

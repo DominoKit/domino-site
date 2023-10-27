@@ -1,0 +1,77 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-box" dui-site-data="org.dominokit.domino.ui.forms.UploadBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-upload" dui-site-data="org.dominokit.domino.ui.upload.FileUpload"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-item" dui-site-data="org.dominokit.domino.ui.upload.FileItem"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-preview" dui-site-data="org.dominokit.domino.ui.upload.IsFilePreview"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-option" dui-site-data="org.dominokit.domino.ui.upload.UploadOptions"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Forms
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/forms/file-upload" aria-expanded="true">
+                File upload
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Upload box,Drag drop upload,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Upload</h1>
+
+    <h3 class="dui dui-site-docs-title">Upload box</h3>
+    <div class="dui dui-site-component-docs" id="dui-upload-box-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">File upload</h3>
+    <div class="dui dui-site-component-docs" id="dui-file-upload-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">File item</h3>
+    <div class="dui dui-site-component-docs" id="dui-file-item-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">File preview</h3>
+    <div class="dui dui-site-component-docs" id="dui-file-preview-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">Upload options</h3>
+    <div class="dui dui-site-component-docs" id="dui-upload-options-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-upload-box">
+        <span class="dui dui-fg-teal">Upload box</span>
+        <small class="dui">Upload file using a simple form field box.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="upload-box-sample"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-drag-drop-upload">
+        <span class="dui dui-fg-teal">Drag/Drop upload</span>
+        <small class="dui">Browse or Drag/Drop to start uploading</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="drag-drop-upload-sample"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-upload-box-method-docs', 'UploadBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/UploadBox.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-file-upload-method-docs', 'FileUpload', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/upload/FileUpload.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-file-item-method-docs', 'FileItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/upload/FileItem.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-file-preview-method-docs', 'IsFilePreview', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/upload/IsFilePreview.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-upload-option-method-docs', 'UploadOptions', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/upload/UploadOptions.html')"></div>
+
+
+</div>

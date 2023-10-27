@@ -23,7 +23,7 @@ public class DatePickerFooterSample extends BaseDominoElement<HTMLDivElement, Da
     public DatePickerFooterSample() {
         this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
-                        .span4(Calendar.create()
+                        .span6(Calendar.create()
                                 .withHeader()
                                 .withFooter((calendar, footer) -> footer
                                         .addCss(dui_flex, dui_justify_center)
@@ -32,7 +32,7 @@ public class DatePickerFooterSample extends BaseDominoElement<HTMLDivElement, Da
                                         )
                                 )
                         )
-                        .span4(Calendar.create(new DateTimeFormatInfoImpl_ar())
+                        .span6(Calendar.create(new DateTimeFormatInfoImpl_ar())
                                 .addCss(dui_accent_blue)
                                 .withHeader()
                                 .withFooter((calendar, footer) -> footer
@@ -42,7 +42,9 @@ public class DatePickerFooterSample extends BaseDominoElement<HTMLDivElement, Da
                                         )
                                 )
                         )
-                        .span4(Calendar.create(new DateTimeFormatInfoImpl_es())
+                )
+                .appendChild(Row.create()
+                        .span6(Calendar.create(new DateTimeFormatInfoImpl_es())
                                 .addCss(dui_accent_teal)
                                 .withHeader()
                                 .withFooter((calendar, footer) -> footer

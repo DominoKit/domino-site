@@ -1,0 +1,135 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started" aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started/archetype" aria-expanded="true">
+                Maven archetype
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Create Domino UI project using maven archetype</h1>
+    <h2 class="dui dui-site-docs-subtitle">Prerequisites</h2>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">Java 8 or higher.</li>
+        <li class="dui">Maven 3.6.0 or higher.</li>
+    </ul>
+
+    <h2 class="dui dui-site-docs-subtitle">Steps</h2>
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">
+            <span>Download and install <a class="dui dui-decoration-none dui-fg-blue" tabindex="0" href="https://github.com/DominoKit/domino-cli" target="_blank">DominoKit CLI tool.</a></span>
+        </li>
+        <li class="dui">
+            <span>Open a terminal and CD into the folder in which you want to create the project.</span>
+        </li>
+        <li class="dui">
+            <span>Execute the following maven command :</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('mvn archetype:generate \
+   -DarchetypeGroupId=net.ltgt.gwt.archetypes \
+   -DarchetypeVersion=LATEST \
+   -DarchetypeArtifactId=modular-webapp')"></div>
+            <small class="dui">Or you can follow the steps <a class="dui dui-fg-blue dui-decoration-none" href="https://github.com/tbroyer/gwt-maven-archetypes" target="_blank">here</a> to create a modular-webapp project.</small>
+        </li>
+        <li class="dui">
+            <span>Follow the instructions from the terminal to setup your project <b>artifactId</b> and <b>groupId</b>, leave the rest to the default.</span>
+        </li>
+        <li class="dui">
+            <span>Open the created project folder, there should three folders, [your app name]-client, [your app name]-server, [your app name]-shared</span>
+        </li>
+        <li class="dui">
+            <span>Open the folder [your app name]-client</span>
+        </li>
+        <li class="dui">
+            <span>Edit the pom.xml file in that folder to add the following domino-ui dependency at the end of the dependencies section :</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('&lt;dependency&gt;
+  &lt;groupId>org.dominokit&lt;/groupId&gt;
+  &lt;artifactId>domino-ui&lt;/artifactId&gt;
+  &lt;version>2.0.0-RC1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.dominokit&lt;/groupId&gt;
+  &lt;artifactId&gt;domino-ui&lt;/artifactId&gt;
+  &lt;version&gt;2.0.0-RC1&lt;/version&gt;
+  &lt;classifier>sources&lt;/classifier&gt;
+&lt;/dependency&gt;')"></div>
+        </li>
+        <li class="dui">
+            <span>In the module locate the file <b>module.gwt.xml</b> inside the folder <b>src/main</b> and add the following inherits directive :</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('&lt;inherits name=&quot;org.dominokit.domino.ui.DominoUI&quot;/&gt;')"></div>
+        </li>
+        <li class="dui">
+            <span>In the module locate the file <b>App.java</b> inside the folder <b>src/main/java</b> and replace its content except the first package line with the following code :</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('import com.google.gwt.core.client.EntryPoint;
+import org.dominokit.domino.ui.cards.Card;
+import org.dominokit.domino.ui.icons.lib.Icons;
+import org.dominokit.domino.ui.layout.AppLayout;
+import org.dominokit.domino.ui.tree.Tree;
+import org.dominokit.domino.ui.tree.TreeItem;
+
+import static org.dominokit.domino.ui.utils.ElementsFactory.elements;
+
+/**
+ * Entry point classes define <code>onModuleLoad()</code>.
+ */
+public class App implements EntryPoint {
+
+    /**
+     * This is the entry point method.
+     */
+    public void onModuleLoad() {
+
+        AppLayout layout = AppLayout.create(&quot;Domino-ui starter&quot;);
+            layout
+            .withLeftDrawer((parent, leftDrawer) -> {
+                    leftDrawer
+                        .appendChild(Tree.<String>create(&quot;Menu&quot;)
+                            .appendChild(TreeItem.create(Icons.widgets(), &quot;Menu 1&quot;))
+                            .appendChild(TreeItem.create(&quot;Menu 2&quot;, Icons.widgets()))
+                            .addSelectionListener((source, selection) -> {
+                                    layout.setContent(Card.create(source.get().getValue())
+                                        .appendChild(elements.p(&quot;Welcome to domino-ui , you are viewing &quot; + source.get().getValue() + &quot; content&quot;))
+                                    );
+                            })
+                        );
+            });
+    }
+}')"></div>
+        </li>
+        <li class="dui">
+            <span>Run the following command to build the project, for the first time this might take some time until maven download the project dependencies.</span>
+            <div th:replace="fragments/commons/components/inline-code :: content('mvn clean verify')"></div>
+        </li>
+        <li class="dui">
+            <span>To run and start the application :</span>
+            <p class="dui">In one terminal execute : </p>
+            <div th:replace="fragments/commons/components/inline-code :: content('mvn gwt:codeserver -pl *-client -am')"></div>
+            <p class="dui">In another terminal execute : </p>
+            <div th:replace="fragments/commons/components/inline-code :: content('mvn jetty:run -pl *-server -am -Denv=dev')"></div>
+        </li>
+        <li class="dui">
+            <span>Access the application on <a class="dui dui-fg-blue dui-decoration-none" href="http://localhost:8080" target="_blank">http://localhost:8080</a></span>
+        </li>
+    </ol>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+    <h2 class="dui dui-site-docs-subtitle">Watch a video tutorial</h2>
+
+    <div class="dui dui-p-l-10 dui-p-t-4">
+        <iframe width="100%" height="500" class="dui dui-rounded" src="https://www.youtube.com/embed/TIe2d69S1T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+</div>

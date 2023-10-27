@@ -1,0 +1,76 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress" dui-site-data="org.dominokit.domino.ui.progress.Progress"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress-bar" dui-site-data="org.dominokit.domino.ui.progress.ProgressBar"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/progress-bars" aria-expanded="true">
+                Progress bars
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Colored,Striped,Animated,Stacked,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Progress bars</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-progress-bar-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic progress bars</span>
+        <small class="dui">Progress bars with custom progress text.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-colored">
+        <span class="dui dui-fg-teal">Colored progress bars</span>
+        <small class="dui">Can have different colors for progress bars.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-colored"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-striped">
+        <span class="dui dui-fg-teal">Striped progress bars</span>
+        <small class="dui">Adds striped decoration to progress bars.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-striped"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-animation">
+        <span class="dui dui-fg-teal">Animated progress bars</span>
+        <small class="dui">Adds animation to progress bars.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-animation"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-stacked">
+        <span class="dui dui-fg-teal">Stacked progress bars</span>
+        <small class="dui">We can stack multiple progress bars in the same progress component.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-stacked"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-progress-method-docs', 'Progress', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/progress/Progress.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-progress-bar-method-docs', 'ProgressBar', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/progress/ProgressBar.html')"></div>
+
+</div>

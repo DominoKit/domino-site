@@ -1,0 +1,26 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2" aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started" aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Create Domino UI project</h1>
+    <p class="dui">In this short getting started document, we will learn how to create and setup a new Domino UI project.</p>
+    <p class="dui">Let's create your first Domino UI project, It is recommended to start using the DominoKit CLI tool, so please follow the link below, it will take less than 5 minutes to get a fully working project.</p>
+    
+    <div class="dui dui-flex dui-justify-center">
+        <img src="/assets/ill_setup_5_steps.svg" class="dui dui-image-responsive dui-m-y-24">
+    </div>
+    <div class="dui dui-flex dui-justify-center dui-gap-1 dui-flex-wrap">
+        <div th:replace="fragments/commons/components/yellow-link :: content('/solutions/domino-ui/v2/docs/getting-started/cli', 'mdi-arrow-right-thin', 'Creating a project using DominoKit CLI')"></div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+</div>

@@ -28,12 +28,12 @@ public class AppClientModule implements EntryPoint {
         }
 
         ClientApp.make().getHistory()
-                .listen(TokenFilter.startsWithPathFilter("solutions/:solution/docs"), state -> {
+                .listen(TokenFilter.startsWithPathFilter("solutions/:solution/:version/docs"), state -> {
                     ElementsFactory.elements.body().removeCss("dui-hide-left-menu");
                 })
                 .onDirectUrl();
         ClientApp.make().getHistory()
-                .listen(TokenFilter.not(TokenFilter.startsWithPathFilter("solutions/:solution/docs")), state -> {
+                .listen(TokenFilter.not(TokenFilter.startsWithPathFilter("solutions/:solution/:version/docs")), state -> {
                     ElementsFactory.elements.body().addCss("dui-hide-left-menu");
                 }).onDirectUrl();
     }

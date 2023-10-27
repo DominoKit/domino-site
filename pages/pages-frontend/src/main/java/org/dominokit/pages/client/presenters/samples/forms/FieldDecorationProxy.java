@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "FieldDecorationDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/forms/field-decoration", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/forms/field-decoration", reRouteActivated = true)
 public class FieldDecorationProxy extends SampleProxy {
 
 }

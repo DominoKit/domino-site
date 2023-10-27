@@ -1,0 +1,49 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-summary" dui-site-data="org.dominokit.domino.ui.datatable.plugins.summary.SummaryPlugin"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Data table
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/data-table/summary" aria-expanded="true">
+                Table summary
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Summary,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Table summary</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-datatable-summary-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-summary">
+        <span class="dui dui-fg-teal">Table summary</span>
+        <small class="dui">Show data aggregation and summary in the table footer.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-summary"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-summary-method-docs', 'SummaryPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/summary/SummaryPlugin.html')"></div>
+
+</div>

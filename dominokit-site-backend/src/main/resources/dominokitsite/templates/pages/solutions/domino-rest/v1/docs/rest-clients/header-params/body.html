@@ -1,0 +1,44 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/v1/docs/rest-clients/header-params" aria-expanded="true">
+                Header parameters
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Header parameters</h1>
+
+    <p class="dui dui-leading-6">With Domino-rest we can set request headers by annotating the method arguments with <b>@HeaderParam</b> and this will automatically set a header in the request when we make the call. for example having the following service :</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
+public interface MoviesService {
+
+    @Path(&quot;library/movies/{name}&quot;)
+    @GET
+    Movie getMovieByName(@PathParam(&quot;name&quot;) String movieName, @HeaderParam(&quot;token&quot;) String requestToken);
+}')"></div>
+
+    <p class="dui dui-leading-6">Then making a request call like this : </p>
+    <div th:replace="fragments/commons/components/inline-code :: content('MoviesServiceFactory.INSTANCE
+    .getMovieByName(&quot;hulk&quot;, &quot;some token&quot;)
+    .onSuccess(movie -&gt;{})
+    .send();')"></div>
+
+    <p class="dui dui-leading-6">Then the request will be made to the following endpoint with the provided path param:</p>
+    <code class="dui dui-inlined">http://localhost:8080/service/library/movies/hulk</code>
+    <p>And if we check the request we also see that it has the header <code class="dui dui-inlined">token: some token</code></p>
+
+</div>

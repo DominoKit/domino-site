@@ -1,5 +1,6 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.columnresize;
 
+import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.cards.Card;
@@ -7,6 +8,8 @@ import org.dominokit.domino.ui.datatable.CellTextAlign;
 import org.dominokit.domino.ui.datatable.ColumnConfig;
 import org.dominokit.domino.ui.datatable.DataTable;
 import org.dominokit.domino.ui.datatable.TableConfig;
+import org.dominokit.domino.ui.datatable.events.ColumnResizedEvent;
+import org.dominokit.domino.ui.datatable.events.ColumnResizingEvent;
 import org.dominokit.domino.ui.datatable.plugins.column.ResizeColumnMeta;
 import org.dominokit.domino.ui.datatable.plugins.column.ResizeColumnsPlugin;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;

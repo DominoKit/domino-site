@@ -1,0 +1,28 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest"
+               aria-expanded="true">
+                Domino REST
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-rest/v1/docs/rest-clients"
+               aria-expanded="true">
+                Rest clients
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-rest/v1/docs/rest-clients/http-methods" aria-expanded="true">
+                HTTP Methods
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">HTTP Methods</h1>
+
+    <p class="dui dui-leading-6">We can set the http request method on a service method using one of the JaxRs annotations :</br> <b>@GET</b>, <b>@POST</b>, <b>@PUT</b>, <b>@PATCH</b>, <b>@DELETE</b>, <b>@HEAD</b>, <b>@OPTIONS</b>.</p>
+    <p class="dui dui-leading-6">If none of these annotations is present on the service method definition then it is considered <b>GET</b> by default, and only <b>@POST</b>, <b>@PUT</b>, <b>@PATCH</b> will allow sending a body in the request while the other will ignore the body presented in the request or service definition.</p>
+
+</div>

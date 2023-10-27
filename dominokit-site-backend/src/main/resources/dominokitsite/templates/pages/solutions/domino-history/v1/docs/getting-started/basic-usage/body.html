@@ -1,0 +1,172 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1"
+               aria-expanded="true">
+                Domino History
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-history/v1/docs/getting-started/basic-usage" aria-expanded="true">
+                Basic usage
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Basic usage</h1>
+
+    <h3 class="dui">Terminology</h3>
+
+    <p class="dui dui-leading-6">Before we start using domino-history we need to understand some terminology about how domino-history see a URL.</p>
+    <p class="dui dui-leading-6">A URL in domino-history has three distinct parts, Paths, query parameters and fragments, please note here that domino-history does not operate on the host or port portions of a URL, so lets take an example :</p>
+    <div th:replace="fragments/commons/components/inline-code :: content('http://localhost:8080/path1/path2?param1=valuea,valueb&param2=valuec#fragment1/fragment2')"></div>
+    <p class="dui dui-leading-6">In the above URL domino-history can operate on the following sections :</p>
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <h4 class="dui">Paths</h4>
+            <p class="dui dui-leading-6">The paths in the above example we have two paths <b>path1</b> and <b>path2</b> domino-history API can append,remove, replace, or clear URL paths.</p>
+            <p class="dui dui-leading-6">Paths in general are used for the navigation from one page or view in the application to another.</p>
+        </li>
+        <li class="dui">
+            <h4 class="dui">Query parameters</h4>
+            <p class="dui dui-leading-6">In the above example we have two query parameters <code class="dui dui-inlined">param1=valuea,valueb</code> and <code class="dui dui-inlined">param2=valuec</code>
+                <b>param1</b> has a multiple values <b>valuea</b> and <b>valueb</b> while <b>param2</b> has a single value <b>valuec</b>, domino-history assumes that all query parameters are multi-value params and the single value parameters
+                are just multi value but with a single entry.
+            </p>
+            <p class="dui dui-leading-6">Query parameters are usually used for search queries and specifying content context regarding the current data being processed in the page or view.</p>
+        </li>
+        <li class="dui">
+            <h4 class="dui">Fragments</h4>
+            <p class="dui dui-leading-6">Fragments are the part that comes after the <b>#</b> in a URL, in the above example we have two fragments <b>fragment1</b> and <b>fragment2</b>, domino-history API can append,remove, replace, or clear URL fragments.
+            </p>
+            <p class="dui dui-leading-6">Fragments are usually used for navigation to different parts within the same page or view.</p>
+        </li>
+    </ul>
+
+    <h3 class="dui">State token</h3>
+    <p class="dui dui-leading-6">In general the URL is assumed to hold your current page or view state,
+        meaning that the URL should hold enough information to reconstruct the page from its current state exactly when the browser is refreshed or if the same URL is used in a different tab or browser.
+        Thus, domino-history consider the URL as a state, And as we navigate from page to page or between different views we are actually changing that state, and we keep track of those states, that how the browser back button takes you to the previous page.
+        Domino-history also keeps a track of that history and so it refers to the browser URL as <code class="dui dui-inlined">StateHistory</code> and the current URL token as a <code class="dui dui-inlined">StateHistoryToken</code>.
+
+    </p>
+    <p class="dui dui-leading-6">To start using Domino-history we need to create a new instance of the <b>StateHistory</b></p>
+    <div th:replace="fragments/commons/components/inline-code :: content('StateHistory history = new StateHistory()')"></div>
+
+    <p class="dui dui-leading-6">We can have as many instances as needed, but in most cased a single instance should be enough, unless we need to operate over different root paths which is a topic we will discuss later,
+        but now once we get the instance we can use to do one of the following operation</p>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <h4 class="dui">pushState</h4>
+            <p class="dui dui-leading-6">Pushing a state is domino-history of changing the URL without firing and event, it will just update the URL with the specified token, Example :</p>
+            <p class="dui dui-leading-6">Assuming we start with the url <code class="dui dui-inlined">http://localhost:8080</code> the following code :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.pushState(StateToken.of(&quot;path1/path2&quot;));')"></div>
+            <p class="dui dui-leading-6">We change the browser URL to <code class="dui dui-inlined">http://localhost:8080/path1/path2</code></p>
+            <p class="dui dui-leading-6">Everytime we use <b>pushState</b> we replace the whole URL with the specified token and not part of the URL, this includes the paths, query parameters and the fragments, for Example the following will also replace the whole URL :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.pushState(StateToken.of(&quot;path1/path2?param1=valuea&amp;param2=valueb&quot;));
+        stateHistory.pushState(StateToken.of(&quot;path1/path2?param1=valuea&amp;param2=valueb#fragment&quot;));')"></div>
+            <p class="dui dui-leading-6">Another useful variation of the <b>pushState</b> is to use expression parameters in the token and substitute them for specified values dynamically, this is helpful in case you want to push state with variable paths, query parameters or fragments dynamically based on some logic, Example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.pushState(StateToken.of(&quot;path1/:namedPath&quot;), TokenParameter.of(&quot;namedPath&quot;, &quot;path2&quot;));
+        //Result : http://localhost:8080/path1/path2')"></div>
+            <p class="dui dui-leading-6">In this case the path <b>namedPath</b> which is prefixed with <code class="dui dui-inlined">:</code> will be replaced with the value specified in the <b>TokenParameter</b> before we push the token changing the URL to
+                <code class="dui dui-inlined"> http://localhost:8080/path1/path2</code>
+            </p>
+            <p class="dui dui-leading-6">Fragments can be the same, Example:</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.pushState(StateToken.of(&quot;path1/:namedPath#:namedFragment&quot;),
+        TokenParameter.of(&quot;namedPath&quot;, &quot;path2&quot;),
+        TokenParameter.of(&quot;namedFragment&quot;, &quot;fragment1&quot;),
+        TokenParameter.query(&quot;param1&quot;, &quot;valuea,valueb&quot;),
+        TokenParameter.query(&quot;param2&quot;, &quot;valuec&quot;)
+);
+//Result : http://localhost:8080/path1/path2?param1=valuea,valueb&amp;param2=valuec#fragment1')"></div>
+            <p class="dui dui-leading-6">We can also specify the page title in the state token to reflect what view or page is currently active in the browser tab header, Example: </p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.pushState(StateToken.of(&quot;dashboard/:dashboardView&quot;)
+                .title(&quot;Opened tickets&quot;)
+        , TokenParameter.of(&quot;dashboardView&quot;, &quot;tickets&quot;));
+//Result : http://localhost:8080/dashboard/tickets
+//And the browser tab title will become : Opened tickets')"></div>
+
+            <p class="dui dui-leading-6">When ever we use push state we are actually pushing a new state to the browser history API, so clicking on the browser back button will still work and will cycle through the states we pushed.</p>
+
+        </li>
+
+        <li class="dui">
+            <h4 class="dui">fireState</h4>
+            <p class="dui dui-leading-6">The only difference between <b>pushState</b> and <b>fireState</b> is that when using <b>fireState</b> we will also fire an event that allow ant defined listener through domino-history to be triggered</p>
+            <p class="dui dui-leading-6">The next section will explain how we can listen to state changes and react accordingly.</p>
+        </li>
+
+        <li class="dui">
+            <h4 class="dui">listen</h4>
+            <p class="dui dui-leading-6">The <b>StateHistory</b> instance allow us to define listeners for the URL changes that are applied through the browser state API and domino-history, Example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(state -&gt; {
+    List&lt;String&gt; paths = state.token().paths();
+    List&lt;String&gt; fragments = state.token().fragments();
+    Map&lt;String, List&lt;String&gt;&gt; queryParams = state.token().queryParameters();
+});')"></div>
+
+            <p class="dui dui-leading-6">The above listener will listen to any change to the browser URL and will call the specified callback passing the <b>State</b> object that represent the new parsed URL value,
+            In the listener you get the <b>HistoryToken</b> from the state which contains all information available in the URL parsed and ready to use in your application logic. for example, it will contain a list of the paths currently present in the URL,
+            The received token can be further modified, and then we can use it to push a new state, or we can just read the information from the token and change our application current active page or data.</p>
+            <p class="dui dui-leading-6">We will discuss the <code class="dui dui-inlined">HistoryToken</code> in details in later sections in this documentation.</p>
+
+            <p class="dui dui-leading-6">Listeners can also filter which token they should listen to, The above example used an omitted default filter token that listen to any token change, so the above example can be also rewritten like this :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.any(), state -&gt; {
+    List&lt;String&gt; paths = state.token().paths();
+    List&lt;String&gt; fragments = state.token().fragments();
+    Map&lt;String, List&lt;String&gt;&gt; queryParams = state.token().queryParameters();
+});')">]</div>
+            <p class="dui dui-leading-6">The <b>TokenFilter.any()</b> is a factory for one of the many predefined filters that comes built-in in domino-history, the filters provided can handle almost all the cases needed to check for a specific token either it is filtering by path, fragments or query parameters,
+            We will discuss and list all the available filters in another part of the documentation, but for now we need to state that you still can implement your own filters to handle any special case you might need.</p>
+
+            <p class="dui dui-leading-6">When we use listeners we are actually wrapping the browser state API <b>popstate</b> event, and this mean that in case we refresh the page or open a link in a new tab or browser window the even will not be fired by the browser,
+            As this a limitation from the native browser API domino-history implements a mechanism to go around this, So in order to actually to trigger a listener in such scenario we just need to specify that in the listener itself using the following syntax :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.any(), state -&gt; {
+    List&lt;String&gt; paths = state.token().paths();
+    List&lt;String&gt; fragments = state.token().fragments();
+    Map&lt;String, List&lt;String&gt;&gt; queryParams = state.token().queryParameters();
+}).onDirectUrl();')"></div>
+
+            <p class="dui dui-leading-6">Or the following :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('stateHistory.listen(TokenFilter.any(), state -&gt; {
+    List&lt;String&gt; paths = state.token().paths();
+    List&lt;String&gt; fragments = state.token().fragments();
+    Map&lt;String, List&lt;String&gt;&gt; queryParams = state.token().queryParameters();
+}).onDirectUrl(TokenFilter.endsWithPathFilter(&quot;path1&quot;));')"></div>
+
+            <p class="dui dui-leading-6">The <b>onDirectUrl</b> allow us to register the listener as one that will be triggered when the browser window is refreshed, or we open a link in a new tab or window,
+                the state in that case will be checked against the filter specified in the listen method or with its own filter if specified in the onDirectUrl method.</p>
+        </li>
+
+        <li class="dui">
+            <h4 class="dui">currentState</h4>
+            <p class="dui dui-leading-6">Sometimes we might need to read the browser URL without firing a state or wait for change so we can get the state in a listener, for Example,
+                we might need to reread the URL to re-update the page data periodically, or we want to push a new state that is very similar to the current active one but with a slight change and we dont want to forge the state token from scratch,
+                in such cases the <code class="dui dui-inlined">currentToken</code> comes in handy, the method will read the current state and parse it for you allowing any kind of modification, then we can use the modified state to push or fire a new state token, for example :</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('//Assuming the url is http://localhost:8080/path1/path2
+stateHistory.fireState(StateToken.of(stateHistory.currentToken().appendPath(&quot;path3&quot;)));
+//Result : http://localhost:8080/path1/path2/path3')"></div>
+
+            <p class="dui dui-leading-6 dui-important-note">One important note here is that the <b>currentToken</b> will always return an instance of the represent the current URL and modifying this instance does not affect the URL directly
+                , instead we need to push or fire the state in order to change the URL, for example :
+                <div th:replace="fragments/commons/components/inline-code :: content('//Assuming the url is http://localhost:8080/path1/path2
+StateHistoryToken currentToken = stateHistory.currentToken();
+currentToken.appendPath(&quot;path3&quot;);
+
+stateHistory.fireState(StateToken.of(stateHistory.currentToken().appendPath(&quot;path4&quot;)));
+//Result : http://localhost:8080/path1/path2/path4')"></div>
+
+            <b>path3</b> is missing in this case because when we called <b>currentToken</b> again we actually started from what is currently in the browser URL with a new instance of the HistoryToken.
+            </p>
+        </li>
+    </ul>
+
+</div>

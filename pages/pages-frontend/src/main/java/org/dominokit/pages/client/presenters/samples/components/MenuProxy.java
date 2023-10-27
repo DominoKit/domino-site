@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "MenuDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/components/menu", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/components/menu", reRouteActivated = true)
 public class MenuProxy extends SampleProxy {
 
 }

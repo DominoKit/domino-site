@@ -1,0 +1,75 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1"
+               aria-expanded="true">
+                Domino Jackson
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-jackson/v1/docs/getting-started"
+               aria-expanded="true">
+                Getting started
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-jackson/v1/docs/getting-started/define-mappers" aria-expanded="true">
+                Defining mappers
+            </a>
+        </li>
+    </ol>
+
+    <h1 class="dui dui-site-docs-title">Mapper Definition Options</h1>
+
+    <p class="dui dui-leading-6">Domino-jackson offers flexibility in how you define mappers for your POJO (Plain Old
+        Java Object) classes:</p>
+
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">
+            <h3>Direct POJO Access:</h3>
+            <p class="dui dui-leading-6">If you have access to the source code of your POJO class, you can easily
+                generate mappers by annotating the class with <b>JSONMapper</b>. This approach automatically generates
+                mappers and (de)serializers in the same package as your POJO. This is particularly handy when your POJO
+                is part of your project's source code or when you want to ship the mappers alongside the POJO itself.
+
+                <b>JSONMapper</b>> generates both deserializers and serializers for your POJO. However, there may be
+                cases where you only need to read JSON without writing it, or vice versa. In such situations, you can
+                utilize two additional annotations: <b>JSONReader</b>> for generating deserializers only and <b>JSONWriter</b>
+                for generating serializers only.</p>
+
+        </li>
+        <li class="dui">
+            <h3>External Mapper Definition:</h3>
+            In scenarios where you cannot access the source code of the POJO, prefer not to clutter the POJO with
+            additional annotations, or aim to keep your POJO free from dependencies on domino-jackson, an alternative
+            approach is available. You can define the mapper externally by introducing a new marker interface:
+
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+interface PersonMapper extends ObjectMapper<Person>{}')"></div>
+
+            <p class="dui dui-leading-6">this will generate the mapper in the same package as the interface and will use
+                the interface as a base name, in this case the generated mapper is <b>PersonMapperImpl</b>.</p>
+
+            <p class="dui dui-leading-6">to generate a reader only use</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONReader
+interface PersonReader extends ObjectReader<Person>{}')"></div>
+
+            <p class="dui dui-leading-6">and to generate a writer only use</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONWriter
+interface PersonWriter extends ObjectWriter<Person>{}')"></div>
+        </li>
+        <li class="dui">
+            <h3>Generating mappers none bean types</h3>
+            <p class="dui dui-leading-6">If you are generating a mapper for a data type that is not represented by a
+                bean but rather with data structure types, for example <b>HashMap&lt;String, List&lt;String&gt;&gt;</b>
+                you can utilize the interface style for this:</p>
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+interface SomeHashMapMapper extends ObjectMapper&lt;HashMap&lt;String, List&lt;String&gt;&gt;&gt;{}')"></div>
+
+            <p>And this applies to any datatype supported by the library.</p>
+        </li>
+    </ul>
+
+
+</div>

@@ -12,11 +12,11 @@ public class MainNavigationContentLoader implements ContentLoader {
         return token.endsWithPath("home")
          || token.endsWithPath("services")
          || token.endsWithPath("solutions")
-         || token.endsWithPath("solutions/domino-ui")
+         || token.endsWithPath("solutions/domino-ui/v2")
          || token.endsWithPath("solutions/domino-mvp")
-         || token.endsWithPath("solutions/domino-jackson")
-         || token.endsWithPath("solutions/domino-rest")
-         || token.endsWithPath("solutions/domino-history")
+         || token.endsWithPath("solutions/domino-jackson/v1")
+         || token.endsWithPath("solutions/domino-rest/v1")
+         || token.endsWithPath("solutions/domino-history/v1")
          || token.endsWithPath("support/donation")
          || token.endsWithPath("resources")
          || token.endsWithPath("news")
@@ -27,7 +27,6 @@ public class MainNavigationContentLoader implements ContentLoader {
     @Override
     public void loadContent(HistoryToken token, PagesView view) {
         String page = token.paths().get(token.paths().size() - 1);
-        boolean docsContent = token.paths().contains("docs");
         getContent(token.path(), page, false , content -> {
             view.replaceContent(content, "dui-content-container");
             view.enhancePadding();

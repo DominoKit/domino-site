@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "PluginMixDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/data-table/mix", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/data-table/mix", reRouteActivated = true)
 public class PluginsMixProxy extends SampleProxy {
 
 }

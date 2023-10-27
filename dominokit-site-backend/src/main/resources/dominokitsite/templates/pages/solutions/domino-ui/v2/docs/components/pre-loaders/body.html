@@ -1,0 +1,56 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-pre-loader" dui-site-data="org.dominokit.domino.ui.preloaders.Preloader"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/pre-loaders" aria-expanded="true">
+                Pre-Loaders
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Colored,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Pre-Loaders</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-pre-loader-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic Pre-loaders</span>
+        <small class="dui">Spinning circles with different sizes.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="pre-loader-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-colored">
+        <span class="dui dui-fg-teal">Colored Pre-loaders</span>
+        <small class="dui">Pre-Loaders can have different colors.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="pre-loader-colored"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-pre-loader-method-docs', 'Preloader', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/preloaders/Preloader.html')"></div>
+
+</div>

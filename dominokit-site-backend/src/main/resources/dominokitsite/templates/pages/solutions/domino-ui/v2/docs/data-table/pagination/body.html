@@ -1,0 +1,67 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-pagination-simple" dui-site-data="org.dominokit.domino.ui.datatable.plugins.pagination.SimplePaginationPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-pagination-scrolling" dui-site-data="org.dominokit.domino.ui.datatable.plugins.pagination.ScrollingPaginationPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-pagination-advanced" dui-site-data="org.dominokit.domino.ui.datatable.plugins.pagination.AdvancedPaginationPlugin"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Data table
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/data-table/pagination" aria-expanded="true">
+                Table pagination
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Simple,Scrolling,Advanced,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Table pagination</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-datatable-pagination-simple-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-pagination-scrolling-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-datatable-pagination-advanced-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-simple">
+        <span class="dui dui-fg-teal">Simple pagination</span>
+        <small class="dui">Use simple pager to fire pagination events for the data store.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-pagination-simple"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-pagination-scrolling">
+        <span class="dui dui-fg-teal">Scrolling pagination</span>
+        <small class="dui">Scrolling pagination plugin allows navigation through a set of page at a time in datatable.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-pagination-scrolling"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-pagination-advanced">
+        <span class="dui dui-fg-teal">Advanced pagination</span>
+        <small class="dui">Advanced pagination plugin allows navigation through pages from a dropdown list.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-pagination-advanced"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-pagination-simple-method-docs', 'SimplePaginationPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/SimplePaginationPlugin.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-pagination-scrolling-method-docs', 'ScrollingPaginationPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/ScrollingPaginationPlugin.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-pagination-advanced-method-docs', 'AdvancedPaginationPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/pagination/AdvancedPaginationPlugin.html')"></div>
+
+</div>

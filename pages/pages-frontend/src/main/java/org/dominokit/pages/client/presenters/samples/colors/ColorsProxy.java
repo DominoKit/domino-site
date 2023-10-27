@@ -11,7 +11,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 
 @PresenterProxy(name = "ColorsDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/colors", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/colors", reRouteActivated = true)
 @Slot("dui-demo-sample-slot")
 public class ColorsProxy  extends ViewablePresenter<ColorsView> implements ColorsView.ColorsUiHandlers {
 

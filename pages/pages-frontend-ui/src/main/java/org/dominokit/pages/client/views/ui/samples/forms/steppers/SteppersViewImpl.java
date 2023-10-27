@@ -11,8 +11,8 @@ public class SteppersViewImpl extends SampleViewImpl {
 
     public SteppersViewImpl() {
         register(DemoSample.of("stepper-track-horizontal", HorizontalTrackSample.class, LazyProvider.of(HorizontalTrackSample::create)));
-        register(DemoSample.of("stepper-track-vertical", VerticalTrackSample.class, LazyProvider.of(VerticalTrackSample::create)));
-        register(DemoSample.of("stepper-horizontal", HorizontalStepperSample.class, LazyProvider.of(HorizontalStepperSample::create)));
-        register(DemoSample.of("stepper-vertical", VerticalStepperSample.class, LazyProvider.of(VerticalStepperSample::create)));
+//        register(DemoSample.of("stepper-track-vertical", VerticalTrackSample.class, LazyProvider.of(VerticalTrackSample::create)));
+//        register(DemoSample.of("stepper-horizontal", HorizontalStepperSample.class, LazyProvider.of(HorizontalStepperSample::create)));
+//        register(DemoSample.of("stepper-vertical", VerticalStepperSample.class, LazyProvider.of(VerticalStepperSample::create)));
     }
 }

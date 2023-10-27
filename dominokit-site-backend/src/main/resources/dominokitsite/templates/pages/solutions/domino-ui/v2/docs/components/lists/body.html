@@ -1,0 +1,61 @@
+
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-list-group" dui-site-data="org.dominokit.domino.ui.lists.ListGroup"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-list-item" dui-site-data="org.dominokit.domino.ui.lists.ListItem"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/lists" aria-expanded="true">
+                Lists
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Single select,Multi-Select,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Lists</h1>
+
+    <h3 class="dui dui-site-docs-subtitle">ListGroup</h3>
+    <div class="dui dui-site-component-docs" id="dui-list-group-class-docs"></div>
+    <h3 class="dui dui-site-docs-subtitle">ListItem</h3>
+    <div class="dui dui-site-component-docs" id="dui-list-item-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-single-select">
+        <span class="dui dui-fg-teal">Single select lists</span>
+        <small class="dui">Lists that allow selecting one item only at a time.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="lists-single-select"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-multi-select">
+        <span class="dui dui-fg-teal">Multi-Select lists</span>
+        <small class="dui">List can allow selecting multiple items.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="lists-multi-select"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-list-group-method-docs', 'ListGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/lists/ListGroup.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-list-item-method-docs', 'ListItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/lists/ListItem.html')"></div>
+
+</div>

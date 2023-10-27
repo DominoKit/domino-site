@@ -1,0 +1,91 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible" dui-site-data="org.dominokit.domino.ui.collapsible.Collapsible"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-handlers" dui-site-data="org.dominokit.domino.ui.collapsible.CollapsibleHandlers"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-strategy" dui-site-data="org.dominokit.domino.ui.collapsible.CollapseStrategy"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-animation-options" dui-site-data="org.dominokit.domino.ui.collapsible.AnimationCollapseOptions"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-accordion" dui-site-data="org.dominokit.domino.ui.collapsible.Accordion"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-collapsible-accordion-panel" dui-site-data="org.dominokit.domino.ui.collapsible.AccordionPanel"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/collapsible" aria-expanded="true">
+                Collapsible
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Strategies,Accordion,Multi open,Letters,Selectable,Docs">
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Collapsible</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-collapsible-class-docs"></div>
+
+    <h3 class="dui dui-site-docs-title">Accordion</h3>
+    <div class="dui dui-site-component-docs" id="dui-collapsible-accordion-class-docs"></div>
+    <h3 class="dui dui-site-docs-title">Accordion Panel</h3>
+    <div class="dui dui-site-component-docs" id="dui-collapsible-accordion-panel-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/accordion-anatomy.png"
+         class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive"
+         alt="alerts-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">Accordion panel header, the header is a NavBar.</li>
+        <li class="dui">Accordion panel content header, this is also a NavBar.</li>
+        <li class="dui">Accordion panel body.</li>
+        <li class="dui">Accordion panel footer. this is also a NavBar.</li>
+        <li class="dui">Collapsed accordion panel.</li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-strategies">
+        <span class="dui dui-fg-teal">Collapse strategies</span>
+        <small class="dui">Different ways to expand/collapse an element.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-strategy"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-accordion">
+        <span class="dui dui-fg-teal">Accordion</span>
+        <small class="dui">Group collapsed panels</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-accordion"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-multi-open">
+        <span class="dui dui-fg-teal">Accordion Multi-open</span>
+        <small class="dui">Accordion can have multiple panels open at the same time.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="collapse-accordion-multi-open"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+    <div th:replace="fragments/commons/components/open-menu :: content"></div>
+</div>
+
+<div  id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-method-docs', 'Collapsible', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/Collapsible.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-handlers-method-docs', 'CollapsibleHandlers', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/collapsible/CollapsibleHandlers.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-strategy-method-docs', 'CollapsibleStrategy', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/collapsible/CollapseStrategy.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-animation-options-method-docs', 'AnimationCollapseOptions', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/collapsible/AnimationCollapseOptions.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-accordion-method-docs', 'Accordion', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/collapsible/Accordion.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-collapsible-accordion-panel-method-docs', 'AccordionPanel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/collapsible/AccordionPanel.html')"></div>
+
+</div>

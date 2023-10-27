@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "BasicDatatableDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/data-table/basic", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/data-table/basic", reRouteActivated = true)
 public class BasicDataTableProxy extends SampleProxy {
 
 }

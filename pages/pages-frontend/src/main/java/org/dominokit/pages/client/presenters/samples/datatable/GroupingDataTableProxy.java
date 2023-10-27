@@ -5,7 +5,7 @@ import org.dominokit.domino.api.client.annotations.presenter.PresenterProxy;
 import org.dominokit.pages.client.presenters.SampleProxy;
 
 @PresenterProxy(name = "GroupingDatatableDemo")
-@AutoRoute(token = "solutions/domino-ui/docs/data-table/grouping", reRouteActivated = true)
+@AutoRoute(token = "solutions/domino-ui/v2/docs/data-table/grouping", reRouteActivated = true)
 public class GroupingDataTableProxy extends SampleProxy {
 
 }
