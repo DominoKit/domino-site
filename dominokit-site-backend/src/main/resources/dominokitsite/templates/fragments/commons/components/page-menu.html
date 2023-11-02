@@ -1,5 +1,6 @@
 <div class="dui dui-site-scroll-fire" style="z-index: 1;" th:fragment="content (items)">
-     <span th:each="item : ${items}" class="dui dui-labeled-icon dui-reversed dui-site-side-nav-item" onclick="scrollToSection(`${item[0]}`)">
+     <span th:each="item : ${items}" class="dui dui-labeled-icon dui-reversed dui-site-side-nav-item"
+           onclick="scrollToSection(`${item[0]}`)">
             <i class="dui mdi" th:classappend="${item[1]}"></i>
             <span class="dui dui-mdi-text dui-text-ellipsis" th:text="${item[2]}"></span>
         </span>

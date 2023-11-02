@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress" dui-site-data="org.dominokit.domino.ui.progress.Progress"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress-bar" dui-site-data="org.dominokit.domino.ui.progress.ProgressBar"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress"
+         dui-site-data="org.dominokit.domino.ui.progress.Progress"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-progress-bar"
+         dui-site-data="org.dominokit.domino.ui.progress.ProgressBar"></div>
 
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
@@ -23,7 +25,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Colored,Striped,Animated,Stacked,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Colored,Striped,Animated,Stacked,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Progress bars</h1>
@@ -65,10 +68,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="progress-bars-stacked"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-progress-method-docs', 'Progress', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/progress/Progress.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-progress-bar-method-docs', 'ProgressBar', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/progress/ProgressBar.html')"></div>

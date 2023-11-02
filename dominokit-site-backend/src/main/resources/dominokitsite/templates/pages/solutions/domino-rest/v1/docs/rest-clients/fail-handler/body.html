@@ -22,7 +22,8 @@
 
     <h1 class="dui dui-site-docs-title">Fail handler</h1>
 
-    <p class="dui dui-leading-6">In a service factory setting up the request fail handler is optional, and in case we don't specify a fail handler a default one will be used,
+    <p class="dui dui-leading-6">In a service factory setting up the request fail handler is optional, and in case we
+        don't specify a fail handler a default one will be used,
         the default response handler from domino-rest will just log the exception.
         we can override the default fail handler using <b>DominoRestConfig</b>.</p>
     <div th:replace="fragments/commons/components/inline-code :: content('DominoRestConfig.getInstance()

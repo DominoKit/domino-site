@@ -22,7 +22,8 @@
 
     <h1 class="dui dui-site-docs-title">Success codes</h1>
 
-    <p class="dui dui-leading-6">By default, status codes <code class="dui dui-inlined">200,201,202,203,204</code> are considered a success for all requests,
+    <p class="dui dui-leading-6">By default, status codes <code class="dui dui-inlined">200,201,202,203,204</code> are
+        considered a success for all requests,
         if we need to change this behavior for a single request we can use the <b>@SuccessCodes</b> annotation.</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
@@ -40,6 +41,7 @@ public interface MoviesService {
     @SuccessCodes({200})
     void updateMovie(@beanParam @RequestBody Movie movie);
 }')"></div>
-    <p class="dui dui-leading-6">With the annotation added now <b>updateMethod</b> will only be considered success if the response status code is <b>200</b>.</p>
+    <p class="dui dui-leading-6">With the annotation added now <b>updateMethod</b> will only be considered success if
+        the response status code is <b>200</b>.</p>
 
 </div>

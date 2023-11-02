@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tabs-panel" dui-site-data="org.dominokit.domino.ui.tabs.TabsPanel"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tab" dui-site-data="org.dominokit.domino.ui.tabs.Tab"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tabs-panel"
+         dui-site-data="org.dominokit.domino.ui.tabs.TabsPanel"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tab"
+         dui-site-data="org.dominokit.domino.ui.tabs.Tab"></div>
 
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
@@ -23,7 +25,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Alignment,Closable,Colored,Content,Animation,Vertical,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Alignment,Closable,Colored,Content,Animation,Vertical,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Tabs</h1>
@@ -79,10 +82,10 @@
 
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tabs-panel-method-docs', 'TabsPanel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tabs/TabsPanel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-tab-method-docs', 'Tab', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/tabs/Tab.html')"></div>

@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-carousel" dui-site-data="org.dominokit.domino.ui.carousel.Carousel"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-carousel-slide" dui-site-data="org.dominokit.domino.ui.carousel.Slide"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-carousel"
+         dui-site-data="org.dominokit.domino.ui.carousel.Carousel"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-carousel-slide"
+         dui-site-data="org.dominokit.domino.ui.carousel.Slide"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -62,10 +64,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="carousel-auto"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-carousel-method-docs', 'Carousel', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/carousel/Carousel.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-carousel-slide-method-docs', 'Slide', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/carousel/Slide.html')"></div>

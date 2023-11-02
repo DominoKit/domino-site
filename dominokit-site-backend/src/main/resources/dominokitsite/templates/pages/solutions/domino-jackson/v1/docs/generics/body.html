@@ -16,7 +16,8 @@
 
     <h1 class="dui dui-site-docs-title">Generics</h1>
 
-    <p class="dui dui-leading-6">Domino-jackson can process generics types as long as the type information are available for the processor for example :</p>
+    <p class="dui dui-leading-6">Domino-jackson can process generics types as long as the type information are available
+        for the processor for example :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('public abstract class BaseGenericType&lt;T, V&gt; {
 
     private T field1;
@@ -39,7 +40,8 @@
     }
 }')"></div>
 
-    <p class="dui dui-leading-6">Then when a child class extends from that type, it can provide the specific generics types for domino-jackson</p>
+    <p class="dui dui-leading-6">Then when a child class extends from that type, it can provide the specific generics
+        types for domino-jackson</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
 public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
 
@@ -54,9 +56,11 @@ public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
     }
 }')"></div>
 
-    <p class="dui dui-leading-6">This allows domino-jackson to generate a correct mapper for this pojo and will use the correct String and Integer types for <b>field1</b> and <b>field2</b> from the base class.</p>
+    <p class="dui dui-leading-6">This allows domino-jackson to generate a correct mapper for this pojo and will use the
+        correct String and Integer types for <b>field1</b> and <b>field2</b> from the base class.</p>
 
-    <p class="dui dui-leading-6">notice that annotating the Base class with JSONMapper wont work, as the type information is not available for the processor.</p>
+    <p class="dui dui-leading-6">notice that annotating the Base class with JSONMapper wont work, as the type
+        information is not available for the processor.</p>
     <p class="dui dui-leading-6">defining the mapper using an interface like this should work</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
 interface GenericMapper extend ObjectMapper&lt;BaseGenericType&lt;T, V&gt;&gt;{}')"></div>

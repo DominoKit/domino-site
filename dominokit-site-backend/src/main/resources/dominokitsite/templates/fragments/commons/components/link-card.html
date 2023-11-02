@@ -1,15 +1,15 @@
 <div class="dk-c-card" th:fragment="content(link, img, category, desc, date)">
-	<a th:href="${link}" target="_blank">
-		<div class="dk-c-card__img-container">
-			<img th:src="${img}">
-		</div>
+    <a th:href="${link}" target="_blank">
+        <div class="dk-c-card__img-container">
+            <img th:src="${img}">
+        </div>
 
-		<div class="dk-c-card__desc-container">
-			<div class="ck-c-card__desc-title">
-				<div class="ck-c-card__category" th:text="${category}"></div>
-				<div class="ck-c-card__headline" th:text="${desc}"></div>
-			</div>
-			<div class="ck-c-card__desc-date" th:text="${date}"></div>
-		</div>
-	</a>
+        <div class="dk-c-card__desc-container">
+            <div class="ck-c-card__desc-title">
+                <div class="ck-c-card__category" th:text="${category}"></div>
+                <div class="ck-c-card__headline" th:text="${desc}"></div>
+            </div>
+            <div class="ck-c-card__desc-date" th:text="${date}"></div>
+        </div>
+    </a>
 </div>

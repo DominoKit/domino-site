@@ -22,8 +22,11 @@
 
     <h1 class="dui dui-site-docs-title">Custom URL</h1>
 
-    <p class="dui dui-leading-6">In some cases like when we work with HATEOAS links the request url isn't fixed and is received from the response of another rest request,
-        and so using service root or Path mapping does not work, in this case we can leave the value for <b>@Path</b> annotation empty and use the request <b>setUrl</b> method to set the url, this method will override any other path mapping.</p>
+    <p class="dui dui-leading-6">In some cases like when we work with HATEOAS links the request url isn't fixed and is
+        received from the response of another rest request,
+        and so using service root or Path mapping does not work, in this case we can leave the value for <b>@Path</b>
+        annotation empty and use the request <b>setUrl</b> method to set the url, this method will override any other
+        path mapping.</p>
     <div th:replace="fragments/commons/components/inline-code :: content('MoviesServiceFactory.INSTANCE
     .updateMovie(movie)
     .setUrl(&quot;http://localhost:6060/movies&quot;)

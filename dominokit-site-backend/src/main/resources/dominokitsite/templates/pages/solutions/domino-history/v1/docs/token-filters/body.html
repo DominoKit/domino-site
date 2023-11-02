@@ -9,7 +9,8 @@
             </a>
         </li>
         <li class="dui dui-active">
-            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-history/v1/docs/token-filters"
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-history/v1/docs/token-filters"
                aria-expanded="true">
                 Token filters
             </a>
@@ -18,17 +19,24 @@
 
     <h1 class="dui dui-site-docs-title">Token filters</h1>
     <p class="dui dui-leading-6">
-        As we discussed in previous parts of this documentation, we can use domino-history to listen for the changes applied to the URL throw the <b>StateHistory.fireState(...)</b> function,
-        But in most of the cases in a listener we will be interested in specific changes and any change that is applied, because most likely we are listening to those changes to take actions based on the change or the new URL value,
-        Domino-history API provide a way to actually filter what changes to the URL will trigger a specific listener, this is achieved through <b>TokenFilters</b>.
+        As we discussed in previous parts of this documentation, we can use domino-history to listen for the changes
+        applied to the URL throw the <b>StateHistory.fireState(...)</b> function,
+        But in most of the cases in a listener we will be interested in specific changes and any change that is applied,
+        because most likely we are listening to those changes to take actions based on the change or the new URL value,
+        Domino-history API provide a way to actually filter what changes to the URL will trigger a specific listener,
+        this is achieved through <b>TokenFilters</b>.
 
     </p>
     <p class="dui dui-leading-6">
-        A <b>TokenFilter</b> works like a condition we check over the new URL value after it is changed, and if the condition pass we call the listener associated with the TokenFilter,
-        When we define a listener without a TokenFilter we are actually using a default TokenFilter which is the `AnyTokenFilter` and this filter simply return always <b>True</b> since it just means any change.
+        A <b>TokenFilter</b> works like a condition we check over the new URL value after it is changed, and if the
+        condition pass we call the listener associated with the TokenFilter,
+        When we define a listener without a TokenFilter we are actually using a default TokenFilter which is the
+        `AnyTokenFilter` and this filter simply return always <b>True</b> since it just means any change.
     </p>
-    <p class="dui dui-leading-6">Domino-history comes with a long list of a ready to use built-in token filters that we will list below, but it is not limited to those filters,
-        the user can still implement his own filters, this because the TokenFilter is an interface and any implementation of this interface is acceptable. For example the following custom TokenFilter :</p>
+    <p class="dui dui-leading-6">Domino-history comes with a long list of a ready to use built-in token filters that we
+        will list below, but it is not limited to those filters,
+        the user can still implement his own filters, this because the TokenFilter is an interface and any
+        implementation of this interface is acceptable. For example the following custom TokenFilter :</p>
 
     <div th:replace="fragments/commons/components/inline-code :: content('
 import org.dominokit.domino.history.HistoryToken;
@@ -67,10 +75,13 @@ public class UserTokenFilter implements TokenFilter {
    //Do something if a logged-in user navigated to a secure path
 });')"></div>
 
-    <p class="dui dui-leading-6">Here the TokenFilter checks if the user is trying to navigate to a secure path, then it assumes the user should be logged in to return true or else will return false,
-    but if the path isn't secure it won't check for a user login and will just return true.</p>
+    <p class="dui dui-leading-6">Here the TokenFilter checks if the user is trying to navigate to a secure path, then it
+        assumes the user should be logged in to return true or else will return false,
+        but if the path isn't secure it won't check for a user login and will just return true.</p>
 
-    <p class="dui dui-leading-6">There is no restriction on what you can with a custom TokenFilter, except as we will discuss later for the use with wildcards when try to normalize a token to match the expressions with the matching values from the token.</p>
+    <p class="dui dui-leading-6">There is no restriction on what you can with a custom TokenFilter, except as we will
+        discuss later for the use with wildcards when try to normalize a token to match the expressions with the
+        matching values from the token.</p>
 
     <p class="dui dui-leading-6">Below is a list of the built-in token filters:</p>
 

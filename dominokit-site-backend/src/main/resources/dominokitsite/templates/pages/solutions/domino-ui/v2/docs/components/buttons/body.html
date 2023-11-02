@@ -1,10 +1,16 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-base" dui-site-data="org.dominokit.domino.ui.button.BaseButton"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-button" dui-site-data="org.dominokit.domino.ui.button.Button"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-link" dui-site-data="org.dominokit.domino.ui.button.LinkButton"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-dropdown" dui-site-data="org.dominokit.domino.ui.button.DropdownButton"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-toolbar" dui-site-data="org.dominokit.domino.ui.button.ButtonsToolbar"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-group" dui-site-data="org.dominokit.domino.ui.button.group.ButtonsGroup"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-base"
+         dui-site-data="org.dominokit.domino.ui.button.BaseButton"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-button"
+         dui-site-data="org.dominokit.domino.ui.button.Button"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-link"
+         dui-site-data="org.dominokit.domino.ui.button.LinkButton"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-dropdown"
+         dui-site-data="org.dominokit.domino.ui.button.DropdownButton"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-toolbar"
+         dui-site-data="org.dominokit.domino.ui.button.ButtonsToolbar"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-buttons-group"
+         dui-site-data="org.dominokit.domino.ui.button.group.ButtonsGroup"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -26,7 +32,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Sizes,Groups,Drop down,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Sizes,Groups,Drop down,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Buttons</h1>
@@ -74,10 +81,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="buttons-split-drop"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-buttons-base-method-docs', 'BaseButton', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/button/BaseButton.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-buttons-button-method-docs', 'Button', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/button/Button.html')"></div>

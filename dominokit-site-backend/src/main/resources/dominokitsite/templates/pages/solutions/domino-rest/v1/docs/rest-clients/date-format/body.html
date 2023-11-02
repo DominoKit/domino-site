@@ -22,7 +22,10 @@
 
     <h1 class="dui dui-site-docs-title">Date format</h1>
 
-    <p class="dui dui-leading-6">If we have a <b>@QueryParam</b>, <b>@PathParam</b> or <b>@HeaderParam</b> and the type of parameter is Date then we can use <b>@DateFormat</b> annotation provided by domino-rest to specify the pattern to format the value of the parameter, if <b>@DateFormat</b> is not specified we <b>String.valueOf</b> will be used.</p>
+    <p class="dui dui-leading-6">If we have a <b>@QueryParam</b>, <b>@PathParam</b> or <b>@HeaderParam</b> and the type
+        of parameter is Date then we can use <b>@DateFormat</b> annotation provided by domino-rest to specify the
+        pattern to format the value of the parameter, if <b>@DateFormat</b> is not specified we <b>String.valueOf</b>
+        will be used.</p>
     <div th:replace="fragments/commons/components/inline-code :: content('    @GET
     @Path(&quot;someService/{starting-date}&quot;)
     String getByDate(@QueryParam(&quot;birth-date&quot;) @DateFormat(&quot;dd-MM-yyyy&quot;) Date birthDate,

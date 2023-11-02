@@ -1,5 +1,6 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-text-area" dui-site-data="org.dominokit.domino.ui.forms.TextAreaBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-text-area"
+         dui-site-data="org.dominokit.domino.ui.forms.TextAreaBox"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -39,10 +40,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="text-area-sample"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-text-area-method-docs', 'TextBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/TextAreaBox.html')"></div>
 

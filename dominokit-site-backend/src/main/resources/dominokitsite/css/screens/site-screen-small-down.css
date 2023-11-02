@@ -13,6 +13,22 @@
 
 @media screen and (max-width: 992px) {
 
+    :root {
+        overflow-x: hidden;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+    #root {
+        padding-top: 60px;
+    }
+
+    body.dui {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
     .dui-site .dui.dui-home-nav-bar > h4 {
         display: block;
     }
@@ -278,5 +294,10 @@
 
     .dui.dui-donation-buttons {
         flex-direction: column;
+    }
+
+    .dui.dui-home-nav-bar {
+        position: fixed;
+        top: 0;
     }
 }

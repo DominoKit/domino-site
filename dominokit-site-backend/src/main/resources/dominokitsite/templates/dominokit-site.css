@@ -7,6 +7,7 @@
     src: url(fonts/Lato-Regular.ttf) format('ttf');
     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
+
 /* latin */
 @font-face {
     font-family: 'Lato';
@@ -18,10 +19,10 @@
 }
 
 .dui-site-menu-padded-content {
-    --dui-site-content-padding : var(--dui-spc-80);
+    --dui-site-content-padding: var(--dui-spc-80);
 }
 
-body.dui-site-theme.dui{
+body.dui-site-theme.dui {
     overflow-y: auto;
     margin-left: 10%;
     margin-right: 10%;
@@ -90,6 +91,7 @@ body.dui-site-theme.dui{
     min-width: 120px;
     justify-content: center;
 }
+
 .dui-site-nav-bar .dui-tab-anchor:hover,
 .dui-site-nav-bar .dui-tab-anchor:focus,
 .dui[class*="dui-bg-"] .dui-site-nav-bar .dui-tab-anchor:hover,
@@ -143,14 +145,14 @@ body.dui-site-theme.dui{
 .dui.dui-learn-more .dui-btn:not(.dui-btn-split):hover,
 .dui.dui-getting-started .dui-btn:not(.dui-btn-split):focus,
 .dui.dui-getting-started .dui-btn:not(.dui-btn-split):hover {
-    --dui-btn-focus-box-shadow:none;
+    --dui-btn-focus-box-shadow: none;
     color: var(--dui-color);
     outline: none;
     transition: none;
 }
 
 .dui.dui-site-button .dui-btn:not(.dui-btn-split):hover {
-    --dui-btn-focus-box-shadow:none;
+    --dui-btn-focus-box-shadow: none;
     color: var(--dui-color);
     outline: none;
     transition: none;
@@ -678,12 +680,12 @@ a.dui.dui-site-menu-category {
     align-items: center;
 }
 
-.dui-site-menu-category span{
+.dui-site-menu-category span {
     flex-grow: 1;
     order: 20;
 }
 
-.dui-site-menu-category i{
+.dui-site-menu-category i {
     order: 10;
 }
 
@@ -701,7 +703,7 @@ a.dui.dui-site-menu-category {
     padding-bottom: var(--dui-spc-2);
 }
 
-.dui-site-menu-item a{
+.dui-site-menu-item a {
     text-decoration: none;
 }
 
@@ -713,6 +715,7 @@ a.dui.dui-site-menu-category {
     color: var(--dui-clr-blue-grey);
     font-weight: 600;
 }
+
 .dui-site-menu-search:focus {
     outline: none;
 }
@@ -745,6 +748,7 @@ a.dui.dui-site-menu-category {
     letter-spacing: 0px;
     color: #1F1E1C;
 }
+
 .dui-site-doc-sub-title {
     text-align: left;
     font: normal normal normal 24px/29px Lato;
@@ -756,7 +760,7 @@ a.dui.dui-site-menu-category {
     text-decoration: none;
 }
 
-.dui-site-menu li.dui-active > a.dui{
+.dui-site-menu li.dui-active > a.dui {
     color: var(--dui-clr-teal);
 }
 
@@ -768,7 +772,7 @@ a.dui.dui-site-menu-category {
     margin-top: var(--dui-spc-4);
     margin-bottom: var(--dui-spc-4);
     color: var(--dui-clr-black-l-3);
-    font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+    font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
 }
 
 .dui-site-code-copy-icon {

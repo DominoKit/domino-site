@@ -1,5 +1,6 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-media-object" dui-site-data="org.dominokit.domino.ui.media.MediaObject"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-media-object"
+         dui-site-data="org.dominokit.domino.ui.media.MediaObject"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -34,22 +35,24 @@
 
     <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
         <span class="dui dui-fg-teal">Basic media</span>
-        <small class="dui">The default media displays a media object (images, video, audio) to the left or right of a content block.</small>
+        <small class="dui">The default media displays a media object (images, video, audio) to the left or right of a
+            content block.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="media-object-basic"></div>
 
     <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-alignment">
         <span class="dui dui-fg-teal">Media alignment</span>
-        <small class="dui">The images or other media can be aligned top, middle, or bottom. The default is top aligned.</small>
+        <small class="dui">The images or other media can be aligned top, middle, or bottom. The default is top
+            aligned.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="media-object-alignment"></div>
 
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-media-object-method-docs', 'MediaObject', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/media/MediaObject.html')"></div>
 

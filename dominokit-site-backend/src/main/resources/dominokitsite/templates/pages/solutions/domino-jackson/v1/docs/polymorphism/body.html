@@ -16,7 +16,8 @@
 
     <h1 class="dui dui-site-docs-title">Polymorphism</h1>
 
-    <p class="dui dui-leading-6">Domino-jackson supports polymorphism by per-class annotations <b>@JsonTypeInfo</b> and <b>@JsonSubTypes</b>. We can have the following hierarchy and mappers for example:</p>
+    <p class="dui dui-leading-6">Domino-jackson supports polymorphism by per-class annotations <b>@JsonTypeInfo</b> and
+        <b>@JsonSubTypes</b>. We can have the following hierarchy and mappers for example:</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, visible = true)
 @JsonSubTypes({
    @Type(value = MyClassOne.class, name = &quot;childclass&quot;),
@@ -37,7 +38,8 @@ class Foo {
 @JSONMapper
 interface FooMapper extends ObjectMapper&lt;Foo&gt;;')"></div>
 
-    <p class="dui dui-leading-6">Then when a child class extends from that type, it can provide the specific generics types for domino-jackson</p>
+    <p class="dui dui-leading-6">Then when a child class extends from that type, it can provide the specific generics
+        types for domino-jackson</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
 public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
 
@@ -52,7 +54,8 @@ public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
     }
 }')"></div>
 
-    <p class="dui dui-leading-6">Domino-jackson process beans annotated with <b>@JsonTypeInfo</b> and <b>@JsonSubTypes</b> and generate all needed serializers and deserializers for subtypes.
+    <p class="dui dui-leading-6">Domino-jackson process beans annotated with <b>@JsonTypeInfo</b> and
+        <b>@JsonSubTypes</b> and generate all needed serializers and deserializers for subtypes.
 
     <h3 class="dui">There are two limitations here:</h3>
 
@@ -64,7 +67,8 @@ public class SampleGenericType extends BaseGenericType&lt;String, Integer&gt; {
 
     <h3 class="dui">Bounded wildcards :</h3>
 
-    <p class="dui dui-leading-6">Having polymorphism naturally leads to the need to have wildcards. but bounded wildcards are tricky, here is a working example :</p>
+    <p class="dui dui-leading-6">Having polymorphism naturally leads to the need to have wildcards. but bounded
+        wildcards are tricky, here is a working example :</p>
 
     <div th:replace="fragments/commons/components/inline-code :: content('@JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, visible = true)
 @JsonSubTypes({
@@ -83,21 +87,23 @@ class Bar {
 @JSONMapper
 interface BarMapper extends ObjectMapper&lt;Bar&gt;{}')"></div>
 
-        <p class="dui dui-leading-6">But there is some limitations :</p>
+    <p class="dui dui-leading-6">But there is some limitations :</p>
 
-        <ul class="dui dui-site-docs-list">
-            <li class="dui">You can <b>not</b> use unbounded wildcards at all</li>
-            <li class="dui">You can not have <b>JSONMapper</b>/<b>JSONReader</b>/<b>JSONWriter</b> for type having wildcards or type parameters i.e.
-                <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
+    <ul class="dui dui-site-docs-list">
+        <li class="dui">You can <b>not</b> use unbounded wildcards at all</li>
+        <li class="dui">You can not have <b>JSONMapper</b>/<b>JSONReader</b>/<b>JSONWriter</b> for type having wildcards
+            or type parameters i.e.
+            <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
 interface BarMapper extends ObjectMapper&lt;Bar&lt;Integer&gt;&gt;{} //Valid
 interface BarMapper extends ObjectMapper&lt;Bar&lt;Integer, List&lt;Foo&gt;&gt;&gt;{} //Valid
 interface BarMapper extends ObjectMapper&lt;Bar&lt;Integer, List&lt;?&gt;&gt;&gt;{} //NOT Valid
 interface BarMapper extends ObjectMapper&lt;Bar&lt;? extends Integer&gt;&gt;{} //NOT Valid
 interface BarMapper extends ObjectMapper&lt;Bar&lt;List&lt;? extends Integer&gt;&gt;&gt;{} //NOT Valid
 interface BarMapper extends ObjectMapper&lt;Bar&lt;T&gt;&gt;{} //NOT Valid')"></div>
-            </li>
-            <li class="dui">You can have generic collections with bounded wildcards. The bounds must be referenced in corresponding <b>@JsonTypeInfo</b> and <b>@JsonSubType</b>. Some examples:
-                <div th:replace="fragments/commons/components/inline-code :: content('@JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, visible = true)
+        </li>
+        <li class="dui">You can have generic collections with bounded wildcards. The bounds must be referenced in
+            corresponding <b>@JsonTypeInfo</b> and <b>@JsonSubType</b>. Some examples:
+            <div th:replace="fragments/commons/components/inline-code :: content('@JsonTypeInfo(use = Id.NAME, include = As.PROPERTY, visible = true)
 @JsonSubTypes({
    @Type(value = MyClassOne.class, name = &quot;childclass&quot;),
    @Type(value = MyClassTwo.class, name = &quot;childclass2&quot;)})
@@ -113,11 +119,12 @@ class Bar&lt;T&gt; {
 
 @JSONMapper
 interface BarMapper extends ObjectMapper&lt;Bar&lt;MyBaseInterface&gt;&gt;{} ')"></div>
-            </li>
-            <li class="dui">You can <b>not</b> have member fields with type a custom generic class, declared with bounded wildcards i.e.
+        </li>
+        <li class="dui">You can <b>not</b> have member fields with type a custom generic class, declared with bounded
+            wildcards i.e.
 
 
-                <div th:replace="fragments/commons/components/inline-code :: content('class Foo&lt;T&gt; {
+            <div th:replace="fragments/commons/components/inline-code :: content('class Foo&lt;T&gt; {
    private List&lt;T&gt; data;
 
    public void setData(List&lt;T&gt; data) {
@@ -136,7 +143,7 @@ class Bar&lt;T&gt; {
 
 @JSONMapper
 interface BarMapper extends ObjectMapper&lt;Bar&lt;Double&gt;&gt;{} ')"></div>
-            </li>
-        </ul>
+        </li>
+    </ul>
 
 </div>

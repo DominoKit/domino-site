@@ -1,17 +1,20 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
-            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2" aria-expanded="true">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
                 Domino UI
             </a>
         </li>
         <li class="dui">
-            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started" aria-expanded="true">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started"
+               aria-expanded="true">
                 Getting started
             </a>
         </li>
         <li class="dui dui-active">
-            <a class="dui" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2/docs/getting-started/archetype" aria-expanded="true">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/getting-started/archetype" aria-expanded="true">
                 Maven archetype
             </a>
         </li>
@@ -29,7 +32,8 @@
 
     <ol class="dui dui-site-docs-list">
         <li class="dui">
-            <span>Download and install <a class="dui dui-decoration-none dui-fg-blue" tabindex="0" href="https://github.com/DominoKit/domino-cli" target="_blank">DominoKit CLI tool.</a></span>
+            <span>Download and install <a class="dui dui-decoration-none dui-fg-blue" tabindex="0"
+                                          href="https://github.com/DominoKit/domino-cli" target="_blank">DominoKit CLI tool.</a></span>
         </li>
         <li class="dui">
             <span>Open a terminal and CD into the folder in which you want to create the project.</span>
@@ -40,7 +44,10 @@
    -DarchetypeGroupId=net.ltgt.gwt.archetypes \
    -DarchetypeVersion=LATEST \
    -DarchetypeArtifactId=modular-webapp')"></div>
-            <small class="dui">Or you can follow the steps <a class="dui dui-fg-blue dui-decoration-none" href="https://github.com/tbroyer/gwt-maven-archetypes" target="_blank">here</a> to create a modular-webapp project.</small>
+            <small class="dui">Or you can follow the steps <a class="dui dui-fg-blue dui-decoration-none"
+                                                              href="https://github.com/tbroyer/gwt-maven-archetypes"
+                                                              target="_blank">here</a> to create a modular-webapp
+                project.</small>
         </li>
         <li class="dui">
             <span>Follow the instructions from the terminal to setup your project <b>artifactId</b> and <b>groupId</b>, leave the rest to the default.</span>
@@ -119,7 +126,8 @@ public class App implements EntryPoint {
             <div th:replace="fragments/commons/components/inline-code :: content('mvn jetty:run -pl *-server -am -Denv=dev')"></div>
         </li>
         <li class="dui">
-            <span>Access the application on <a class="dui dui-fg-blue dui-decoration-none" href="http://localhost:8080" target="_blank">http://localhost:8080</a></span>
+            <span>Access the application on <a class="dui dui-fg-blue dui-decoration-none" href="http://localhost:8080"
+                                               target="_blank">http://localhost:8080</a></span>
         </li>
     </ol>
 
@@ -130,6 +138,9 @@ public class App implements EntryPoint {
     <h2 class="dui dui-site-docs-subtitle">Watch a video tutorial</h2>
 
     <div class="dui dui-p-l-10 dui-p-t-4">
-        <iframe width="100%" height="500" class="dui dui-rounded" src="https://www.youtube.com/embed/TIe2d69S1T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="100%" height="500" class="dui dui-rounded" src="https://www.youtube.com/embed/TIe2d69S1T4"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
     </div>
 </div>

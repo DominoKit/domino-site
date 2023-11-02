@@ -1,39 +1,65 @@
 <head th:fragment="head">
-	<meta charset=UTF-8>
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
-	<title>DominoKit</title>
+    <meta charset=UTF-8>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="Dominokit website demonstrating various Dominokit tools like domino-ui, domino-history, domino-jackson, domino-rest">
+    <title>DominoKit</title>
 
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-	<link href="/css/domino-ui/domino-ui.css" rel="stylesheet" type="text/css">
-	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="/css/domino-ui/domino-ui.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="/css/main.css">
 
-	<script src="/js/prettify.js"></script>
-	<script src="/dominokitsite.nocache.js"></script>
-	<script>
-		function copyCode(code){
-			navigator.clipboard.writeText(code);
-		}
-		function scrollToSection(elementId){
-			let elementById = document.getElementById(elementId);
-			elementById.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
-		}
+    <script src="/js/prettify.js"></script>
+    <script src="/dominokitsite.nocache.js"></script>
+    <script>
+        function copyCode(code) {
+            navigator.clipboard.writeText(code);
+        }
 
-		function openLeftMenu(){
-			let leftMenu = document.getElementById("dui-site-left-menu");
-			if(leftMenu && !leftMenu.classList.contains("dui-active")){
-				leftMenu.setAttribute("opened", "true")
+        function scrollToSection(elementId) {
+            let elementById = document.getElementById(elementId);
+            elementById.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+        }
 
-				console.info("1"+leftMenu.classList);
-				leftMenu.classList.add("dui-active");
-				console.info("2"+leftMenu.classList);
-			}
-		}
+        function openLeftMenu() {
+            let leftMenu = document.getElementById("dui-site-left-menu");
+            if (leftMenu && !leftMenu.classList.contains("dui-active")) {
+                leftMenu.setAttribute("opened", "true")
 
-		document.addEventListener('touchmove', function (event) {
-			if (event.scale !== 1) { event.preventDefault(); }
-		}, false);
+                leftMenu.classList.add("dui-active");
+            }
+        }
 
-	</script>
+        document.addEventListener('touchmove', function (event) {
+            if (event.scale !== 1) {
+                event.preventDefault();
+            }
+        }, false);
+
+        document.addEventListener("gesturestart", function (e) {
+            e.preventDefault();
+            document.body.style.zoom = 0.99;
+        });
+
+        document.addEventListener("gesturechange", function (e) {
+            e.preventDefault();
+
+            document.body.style.zoom = 0.99;
+        });
+        document.addEventListener("gestureend", function (e) {
+            e.preventDefault();
+            document.body.style.zoom = 1;
+        });
+
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F4LD8RJ9L1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-F4LD8RJ9L1');
+    </script>
 </head>

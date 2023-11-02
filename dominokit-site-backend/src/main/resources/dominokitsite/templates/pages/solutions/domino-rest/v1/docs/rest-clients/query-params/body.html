@@ -22,7 +22,9 @@
 
     <h1 class="dui dui-site-docs-title">Query parameters</h1>
 
-    <p class="dui dui-leading-6">Sending query parameters with Domino-rest is as easy annotating the method argument with <b>@QueryParam</b> and this will automatically adds it as a query parameter to the request path. for example having the following service :</p>
+    <p class="dui dui-leading-6">Sending query parameters with Domino-rest is as easy annotating the method argument
+        with <b>@QueryParam</b> and this will automatically adds it as a query parameter to the request path. for
+        example having the following service :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
 
@@ -36,7 +38,8 @@ public interface MoviesService {
     .onSuccess(movie -&gt;{})
     .send();')"></div>
 
-    <p class="dui dui-leading-6">Then the request will be made to the following endpoint with the provided query param:</p>
-        <code class="dui dui-inlined">http://localhost:8080/service/library/movies?name=hulk</code>
+    <p class="dui dui-leading-6">Then the request will be made to the following endpoint with the provided query
+        param:</p>
+    <code class="dui dui-inlined">http://localhost:8080/service/library/movies?name=hulk</code>
 
 </div>

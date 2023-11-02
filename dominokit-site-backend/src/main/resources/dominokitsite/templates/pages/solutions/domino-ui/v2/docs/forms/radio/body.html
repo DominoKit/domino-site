@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio-group" dui-site-data="org.dominokit.domino.ui.forms.RadioGroup"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio" dui-site-data="org.dominokit.domino.ui.forms.Radio"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio-group"
+         dui-site-data="org.dominokit.domino.ui.forms.RadioGroup"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-radio"
+         dui-site-data="org.dominokit.domino.ui.forms.Radio"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -44,10 +46,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="radio-sample"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-radio-group-method-docs', 'RadioGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/RadioGroup.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-radio-method-docs', 'Radio', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/Radio.html')"></div>

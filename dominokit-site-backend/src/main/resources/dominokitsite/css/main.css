@@ -17,9 +17,16 @@
 @import "screens/site-screen-xsmall.css";
 @import "screens/site-screen-xsmall-up.css";
 @import "screens/site-screen-xsmall-down.css";
+
+
 :root {
     --dui-site-class-docs-bg: #f5f8fc;
     --dui-site-class-docs-bg-darker: #C2DFDFFF;
+    max-width: 100vw;
+}
+
+html{
+    max-width: 100vw;
 }
 
 .dui-site .dui-site-nav-bar .dui[class*="dui-bg-"] .dui-tab-anchor:hover {
@@ -44,8 +51,9 @@
 }
 body.dui {
     position: relative;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: auto;
+    touch-action: pan-x pan-y;
+    max-width: 100vw;
 }
 
 .dui-tab-anchor {

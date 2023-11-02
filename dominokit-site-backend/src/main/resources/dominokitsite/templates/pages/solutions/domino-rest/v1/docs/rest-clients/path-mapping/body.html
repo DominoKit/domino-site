@@ -22,7 +22,9 @@
 
     <h1 class="dui dui-site-docs-title">Path mapping</h1>
 
-    <p class="dui dui-leading-6">The JaxRs annotation <b>@Path</b> is used to map each service method to an endpoint in the service alongside the http method, the path defined in the service method definition will be appended to matched service root of that service and can have variable parameters. for example the following service :</p>
+    <p class="dui dui-leading-6">The JaxRs annotation <b>@Path</b> is used to map each service method to an endpoint in
+        the service alongside the http method, the path defined in the service method definition will be appended to
+        matched service root of that service and can have variable parameters. for example the following service :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
 
@@ -38,13 +40,20 @@ public interface MoviesService {
     @PUT
     void updateMovie(@BeanParam @RequestBody Movie movie);
 }')"></div>
-    <p class="dui dui-leading-6">The <b>listMovies</b> method will make a request to the following endpoint <code class="dui dui-inlined">http://localhost:8080/service/library/movies</code></p>
-    <p class="dui dui-leading-6">Notice that we can also define a variable parameter in the method path by adding <b>:</b> before the name of the parameter or surround it with <b>{}</b>,
+    <p class="dui dui-leading-6">The <b>listMovies</b> method will make a request to the following endpoint <code
+            class="dui dui-inlined">http://localhost:8080/service/library/movies</code></p>
+    <p class="dui dui-leading-6">Notice that we can also define a variable parameter in the method path by adding
+        <b>:</b> before the name of the parameter or surround it with <b>{}</b>,
         the parameter name will be matched with the method argument name for replacement</p>
-    <p class="dui dui-leading-6">for example : calling <b>getMovieByName</b> and pass the movie name <b>hulk</b> as argument will make a request to the following url <code class="dui dui-inlined">http://localhost:8080/service/library/movies/hulk</code></p>
-    <p class="dui dui-leading-6">if we are passing a request body in the method argument we can use that request properties to replace path variable parameters,
+    <p class="dui dui-leading-6">for example : calling <b>getMovieByName</b> and pass the movie name <b>hulk</b> as
+        argument will make a request to the following url <code class="dui dui-inlined">http://localhost:8080/service/library/movies/hulk</code>
+    </p>
+    <p class="dui dui-leading-6">if we are passing a request body in the method argument we can use that request
+        properties to replace path variable parameters,
         the variable path parameter name will be match with the property name from the request pojo.</p>
-    <p class="dui dui-leading-6">We can also use the <b>@Path</b> annotation on service level top define a root service path for the service methods presented in the service interface, for example instead of writing the service like this </p>
+    <p class="dui dui-leading-6">We can also use the <b>@Path</b> annotation on service level top define a root service
+        path for the service methods presented in the service interface, for example instead of writing the service like
+        this </p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
 

@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip" dui-site-data="org.dominokit.domino.ui.chips.Chip"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip-group" dui-site-data="org.dominokit.domino.ui.chips.ChipsGroup"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip"
+         dui-site-data="org.dominokit.domino.ui.chips.Chip"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-chip-group"
+         dui-site-data="org.dominokit.domino.ui.chips.ChipsGroup"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -22,7 +24,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Removable,Images,Letters,Selectable,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Removable,Images,Letters,Selectable,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Chip</h1>
@@ -66,10 +69,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="chip-selectable"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-chip-method-docs', 'Chip', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/chips/Chip.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-chip-group-method-docs', 'ChipGroup', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/chips/ChipsGroup.html')"></div>

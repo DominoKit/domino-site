@@ -16,21 +16,27 @@
 
     <h1 class="dui dui-site-docs-title">Mappers registry</h1>
 
-    <p class="dui dui-leading-6">In some cases, You might need to store all generated mappers and load or use them dynamically.</p>
+    <p class="dui dui-leading-6">In some cases, You might need to store all generated mappers and load or use them
+        dynamically.</p>
 
-    <p class="dui dui-leading-6">Domino-jackson includes a mechanism that allows this kind of mapper registration to happen automatically through some code generation, then the registry can be used to look-up the mapper using the pojo full qualified type of the bean, this feature is called <b>JSONRegistration</b>.</p>
+    <p class="dui dui-leading-6">Domino-jackson includes a mechanism that allows this kind of mapper registration to
+        happen automatically through some code generation, then the registry can be used to look-up the mapper using the
+        pojo full qualified type of the bean, this feature is called <b>JSONRegistration</b>.</p>
 
-    <p class="dui dui-leading-6">to use <b>JSONRegistration</b> you need to annotate a package-info class with <b>@JSONRegistration</b> , example :</p>
+    <p class="dui dui-leading-6">to use <b>JSONRegistration</b> you need to annotate a package-info class with <b>@JSONRegistration</b>
+        , example :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@JSONRegistration(&quot;SomeName&quot;)
 package com.foo.bar;
 
 import org.dominokit.jacksonapt.annotation.JSONRegistration;')"></div>
 
-    <p class="dui dui-leading-6">This will generate a class that register all generated mappers from all domino-jackson annotated beans in this package.</p>
+    <p class="dui dui-leading-6">This will generate a class that register all generated mappers from all domino-jackson
+        annotated beans in this package.</p>
 
     <p class="dui dui-leading-6">Use the registration as the following :</P>
 
-    <p class="dui dui-leading-6">Assuming we have the above <b>JSONRegistration</b> and we have the following mappers</p>
+    <p class="dui dui-leading-6">Assuming we have the above <b>JSONRegistration</b> and we have the following mappers
+    </p>
 
     <div th:replace="fragments/commons/components/inline-code :: content('@JSONMapper
 public interface PersonMapper extends ObjectMapper&lt;Person&gt; {}

@@ -1,19 +1,23 @@
 <div class="dk-c-card" th:fragment="content(img, category, desc, date)">
-		<div class="dk-c-card__img-container">
-			<img th:src="${img}">
-		</div>
+    <div class="dk-c-card__img-container">
+        <img th:src="${img}">
+    </div>
 
-		<div class="dk-c-card__desc-container">
-			<div class="ck-c-card__desc-title">
-				<div class="ck-c-card__category" th:text="${category}"></div>
-				<div class="ck-c-card__headline" th:text="${desc}"></div>
-				<div class="dui dui-flex dui-justify-left dui-gap-4 dui-m-t-4">
-					<a href="https://github.com/DominoKit" tabindex="0" aria-expanded="true" target="_blank"><img src="/assets/ic_footer_github_dark.svg" alt="github"></a>
-					<a href="https://www.facebook.com" tabindex="0" aria-expanded="true" target="_blank"><img src="/assets/ic_footer_facebook_dark.svg" alt="facebook"></a>
-					<a href="https://www.linkedin.com/company/dominokit" tabindex="0" aria-expanded="true" target="_blank"><img src="/assets/ic_footer_linkedin_dark.svg" alt="linked-in"></a>
-					<a href="https://x.com/dominokit" tabindex="0" aria-expanded="true" target="_blank"><img src="/assets/ic_footer_twitter-x_dark.svg" alt="twitter X"></a>
-				</div>
-			</div>
-			<div class="ck-c-card__desc-date" th:text="${date}"></div>
-		</div>
+    <div class="dk-c-card__desc-container">
+        <div class="ck-c-card__desc-title">
+            <div class="ck-c-card__category" th:text="${category}"></div>
+            <div class="ck-c-card__headline" th:text="${desc}"></div>
+            <div class="dui dui-flex dui-justify-left dui-gap-4 dui-m-t-4">
+                <a href="https://github.com/DominoKit" tabindex="0" aria-expanded="true" target="_blank"><img
+                        src="/assets/ic_footer_github_dark.svg" alt="github"></a>
+                <a href="https://www.facebook.com" tabindex="0" aria-expanded="true" target="_blank"><img
+                        src="/assets/ic_footer_facebook_dark.svg" alt="facebook"></a>
+                <a href="https://www.linkedin.com/company/dominokit" tabindex="0" aria-expanded="true"
+                   target="_blank"><img src="/assets/ic_footer_linkedin_dark.svg" alt="linked-in"></a>
+                <a href="https://x.com/dominokit" tabindex="0" aria-expanded="true" target="_blank"><img
+                        src="/assets/ic_footer_twitter-x_dark.svg" alt="twitter X"></a>
+            </div>
+        </div>
+        <div class="ck-c-card__desc-date" th:text="${date}"></div>
+    </div>
 </div>

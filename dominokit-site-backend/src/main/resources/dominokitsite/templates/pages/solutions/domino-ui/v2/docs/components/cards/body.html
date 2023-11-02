@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card" dui-site-data="org.dominokit.domino.ui.cards.Card"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card-header" dui-site-data="org.dominokit.domino.ui.cards.CardHeader"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card"
+         dui-site-data="org.dominokit.domino.ui.cards.Card"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-card-header"
+         dui-site-data="org.dominokit.domino.ui.cards.CardHeader"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -22,7 +24,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,No header,Headers,Colored,Collapsible,With logo,Sub-header,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,No header,Headers,Colored,Collapsible,With logo,Sub-header,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Cards</h1>
@@ -41,10 +44,14 @@
         <li class="dui">Card body, the card main content container.</li>
         <li class="dui">Card title, Optional.</li>
         <li class="dui">Card description, Optional.</li>
-        <li class="dui">Card header postfix elements, Optional, collapsible cards will have a collapse postfix action by default.</li>
+        <li class="dui">Card header postfix elements, Optional, collapsible cards will have a collapse postfix action by
+            default.
+        </li>
         <li class="dui">Card prefix elements, Optional, Will be positioned before the title.</li>
         <li class="dui">Card logo, Optional will be placed before the header prefix elements.</li>
-        <li class="dui">Card sub-header, Optional, Will show below the header if the header at the top or at the top of the header if the header at the bottom.</li>
+        <li class="dui">Card sub-header, Optional, Will show below the header if the header at the top or at the top of
+            the header if the header at the bottom.
+        </li>
     </ol>
 
     <h2 class="dui dui-site-docs-subtitle">Examples</h2>
@@ -88,10 +95,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="cards-subheader"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-card-method-docs', 'Card', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/cards/Card.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-card-header-method-docs', 'CardHeader', 'https://www.javadoc.io/static/org.dominokit/domino-ui/2.0.0-RC1/org/dominokit/domino/ui/cards/CardHeader.html')"></div>

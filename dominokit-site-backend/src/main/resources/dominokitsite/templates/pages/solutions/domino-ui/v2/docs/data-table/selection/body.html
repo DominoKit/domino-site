@@ -1,5 +1,7 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-selection" dui-site-data="org.dominokit.domino.ui.datatable.plugins.selection.SelectionPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true"
+         dui-site-data-id-prefix="dui-datatable-selection"
+         dui-site-data="org.dominokit.domino.ui.datatable.plugins.selection.SelectionPlugin"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -45,10 +47,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-selection-multi"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-selection-method-docs', 'SelectionPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/selection/SelectionPlugin.CheckBoxCreator.html')"></div>
 

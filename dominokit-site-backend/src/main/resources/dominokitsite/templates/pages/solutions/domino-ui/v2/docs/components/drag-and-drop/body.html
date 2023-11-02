@@ -1,7 +1,10 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-draggable" dui-site-data="org.dominokit.domino.ui.dnd.Draggable"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-drag-source" dui-site-data="org.dominokit.domino.ui.dnd.DragSource"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-drop-zone" dui-site-data="org.dominokit.domino.ui.dnd.DropZone"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-draggable"
+         dui-site-data="org.dominokit.domino.ui.dnd.Draggable"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-drag-source"
+         dui-site-data="org.dominokit.domino.ui.dnd.DragSource"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-drop-zone"
+         dui-site-data="org.dominokit.domino.ui.dnd.DropZone"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -45,10 +48,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="drag-and-drop-basic"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-draggable-method-docs', 'Draggble', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dnd/Draggable.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-drag-source-method-docs', 'DragSource', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dnd/DragSource.html')"></div>

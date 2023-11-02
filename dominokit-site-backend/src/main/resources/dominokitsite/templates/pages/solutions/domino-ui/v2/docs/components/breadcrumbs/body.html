@@ -1,6 +1,8 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-breadcrumbs" dui-site-data="org.dominokit.domino.ui.breadcrumbs.Breadcrumb"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-breadcrumbs-item" dui-site-data="org.dominokit.domino.ui.breadcrumbs.BreadcrumbItem"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-breadcrumbs"
+         dui-site-data="org.dominokit.domino.ui.breadcrumbs.Breadcrumb"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-breadcrumbs-item"
+         dui-site-data="org.dominokit.domino.ui.breadcrumbs.BreadcrumbItem"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -22,7 +24,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Basic,Background,Alignment,Docs"></div>
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Background,Alignment,Docs"></div>
 
     <h1 class="dui dui-site-docs-title">Breadcrumbs</h1>
 
@@ -37,7 +40,9 @@
 
     <ol class="dui dui-site-docs-list">
         <li class="dui">Breadcrumb consist of several links represents the navigation path.</li>
-        <li class="dui">Each link in the breadcrumb represent a point in the navigation path and can have an icon in addition to the path text.</li>
+        <li class="dui">Each link in the breadcrumb represent a point in the navigation path and can have an icon in
+            addition to the path text.
+        </li>
         <li class="dui">Breadcrumb links can be programmed to navigate back to that point in the path</li>
         <li class="dui">Last breadcrumb path is the current active page, so it is not clickable by default.</li>
     </ol>
@@ -65,10 +70,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="breadcrumbs-alignment"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-breadcrumbs-method-docs', 'Breadcrumb', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/breadcrumbs/Breadcrumb.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-breadcrumbs-item-method-docs', 'BreadcrumbItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/breadcrumbs/BreadcrumbItem.html')"></div>

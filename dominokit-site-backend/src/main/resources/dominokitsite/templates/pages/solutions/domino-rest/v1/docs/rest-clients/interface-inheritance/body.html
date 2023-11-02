@@ -22,8 +22,11 @@
 
     <h1 class="dui dui-site-docs-title">Interface inheritance</h1>
 
-    <p class="dui dui-leading-6">A request factory interface can extend from other interfaces that does or does not have the request factory annotation. this means that we can generate a single request factory for multiple jax-rs interfaces,
-        or we can generate a request factory for jax-rs interfaces when we dont have access to the source code to add the <b>@RequestFactory</b> annotation.
+    <p class="dui dui-leading-6">A request factory interface can extend from other interfaces that does or does not have
+        the request factory annotation. this means that we can generate a single request factory for multiple jax-rs
+        interfaces,
+        or we can generate a request factory for jax-rs interfaces when we dont have access to the source code to add
+        the <b>@RequestFactory</b> annotation.
         each inherited interface can have its own <b>@Path</b> annotation. Example :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface SomeService extends FirstService, SecondService {
@@ -41,6 +44,7 @@ public interface SecondService {
     @Path(&quot;second-path&quot;)
     SomeResponse secondRequest();
 }')"></div>
-    <p class="dui dui-leading-6">This will generate a factory for all service methods from all three services, where FirstService and SecondService could be coming from an external dependency.</p>
+    <p class="dui dui-leading-6">This will generate a factory for all service methods from all three services, where
+        FirstService and SecondService could be coming from an external dependency.</p>
 
 </div>

@@ -1,6 +1,10 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-tree-lazy" dui-site-data="org.dominokit.domino.ui.datatable.plugins.tree.TreeGridPlugin"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-datatable-tree-config" dui-site-data="org.dominokit.domino.ui.datatable.plugins.tree.TreePluginConfig"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true"
+         dui-site-data-id-prefix="dui-datatable-tree-lazy"
+         dui-site-data="org.dominokit.domino.ui.datatable.plugins.tree.TreeGridPlugin"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true"
+         dui-site-data-id-prefix="dui-datatable-tree-config"
+         dui-site-data="org.dominokit.domino.ui.datatable.plugins.tree.TreePluginConfig"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -22,7 +26,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Full span,Columns,Large data set,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Full span,Columns,Large data set,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Tree - Lazy</h1>
@@ -35,13 +40,15 @@
 
     <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-tree-lazy-full">
         <span class="dui dui-fg-teal">Lazy tree - Full span</span>
-        <small class="dui">A tree table with leaf nodes are only loaded when expanding the parent. and root nodes spans full row.</small>
+        <small class="dui">A tree table with leaf nodes are only loaded when expanding the parent. and root nodes spans
+            full row.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-tree-lazy-full"></div>
 
     <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-tree-lazy-columns">
         <span class="dui dui-fg-teal">Lazy tree - Root columns</span>
-        <small class="dui">A tree table with leaf nodes are only loaded when expanding the parent, root nodes show columns.</small>
+        <small class="dui">A tree table with leaf nodes are only loaded when expanding the parent, root nodes show
+            columns.</small>
     </h3>
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-tree-lazy-columns"></div>
 
@@ -52,10 +59,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="datatable-tree-lazy-large"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-tree-lazy-method-docs', 'TreeGridPlugin', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/tree/TreeGridPlugin.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-datatable-tree-config-method-docs', 'TreePluginConfig', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/datatable/plugins/tree/TreePluginConfig.html')"></div>

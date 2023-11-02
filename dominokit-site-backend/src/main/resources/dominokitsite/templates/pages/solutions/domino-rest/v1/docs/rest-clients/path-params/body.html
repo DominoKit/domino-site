@@ -22,7 +22,9 @@
 
     <h1 class="dui dui-site-docs-title">Path parameters</h1>
 
-    <p class="dui dui-leading-6">Sending path parameters with Domino-rest is as easy annotating the method argument with <b>@PathParam</b> and this will automatically replace a path expression with the value of the argument when we make the call. for example having the following service :</p>
+    <p class="dui dui-leading-6">Sending path parameters with Domino-rest is as easy annotating the method argument with
+        <b>@PathParam</b> and this will automatically replace a path expression with the value of the argument when we
+        make the call. for example having the following service :</p>
     <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
 
@@ -37,7 +39,8 @@ public interface MoviesService {
     .onSuccess(movie -&gt;{})
     .send();')"></div>
 
-    <p class="dui dui-leading-6">Then the request will be made to the following endpoint with the provided path param:</p>
+    <p class="dui dui-leading-6">Then the request will be made to the following endpoint with the provided path
+        param:</p>
     <code class="dui dui-inlined">http://localhost:8080/service/library/movies/hulk</code>
     <p>The expression <b>{name}</b> or <b>:name</b> will be replaced with the movieName argument value.</p>
 

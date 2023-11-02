@@ -1,5 +1,6 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-pre-loader" dui-site-data="org.dominokit.domino.ui.preloaders.Preloader"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-pre-loader"
+         dui-site-data="org.dominokit.domino.ui.preloaders.Preloader"></div>
 
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
@@ -46,10 +47,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="pre-loader-colored"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-pre-loader-method-docs', 'Preloader', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/preloaders/Preloader.html')"></div>
 

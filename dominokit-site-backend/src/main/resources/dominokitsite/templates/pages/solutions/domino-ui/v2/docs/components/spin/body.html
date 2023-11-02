@@ -1,8 +1,11 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-<!--    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin" dui-site-data="org.dominokit.domino.ui.spin.SpinSelect"></div>-->
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-item" dui-site-data="org.dominokit.domino.ui.spin.SpinItem"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-horizontal" dui-site-data="org.dominokit.domino.ui.spin.HSpinSelect"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-vertical" dui-site-data="org.dominokit.domino.ui.spin.VSpinSelect"></div>
+    <!--    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin" dui-site-data="org.dominokit.domino.ui.spin.SpinSelect"></div>-->
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-item"
+         dui-site-data="org.dominokit.domino.ui.spin.SpinItem"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-horizontal"
+         dui-site-data="org.dominokit.domino.ui.spin.HSpinSelect"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-spin-vertical"
+         dui-site-data="org.dominokit.domino.ui.spin.VSpinSelect"></div>
 
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
@@ -54,12 +57,12 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="spin-vertical"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
-<!--    <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-method-docs', 'SpingSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/SpinSelect.html')"></div>-->
+    <!--    <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-method-docs', 'SpingSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/SpinSelect.html')"></div>-->
     <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-item-method-docs', 'SpingItem', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/SpinItem.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-horizontal-method-docs', 'HSpinSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/HSpinSelect.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-spin-vertical-method-docs', 'VSpinSelect', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/spin/VSpinSelect.html')"></div>

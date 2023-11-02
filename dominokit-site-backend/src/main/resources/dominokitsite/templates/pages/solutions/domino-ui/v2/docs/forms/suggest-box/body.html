@@ -1,8 +1,12 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-abstract-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.AbstractSuggestBox"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-single-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.SuggestBox"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-multi-suggest" dui-site-data="org.dominokit.domino.ui.forms.suggest.MultiSuggestBox"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tag-box" dui-site-data="org.dominokit.domino.ui.forms.suggest.TagBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-abstract-suggest"
+         dui-site-data="org.dominokit.domino.ui.forms.suggest.AbstractSuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-single-suggest"
+         dui-site-data="org.dominokit.domino.ui.forms.suggest.SuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-multi-suggest"
+         dui-site-data="org.dominokit.domino.ui.forms.suggest.MultiSuggestBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tag-box"
+         dui-site-data="org.dominokit.domino.ui.forms.suggest.TagBox"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -55,10 +59,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="tag-box-sample"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-abstract-suggest-method-docs', 'AbstractSuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/AbstractSuggestBox.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-single-suggest-method-docs', 'SuggestBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/suggest/SuggestBox.html')"></div>

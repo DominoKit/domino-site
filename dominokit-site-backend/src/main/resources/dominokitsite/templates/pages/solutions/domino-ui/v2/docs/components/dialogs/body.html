@@ -1,8 +1,12 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-abstract" dui-site-data="org.dominokit.domino.ui.dialogs.AbstractDialog"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-alert" dui-site-data="org.dominokit.domino.ui.dialogs.AlertMessageDialog"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-confirm" dui-site-data="org.dominokit.domino.ui.dialogs.ConfirmationDialog"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-message" dui-site-data="org.dominokit.domino.ui.dialogs.MessageDialog"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-abstract"
+         dui-site-data="org.dominokit.domino.ui.dialogs.AbstractDialog"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-alert"
+         dui-site-data="org.dominokit.domino.ui.dialogs.AlertMessageDialog"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-confirm"
+         dui-site-data="org.dominokit.domino.ui.dialogs.ConfirmationDialog"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-dialog-message"
+         dui-site-data="org.dominokit.domino.ui.dialogs.MessageDialog"></div>
 
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
@@ -49,10 +53,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="dialogs-basic"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-abstract-method-docs', 'AbstractDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AbstractDialog.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-dialog-alert-method-docs', 'AlertMessageDialog', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/dialogs/AlertMessageDialog.html')"></div>

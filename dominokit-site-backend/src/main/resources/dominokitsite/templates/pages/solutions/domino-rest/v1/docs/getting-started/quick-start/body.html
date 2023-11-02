@@ -28,7 +28,8 @@
         <li class="dui">Maven 3.6.0 or higher.</li>
     </ul>
 
-    <p class="dui dui-leading-6">Adding domino-rest to your GWT project is quite simple, just follow these steps to get started with using domino-rest :</p>
+    <p class="dui dui-leading-6">Adding domino-rest to your GWT project is quite simple, just follow these steps to get
+        started with using domino-rest :</p>
     <h2 class="dui dui-site-docs-subtitle">Steps</h2>
 
     <ul class="dui dui-site-docs-list">
@@ -57,12 +58,16 @@ public class Movie {
 
     // setters and getters
 }')"></div>
-            <p class="dui dui-leading-6">A POJO used in the service definition as a response or request needs to be annotated with <b>@JSONMapper</b> otherwise domino-rest will assume it will be serialized/deserialized as a JSON using domino-jackson defaults.</p>
+            <p class="dui dui-leading-6">A POJO used in the service definition as a response or request needs to be
+                annotated with <b>@JSONMapper</b> otherwise domino-rest will assume it will be serialized/deserialized
+                as a JSON using domino-jackson defaults.</p>
         </li>
 
         <li class="dui">
             <span>Write the service definition interface :</span>
-            <p class="dui dui-leading-6">Defining a service and generating the REST cliend can as easy as annotating a JAX-RS interface with <b>@RequestFactory</b>, once the interface is compiled domino-rest processor will generate a factory class that we can use to make REST requests.</p>
+            <p class="dui dui-leading-6">Defining a service and generating the REST cliend can as easy as annotating a
+                JAX-RS interface with <b>@RequestFactory</b>, once the interface is compiled domino-rest processor will
+                generate a factory class that we can use to make REST requests.</p>
             <div th:replace="fragments/commons/components/inline-code :: content('@RequestFactory
 public interface MoviesService {
 
@@ -81,7 +86,8 @@ public interface MoviesService {
         </li>
         <li class="dui">
             <span>Using the generated clients :</span>
-            <p class="dui dui-leading-6">The generated client class will be named with the service interface name + <b>Factory</b>, get the instance and call the service method :</p>
+            <p class="dui dui-leading-6">The generated client class will be named with the service interface name + <b>Factory</b>,
+                get the instance and call the service method :</p>
             <div th:replace="fragments/commons/components/inline-code :: content('MoviesServiceFactory.INSTANCE
     .getMovieByName(&quot;hulk&quot;)
     .onSuccess(movie -&gt; {

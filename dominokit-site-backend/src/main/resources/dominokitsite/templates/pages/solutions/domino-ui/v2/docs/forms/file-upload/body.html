@@ -1,9 +1,14 @@
 <div th:fragment="content" class="dui dui-site-solution-doc-body">
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-box" dui-site-data="org.dominokit.domino.ui.forms.UploadBox"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-upload" dui-site-data="org.dominokit.domino.ui.upload.FileUpload"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-item" dui-site-data="org.dominokit.domino.ui.upload.FileItem"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-preview" dui-site-data="org.dominokit.domino.ui.upload.IsFilePreview"></div>
-    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-option" dui-site-data="org.dominokit.domino.ui.upload.UploadOptions"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-box"
+         dui-site-data="org.dominokit.domino.ui.forms.UploadBox"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-upload"
+         dui-site-data="org.dominokit.domino.ui.upload.FileUpload"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-item"
+         dui-site-data="org.dominokit.domino.ui.upload.FileItem"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-file-preview"
+         dui-site-data="org.dominokit.domino.ui.upload.IsFilePreview"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-upload-option"
+         dui-site-data="org.dominokit.domino.ui.upload.UploadOptions"></div>
     <div id="dui-side-nav-top"></div>
     <ol class="dui dui-breadcrumb dui-p-0">
         <li class="dui">
@@ -25,7 +30,8 @@
         </li>
     </ol>
 
-    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav" dui-site-data="Top,Upload box,Drag drop upload,Docs">
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Upload box,Drag drop upload,Docs">
     </div>
 
     <h1 class="dui dui-site-docs-title">Upload</h1>
@@ -62,10 +68,10 @@
     <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="drag-drop-upload-sample"></div>
 
     <div class="dui dui-flex dui-justify-center">
-    <div th:replace="fragments/commons/components/open-menu :: content"></div>
-</div>
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
 
-<div  id="dui-side-nav-docs"></div>
+    <div id="dui-side-nav-docs"></div>
 
     <div th:replace="fragments/commons/components/javadocs :: content('dui-upload-box-method-docs', 'UploadBox', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/forms/UploadBox.html')"></div>
     <div th:replace="fragments/commons/components/javadocs :: content('dui-file-upload-method-docs', 'FileUpload', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/upload/FileUpload.html')"></div>
