@@ -5,7 +5,6 @@ import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.loaders.Loader;
@@ -13,6 +12,8 @@ import org.dominokit.domino.ui.loaders.LoaderEffect;
 import org.dominokit.domino.ui.style.Color;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.gwtproject.timer.client.Timer;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LoadersBasicSample extends BaseDominoElement<HTMLDivElement, LoadersBasicSample> {
 

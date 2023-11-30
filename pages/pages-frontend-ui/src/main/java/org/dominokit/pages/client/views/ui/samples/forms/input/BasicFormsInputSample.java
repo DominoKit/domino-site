@@ -8,6 +8,9 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 public class BasicFormsInputSample extends BaseDominoElement<HTMLDivElement, BasicFormsInputSample> {
 
     private DivElement element;
@@ -21,7 +24,8 @@ public class BasicFormsInputSample extends BaseDominoElement<HTMLDivElement, Bas
                 .appendChild(BlockHeader.create("Basic Example"))
                 .appendChild(Row.create()
                         .span12(TextBox.create().setLabel("User name")
-                                .setPlaceholder("Username"))
+                                .setPlaceholder("Username")
+                        )
                 )
                 .appendChild(Row.create()
                         .span12(PasswordBox.create().setLabel("Password").setPlaceholder("Password"))

@@ -1,15 +1,15 @@
 package org.dominokit.pages.client.views.ui.samples.components.buttons;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.breadcrumbs.Breadcrumb;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.button.LinkButton;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ButtonsBasicSample extends BaseDominoElement<HTMLDivElement, ButtonsBasicSample> {
 

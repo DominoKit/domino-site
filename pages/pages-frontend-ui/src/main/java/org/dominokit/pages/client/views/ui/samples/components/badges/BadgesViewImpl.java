@@ -5,8 +5,6 @@ import org.dominokit.pages.client.presenters.samples.components.BadgesProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.ContextAlertsSample;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.DismissibleAlertsSample;
 
 @UiView(presentable = BadgesProxy.class)
 public class BadgesViewImpl extends SampleViewImpl {

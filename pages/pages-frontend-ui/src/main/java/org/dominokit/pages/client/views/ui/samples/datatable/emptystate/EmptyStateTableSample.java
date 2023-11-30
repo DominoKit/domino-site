@@ -14,7 +14,8 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
-import org.dominokit.pages.shared.model.ContactsProvider;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class EmptyStateTableSample extends BaseDominoElement<HTMLDivElement, EmptyStateTableSample> {
 

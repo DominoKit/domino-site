@@ -2,7 +2,6 @@ package org.dominokit.pages.client.views.ui.samples.datatable.summary;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
 import org.dominokit.domino.ui.datatable.ColumnConfig;
 import org.dominokit.domino.ui.datatable.DataTable;
@@ -23,6 +22,8 @@ import org.dominokit.pages.shared.model.ContactsProvider;
 import java.util.Arrays;
 import java.util.List;
 import java.util.OptionalDouble;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TableSummarySample extends BaseDominoElement<HTMLDivElement, TableSummarySample> {
 

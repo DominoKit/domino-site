@@ -9,6 +9,8 @@ import org.dominokit.domino.ui.upload.DefaultFileUploadDecoration;
 import org.dominokit.domino.ui.upload.FileUpload;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class FileUploadSample extends BaseDominoElement<HTMLDivElement, FileUploadSample> {
 
     private DivElement element;

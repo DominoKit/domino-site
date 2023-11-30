@@ -6,10 +6,7 @@ import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.dialogs.Dialog;
 import org.dominokit.domino.ui.dialogs.DialogSize;
 import org.dominokit.domino.ui.dialogs.DialogStyles;
-import org.dominokit.domino.ui.dialogs.DialogType;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.suggest.Select;
-import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.layout.NavBar;
@@ -21,6 +18,7 @@ import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
 import static org.dominokit.domino.ui.dialogs.DialogStyles.*;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SheetModalsSample extends BaseDominoElement<HTMLDivElement, SheetModalsSample> {
 

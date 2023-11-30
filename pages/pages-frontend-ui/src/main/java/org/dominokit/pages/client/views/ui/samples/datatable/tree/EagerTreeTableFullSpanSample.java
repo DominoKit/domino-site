@@ -23,6 +23,7 @@ import java.util.Collections;
 import java.util.Optional;
 
 import static org.dominokit.domino.ui.datatable.DataTableStyles.dui_datatable_td;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class EagerTreeTableFullSpanSample extends BaseDominoElement<HTMLDivElement, EagerTreeTableFullSpanSample> {
 

@@ -2,12 +2,13 @@ package org.dominokit.pages.client.views.ui.samples.forms.timepicker;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.DateBox;
 import org.dominokit.domino.ui.forms.TimeBox;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_ar;
 import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_es;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TimeBoxSample extends BaseDominoElement<HTMLDivElement, TimeBoxSample> {
 

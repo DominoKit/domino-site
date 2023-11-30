@@ -9,7 +9,6 @@ import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.pagination.BodyScrollPlugin;
 import org.dominokit.domino.ui.datatable.plugins.pagination.SortPlugin;
-import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
 import org.dominokit.domino.ui.datatable.store.LocalListScrollingDataSource;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -19,6 +18,8 @@ import org.dominokit.pages.client.views.ui.samples.datatable.ContactSorter;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ScrollLoadingSample extends BaseDominoElement<HTMLDivElement, ScrollLoadingSample> {
 

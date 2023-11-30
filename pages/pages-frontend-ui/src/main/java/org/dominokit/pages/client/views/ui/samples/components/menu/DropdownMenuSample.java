@@ -14,6 +14,8 @@ import org.dominokit.domino.ui.menu.direction.TopRightDropDirection;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.*;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class DropdownMenuSample extends BaseDominoElement<HTMLDivElement, DropdownMenuSample> {
 
     private DivElement element;

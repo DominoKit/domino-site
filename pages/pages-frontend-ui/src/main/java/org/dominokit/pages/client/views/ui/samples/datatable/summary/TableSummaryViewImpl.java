@@ -1,12 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.summary;
 
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.pages.client.presenters.samples.datatable.BasicDataTableProxy;
 import org.dominokit.pages.client.presenters.samples.datatable.TableSummaryProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.datatable.basic.BasicDataTableSample;
 
 @UiView(presentable = TableSummaryProxy.class)
 public class TableSummaryViewImpl extends SampleViewImpl {

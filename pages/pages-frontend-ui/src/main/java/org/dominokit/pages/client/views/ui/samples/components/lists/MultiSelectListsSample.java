@@ -12,6 +12,8 @@ import org.dominokit.pages.shared.service.DemoServiceFactory;
 
 import java.util.Random;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class MultiSelectListsSample extends BaseDominoElement<HTMLDivElement, MultiSelectListsSample> {
 
     private DivElement element;

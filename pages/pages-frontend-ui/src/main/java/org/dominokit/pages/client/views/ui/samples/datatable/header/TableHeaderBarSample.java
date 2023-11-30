@@ -16,6 +16,8 @@ import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TableHeaderBarSample extends BaseDominoElement<HTMLDivElement, TableHeaderBarSample> {
 
     private DivElement element;

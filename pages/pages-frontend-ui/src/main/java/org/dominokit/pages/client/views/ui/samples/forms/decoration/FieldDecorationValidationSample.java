@@ -7,10 +7,11 @@ import org.dominokit.domino.ui.forms.*;
 import org.dominokit.domino.ui.forms.suggest.Select;
 import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.forms.validations.ValidationResult;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class FieldDecorationValidationSample extends BaseDominoElement<HTMLDivElement, FieldDecorationValidationSample> {
 

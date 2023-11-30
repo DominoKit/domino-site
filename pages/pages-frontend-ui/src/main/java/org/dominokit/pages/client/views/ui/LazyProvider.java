@@ -15,8 +15,6 @@
  */
 package org.dominokit.pages.client.views.ui;
 
-import org.dominokit.domino.ui.IsElement;
-
 import java.util.function.Supplier;
 
 import static java.util.Objects.isNull;

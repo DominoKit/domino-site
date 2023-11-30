@@ -26,6 +26,8 @@ import org.dominokit.pages.shared.model.ContactsProvider;
 
 import java.util.List;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TableTopPanelSample extends BaseDominoElement<HTMLDivElement, TableTopPanelSample> {
 
     private DivElement element;

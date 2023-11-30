@@ -1,10 +1,9 @@
 package org.dominokit.pages.client.views.ui.samples.components.menu;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.cards.Card;
+import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
-import org.dominokit.domino.ui.grid.Row;
+import org.dominokit.domino.ui.forms.IntegerBox;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.Menu;
 import org.dominokit.domino.ui.menu.MenuItem;
@@ -13,6 +12,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.domino.ui.utils.Separator;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicMenuSample extends BaseDominoElement<HTMLDivElement, BasicMenuSample> {
 
@@ -23,8 +24,17 @@ public class BasicMenuSample extends BaseDominoElement<HTMLDivElement, BasicMenu
     }
 
     public BasicMenuSample() {
+        Menu<String> stringMenu = Menu.<String>create();
+        IntegerBox index = IntegerBox.create("index");
         this.element = div().addCss(dui_p_2)
-                .appendChild(Menu.<String>create()
+                .appendChild(Button.create("Append at").addClickListener(evt -> {
+                    stringMenu.insertChild(index.getValue(), MenuItem.<String>create("Item "+index.getValue())
+                            .setKey("new-key"+index.getValue())
+                            .withValue("new-value"+index.getValue())
+                    );
+                }))
+                .appendChild(index)
+                .appendChild(stringMenu
                         .addCss(dui_w_96)
                         .appendChild(MenuItem.<String>create("New ...")
                                 .setKey("new-key")

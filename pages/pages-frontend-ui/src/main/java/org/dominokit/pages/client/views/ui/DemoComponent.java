@@ -15,6 +15,7 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.ChildHandler;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.pages.shared.service.LoadContentServiceFactory;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class DemoComponent<T extends IsElement<?>> extends BaseDominoElement<HTMLDivElement, DemoComponent<T>> {
 

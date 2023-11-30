@@ -7,6 +7,8 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class Grid18ColumnsSample extends BaseDominoElement<HTMLDivElement, Grid18ColumnsSample> {
 
     private final DivElement element;

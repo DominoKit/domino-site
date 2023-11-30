@@ -9,6 +9,8 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.infoboxes.InfoBox;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class BasicInfoBoxSample extends BaseDominoElement<HTMLDivElement, BasicInfoBoxSample> {
     private DivElement element;
     private Counter counter;

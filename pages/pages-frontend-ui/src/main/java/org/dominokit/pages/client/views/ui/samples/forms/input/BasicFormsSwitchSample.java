@@ -8,6 +8,8 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class BasicFormsSwitchSample extends BaseDominoElement<HTMLDivElement, BasicFormsSwitchSample> {
 
     private DivElement element;

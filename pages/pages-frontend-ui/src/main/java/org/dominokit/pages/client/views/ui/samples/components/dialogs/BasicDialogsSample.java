@@ -16,6 +16,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class BasicDialogsSample extends BaseDominoElement<HTMLDivElement, BasicDialogsSample> {
 
     private DivElement element;

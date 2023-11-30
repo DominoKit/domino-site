@@ -14,6 +14,8 @@ import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.domino.ui.utils.Separator;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class CustomItemSample extends BaseDominoElement<HTMLDivElement, CustomItemSample> {
 
     private DivElement element;

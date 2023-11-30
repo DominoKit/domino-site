@@ -1,5 +1,6 @@
 package org.dominokit.pages.client.presenters;
 
+import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.annotations.presenter.ListenTo;
 import org.dominokit.domino.api.client.annotations.presenter.OnReveal;
 import org.dominokit.domino.api.client.annotations.presenter.Slot;

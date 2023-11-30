@@ -2,12 +2,9 @@ package org.dominokit.pages.client.views.ui.samples.helpers;
 
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.pages.client.presenters.samples.helpers.HelpersProxy;
-import org.dominokit.pages.client.presenters.samples.typography.TypographyProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.layouts.applayout.AppLayoutSample;
-import org.dominokit.pages.client.views.ui.samples.typography.*;
 
 @UiView(presentable = HelpersProxy.class)
 public class HelpersViewImpl extends SampleViewImpl {

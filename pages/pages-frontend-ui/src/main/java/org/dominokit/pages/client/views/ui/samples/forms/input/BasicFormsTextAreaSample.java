@@ -6,6 +6,9 @@ import org.dominokit.domino.ui.forms.TextAreaBox;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 public class BasicFormsTextAreaSample extends BaseDominoElement<HTMLDivElement, BasicFormsTextAreaSample> {
 
     private DivElement element;

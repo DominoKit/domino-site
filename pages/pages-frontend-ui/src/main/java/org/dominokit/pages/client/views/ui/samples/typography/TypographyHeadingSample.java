@@ -2,8 +2,9 @@ package org.dominokit.pages.client.views.ui.samples.typography;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyHeadingSample extends BaseDominoElement<HTMLDivElement, TypographyHeadingSample> {
 

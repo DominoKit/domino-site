@@ -1,16 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.components.thumbnails;
 
-import com.google.gwt.core.client.GWT;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.thumbnails.Thumbnail;
 import org.dominokit.domino.ui.thumbnails.ThumbnailDirection;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.FooterContent;
 import org.dominokit.domino.ui.utils.HeaderContent;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class DetailedThumbnailsSample extends BaseDominoElement<HTMLDivElement, DetailedThumbnailsSample> {
 

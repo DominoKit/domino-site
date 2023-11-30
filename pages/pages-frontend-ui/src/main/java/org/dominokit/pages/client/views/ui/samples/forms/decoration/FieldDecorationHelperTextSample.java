@@ -8,6 +8,8 @@ import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class FieldDecorationHelperTextSample extends BaseDominoElement<HTMLDivElement, FieldDecorationHelperTextSample> {
 
     private DivElement element;

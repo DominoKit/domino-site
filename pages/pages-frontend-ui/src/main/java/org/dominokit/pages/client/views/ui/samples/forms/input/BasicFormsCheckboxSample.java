@@ -8,6 +8,7 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
 import static org.dominokit.domino.ui.grid.Column.Span.*;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicFormsCheckboxSample extends BaseDominoElement<HTMLDivElement, BasicFormsCheckboxSample> {
 

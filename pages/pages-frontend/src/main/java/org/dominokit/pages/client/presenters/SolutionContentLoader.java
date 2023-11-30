@@ -21,11 +21,13 @@ public class SolutionContentLoader implements ContentLoader {
         boolean docsContent = token.paths().contains("docs") && nonNull(DomGlobal.document.getElementById("dui-site-left-menu"));
         getContent(token.path(), page, docsContent, content -> {
             String container = docsContent?"dui-docs-content":"dui-content-container";
-            DomGlobal.console.info("CONTAINER IS : -------- > : "+container);
             view.replaceContent(content, container);
             view.enhancePadding();
             view.registerSlots();
-            DominoEvents.fire(ContentState.class, new ContentState(true));
+            DomGlobal.setTimeout(p0 -> {
+                DominoEvents.fire(ContentState.class, new ContentState(true));
+            }, 0);
+
         });
     }
 }

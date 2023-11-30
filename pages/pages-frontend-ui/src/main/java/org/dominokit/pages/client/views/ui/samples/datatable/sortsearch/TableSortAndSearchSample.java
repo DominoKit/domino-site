@@ -23,6 +23,8 @@ import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
 import org.dominokit.pages.shared.model.Gender;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TableSortAndSearchSample extends BaseDominoElement<HTMLDivElement, TableSortAndSearchSample> {
 
     private DivElement element;

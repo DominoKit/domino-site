@@ -10,12 +10,13 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.stepper.Step;
 import org.dominokit.domino.ui.stepper.StepState;
 import org.dominokit.domino.ui.stepper.Stepper;
-import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
 import java.util.Objects;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class HorizontalStepperSample extends BaseDominoElement<HTMLDivElement, HorizontalStepperSample> {
 

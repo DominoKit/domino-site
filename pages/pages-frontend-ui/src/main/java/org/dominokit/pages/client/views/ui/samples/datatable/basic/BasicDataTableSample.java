@@ -2,7 +2,6 @@ package org.dominokit.pages.client.views.ui.samples.datatable.basic;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
 import org.dominokit.domino.ui.datatable.ColumnConfig;
 import org.dominokit.domino.ui.datatable.DataTable;
@@ -15,6 +14,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicDataTableSample extends BaseDominoElement<HTMLDivElement, BasicDataTableSample> {
 
@@ -45,15 +46,18 @@ public class BasicDataTableSample extends BaseDominoElement<HTMLDivElement, Basi
                         })
                 )
                 .addColumn(ColumnConfig.<Contact>create("firstName", "First name")
+                    .setHeaderTextAlign(CellTextAlign.RIGHT)
                         .setCellRenderer(cell -> text(cell.getTableRow().getRecord().getName()))
                 )
                 .addColumn(ColumnConfig.<Contact>create("gender", "Gender")
                         .setCellRenderer(cell -> ContactUiUtils.getGenderElement(cell.getRecord()))
+                    .setHeaderTextAlign(CellTextAlign.RIGHT)
                         .setTextAlign(CellTextAlign.CENTER)
                 )
 
                 .addColumn(ColumnConfig.<Contact>create("eyeColor", "Eye color")
                         .setCellRenderer(cell -> ContactUiUtils.getEyeColorElement(cell.getRecord()))
+                    .setHeaderTextAlign(CellTextAlign.LEFT)
                         .setTextAlign(CellTextAlign.CENTER)
                 )
                 .addColumn(ColumnConfig.<Contact>create("balance", "Balance")
@@ -61,6 +65,7 @@ public class BasicDataTableSample extends BaseDominoElement<HTMLDivElement, Basi
                 )
 
                 .addColumn(ColumnConfig.<Contact>create("email", "Email")
+                    .setHeaderTextAlign(CellTextAlign.RIGHT)
                         .setCellRenderer(cell -> text(cell.getTableRow().getRecord().getEmail()))
                 )
 

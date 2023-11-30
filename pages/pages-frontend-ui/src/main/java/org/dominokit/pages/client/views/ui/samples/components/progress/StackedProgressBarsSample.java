@@ -6,6 +6,8 @@ import org.dominokit.domino.ui.progress.Progress;
 import org.dominokit.domino.ui.progress.ProgressBar;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class StackedProgressBarsSample extends BaseDominoElement<HTMLDivElement, StackedProgressBarsSample> {
 
     private DivElement element;

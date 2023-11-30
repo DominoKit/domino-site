@@ -10,6 +10,8 @@ import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.*;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class MenuFeaturesSample extends BaseDominoElement<HTMLDivElement, MenuFeaturesSample> {
 
     private DivElement element;

@@ -9,6 +9,8 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class BasicFormsRadioSample extends BaseDominoElement<HTMLDivElement, BasicFormsRadioSample> {
 
     private DivElement element;

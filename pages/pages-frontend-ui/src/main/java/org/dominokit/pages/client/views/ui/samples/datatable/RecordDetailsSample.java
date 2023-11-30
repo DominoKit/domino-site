@@ -2,7 +2,10 @@ package org.dominokit.pages.client.views.ui.samples.datatable;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.datatable.*;
+import org.dominokit.domino.ui.datatable.CellTextAlign;
+import org.dominokit.domino.ui.datatable.ColumnConfig;
+import org.dominokit.domino.ui.datatable.DataTable;
+import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.row.RecordDetailsPlugin;
 import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
@@ -12,6 +15,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.details.ContactDetails;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class RecordDetailsSample extends BaseDominoElement<HTMLDivElement, RecordDetailsSample> {
 

@@ -2,9 +2,10 @@ package org.dominokit.pages.client.views.ui.samples.components.alerts;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.alerts.Alert;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LinksAlertsSample extends BaseDominoElement<HTMLDivElement, LinksAlertsSample> {
 

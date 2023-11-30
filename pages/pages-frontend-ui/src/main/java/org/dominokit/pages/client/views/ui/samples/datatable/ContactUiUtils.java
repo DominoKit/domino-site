@@ -11,8 +11,8 @@ import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.EyeColor;
 import org.dominokit.pages.shared.model.Gender;
 
-import static org.dominokit.domino.ui.style.ColorsCss.*;
 import static org.dominokit.domino.ui.style.SpacingCss.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 
 public class ContactUiUtils {

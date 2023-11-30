@@ -12,6 +12,8 @@ import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_es;
 
 import java.util.Date;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class DatePickerFooterSample extends BaseDominoElement<HTMLDivElement, DatePickerFooterSample> {
 
     private DivElement element;

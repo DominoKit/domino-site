@@ -3,7 +3,10 @@ package org.dominokit.pages.client.views.ui.samples.datatable.tree;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
-import org.dominokit.domino.ui.datatable.*;
+import org.dominokit.domino.ui.datatable.CellTextAlign;
+import org.dominokit.domino.ui.datatable.ColumnConfig;
+import org.dominokit.domino.ui.datatable.DataTable;
+import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.marker.RowMarkerPlugin;
 import org.dominokit.domino.ui.datatable.plugins.pagination.SortPlugin;
@@ -26,6 +29,8 @@ import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
 
 import java.util.Optional;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LazyTreeTableLargeDataSetSample extends BaseDominoElement<HTMLDivElement, LazyTreeTableLargeDataSetSample> {
 

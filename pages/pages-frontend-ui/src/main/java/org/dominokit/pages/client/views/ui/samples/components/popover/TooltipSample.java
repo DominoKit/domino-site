@@ -2,12 +2,12 @@ package org.dominokit.pages.client.views.ui.samples.components.popover;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TooltipSample extends BaseDominoElement<HTMLDivElement, TooltipSample> {
 

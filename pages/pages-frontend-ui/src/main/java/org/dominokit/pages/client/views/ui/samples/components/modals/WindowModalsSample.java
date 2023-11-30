@@ -1,24 +1,15 @@
 package org.dominokit.pages.client.views.ui.samples.components.modals;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
-import org.dominokit.domino.ui.dialogs.Dialog;
 import org.dominokit.domino.ui.dialogs.DialogSize;
 import org.dominokit.domino.ui.dialogs.Window;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.suggest.Select;
-import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
-import org.dominokit.domino.ui.icons.lib.Icons;
-import org.dominokit.domino.ui.layout.NavBar;
-import org.dominokit.domino.ui.menu.Menu;
-import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-import org.dominokit.domino.ui.utils.FooterContent;
-import org.dominokit.domino.ui.utils.PostfixAddOn;
-import org.dominokit.domino.ui.utils.PrefixAddOn;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class WindowModalsSample extends BaseDominoElement<HTMLDivElement, WindowModalsSample> {
 

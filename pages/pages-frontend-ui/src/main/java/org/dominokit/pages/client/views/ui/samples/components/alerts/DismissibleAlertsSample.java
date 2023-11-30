@@ -5,6 +5,8 @@ import org.dominokit.domino.ui.alerts.Alert;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class DismissibleAlertsSample extends BaseDominoElement<HTMLDivElement, DismissibleAlertsSample> {
 
     private DivElement element;

@@ -1,11 +1,12 @@
 package org.dominokit.pages.client.views.ui.samples.components.carousel;
 
-import com.google.gwt.core.client.GWT;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.carousel.Carousel;
 import org.dominokit.domino.ui.carousel.Slide;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class AutoCarouselSample extends BaseDominoElement<HTMLDivElement, AutoCarouselSample> {
 

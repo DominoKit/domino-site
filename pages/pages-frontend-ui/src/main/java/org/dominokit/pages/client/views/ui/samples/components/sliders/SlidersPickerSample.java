@@ -5,10 +5,10 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.SwitchButton;
 import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.grid.Row;
-import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.sliders.Slider;
-import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SlidersPickerSample extends BaseDominoElement<HTMLDivElement, SlidersPickerSample> {
 

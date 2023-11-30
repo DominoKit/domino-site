@@ -5,6 +5,7 @@ import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
+import org.dominokit.domino.ui.forms.IntegerBox;
 import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.MultiSelect;
 import org.dominokit.domino.ui.forms.suggest.Select;
@@ -16,6 +17,7 @@ import org.dominokit.domino.ui.icons.MdiIcon;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.icons.lib.IconsMeta;
 import org.dominokit.domino.ui.menu.CustomMenuItem;
+import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.popover.Popover;
@@ -23,8 +25,11 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 import java.util.Arrays;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, BasicFormsSelectSample> {
 
@@ -35,16 +40,22 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
     }
 
     public BasicFormsSelectSample() {
+        Select<String> select1 = Select.<String>create();
+        IntegerBox index = IntegerBox.create("index");
         this.element = div().addCss(dui_p_2)
+                .appendChild(Button.create("Append at").addClickListener(evt -> {
+                    select1.insertChild(index.getValue(), SelectOption.create(""+index.getValue(), ""+index.getValue(), ""+index.getValue()));
+                }))
+                .appendChild(index)
                 .appendChild(Row.create()
                         .appendChild(Column.span6()
-                                .appendChild(Select.<String>create()
+                                .appendChild(select1
                                         .appendChild(SelectOption.create("nothing", null, "-- please select --"))
-                                        .appendChild(SelectOption.create("value10", "value10", "10"))
-                                        .appendChild(SelectOption.create("value20", "value20", "20"))
-                                        .appendChild(SelectOption.create("value30", "value30", "30"))
-                                        .appendChild(SelectOption.create("value40", "value40", "40"))
-                                        .appendChild(SelectOption.create("value50", "value50", "50"))
+                                        .apply(self -> {
+                                            for(int i=10; i<=300; i+=10){
+                                                self.appendChild(SelectOption.create("value"+i, i+"", "value "+i));
+                                            }
+                                        })
                                         .setSearchable(false)
                                         .selectAt(0)
                                         .addChangeListener((oldValue, newValue) -> Notification.create("Item selected : Old value[ " + oldValue + " ], New value [" + newValue + "]").show())))
@@ -55,8 +66,8 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                         .disable()
                                 ))
                 )
-                .appendChild(BlockHeader.create("Searchable select"))
-                .appendChild(Row.create()
+                .appendChild(BlockHeader.create("Searchable select"));
+        this.element.appendChild(Row.create()
                         .appendChild(Column.span6()
                                 .appendChild(Select.<String>create("Country")
                                         .setSearchable(true)
@@ -82,6 +93,7 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                                                                 onComplete.accept(option);
                                                                                 select.selectOption(option);
                                                                                 popover.close();
+                                                                                popover.detach();
                                                                             }
                                                                         }))
                                                                 )
@@ -106,6 +118,8 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                         .appendChild(SelectOption.create("SPA", "SPA", "Spain"))
                                         .appendChild(SelectOption.create("FRA", "FRA", "France"))
                                         .appendChild(SelectOption.create("JOR", "JOR", "Jordan"))
+                                        .appendChild(SelectOption.create("JAP", "JAP", "Japan"))
+                                        .appendChild(SelectOption.create("JAM", "JAM", "Jamaica"))
                                         .selectAt(0)
                                         .addChangeListener((oldValue, newValue) -> {
                                             Notification.create("Item selected [ " + newValue + " ]").show();
@@ -245,7 +259,7 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
     public static class IconOption extends SelectOption<MdiIcon> {
         public IconOption(MdiIcon mdiIcon) {
             super(mdiIcon.getName(), mdiIcon,
-                    (key, value) -> elements.div()
+                    (key, value) -> div()
                             .appendChild(LabeledIcon.create(mdiIcon.copy(), mdiIcon.getName())
                                     .addCss(dui_rounded_full, dui_accent, dui_p_x_1))
                     ,
@@ -258,10 +272,10 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                     icon.getMetaInfo().getTags()
                                             .stream().anyMatch(iconTag -> compare(iconTag, token, caseSensitive))
                             )
-                            .appendChild(elements.div()
+                            .appendChild(div()
                                     .addCss(dui_flex, dui_gap_1, dui_items_center)
                                     .appendChild(mdiIcon)
-                                    .appendChild(elements.span()
+                                    .appendChild(span()
                                             .addCss(dui_grow_1)
                                             .textContent(mdiIcon.getName()))
                                     .appendChild(Badge.create("version :" + mdiIcon.getMetaInfo().getVersion())

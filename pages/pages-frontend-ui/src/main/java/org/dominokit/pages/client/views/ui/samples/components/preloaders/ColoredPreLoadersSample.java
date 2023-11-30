@@ -5,6 +5,8 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.preloaders.Preloader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class ColoredPreLoadersSample extends BaseDominoElement<HTMLDivElement, ColoredPreLoadersSample> {
 
     private DivElement element;

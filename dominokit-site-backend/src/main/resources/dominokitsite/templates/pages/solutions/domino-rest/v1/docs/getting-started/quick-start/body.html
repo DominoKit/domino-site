@@ -24,7 +24,7 @@
     <h2 class="dui dui-site-docs-subtitle">Prerequisites</h2>
 
     <ul class="dui dui-site-docs-list">
-        <li class="dui">Java 8 or higher.</li>
+        <li class="dui">Java 11 or higher.</li>
         <li class="dui">Maven 3.6.0 or higher.</li>
     </ul>
 
@@ -36,6 +36,8 @@
         <li class="dui">
             <span>Add the library and processors dependencies to your project</span>
             <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_dependencies}|)"></div>
+            <p class="dui">If you are using <b>annotationProcessorPaths</b> to add processors dependencies, make sure you add the <b>domino-rest-jaxrs path as well</b></p>
+            <div th:replace="fragments/commons/components/inline-code :: content(|${domino_rest_paths_dependencies}|)"></div>
         </li>
         <li class="dui">
             <span>If you are using domino-rest with GWT then you will need to add the following inherit directive to your project .gwt.xml file</span>

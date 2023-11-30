@@ -1,15 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.components.cards;
 
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.pages.client.presenters.samples.components.ButtonsProxy;
 import org.dominokit.pages.client.presenters.samples.components.CardsProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.components.buttons.ButtonsBasicSample;
-import org.dominokit.pages.client.views.ui.samples.components.buttons.ButtonsDropDownSample;
-import org.dominokit.pages.client.views.ui.samples.components.buttons.ButtonsGroupsSample;
-import org.dominokit.pages.client.views.ui.samples.components.buttons.ButtonsSizeSample;
 
 @UiView(presentable = CardsProxy.class)
 public class CardsViewImpl extends SampleViewImpl {

@@ -1,12 +1,12 @@
 package org.dominokit.pages.client.views.ui.samples.components.labels;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.labels.Label;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LabelsBasicSample extends BaseDominoElement<HTMLDivElement, LabelsBasicSample> {
 

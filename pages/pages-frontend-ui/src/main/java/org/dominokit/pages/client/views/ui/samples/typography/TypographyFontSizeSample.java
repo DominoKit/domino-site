@@ -5,6 +5,8 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TypographyFontSizeSample extends BaseDominoElement<HTMLDivElement, TypographyFontSizeSample> {
 
     private DivElement element;

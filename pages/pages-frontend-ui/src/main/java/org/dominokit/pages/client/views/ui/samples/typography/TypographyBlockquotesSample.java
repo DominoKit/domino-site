@@ -5,6 +5,8 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.typography.Blockquote;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TypographyBlockquotesSample extends BaseDominoElement<HTMLDivElement, TypographyBlockquotesSample> {
 
     private DivElement element;

@@ -2,16 +2,14 @@ package org.dominokit.pages.client.views.ui.samples.components.badges;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
-import org.dominokit.domino.ui.grid.Row;
-import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.lists.ListGroup;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
 import java.util.Arrays;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BadgesListsSample extends BaseDominoElement<HTMLDivElement, BadgesListsSample> {
 

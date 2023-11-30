@@ -4,8 +4,6 @@ import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.chips.Chip;
 import org.dominokit.domino.ui.chips.ChipsGroup;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
-import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.typography.BlockHeader;
@@ -13,6 +11,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.ElementHandler;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.domino.ui.utils.meta.ValueMeta;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SelectableChipsSample extends BaseDominoElement<HTMLDivElement, SelectableChipsSample> {
 

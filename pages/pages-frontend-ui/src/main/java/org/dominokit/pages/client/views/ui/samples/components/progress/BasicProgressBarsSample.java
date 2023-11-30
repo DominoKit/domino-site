@@ -1,14 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.progress;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
-import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.progress.Progress;
 import org.dominokit.domino.ui.progress.ProgressBar;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.gwtproject.timer.client.Timer;
+
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
 
 public class BasicProgressBarsSample extends BaseDominoElement<HTMLDivElement, BasicProgressBarsSample> {
 

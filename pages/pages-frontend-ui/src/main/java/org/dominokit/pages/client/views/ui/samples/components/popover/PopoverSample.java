@@ -4,13 +4,14 @@ import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.popover.Popover;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSample> {
 
@@ -23,12 +24,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
     public PopoverSample() {
         this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
-                        .span3(Button.create("POPOVER ON RIGHT")
+                        .span3(Button.create("RIGHT MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.RIGHT_MIDDLE)
-                                            .appendChild(Card.create("Popover on right")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -37,12 +38,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER ON TOP")
+                        .span3(Button.create("TOP MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.TOP_MIDDLE)
-                                            .appendChild(Card.create("Popover on TOP")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -51,12 +52,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER ON BOTTOM")
+                        .span3(Button.create("BOTTOM MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.BOTTOM_MIDDLE)
-                                            .appendChild(Card.create("Popover on BOTTOM")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -65,12 +66,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER ON LEFT")
+                        .span3(Button.create("LEFT MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.LEFT_MIDDLE)
-                                            .appendChild(Card.create("Popover on left")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -81,12 +82,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                         )
                 )
                 .appendChild(Row.create()
-                        .span3(Button.create("POPOVER BOTTOM LEFT")
+                        .span3(Button.create("BOTTOM LEFT")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.BOTTOM_LEFT)
-                                            .appendChild(Card.create("Popover on right")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -95,12 +96,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER BOTTOM MIDDLE")
+                        .span3(Button.create("BOTTOM MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.BOTTOM_MIDDLE)
-                                            .appendChild(Card.create("Popover on TOP")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -109,12 +110,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER BOTTOM RIGHT")
+                        .span3(Button.create("BOTTOM RIGHT")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.BOTTOM_RIGHT)
-                                            .appendChild(Card.create("Popover on BOTTOM")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -123,12 +124,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER LEFT DOWN")
+                        .span3(Button.create("LEFT DOWN")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.LEFT_DOWN)
-                                            .appendChild(Card.create("Popover on left")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -139,12 +140,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                         )
                 )
                 .appendChild(Row.create()
-                        .span3(Button.create("POPOVER LEFT MIDDLE")
+                        .span3(Button.create("LEFT MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.LEFT_MIDDLE)
-                                            .appendChild(Card.create("Popover on right")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -153,12 +154,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER LEFT UP")
+                        .span3(Button.create("LEFT UP")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.LEFT_UP)
-                                            .appendChild(Card.create("Popover on TOP")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -167,12 +168,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER RIGHT DOWN")
+                        .span3(Button.create("RIGHT DOWN")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.RIGHT_DOWN)
-                                            .appendChild(Card.create("Popover on BOTTOM")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -181,12 +182,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER RIGHT MIDDLE")
+                        .span3(Button.create("RIGHT MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.RIGHT_MIDDLE)
-                                            .appendChild(Card.create("Popover on left")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -197,12 +198,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                         )
                 )
                 .appendChild(Row.create()
-                        .span3(Button.create("POPOVER RIGHT UP")
+                        .span3(Button.create("RIGHT UP")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.RIGHT_UP)
-                                            .appendChild(Card.create("Popover on right")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -211,12 +212,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER TOP LEFT")
+                        .span3(Button.create("TOP LEFT")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.TOP_LEFT)
-                                            .appendChild(Card.create("Popover on TOP")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -225,12 +226,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER TOP MIDDLE")
+                        .span3(Button.create("TOP MIDDLE")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.TOP_MIDDLE)
-                                            .appendChild(Card.create("Popover on BOTTOM")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))
@@ -239,12 +240,12 @@ public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSamp
                                             );
                                 })
                         )
-                        .span3(Button.create("POPOVER TOP RIGHT")
+                        .span3(Button.create("TOP RIGHT")
                                 .apply(button -> {
                                     Popover.create(button)
                                             .addCss(dui_bg_accent, dui_rounded_sm)
                                             .setPosition(DropDirection.TOP_RIGHT)
-                                            .appendChild(Card.create("Popover on left")
+                                            .appendChild(Card.create("Popover")
                                                     .setIcon(Icons.message_settings_outline())
                                                     .addCss(dui_bg_accent, dui_fg, dui_elevation_0, dui_m_2px, dui_rounded_sm)
                                                     .appendChild(PostfixAddOn.of(Icons.dots_vertical().clickable()))

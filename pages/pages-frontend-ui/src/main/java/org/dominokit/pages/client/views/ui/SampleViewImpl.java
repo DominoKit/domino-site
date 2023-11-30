@@ -2,11 +2,14 @@ package org.dominokit.pages.client.views.ui;
 
 import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
+import org.dominokit.domino.ui.utils.Domino;
 import org.dominokit.domino.view.BaseElementView;
 import org.dominokit.pages.client.views.SampleView;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.dominokit.domino.ui.utils.Domino.div;
 
 public abstract class SampleViewImpl extends BaseElementView<HTMLDivElement> implements SampleView {
 
@@ -18,7 +21,7 @@ public abstract class SampleViewImpl extends BaseElementView<HTMLDivElement> imp
         DomGlobal.document.querySelectorAll("[dui-site-data='dui-sample-container']")
                 .asList()
                 .stream()
-                .map(this::elementOf)
+                .map(Domino::elementOf)
                 .forEach(element -> {
                     if (element.hasAttribute("dui-sample-id")) {
                         String sampleId = element.getAttribute("dui-sample-id");

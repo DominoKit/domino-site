@@ -8,6 +8,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_ar;
 import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_es;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class DatePickerHeaderSample extends BaseDominoElement<HTMLDivElement, DatePickerHeaderSample> {
 
     private DivElement element;

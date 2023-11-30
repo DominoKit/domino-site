@@ -2,11 +2,12 @@ package org.dominokit.pages.client.views.ui.samples.forms.decoration;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.*;
-import org.dominokit.domino.ui.forms.suggest.Select;
-import org.dominokit.domino.ui.forms.suggest.SelectOption;
-import org.dominokit.domino.ui.typography.BlockHeader;
+import org.dominokit.domino.ui.forms.TextAreaBox;
+import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
 
 public class FieldDecorationCounterSample extends BaseDominoElement<HTMLDivElement, FieldDecorationCounterSample> {
 

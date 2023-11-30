@@ -11,6 +11,8 @@ import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class CardsWithHeadersSample extends BaseDominoElement<HTMLDivElement, CardsWithHeadersSample> {
 
     private static final String SAMPLE_CONTENT = "Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.";

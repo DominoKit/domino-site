@@ -13,6 +13,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class AppLayoutSample extends BaseDominoElement<HTMLDivElement, AppLayoutSample> {
 
     private AppLayout appLayout;

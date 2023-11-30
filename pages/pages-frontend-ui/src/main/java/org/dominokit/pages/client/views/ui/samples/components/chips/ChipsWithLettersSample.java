@@ -3,9 +3,10 @@ package org.dominokit.pages.client.views.ui.samples.components.chips;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.chips.Chip;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ChipsWithLettersSample extends BaseDominoElement<HTMLDivElement, ChipsWithLettersSample> {
 

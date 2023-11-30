@@ -6,11 +6,13 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.lists.ListGroup;
 import org.dominokit.domino.ui.style.BooleanCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.client.views.ui.ContactUiUtils;
+import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.service.DemoServiceFactory;
 
 import java.util.Random;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SingleSelectListsSample extends BaseDominoElement<HTMLDivElement, SingleSelectListsSample> {
 

@@ -14,6 +14,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class CardSubHeaderSample extends BaseDominoElement<HTMLDivElement, CardSubHeaderSample> {
 
     private static final String SAMPLE_CONTENT = "Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat. Ridiculus nostra.";

@@ -18,8 +18,12 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Consumer;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SuggestBoxSample extends BaseDominoElement<HTMLDivElement, SuggestBoxSample> {
 

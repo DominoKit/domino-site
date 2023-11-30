@@ -8,7 +8,6 @@ import org.dominokit.domino.ui.datatable.DataTable;
 import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.marker.RowMarkerPlugin;
-import org.dominokit.domino.ui.datatable.plugins.selection.SelectionPlugin;
 import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -17,6 +16,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TableRowMarkerSample extends BaseDominoElement<HTMLDivElement, TableRowMarkerSample> {
 

@@ -15,6 +15,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class FlexItemPlayground extends BaseDominoElement<HTMLDivElement, FlexItemPlayground> {
 
     private final DivElement element;

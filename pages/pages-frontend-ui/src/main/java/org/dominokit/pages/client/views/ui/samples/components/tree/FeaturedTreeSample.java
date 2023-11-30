@@ -19,6 +19,7 @@ import org.dominokit.pages.shared.model.Country;
 import java.util.List;
 
 import static java.util.Objects.nonNull;
+import static org.dominokit.domino.ui.utils.Domino.*;
 import static org.dominokit.pages.shared.model.Countries.COUNTRIES;
 
 public class FeaturedTreeSample extends BaseDominoElement<HTMLDivElement, FeaturedTreeSample> {

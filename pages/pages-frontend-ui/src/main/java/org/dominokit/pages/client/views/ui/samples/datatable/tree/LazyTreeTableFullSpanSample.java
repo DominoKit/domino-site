@@ -22,6 +22,8 @@ import org.dominokit.pages.shared.model.ContactsProvider;
 import java.util.Collections;
 import java.util.Optional;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class LazyTreeTableFullSpanSample extends BaseDominoElement<HTMLDivElement, LazyTreeTableFullSpanSample> {
 
     private DivElement element;

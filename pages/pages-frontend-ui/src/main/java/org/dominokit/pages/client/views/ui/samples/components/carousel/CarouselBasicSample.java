@@ -6,6 +6,9 @@ import org.dominokit.domino.ui.carousel.Slide;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 public class CarouselBasicSample extends BaseDominoElement<HTMLDivElement, CarouselBasicSample> {
 
     private DivElement element;

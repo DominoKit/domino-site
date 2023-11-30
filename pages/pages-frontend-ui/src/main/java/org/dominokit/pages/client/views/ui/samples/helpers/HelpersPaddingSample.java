@@ -1,13 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.helpers;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class HelpersPaddingSample extends BaseDominoElement<HTMLDivElement, HelpersPaddingSample> {
 

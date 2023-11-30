@@ -1,12 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.components.menu;
 
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.pages.client.presenters.samples.components.CardsProxy;
 import org.dominokit.pages.client.presenters.samples.components.MenuProxy;
 import org.dominokit.pages.client.views.ui.DemoSample;
 import org.dominokit.pages.client.views.ui.LazyProvider;
 import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.components.cards.*;
 
 @UiView(presentable = MenuProxy.class)
 public class MenuViewImpl extends SampleViewImpl {

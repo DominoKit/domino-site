@@ -3,11 +3,12 @@ package org.dominokit.pages.client.views.ui.samples.components.chips;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.chips.Chip;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ChipsWithIconsAndImagesSample extends BaseDominoElement<HTMLDivElement, ChipsWithIconsAndImagesSample> {
 

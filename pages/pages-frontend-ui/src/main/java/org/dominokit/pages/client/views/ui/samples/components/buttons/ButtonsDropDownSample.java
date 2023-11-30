@@ -14,7 +14,7 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
 import static org.dominokit.domino.ui.menu.direction.DropDirection.*;
-import static org.dominokit.domino.ui.menu.direction.DropDirection.BOTTOM_LEFT;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, ButtonsDropDownSample> {
 

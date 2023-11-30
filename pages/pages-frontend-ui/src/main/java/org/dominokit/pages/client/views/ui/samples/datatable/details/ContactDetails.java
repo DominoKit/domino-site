@@ -12,6 +12,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class ContactDetails extends BaseDominoElement<HTMLDivElement, ContactDetails> {
 
     private Row rowElement = Row.create()

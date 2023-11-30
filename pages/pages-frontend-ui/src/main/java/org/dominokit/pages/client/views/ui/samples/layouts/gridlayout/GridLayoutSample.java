@@ -12,6 +12,8 @@ import org.dominokit.domino.ui.sliders.Slider;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class GridLayoutSample extends BaseDominoElement<HTMLDivElement, GridLayoutSample> {
 
     private final DivElement element;

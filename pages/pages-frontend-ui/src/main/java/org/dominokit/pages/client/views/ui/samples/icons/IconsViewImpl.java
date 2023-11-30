@@ -1,7 +1,9 @@
 package org.dominokit.pages.client.views.ui.samples.icons;
 
-import elemental2.dom.*;
+import com.google.gwt.core.client.GWT;
+import com.google.gwt.core.client.RunAsyncCallback;
 import elemental2.dom.EventListener;
+import elemental2.dom.*;
 import jsinterop.base.Js;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.ui.IsElement;
@@ -19,28 +21,19 @@ import org.dominokit.domino.ui.icons.lib.MdiByTagFactory;
 import org.dominokit.domino.ui.icons.lib.MdiTags;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.search.SearchBox;
-import org.dominokit.domino.ui.style.DisplayCss;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.DominoDom;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.view.BaseElementView;
-import org.dominokit.pages.client.presenters.samples.components.AlertsProxy;
 import org.dominokit.pages.client.presenters.samples.icons.IconsProxy;
 import org.dominokit.pages.client.views.IconsView;
-import org.dominokit.pages.client.views.ui.DemoSample;
-import org.dominokit.pages.client.views.ui.LazyProvider;
-import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.BasicAlertsSample;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.ContextAlertsSample;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.DismissibleAlertsSample;
-import org.dominokit.pages.client.views.ui.samples.components.alerts.LinksAlertsSample;
 
 import java.util.*;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
-import static org.dominokit.domino.ui.style.DisplayCss.dui_elevation_0;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 @UiView(presentable = IconsProxy.class)
 public class IconsViewImpl extends BaseElementView<HTMLDivElement> implements IconsView {
@@ -58,6 +51,7 @@ public class IconsViewImpl extends BaseElementView<HTMLDivElement> implements Ic
     @Override
     protected HTMLDivElement init() {
         element = div();
+
         element.appendChild(copyInput);
 
         element.appendChild(SearchBox.create()
@@ -80,53 +74,64 @@ public class IconsViewImpl extends BaseElementView<HTMLDivElement> implements Ic
                     byTagsContainer.clearElement();
                     icons_cards.clear();
                     if (token.isEmpty()) {
-                        setTag(this.tag);
+                        setTag(tag);
                     } else {
                         if (isNull(tag) || "all".equals(tag)) {
                             MdiTags.TAGS.forEach(tag -> findForTag(token, tag));
                         } else {
-                            findForTag(token, this.tag);
+                            findForTag(token, tag);
                         }
                     }
                 })
         );
         element.appendChild(byTagsContainer = div());
         mdiEffects();
+
         return element.element();
     }
 
     @Override
-    public void setTag(String tag) {
-        this.tag = tag.replace("_", " / ");
+    public void setTag(String targetTag) {
+        tag = targetTag.replace("_", " / ");
         byTagsContainer.clearElement();
         icons_cards.clear();
-        if ("all".equals(this.tag)) {
+        if ("all".equals(tag)) {
             MdiTags.TAGS.forEach(iconsTag -> {
-                icons_cards.put(iconsTag, createCategoryCard(iconsTag));
+                findForTag("", iconsTag);
             });
         } else {
-            icons_cards.put(this.tag, createCategoryCard(this.tag));
+            findForTag("", tag);
         }
     }
 
 
     private void findForTag(String token, String tag) {
-        List<Supplier<MdiIcon>> foundForTag = MdiByTagFactory.get(Arrays.asList("Untagged", "").contains(tag) ? MdiTags.UNTAGGED : tag).stream().filter(supplier -> {
-                    MdiIcon mdiIcon = supplier.get();
-                    return mdiIcon.getMetaInfo()
-                            .getAliases()
-                            .stream()
-                            .anyMatch(alias -> alias.toLowerCase().contains(token.toLowerCase())) ||
-                            mdiIcon.getMetaInfo().getName().contains(token.toLowerCase()) ||
-                            mdiIcon.getMetaInfo().getTags()
-                                    .stream().anyMatch(iconTag -> iconTag.toLowerCase().contains(token.toLowerCase()))
-                            ;
-                })
-                .collect(Collectors.toList());
+        GWT.runAsync(new RunAsyncCallback() {
+            @Override
+            public void onFailure(Throwable throwable) {
 
-        if (!foundForTag.isEmpty()) {
-            icons_cards.put(tag, createCategoryCard(tag, foundForTag));
-        }
+            }
+
+            @Override
+            public void onSuccess() {
+                List<Supplier<MdiIcon>> foundForTag = MdiByTagFactory.get(Arrays.asList("Untagged", "").contains(tag) ? MdiTags.UNTAGGED : tag).stream().filter(supplier -> {
+                            MdiIcon mdiIcon = supplier.get();
+                            return mdiIcon.getMetaInfo()
+                                    .getAliases()
+                                    .stream()
+                                    .anyMatch(alias -> token.isEmpty() || alias.toLowerCase().contains(token.toLowerCase())) ||
+                                    mdiIcon.getMetaInfo().getName().contains(token.toLowerCase()) ||
+                                    mdiIcon.getMetaInfo().getTags()
+                                            .stream().anyMatch(iconTag -> iconTag.toLowerCase().contains(token.toLowerCase()))
+                                    ;
+                        })
+                        .collect(Collectors.toList());
+
+                if (!foundForTag.isEmpty()) {
+                    icons_cards.put(tag, createCategoryCard(tag, foundForTag));
+                }
+            }
+        });
     }
 
     private Card createCategoryCard(String tag, List<Supplier<MdiIcon>> iconsSuppliers) {

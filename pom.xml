@@ -16,10 +16,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <vertx.version>3.9.0</vertx.version>
         <domino.history.version>1.0.1</domino.history.version>
-        <domino.rest.version>1.0.0</domino.rest.version>
+        <domino.rest.version>1.0.1</domino.rest.version>
         <domino.ui.version>HEAD-SNAPSHOT</domino.ui.version>
         <domino.history.version>HEAD-SNAPSHOT</domino.history.version>
-        <domino.jackson.version>1.0.0</domino.jackson.version>
+        <domino.jackson.version>1.0.3</domino.jackson.version>
         <domino.mvp.version>HEAD-SNAPSHOT</domino.mvp.version>
     </properties>
 
@@ -33,7 +33,7 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.google.gwt</groupId>
+                <groupId>org.gwtproject</groupId>
                 <artifactId>gwt</artifactId>
                 <version>2.10.0</version>
                 <type>pom</type>
@@ -65,7 +65,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -101,7 +101,14 @@
                     <extensions>true</extensions>
                     <configuration>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
-                        <style>DETAILED</style>
+                        <compilerArgs>
+                            <compilerArg>-XdisableCastChecking</compilerArg>
+                            <!--<compilerArg>-style</compilerArg>-->
+                            <!--<compilerArg>PRETTY</compilerArg>-->
+                            <compilerArg>-compileReport</compilerArg>
+                            <compilerArg>-extra</compilerArg>
+                            <compilerArg>${project.build.directory}/gwt/extra</compilerArg>
+                        </compilerArgs>
                         <failOnError>true</failOnError>
                         <codeserverArgs>
                             <codeserverArg>-bindAddress</codeserverArg>

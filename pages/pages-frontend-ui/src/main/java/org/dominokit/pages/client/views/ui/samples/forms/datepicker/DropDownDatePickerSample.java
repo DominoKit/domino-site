@@ -9,8 +9,9 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.popover.Popover;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_ar;
-import org.gwtproject.i18n.shared.cldr.impl.DateTimeFormatInfoImpl_es;
+
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
 
 public class DropDownDatePickerSample extends BaseDominoElement<HTMLDivElement, DropDownDatePickerSample> {
 

@@ -8,6 +8,8 @@ import org.dominokit.domino.ui.splitpanel.VSplitPanel;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class SplitPanelMultiple extends BaseDominoElement<HTMLDivElement, SplitPanelMultiple> {
 
     private final DivElement element;

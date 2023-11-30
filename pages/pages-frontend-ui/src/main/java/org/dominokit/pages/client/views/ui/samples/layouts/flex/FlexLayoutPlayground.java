@@ -14,6 +14,8 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class FlexLayoutPlayground extends BaseDominoElement<HTMLDivElement, FlexLayoutPlayground> {
 
     private final DivElement element;

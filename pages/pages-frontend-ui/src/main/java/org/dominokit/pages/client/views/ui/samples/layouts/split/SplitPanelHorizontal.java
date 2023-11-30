@@ -7,6 +7,8 @@ import org.dominokit.domino.ui.splitpanel.SplitPanel;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class SplitPanelHorizontal extends BaseDominoElement<HTMLDivElement, SplitPanelHorizontal> {
 
     private final DivElement element;

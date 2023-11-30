@@ -1,47 +1,17 @@
 package org.dominokit.pages.client.views.ui.samples.colors;
 
-import elemental2.dom.*;
-import elemental2.dom.EventListener;
-import jsinterop.base.Js;
+import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.api.client.annotations.UiView;
-import org.dominokit.domino.ui.IsElement;
-import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
-import org.dominokit.domino.ui.icons.Icon;
-import org.dominokit.domino.ui.icons.LabeledIcon;
-import org.dominokit.domino.ui.icons.MdiIcon;
-import org.dominokit.domino.ui.icons.ToggleMdiIcon;
-import org.dominokit.domino.ui.icons.lib.Icons;
-import org.dominokit.domino.ui.icons.lib.MdiByTagFactory;
-import org.dominokit.domino.ui.icons.lib.MdiTags;
-import org.dominokit.domino.ui.notifications.Notification;
-import org.dominokit.domino.ui.search.SearchBox;
 import org.dominokit.domino.ui.style.Color;
 import org.dominokit.domino.ui.style.ColorScheme;
-import org.dominokit.domino.ui.typography.BlockHeader;
-import org.dominokit.domino.ui.utils.DominoDom;
-import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.view.BaseElementView;
 import org.dominokit.pages.client.presenters.samples.colors.ColorsProxy;
-import org.dominokit.pages.client.presenters.samples.helpers.HelpersProxy;
 import org.dominokit.pages.client.views.ColorsView;
-import org.dominokit.pages.client.views.IconsView;
-import org.dominokit.pages.client.views.ui.DemoSample;
-import org.dominokit.pages.client.views.ui.LazyProvider;
-import org.dominokit.pages.client.views.ui.SampleViewImpl;
-import org.dominokit.pages.client.views.ui.samples.helpers.HelpersHeightSample;
-import org.dominokit.pages.client.views.ui.samples.helpers.HelpersMarginSample;
-import org.dominokit.pages.client.views.ui.samples.helpers.HelpersPaddingSample;
-import org.dominokit.pages.client.views.ui.samples.helpers.HelpersWidthSample;
 
-import java.util.*;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
-import static java.util.Objects.isNull;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 @UiView(presentable = ColorsProxy.class)
 public class ColorsViewImpl extends BaseElementView<HTMLDivElement> implements ColorsView {

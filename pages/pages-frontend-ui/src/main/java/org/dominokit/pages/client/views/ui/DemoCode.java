@@ -7,6 +7,7 @@ import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.DominoNavigator;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class DemoCode extends BaseDominoElement<HTMLDivElement, DemoCode> {
 

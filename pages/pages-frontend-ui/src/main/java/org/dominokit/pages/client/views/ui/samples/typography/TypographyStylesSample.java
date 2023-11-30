@@ -6,6 +6,8 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TypographyStylesSample extends BaseDominoElement<HTMLDivElement, TypographyStylesSample> {
 
     private DivElement element;

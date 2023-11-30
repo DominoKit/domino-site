@@ -1,8 +1,6 @@
 package org.dominokit.pages.client.views.ui.samples.animations;
 
-import com.google.gwt.core.client.GWT;
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.api.shared.extension.Aggregate;
 import org.dominokit.domino.ui.animations.Animation;
 import org.dominokit.domino.ui.animations.Transition;
 import org.dominokit.domino.ui.button.Button;
@@ -12,6 +10,8 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.style.Style;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, AnimationsBasicSample> {
 

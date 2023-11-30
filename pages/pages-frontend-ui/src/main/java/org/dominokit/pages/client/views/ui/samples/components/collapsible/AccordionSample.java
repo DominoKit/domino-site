@@ -4,16 +4,16 @@ import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.button.LinkButton;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.collapsible.Accordion;
 import org.dominokit.domino.ui.collapsible.AccordionPanel;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class AccordionSample extends BaseDominoElement<HTMLDivElement, AccordionSample> {
 
@@ -31,6 +31,7 @@ public class AccordionSample extends BaseDominoElement<HTMLDivElement, Accordion
                         .span6(Accordion.create()
                                 .appendChild(AccordionPanel.create("Collapsible item 1")
                                         .withHeader((parent, header) -> header
+                                                .setDescription("Sample description")
                                                 .appendChild(PrefixAddOn.of(Icons.bus_clock()))
                                                 .appendChild(PostfixAddOn.of(Badge.create("15").addCss(dui_rounded_full, dui_bg_accent_d_3)))
                                                 .appendChild(PostfixAddOn.of(Icons.clock_end()))

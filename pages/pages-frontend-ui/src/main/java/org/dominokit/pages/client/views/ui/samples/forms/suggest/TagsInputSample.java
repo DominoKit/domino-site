@@ -18,6 +18,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class TagsInputSample extends BaseDominoElement<HTMLDivElement, TagsInputSample> {
 
     private static final String IP_ADDRESS_REGEX = "^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$";

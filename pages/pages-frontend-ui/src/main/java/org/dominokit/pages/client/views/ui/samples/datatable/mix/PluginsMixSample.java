@@ -37,6 +37,8 @@ import org.dominokit.pages.shared.model.Gender;
 
 import java.util.List;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class PluginsMixSample extends BaseDominoElement<HTMLDivElement, PluginsMixSample> {
 
     private DivElement element;

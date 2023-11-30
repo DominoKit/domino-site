@@ -5,7 +5,6 @@ import elemental2.dom.Element;
 import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.ui.style.DominoCss;
-import org.dominokit.domino.ui.utils.ElementUtil;
 import org.dominokit.domino.view.BaseNoContentView;
 import org.dominokit.domino.view.slots.ElementIdSlot;
 import org.dominokit.pages.client.presenters.PagesProxy;

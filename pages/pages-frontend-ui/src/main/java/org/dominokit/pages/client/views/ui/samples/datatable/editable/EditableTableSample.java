@@ -1,5 +1,8 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.editable;
 
+import elemental2.dom.DomGlobal;
+import elemental2.dom.Event;
+import elemental2.dom.EventListener;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
@@ -7,6 +10,7 @@ import org.dominokit.domino.ui.datatable.ColumnConfig;
 import org.dominokit.domino.ui.datatable.DataTable;
 import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
+import org.dominokit.domino.ui.datatable.plugins.row.RowClickPlugin;
 import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.*;
@@ -21,6 +25,7 @@ import org.dominokit.pages.shared.model.EyeColor;
 import org.dominokit.pages.shared.model.Gender;
 
 import static org.dominokit.domino.ui.forms.FormsStyles.dui_form_select_check_box;
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class EditableTableSample extends BaseDominoElement<HTMLDivElement, EditableTableSample> {
 
@@ -31,6 +36,7 @@ public class EditableTableSample extends BaseDominoElement<HTMLDivElement, Edita
     }
 
     public EditableTableSample() {
+
         TableConfig<Contact> tableConfig = new TableConfig<>();
         tableConfig
                 .addColumn(ColumnConfig.<Contact>create("edit_save", "")
@@ -160,7 +166,10 @@ public class EditableTableSample extends BaseDominoElement<HTMLDivElement, Edita
                         .addActionElement(new HeaderBarPlugin.CondenseTableAction<>())
                         .addActionElement(new HeaderBarPlugin.StripesTableAction<>())
                         .addActionElement(new HeaderBarPlugin.BordersTableAction<>())
-                );
+                )
+            .addPlugin(new RowClickPlugin<>(tableRow -> {
+              DomGlobal.console.info("CLICKING ON ROW ------------");
+            }));
 
         LocalListDataStore<Contact> localListDataStore = new LocalListDataStore<>();
         DataTable<Contact> table = new DataTable<>(tableConfig, localListDataStore);

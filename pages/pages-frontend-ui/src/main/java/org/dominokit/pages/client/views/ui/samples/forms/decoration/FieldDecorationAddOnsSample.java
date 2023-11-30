@@ -2,15 +2,19 @@ package org.dominokit.pages.client.views.ui.samples.forms.decoration;
 
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.*;
+import org.dominokit.domino.ui.forms.PasswordBox;
+import org.dominokit.domino.ui.forms.TextAreaBox;
+import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.Select;
 import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
-import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
+
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
 
 public class FieldDecorationAddOnsSample extends BaseDominoElement<HTMLDivElement, FieldDecorationAddOnsSample> {
 

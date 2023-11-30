@@ -6,6 +6,8 @@ import org.dominokit.domino.ui.progress.Progress;
 import org.dominokit.domino.ui.progress.ProgressBar;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class StripedProgressBarsSample extends BaseDominoElement<HTMLDivElement, StripedProgressBarsSample> {
 
     private DivElement element;

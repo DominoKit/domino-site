@@ -11,6 +11,8 @@ import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.domino.ui.utils.Separator;
 
+import static org.dominokit.domino.ui.utils.Domino.*;
+
 public class MenuSearchSample extends BaseDominoElement<HTMLDivElement, MenuSearchSample> {
 
     private DivElement element;

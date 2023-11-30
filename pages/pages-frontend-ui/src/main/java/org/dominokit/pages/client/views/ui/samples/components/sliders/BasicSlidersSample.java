@@ -1,14 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.sliders;
 
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.sliders.Slider;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
+
+import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicSlidersSample extends BaseDominoElement<HTMLDivElement, BasicSlidersSample> {
 
