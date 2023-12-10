@@ -24,17 +24,8 @@ public class BasicMenuSample extends BaseDominoElement<HTMLDivElement, BasicMenu
     }
 
     public BasicMenuSample() {
-        Menu<String> stringMenu = Menu.<String>create();
-        IntegerBox index = IntegerBox.create("index");
         this.element = div().addCss(dui_p_2)
-                .appendChild(Button.create("Append at").addClickListener(evt -> {
-                    stringMenu.insertChild(index.getValue(), MenuItem.<String>create("Item "+index.getValue())
-                            .setKey("new-key"+index.getValue())
-                            .withValue("new-value"+index.getValue())
-                    );
-                }))
-                .appendChild(index)
-                .appendChild(stringMenu
+                .appendChild(Menu.<String>create()
                         .addCss(dui_w_96)
                         .appendChild(MenuItem.<String>create("New ...")
                                 .setKey("new-key")

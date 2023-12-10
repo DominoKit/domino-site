@@ -5,6 +5,7 @@ import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
+import org.dominokit.domino.ui.forms.FormsStyles;
 import org.dominokit.domino.ui.forms.IntegerBox;
 import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.MultiSelect;
@@ -40,16 +41,10 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
     }
 
     public BasicFormsSelectSample() {
-        Select<String> select1 = Select.<String>create();
-        IntegerBox index = IntegerBox.create("index");
-        this.element = div().addCss(dui_p_2)
-                .appendChild(Button.create("Append at").addClickListener(evt -> {
-                    select1.insertChild(index.getValue(), SelectOption.create(""+index.getValue(), ""+index.getValue(), ""+index.getValue()));
-                }))
-                .appendChild(index)
+      this.element = div().addCss(dui_p_2)
                 .appendChild(Row.create()
                         .appendChild(Column.span6()
-                                .appendChild(select1
+                            .appendChild(Select.<String>create()
                                         .appendChild(SelectOption.create("nothing", null, "-- please select --"))
                                         .apply(self -> {
                                             for(int i=10; i<=300; i+=10){
@@ -153,7 +148,9 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                 .appendChild(BlockHeader.create("Grouping select"))
                                 .appendChild(Select.<String>create("Country")
                                         .group(group -> {
-                                                    group.withHeader((parent, header) -> header
+                                          group.withClickableElement(
+                                                  (parent, link) -> link.addCss(dui_blue))
+                                              .withHeader((parent, header) -> header
                                                             .appendChild(PrefixAddOn.of(Icons.map_marker()))
                                                             .appendChild(PostfixAddOn.of(Badge.create("5").addCss(dui_bg_d_2, dui_rounded_full)))
                                                             .addCss(dui_h_8, dui_blue)
@@ -167,10 +164,13 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                                 )
                                         )
                                         .group(group -> {
-                                                    group.withHeader((parent, header) -> header
+                                          group
+                                              .withClickableElement(
+                                                  (parent, link) -> link.addCss(dui_teal))
+                                              .withHeader((parent, header) -> header
                                                             .appendChild(PrefixAddOn.of(Icons.map_marker()))
                                                             .appendChild(PostfixAddOn.of(Badge.create("5").addCss(dui_bg_d_2, dui_rounded_full)))
-                                                            .addCss(dui_h_8, dui_teal)
+                                                      .addCss(dui_h_8)
                                                             .setTitle("Europe")
                                                     );
                                                 }, Arrays.asList(SelectOption.create("FRA", "FRA", "France"),
@@ -276,7 +276,8 @@ public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, Ba
                                     .addCss(dui_flex, dui_gap_1, dui_items_center)
                                     .appendChild(mdiIcon)
                                     .appendChild(span()
-                                            .addCss(dui_grow_1)
+                                        .setCssProperty("line-height", "1")
+                                        .addCss(dui_grow_1, dui_overflow_hidden, dui_text_ellipsis)
                                             .textContent(mdiIcon.getName()))
                                     .appendChild(Badge.create("version :" + mdiIcon.getMetaInfo().getVersion())
                                             .addCss(dui_rounded_full))
