@@ -4,6 +4,7 @@ import elemental2.dom.DomGlobal;
 import elemental2.dom.Element;
 import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.annotations.UiView;
+import org.dominokit.domino.history.StateToken;
 import org.dominokit.domino.ui.style.DominoCss;
 import org.dominokit.domino.view.BaseNoContentView;
 import org.dominokit.domino.view.slots.ElementIdSlot;
@@ -33,6 +34,7 @@ public class PagesViewImpl extends BaseNoContentView implements PagesView, Domin
             NavigationEnhancer.enhancePadding();
             registerSlots();
             handler.accept(null);
+            ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
         });
     }
 
