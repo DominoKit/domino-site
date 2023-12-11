@@ -25,6 +25,8 @@ public class AppClientModule implements EntryPoint {
         LOGGER.info("dominokit-site Application frontend have been initialized.");
         if (ClientApp.make().getHistory().currentToken().isEmpty()) {
             ClientApp.make().getHistory().fireState(StateToken.of("home"));
+        }else {
+          ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
         }
 
         ClientApp.make().getHistory()
