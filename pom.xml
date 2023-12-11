@@ -100,6 +100,10 @@
                     <version>1.0.1</version>
                     <extensions>true</extensions>
                     <configuration>
+                        <jvmArgs>
+                            <jvmArg>-Xms2048m</jvmArg>
+                            <jvmArg>-Xmx4096m</jvmArg>
+                        </jvmArgs>
                         <sourceLevel>${maven.compiler.source}</sourceLevel>
                         <compilerArgs>
                             <compilerArg>-XdisableCastChecking</compilerArg>

@@ -20,11 +20,13 @@ public abstract class SampleProxy extends ViewablePresenter<SampleView> implemen
 
     @ListenTo(event = ContentState.class)
     public void onContentReady(ContentState event){
+        DomGlobal.console.info(">Revealing sample view.");
         reveal();
     }
 
     @OnReveal
     public void renderSamples(){
+        DomGlobal.console.info("On reveal render samples -->");
         view.renderSamples();
     }
 }

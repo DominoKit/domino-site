@@ -24,9 +24,8 @@ public class SolutionContentLoader implements ContentLoader {
             view.replaceContent(content, container);
             view.enhancePadding();
             view.registerSlots();
-            DomGlobal.setTimeout(p0 -> {
-                DominoEvents.fire(ContentState.class, new ContentState(true));
-            }, 0);
+            DomGlobal.console.info("Firing content ready event :");
+            DominoEvents.fire(ContentState.class, new ContentState(true));
 
         });
     }

@@ -74,3 +74,4 @@ artifacts/**/*.*
 **/**/pom.xml.versionsBackup
 **/artifacts/*.*
 .mvn/*.*
+/dominokit-site-backend/file-uploads/

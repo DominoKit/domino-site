@@ -1,5 +1,5 @@
 {
   "http.port": 8080,
   "webroot": "dominokitsite",
-  "samples.branch": "docs"
+  "samples.branch": "main"
 }
