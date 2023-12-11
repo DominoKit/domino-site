@@ -11,7 +11,10 @@ public class EventStartUpTask implements ClientStartupTask {
   @Override
   public void execute() {
     ClientApp.make().addListener(ContentState.class,dominoEvent -> {
-      SampleProxy.ready = true;
+      if(SampleProxy.listen) {
+        SampleProxy.listen = false;
+        SampleProxy.ready = true;
+      }
     });
   }
 }

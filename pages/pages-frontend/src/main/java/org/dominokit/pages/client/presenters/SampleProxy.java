@@ -15,6 +15,7 @@ import javax.annotation.PostConstruct;
 public abstract class SampleProxy extends ViewablePresenter<SampleView> implements SampleView.SampleUiHandlers {
 
     public static boolean ready = false;
+    public static boolean listen = true;
 
     @PostConstruct
     public void onPostConstruct() {
@@ -22,6 +23,8 @@ public abstract class SampleProxy extends ViewablePresenter<SampleView> implemen
         activate();
         if(ready){
             reveal();
+            listen= false;
+            ready= false;
         }
     }
 
