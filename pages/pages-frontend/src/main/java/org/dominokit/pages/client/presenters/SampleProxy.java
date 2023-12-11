@@ -21,11 +21,11 @@ public abstract class SampleProxy extends ViewablePresenter<SampleView> implemen
     public void onPostConstruct() {
         DomGlobal.console.info(">Activating sample view.");
         activate();
-        if(ready){
+//        if(ready){
             reveal();
-            listen= false;
-            ready= false;
-        }
+//            listen= false;
+//            ready= false;
+//        }
     }
 
     @ListenTo(event = ContentState.class)
