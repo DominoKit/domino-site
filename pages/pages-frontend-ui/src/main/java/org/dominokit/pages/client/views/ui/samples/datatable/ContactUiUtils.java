@@ -1,5 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.datatable;
 
+import static org.dominokit.domino.ui.style.SpacingCss.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_brown;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green;
+
 import elemental2.dom.HTMLElement;
 import org.dominokit.domino.ui.icons.Icon;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -10,9 +15,6 @@ import org.dominokit.domino.ui.style.ColorScheme;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.EyeColor;
 import org.dominokit.pages.shared.model.Gender;
-
-import static org.dominokit.domino.ui.style.SpacingCss.dui_m_0;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 
 public class ContactUiUtils {

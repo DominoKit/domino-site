@@ -1,11 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.datatable;
 
 
+import java.util.Comparator;
 import org.dominokit.domino.ui.datatable.plugins.pagination.SortDirection;
 import org.dominokit.domino.ui.datatable.store.RecordsSorter;
 import org.dominokit.pages.shared.model.Contact;
-
-import java.util.Comparator;
 
 public class ContactSorter implements RecordsSorter<Contact> {
     @Override

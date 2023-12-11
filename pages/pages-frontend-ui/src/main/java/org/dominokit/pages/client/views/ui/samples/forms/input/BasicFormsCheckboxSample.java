@@ -1,14 +1,23 @@
 package org.dominokit.pages.client.views.ui.samples.forms.input;
 
+import static org.dominokit.domino.ui.grid.Column.Span._2;
+import static org.dominokit.domino.ui.grid.Column.Span._3;
+import static org.dominokit.domino.ui.grid.Column.Span._6;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_deep_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.h;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.CheckBox;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.grid.Column.Span.*;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicFormsCheckboxSample extends BaseDominoElement<HTMLDivElement, BasicFormsCheckboxSample> {
 

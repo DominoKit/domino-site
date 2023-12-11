@@ -1,8 +1,17 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.editable;
 
+import static org.dominokit.domino.ui.forms.FormsStyles.dui_form_select_check_box;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_hide_label;
+import static org.dominokit.domino.ui.utils.Domino.dui_min_w_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.DomGlobal;
-import elemental2.dom.Event;
-import elemental2.dom.EventListener;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
@@ -13,7 +22,11 @@ import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.row.RowClickPlugin;
 import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.*;
+import org.dominokit.domino.ui.forms.CheckBox;
+import org.dominokit.domino.ui.forms.DoubleBox;
+import org.dominokit.domino.ui.forms.EmailBox;
+import org.dominokit.domino.ui.forms.TelephoneBox;
+import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.Select;
 import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -23,9 +36,6 @@ import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
 import org.dominokit.pages.shared.model.EyeColor;
 import org.dominokit.pages.shared.model.Gender;
-
-import static org.dominokit.domino.ui.forms.FormsStyles.dui_form_select_check_box;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class EditableTableSample extends BaseDominoElement<HTMLDivElement, EditableTableSample> {
 

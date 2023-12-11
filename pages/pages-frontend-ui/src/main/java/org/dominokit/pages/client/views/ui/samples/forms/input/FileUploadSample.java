@@ -1,5 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.forms.input;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_error;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_b_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_min_h_32;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_warning;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -8,8 +19,6 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.upload.DefaultFileUploadDecoration;
 import org.dominokit.domino.ui.upload.FileUpload;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class FileUploadSample extends BaseDominoElement<HTMLDivElement, FileUploadSample> {
 

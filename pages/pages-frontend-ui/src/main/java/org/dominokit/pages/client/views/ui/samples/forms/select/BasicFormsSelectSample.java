@@ -1,12 +1,33 @@
 package org.dominokit.pages.client.views.ui.samples.forms.select;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_elevation_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_2px;
+import static org.dominokit.domino.ui.utils.Domino.dui_overflow_hidden;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_x_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_sm;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_ellipsis;
+import static org.dominokit.domino.ui.utils.Domino.span;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Arrays;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.FormsStyles;
-import org.dominokit.domino.ui.forms.IntegerBox;
 import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.MultiSelect;
 import org.dominokit.domino.ui.forms.suggest.Select;
@@ -18,7 +39,6 @@ import org.dominokit.domino.ui.icons.MdiIcon;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.icons.lib.IconsMeta;
 import org.dominokit.domino.ui.menu.CustomMenuItem;
-import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.popover.Popover;
@@ -26,11 +46,6 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-import static org.dominokit.domino.ui.utils.Domino.*;
-
-import java.util.Arrays;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicFormsSelectSample extends BaseDominoElement<HTMLDivElement, BasicFormsSelectSample> {
 

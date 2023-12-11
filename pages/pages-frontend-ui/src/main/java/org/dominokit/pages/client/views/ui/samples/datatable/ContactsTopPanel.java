@@ -1,6 +1,7 @@
 package org.dominokit.pages.client.views.ui.samples.datatable;
 
 import elemental2.dom.HTMLElement;
+import java.util.List;
 import org.dominokit.domino.ui.IsElement;
 import org.dominokit.domino.ui.datatable.events.TableDataUpdatedEvent;
 import org.dominokit.domino.ui.grid.Row;
@@ -11,8 +12,6 @@ import org.dominokit.domino.ui.style.DisplayCss;
 import org.dominokit.domino.ui.style.SpacingCss;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.Gender;
-
-import java.util.List;
 
 public class ContactsTopPanel<T> implements IsElement<HTMLElement> {
 

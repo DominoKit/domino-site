@@ -1,6 +1,63 @@
 package org.dominokit.pages.client.views.ui.samples.layouts.flex;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_d_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_row;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_11;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_7;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_9;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_start;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_20;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_30;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_40;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_50;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_60;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_70;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_baseline;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_end;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_start;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_stretch;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_11;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_7;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_shrink_9;
+import static org.dominokit.domino.ui.utils.Domino.h;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.HashMap;
+import java.util.Map;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.Radio;
 import org.dominokit.domino.ui.forms.RadioGroup;
@@ -11,11 +68,6 @@ import org.dominokit.domino.ui.sliders.Slider;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.style.LimitOneOfCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class FlexItemPlayground extends BaseDominoElement<HTMLDivElement, FlexItemPlayground> {
 

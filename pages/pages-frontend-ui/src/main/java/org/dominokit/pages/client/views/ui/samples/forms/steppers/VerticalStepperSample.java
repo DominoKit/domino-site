@@ -1,10 +1,35 @@
 package org.dominokit.pages.client.views.ui.samples.forms.steppers;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_success;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_32;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_l_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_r_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_reversed;
+import static org.dominokit.domino.ui.utils.Domino.dui_success;
+import static org.dominokit.domino.ui.utils.Domino.dui_vertical;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_24;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Objects;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.events.CustomEvents;
-import org.dominokit.domino.ui.forms.*;
+import org.dominokit.domino.ui.forms.EmailBox;
+import org.dominokit.domino.ui.forms.FieldsGrouping;
+import org.dominokit.domino.ui.forms.PasswordBox;
+import org.dominokit.domino.ui.forms.TelephoneBox;
+import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.validations.ValidationResult;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.stepper.Step;
@@ -13,10 +38,6 @@ import org.dominokit.domino.ui.stepper.Stepper;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import java.util.Objects;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class VerticalStepperSample extends BaseDominoElement<HTMLDivElement, VerticalStepperSample> {
 

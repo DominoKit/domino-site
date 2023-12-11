@@ -1,9 +1,27 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.tree;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.p;
+import static org.dominokit.domino.ui.utils.Domino.td;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import elemental2.dom.HTMLTableCellElement;
+import java.util.Collections;
+import java.util.Optional;
 import org.dominokit.domino.ui.badges.Badge;
-import org.dominokit.domino.ui.datatable.*;
+import org.dominokit.domino.ui.datatable.CellRenderer;
+import org.dominokit.domino.ui.datatable.CellTextAlign;
+import org.dominokit.domino.ui.datatable.ColumnConfig;
+import org.dominokit.domino.ui.datatable.DataTable;
+import org.dominokit.domino.ui.datatable.RowCell;
+import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.marker.RowMarkerPlugin;
 import org.dominokit.domino.ui.datatable.plugins.pagination.SortPlugin;
@@ -18,11 +36,6 @@ import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.client.views.ui.samples.datatable.details.ContactDetails;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
-
-import java.util.Collections;
-import java.util.Optional;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LazyTreeTableFullSpanSample extends BaseDominoElement<HTMLDivElement, LazyTreeTableFullSpanSample> {
 

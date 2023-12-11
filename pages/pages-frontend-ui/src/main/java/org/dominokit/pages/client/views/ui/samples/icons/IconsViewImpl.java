@@ -1,9 +1,41 @@
 package org.dominokit.pages.client.views.ui.samples.icons;
 
+import static java.util.Objects.isNull;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_black;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_clickable;
+import static org.dominokit.domino.ui.utils.Domino.dui_elevation_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_14;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_info;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_b_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_md;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.input;
+
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.RunAsyncCallback;
+import elemental2.dom.ClipboardEvent;
+import elemental2.dom.DomGlobal;
 import elemental2.dom.EventListener;
-import elemental2.dom.*;
+import elemental2.dom.HTMLDivElement;
+import elemental2.dom.HTMLElement;
+import elemental2.dom.HTMLInputElement;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import jsinterop.base.Js;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.ui.IsElement;
@@ -27,13 +59,6 @@ import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.view.BaseElementView;
 import org.dominokit.pages.client.presenters.samples.icons.IconsProxy;
 import org.dominokit.pages.client.views.IconsView;
-
-import java.util.*;
-import java.util.function.Supplier;
-import java.util.stream.Collectors;
-
-import static java.util.Objects.isNull;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 @UiView(presentable = IconsProxy.class)
 public class IconsViewImpl extends BaseElementView<HTMLDivElement> implements IconsView {

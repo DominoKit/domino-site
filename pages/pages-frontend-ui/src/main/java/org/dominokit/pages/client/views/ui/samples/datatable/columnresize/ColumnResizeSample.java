@@ -1,5 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.columnresize;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.span;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
@@ -15,8 +24,6 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ColumnResizeSample extends BaseDominoElement<HTMLDivElement, ColumnResizeSample> {
 

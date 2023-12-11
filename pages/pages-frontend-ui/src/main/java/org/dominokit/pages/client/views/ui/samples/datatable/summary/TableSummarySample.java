@@ -1,6 +1,19 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.summary;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.elementOf;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Arrays;
+import java.util.List;
+import java.util.OptionalDouble;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
 import org.dominokit.domino.ui.datatable.ColumnConfig;
@@ -18,12 +31,6 @@ import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactSummary;
 import org.dominokit.pages.shared.model.ContactsProvider;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalDouble;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TableSummarySample extends BaseDominoElement<HTMLDivElement, TableSummarySample> {
 

@@ -1,5 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.layouts.gridlayout;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_accent_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_elevation_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_center;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.span;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -11,8 +22,6 @@ import org.dominokit.domino.ui.grid.SectionSpan;
 import org.dominokit.domino.ui.sliders.Slider;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class GridLayoutSample extends BaseDominoElement<HTMLDivElement, GridLayoutSample> {
 

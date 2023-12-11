@@ -1,5 +1,13 @@
 package org.dominokit.pages.client.views.ui.samples.forms.steppers;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
@@ -9,8 +17,6 @@ import org.dominokit.domino.ui.stepper.StepTracker;
 import org.dominokit.domino.ui.stepper.StepperTrack;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class HorizontalTrackSample extends BaseDominoElement<HTMLDivElement, HorizontalTrackSample> {
 

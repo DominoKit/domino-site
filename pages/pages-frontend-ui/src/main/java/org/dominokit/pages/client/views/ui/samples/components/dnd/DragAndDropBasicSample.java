@@ -1,5 +1,22 @@
 package org.dominokit.pages.client.views.ui.samples.components.dnd;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_72;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_72;
+import static org.dominokit.domino.ui.utils.Domino.dui_yellow;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.dnd.DragSource;
 import org.dominokit.domino.ui.dnd.Draggable;
@@ -7,8 +24,6 @@ import org.dominokit.domino.ui.dnd.DropZone;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class DragAndDropBasicSample extends BaseDominoElement<HTMLDivElement, DragAndDropBasicSample> {
 

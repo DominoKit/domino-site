@@ -1,5 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.tabs;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
@@ -7,8 +16,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.tabs.Tab;
 import org.dominokit.domino.ui.tabs.TabsPanel;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ColoredTabsSample extends BaseDominoElement<HTMLDivElement, ColoredTabsSample> {
 

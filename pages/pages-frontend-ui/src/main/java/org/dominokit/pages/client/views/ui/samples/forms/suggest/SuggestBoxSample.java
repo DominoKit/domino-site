@@ -1,29 +1,36 @@
 package org.dominokit.pages.client.views.ui.samples.forms.suggest;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+
 import elemental2.core.Global;
 import elemental2.core.JsArray;
 import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
 import elemental2.dom.Response;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.Consumer;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.elements.SpanElement;
 import org.dominokit.domino.ui.forms.TextBox;
-import org.dominokit.domino.ui.forms.suggest.*;
+import org.dominokit.domino.ui.forms.suggest.LocalSuggestionsStore;
+import org.dominokit.domino.ui.forms.suggest.MultiSuggestBox;
+import org.dominokit.domino.ui.forms.suggest.SuggestBox;
+import org.dominokit.domino.ui.forms.suggest.SuggestOption;
+import org.dominokit.domino.ui.forms.suggest.SuggestionsStore;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Consumer;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class SuggestBoxSample extends BaseDominoElement<HTMLDivElement, SuggestBoxSample> {
 

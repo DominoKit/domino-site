@@ -1,13 +1,19 @@
 package org.dominokit.pages.client.views.ui.samples.layouts.grids;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_center;
+import static org.dominokit.domino.ui.utils.Domino.span;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class Grid16ColumnsSample extends BaseDominoElement<HTMLDivElement, Grid16ColumnsSample> {
 

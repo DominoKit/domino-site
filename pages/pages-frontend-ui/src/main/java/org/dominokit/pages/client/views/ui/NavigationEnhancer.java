@@ -394,8 +394,14 @@ public class NavigationEnhancer implements DominoCss, ElementsFactory {
             menuActiveELementCss.apply(activeAnchor);
             String subMenuId = activeAnchor.getAttribute("dui-sub-menu-id");
             if (nonNull(subMenuId)) {
-                activeSubMenuCss.apply(document.getElementById(subMenuId)
-                        .querySelector(".dui-site-docs-sub-menu"));
+              Element subMenu = document.getElementById(subMenuId);
+              if(nonNull(subMenu)) {
+                Element siteDocsSubMenu = subMenu
+                    .querySelector(".dui-site-docs-sub-menu");
+                if(nonNull(siteDocsSubMenu)) {
+                  activeSubMenuCss.apply(siteDocsSubMenu);
+                }
+              }
             }
         }
     }

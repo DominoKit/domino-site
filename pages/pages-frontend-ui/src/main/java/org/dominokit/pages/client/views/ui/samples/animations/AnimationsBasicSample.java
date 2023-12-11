@@ -1,5 +1,15 @@
 package org.dominokit.pages.client.views.ui.samples.animations;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_image_responsive;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_large;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.img;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.animations.Animation;
 import org.dominokit.domino.ui.animations.Transition;
@@ -10,8 +20,6 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.style.Style;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, AnimationsBasicSample> {
 

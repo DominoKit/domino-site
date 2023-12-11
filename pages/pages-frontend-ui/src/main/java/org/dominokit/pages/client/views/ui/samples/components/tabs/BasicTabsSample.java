@@ -1,5 +1,10 @@
 package org.dominokit.pages.client.views.ui.samples.components.tabs;
 
+import static org.dominokit.domino.ui.utils.Domino.b;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.icons.lib.Icons;
@@ -9,8 +14,6 @@ import org.dominokit.domino.ui.tabs.TabsPanel;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicTabsSample extends BaseDominoElement<HTMLDivElement, BasicTabsSample> {
 

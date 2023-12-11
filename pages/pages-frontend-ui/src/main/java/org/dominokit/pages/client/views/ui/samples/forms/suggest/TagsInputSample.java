@@ -1,7 +1,19 @@
 package org.dominokit.pages.client.views.ui.samples.forms.suggest;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.core.JsRegExp;
 import elemental2.dom.HTMLDivElement;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
 import org.dominokit.domino.ui.chips.Chip;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.suggest.OrderedSuggestionsStore;
@@ -12,13 +24,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TagsInputSample extends BaseDominoElement<HTMLDivElement, TagsInputSample> {
 

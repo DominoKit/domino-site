@@ -1,5 +1,27 @@
 package org.dominokit.pages.client.views.ui.samples.components.spin;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_brown;
+import static org.dominokit.domino.ui.utils.Domino.dui_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_min_h_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_12;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Row;
@@ -7,8 +29,6 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.spin.SpinItem;
 import org.dominokit.domino.ui.spin.VSpinSelect;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class VerticalSpinSample extends BaseDominoElement<HTMLDivElement, VerticalSpinSample> {
 

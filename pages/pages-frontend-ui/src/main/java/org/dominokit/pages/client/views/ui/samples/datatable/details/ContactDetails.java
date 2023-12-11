@@ -1,5 +1,12 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.details;
 
+import static org.dominokit.domino.ui.utils.Domino.a;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.elementOf;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.datatable.CellRenderer;
 import org.dominokit.domino.ui.datatable.TableRow;
@@ -11,8 +18,6 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ContactDetails extends BaseDominoElement<HTMLDivElement, ContactDetails> {
 

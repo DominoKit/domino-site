@@ -1,5 +1,20 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.grouping;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_d_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_accent_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.elementOf;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
@@ -15,8 +30,6 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class GroupingDataTableSample extends BaseDominoElement<HTMLDivElement, GroupingDataTableSample> {
 

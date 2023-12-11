@@ -1,17 +1,26 @@
 package org.dominokit.pages.client.views.ui.samples.forms.decoration;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_error;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.*;
+import org.dominokit.domino.ui.forms.CheckBox;
+import org.dominokit.domino.ui.forms.FieldsGrouping;
+import org.dominokit.domino.ui.forms.PasswordBox;
+import org.dominokit.domino.ui.forms.Radio;
+import org.dominokit.domino.ui.forms.RadioGroup;
+import org.dominokit.domino.ui.forms.TextAreaBox;
+import org.dominokit.domino.ui.forms.TextBox;
 import org.dominokit.domino.ui.forms.suggest.Select;
 import org.dominokit.domino.ui.forms.suggest.SelectOption;
 import org.dominokit.domino.ui.forms.validations.ValidationResult;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class FieldDecorationValidationSample extends BaseDominoElement<HTMLDivElement, FieldDecorationValidationSample> {
 

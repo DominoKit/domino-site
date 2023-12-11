@@ -1,5 +1,19 @@
 package org.dominokit.pages.client.views.ui.samples.colors;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_elevation_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_sm;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_full;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.api.client.annotations.UiView;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -10,8 +24,6 @@ import org.dominokit.domino.ui.style.ColorScheme;
 import org.dominokit.domino.view.BaseElementView;
 import org.dominokit.pages.client.presenters.samples.colors.ColorsProxy;
 import org.dominokit.pages.client.views.ColorsView;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 @UiView(presentable = ColorsProxy.class)
 public class ColorsViewImpl extends BaseElementView<HTMLDivElement> implements ColorsView {

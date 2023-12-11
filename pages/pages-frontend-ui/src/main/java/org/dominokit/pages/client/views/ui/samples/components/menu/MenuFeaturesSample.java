@@ -1,5 +1,17 @@
 package org.dominokit.pages.client.views.ui.samples.components.menu;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_hover_disabled;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_96;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -8,9 +20,11 @@ import org.dominokit.domino.ui.menu.CustomMenuItem;
 import org.dominokit.domino.ui.menu.Menu;
 import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.notifications.Notification;
-import org.dominokit.domino.ui.utils.*;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
+import org.dominokit.domino.ui.utils.BaseDominoElement;
+import org.dominokit.domino.ui.utils.PostfixAddOn;
+import org.dominokit.domino.ui.utils.PrefixAddOn;
+import org.dominokit.domino.ui.utils.Separator;
+import org.dominokit.domino.ui.utils.SubheaderAddon;
 
 public class MenuFeaturesSample extends BaseDominoElement<HTMLDivElement, MenuFeaturesSample> {
 

@@ -1,9 +1,12 @@
 package org.dominokit.pages.client.views.ui.samples.components.menu;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_96;
+
 import elemental2.dom.HTMLDivElement;
-import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
-import org.dominokit.domino.ui.forms.IntegerBox;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.menu.Menu;
 import org.dominokit.domino.ui.menu.MenuItem;
@@ -12,8 +15,6 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
 import org.dominokit.domino.ui.utils.Separator;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicMenuSample extends BaseDominoElement<HTMLDivElement, BasicMenuSample> {
 

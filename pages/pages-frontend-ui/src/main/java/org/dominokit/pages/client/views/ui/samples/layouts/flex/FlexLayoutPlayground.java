@@ -1,6 +1,37 @@
 package org.dominokit.pages.client.views.ui.samples.layouts.flex;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col_reverse;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_nowrap;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_row;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_row_reverse;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_wrap;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_wrap_reverse;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_right;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_96;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_baseline;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_end;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_start;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_stretch;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_around;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_between;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_end;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_evenly;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_start;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_r_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.h;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.ArrayList;
+import java.util.List;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.forms.Radio;
@@ -10,11 +41,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.style.LimitOneOfCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class FlexLayoutPlayground extends BaseDominoElement<HTMLDivElement, FlexLayoutPlayground> {
 

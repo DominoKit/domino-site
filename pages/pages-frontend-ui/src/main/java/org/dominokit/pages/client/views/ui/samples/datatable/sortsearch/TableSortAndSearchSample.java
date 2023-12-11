@@ -1,5 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.datatable.sortsearch;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_dominant_d_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_float_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_max_w_64;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_md;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.datatable.CellTextAlign;
@@ -8,7 +19,11 @@ import org.dominokit.domino.ui.datatable.DataTable;
 import org.dominokit.domino.ui.datatable.TableConfig;
 import org.dominokit.domino.ui.datatable.plugins.column.ColumnFilterMeta;
 import org.dominokit.domino.ui.datatable.plugins.column.ColumnHeaderFilterPlugin;
-import org.dominokit.domino.ui.datatable.plugins.filter.header.*;
+import org.dominokit.domino.ui.datatable.plugins.filter.header.BooleanHeaderFilter;
+import org.dominokit.domino.ui.datatable.plugins.filter.header.DoubleHeaderFilter;
+import org.dominokit.domino.ui.datatable.plugins.filter.header.EnumHeaderFilter;
+import org.dominokit.domino.ui.datatable.plugins.filter.header.SelectHeaderFilter;
+import org.dominokit.domino.ui.datatable.plugins.filter.header.TextHeaderFilter;
 import org.dominokit.domino.ui.datatable.plugins.header.HeaderBarPlugin;
 import org.dominokit.domino.ui.datatable.plugins.pagination.SortPlugin;
 import org.dominokit.domino.ui.datatable.store.LocalListDataStore;
@@ -22,8 +37,6 @@ import org.dominokit.pages.client.views.ui.samples.datatable.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.ContactsProvider;
 import org.dominokit.pages.shared.model.Gender;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TableSortAndSearchSample extends BaseDominoElement<HTMLDivElement, TableSortAndSearchSample> {
 

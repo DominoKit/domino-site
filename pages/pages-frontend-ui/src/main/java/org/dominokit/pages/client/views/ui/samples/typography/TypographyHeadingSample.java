@@ -1,10 +1,13 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyHeadingSample extends BaseDominoElement<HTMLDivElement, TypographyHeadingSample> {
 

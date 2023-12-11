@@ -1,5 +1,8 @@
 package org.dominokit.pages.client.views.ui.samples.datatable;
 
+import static java.util.Objects.nonNull;
+
+import java.util.List;
 import org.dominokit.domino.ui.datatable.events.SearchEvent;
 import org.dominokit.domino.ui.datatable.model.Category;
 import org.dominokit.domino.ui.datatable.model.Filter;
@@ -7,10 +10,6 @@ import org.dominokit.domino.ui.datatable.store.SearchFilter;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.model.EyeColor;
 import org.dominokit.pages.shared.model.Gender;
-
-import java.util.List;
-
-import static java.util.Objects.nonNull;
 
 public class ContactSearchFilter implements SearchFilter<Contact> {
     @Override

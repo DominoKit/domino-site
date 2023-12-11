@@ -1,5 +1,11 @@
 package org.dominokit.pages.client.views.ui.samples.components.tabs;
 
+import static org.dominokit.domino.ui.utils.Domino.b;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -8,8 +14,6 @@ import org.dominokit.domino.ui.tabs.Tab;
 import org.dominokit.domino.ui.tabs.TabsPanel;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ClosableTabsSample extends BaseDominoElement<HTMLDivElement, ClosableTabsSample> {
 

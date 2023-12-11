@@ -1,5 +1,22 @@
 package org.dominokit.pages.client.views.ui.samples.forms.steppers;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_l_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_vertical;
+import static org.dominokit.domino.ui.utils.Domino.p;
+import static org.dominokit.domino.ui.utils.Domino.span;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -13,8 +30,6 @@ import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class VerticalTrackSample extends BaseDominoElement<HTMLDivElement, VerticalTrackSample> {
 

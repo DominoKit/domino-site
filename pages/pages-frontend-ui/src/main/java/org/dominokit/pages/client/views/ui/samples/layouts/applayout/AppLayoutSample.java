@@ -1,5 +1,23 @@
 package org.dominokit.pages.client.views.ui.samples.layouts.applayout;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_dominant_d_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_b;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_wrap;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_14;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_between;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_56;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
@@ -12,8 +30,6 @@ import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class AppLayoutSample extends BaseDominoElement<HTMLDivElement, AppLayoutSample> {
 
