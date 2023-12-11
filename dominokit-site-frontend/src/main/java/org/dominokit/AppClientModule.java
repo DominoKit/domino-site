@@ -23,14 +23,15 @@ public class AppClientModule implements EntryPoint {
         DominoRestConfig.initDefaults();
         DominoGWT.init(DominoViewOptions.getInstance());
         DominoThemeManager.INSTANCE.applyUserThemes();
-        ClientApp.make().run();
-        LOGGER.info("dominokit-site Application frontend have been initialized.");
-        if (ClientApp.make().getHistory().currentToken().isEmpty()) {
+        ClientApp.make().run(dominoOptions -> dominoOptions.setApplicationStartHandler(() -> {
+          LOGGER.info("dominokit-site Application frontend have been initialized.");
+          if (ClientApp.make().getHistory().currentToken().isEmpty()) {
             ClientApp.make().getHistory().fireState(StateToken.of("home"));
-        }else {
-          ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
-          DominoEvents.fire(ContentState.class, new ContentState(true));
-        }
+          }else {
+            ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
+            DominoEvents.fire(ContentState.class, new ContentState(true));
+          }
+        }));
 
         ClientApp.make().getHistory()
                 .listen(TokenFilter.startsWithPathFilter("solutions/:solution/:version/docs"), state -> {

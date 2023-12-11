@@ -15,6 +15,7 @@ public abstract class SampleProxy extends ViewablePresenter<SampleView> implemen
 
     @PostConstruct
     public void onPostConstruct() {
+        DomGlobal.console.info(">Activating sample view.");
         activate();
     }
 
