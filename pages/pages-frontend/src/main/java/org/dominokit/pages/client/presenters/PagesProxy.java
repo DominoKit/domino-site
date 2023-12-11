@@ -4,6 +4,7 @@ import org.dominokit.domino.api.client.annotations.presenter.*;
 import org.dominokit.domino.api.client.mvp.presenter.ViewablePresenter;
 import org.dominokit.domino.api.shared.extension.PredefinedSlots;
 import org.dominokit.domino.history.DominoHistory;
+import org.dominokit.pages.client.presenters.samples.SiteEvents;
 import org.dominokit.pages.client.views.PagesView;
 import org.dominokit.pages.shared.events.ContentState;
 import org.slf4j.Logger;
@@ -34,7 +35,7 @@ public class PagesProxy extends ViewablePresenter<PagesView> implements PagesVie
     public void onPagesRevealed() {
         LOGGER.info("Enhancing view ==============================");
         view.enhance(unused -> {
-            fireEvent(ContentState.class, new ContentState(true));
+            SiteEvents.fireContentEvent();
         });
     }
 
