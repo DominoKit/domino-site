@@ -1,5 +1,6 @@
 package org.dominokit.pages.client.presenters;
 
+import dominoaggregate.shaded.com.apache.commons.lang3.concurrent.LazyInitializer;
 import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.annotations.presenter.ListenTo;
 import org.dominokit.domino.api.client.annotations.presenter.OnReveal;
@@ -12,6 +13,7 @@ import javax.annotation.PostConstruct;
 
 @Slot("dui-demo-sample-slot")
 public abstract class SampleProxy extends ViewablePresenter<SampleView> implements SampleView.SampleUiHandlers {
+
 
     @PostConstruct
     public void onPostConstruct() {

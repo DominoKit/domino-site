@@ -21,6 +21,7 @@ public class AppClientModule implements EntryPoint {
         DominoRestConfig.initDefaults();
         DominoGWT.init(DominoViewOptions.getInstance());
         DominoThemeManager.INSTANCE.applyUserThemes();
+
         ClientApp.make().run();
         LOGGER.info("dominokit-site Application frontend have been initialized.");
         if (ClientApp.make().getHistory().currentToken().isEmpty()) {

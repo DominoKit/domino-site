@@ -3,6 +3,7 @@ package org.dominokit.pages.client.presenters;
 import elemental2.dom.DomGlobal;
 import org.dominokit.domino.api.client.extension.DominoEvents;
 import org.dominokit.domino.history.HistoryToken;
+import org.dominokit.pages.client.presenters.samples.SiteEvents;
 import org.dominokit.pages.client.views.PagesView;
 import org.dominokit.pages.shared.events.ContentState;
 
@@ -25,8 +26,7 @@ public class SolutionContentLoader implements ContentLoader {
             view.replaceContent(content, container);
             view.enhancePadding();
             view.registerSlots();
-            DomGlobal.console.info("Firing content ready event :");
-            DominoEvents.fire(ContentState.class, new ContentState(true));
+            SiteEvents.fireContentEvent();
 
         });
     }
