@@ -14,11 +14,15 @@ import javax.annotation.PostConstruct;
 @Slot("dui-demo-sample-slot")
 public abstract class SampleProxy extends ViewablePresenter<SampleView> implements SampleView.SampleUiHandlers {
 
+    public static boolean ready = false;
 
     @PostConstruct
     public void onPostConstruct() {
         DomGlobal.console.info(">Activating sample view.");
         activate();
+        if(ready){
+            reveal();
+        }
     }
 
     @ListenTo(event = ContentState.class)
