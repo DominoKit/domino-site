@@ -1,15 +1,24 @@
 package org.dominokit.pages.client.views.ui.samples.components.collapsible;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_y_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.animations.Transition;
 import org.dominokit.domino.ui.button.Button;
-import org.dominokit.domino.ui.collapsible.*;
+import org.dominokit.domino.ui.collapsible.AnimationCollapseStrategy;
+import org.dominokit.domino.ui.collapsible.Collapsible;
+import org.dominokit.domino.ui.collapsible.CollapsibleDuration;
+import org.dominokit.domino.ui.collapsible.DisplayCollapseStrategy;
+import org.dominokit.domino.ui.collapsible.HeightCollapseStrategy;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class CollapsibleStrategySample extends BaseDominoElement<HTMLDivElement, CollapsibleStrategySample> {
 

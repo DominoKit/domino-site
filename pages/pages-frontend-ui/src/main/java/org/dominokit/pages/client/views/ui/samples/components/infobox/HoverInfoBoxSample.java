@@ -1,5 +1,19 @@
 package org.dominokit.pages.client.views.ui.samples.components.infobox;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_deep_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_deep_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_light_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_lime;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_lg;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
@@ -7,8 +21,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.infoboxes.InfoBox;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class HoverInfoBoxSample extends BaseDominoElement<HTMLDivElement, HoverInfoBoxSample> {
     private DivElement element;

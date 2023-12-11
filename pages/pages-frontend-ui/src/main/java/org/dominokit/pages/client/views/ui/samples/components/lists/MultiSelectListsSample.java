@@ -1,6 +1,25 @@
 package org.dominokit.pages.client.views.ui.samples.components.lists;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_l_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_16;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_opacity_50;
+import static org.dominokit.domino.ui.utils.Domino.dui_order_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_self_stretch;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_16;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.span;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Random;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.lists.ListGroup;
@@ -9,10 +28,6 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.pages.client.views.ui.ContactUiUtils;
 import org.dominokit.pages.shared.model.Contact;
 import org.dominokit.pages.shared.service.DemoServiceFactory;
-
-import java.util.Random;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class MultiSelectListsSample extends BaseDominoElement<HTMLDivElement, MultiSelectListsSample> {
 

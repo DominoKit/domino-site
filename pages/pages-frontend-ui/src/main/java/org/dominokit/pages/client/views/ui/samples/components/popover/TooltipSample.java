@@ -1,13 +1,15 @@
 package org.dominokit.pages.client.views.ui.samples.components.popover;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TooltipSample extends BaseDominoElement<HTMLDivElement, TooltipSample> {
 

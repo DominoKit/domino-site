@@ -1,5 +1,27 @@
 package org.dominokit.pages.client.views.ui.samples.components.dialogs;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_orange_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_orange_l_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_teal_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_error;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_info;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_warning;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_32;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_32;
+import static org.dominokit.domino.ui.utils.Domino.dui_h_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_image_responsive;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_auto;
+import static org.dominokit.domino.ui.utils.Domino.dui_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_32;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import com.google.gwt.core.client.GWT;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.animations.Transition;
@@ -15,8 +37,6 @@ import org.dominokit.domino.ui.layout.NavBar;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicDialogsSample extends BaseDominoElement<HTMLDivElement, BasicDialogsSample> {
 

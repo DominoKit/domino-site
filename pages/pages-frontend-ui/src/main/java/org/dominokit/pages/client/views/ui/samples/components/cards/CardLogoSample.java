@@ -1,5 +1,13 @@
 package org.dominokit.pages.client.views.ui.samples.components.cards;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.cards.HeaderPosition;
@@ -10,8 +18,6 @@ import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class CardLogoSample extends BaseDominoElement<HTMLDivElement, CardLogoSample> {
 

@@ -1,5 +1,22 @@
 package org.dominokit.pages.client.views.ui.samples.components.collapsible;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_orange_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_primary_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_teal_d_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_success;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_28;
+import static org.dominokit.domino.ui.utils.Domino.dui_warning;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.button.Button;
@@ -11,8 +28,6 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.domino.ui.utils.PrefixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class MultiOpenAccordionSample extends BaseDominoElement<HTMLDivElement, MultiOpenAccordionSample> {
 

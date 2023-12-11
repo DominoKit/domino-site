@@ -1,5 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.thumbnails;
 
+import static org.dominokit.domino.ui.utils.Domino.a;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_image_responsive;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.img;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -8,8 +17,6 @@ import org.dominokit.domino.ui.thumbnails.Thumbnail;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.FooterContent;
 import org.dominokit.domino.ui.utils.HeaderContent;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ThumbnailsTitleSample extends BaseDominoElement<HTMLDivElement, ThumbnailsTitleSample> {
 

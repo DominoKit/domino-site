@@ -1,11 +1,58 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.b;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_0_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_11;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_12;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_14;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_16;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_1_2p;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_1_3p;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_1_4p;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_1_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_20;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_24;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_28;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_2_3p;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_2_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_2px;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_32;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_36;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_3_4p;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_3_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_40;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_44;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_48;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_4px;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_52;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_56;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_60;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_64;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_7;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_72;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_80;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_8px;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_9;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_96;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_size_px;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyFontSizeSample extends BaseDominoElement<HTMLDivElement, TypographyFontSizeSample> {
 

@@ -1,12 +1,41 @@
 package org.dominokit.pages.client.views.ui.samples.components.labels;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_deep_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_error;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_wrap;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_info;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_light_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.dui_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_success;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_left;
+import static org.dominokit.domino.ui.utils.Domino.dui_warning;
+import static org.dominokit.domino.ui.utils.Domino.dui_yellow;
+import static org.dominokit.domino.ui.utils.Domino.h;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.labels.Label;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class LabelsBasicSample extends BaseDominoElement<HTMLDivElement, LabelsBasicSample> {
 

@@ -1,11 +1,20 @@
 package org.dominokit.pages.client.views.ui.samples.components.preloaders;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_large;
+import static org.dominokit.domino.ui.utils.Domino.dui_medium;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_small;
+import static org.dominokit.domino.ui.utils.Domino.dui_xlarge;
+import static org.dominokit.domino.ui.utils.Domino.dui_xsmall;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.preloaders.Preloader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicPreLoadersSample extends BaseDominoElement<HTMLDivElement, BasicPreLoadersSample> {
 

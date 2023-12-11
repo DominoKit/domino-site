@@ -1,11 +1,27 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_10;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_5;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_6;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_7;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_8;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_9;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_loose;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_normal;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_relaxed;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_snug;
+import static org.dominokit.domino.ui.utils.Domino.dui_leading_tight;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyLeadSample extends BaseDominoElement<HTMLDivElement, TypographyLeadSample> {
 

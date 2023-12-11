@@ -1,6 +1,58 @@
 package org.dominokit.pages.client.views.ui.samples.components.waves;
 
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_accent;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_amber;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_black;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_blue;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_blue_grey;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_brown;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_cyan;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_deep_orange;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_deep_purple;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_green;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_grey;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_indigo;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_light_blue;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_light_green;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_lime;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_orange;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_pink;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_purple;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_red;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_teal;
+import static org.dominokit.domino.ui.style.WavesStyles.dui_waves_yellow;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_black;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_brown;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_deep_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_deep_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_light_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_light_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_lime;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_yellow;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_3;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_28;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Arrays;
 import org.dominokit.domino.ui.IsElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -8,11 +60,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.lists.ListGroup;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import java.util.Arrays;
-
-import static org.dominokit.domino.ui.style.WavesStyles.*;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class WavesSample extends BaseDominoElement<HTMLDivElement, WavesSample> {
 

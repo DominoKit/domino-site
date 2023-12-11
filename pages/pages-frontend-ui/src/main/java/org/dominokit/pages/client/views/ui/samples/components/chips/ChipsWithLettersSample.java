@@ -1,12 +1,31 @@
 package org.dominokit.pages.client.views.ui.samples.components.chips;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_black;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_black;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_wrap;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_transparent;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.chips.Chip;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.style.CompositeCssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ChipsWithLettersSample extends BaseDominoElement<HTMLDivElement, ChipsWithLettersSample> {
 

@@ -1,5 +1,17 @@
 package org.dominokit.pages.client.views.ui.samples.components.notifications;
 
+import static org.dominokit.domino.ui.notifications.Notification.Position.BOTTOM_LEFT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.BOTTOM_MIDDLE;
+import static org.dominokit.domino.ui.notifications.Notification.Position.BOTTOM_RIGHT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_LEFT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_MIDDLE;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_RIGHT;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_black;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_full;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -7,9 +19,6 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.notifications.Notification.Position.*;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicNotificationsSample extends BaseDominoElement<HTMLDivElement, BasicNotificationsSample> {
 

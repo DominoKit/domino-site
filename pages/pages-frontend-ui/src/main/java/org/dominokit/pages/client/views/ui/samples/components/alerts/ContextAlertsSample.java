@@ -1,11 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.alerts;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_b_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.strong;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.alerts.Alert;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ContextAlertsSample extends BaseDominoElement<HTMLDivElement, ContextAlertsSample> {
 

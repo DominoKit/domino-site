@@ -1,5 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.components.cards;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_blue_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_teal_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_blue;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.cards.Card;
 import org.dominokit.domino.ui.cards.HeaderPosition;
@@ -10,8 +21,6 @@ import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ColoredCardsSample extends BaseDominoElement<HTMLDivElement, ColoredCardsSample> {
 

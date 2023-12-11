@@ -1,11 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.cite;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.typography.Blockquote;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyBlockquotesSample extends BaseDominoElement<HTMLDivElement, TypographyBlockquotesSample> {
 

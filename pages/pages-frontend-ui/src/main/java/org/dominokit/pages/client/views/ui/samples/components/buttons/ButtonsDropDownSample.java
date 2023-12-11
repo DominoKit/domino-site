@@ -1,5 +1,24 @@
 package org.dominokit.pages.client.views.ui.samples.components.buttons;
 
+import static org.dominokit.domino.ui.menu.direction.DropDirection.BOTTOM_LEFT;
+import static org.dominokit.domino.ui.menu.direction.DropDirection.BOTTOM_MIDDLE;
+import static org.dominokit.domino.ui.menu.direction.DropDirection.BOTTOM_RIGHT;
+import static org.dominokit.domino.ui.menu.direction.DropDirection.TOP_LEFT;
+import static org.dominokit.domino.ui.menu.direction.DropDirection.TOP_MIDDLE;
+import static org.dominokit.domino.ui.menu.direction.DropDirection.TOP_RIGHT;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex_col;
+import static org.dominokit.domino.ui.utils.Domino.dui_gap_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_justify_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_primary;
+import static org.dominokit.domino.ui.utils.Domino.dui_text_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_28;
+import static org.dominokit.domino.ui.utils.Domino.dui_warning;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.button.DropdownButton;
@@ -12,9 +31,6 @@ import org.dominokit.domino.ui.menu.Menu;
 import org.dominokit.domino.ui.menu.MenuItem;
 import org.dominokit.domino.ui.typography.BlockHeader;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.menu.direction.DropDirection.*;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class ButtonsDropDownSample extends BaseDominoElement<HTMLDivElement, ButtonsDropDownSample> {
 

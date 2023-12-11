@@ -1,12 +1,17 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_list_none;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.li;
+import static org.dominokit.domino.ui.utils.Domino.ol;
+import static org.dominokit.domino.ui.utils.Domino.ul;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyListsSample extends BaseDominoElement<HTMLDivElement, TypographyListsSample> {
 

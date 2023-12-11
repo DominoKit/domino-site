@@ -41,7 +41,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.PULSE)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -53,7 +52,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.SWING)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -65,7 +63,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.JELLO)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -77,7 +74,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.BOUNCE_IN_LEFT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -89,7 +85,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.BOUNCE_OUT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -101,7 +96,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.BOUNCE_OUT_RIGHT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -113,7 +107,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_IN_DOWN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -125,7 +118,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_IN_LEFT_BIG)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -137,7 +129,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_IN_UP)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -149,7 +140,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_OUT_DOWN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -161,7 +151,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_OUT_LEFT_BIG)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -173,7 +162,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FADE_OUT_UP)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -185,7 +173,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FLIP_IN_X)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -197,7 +184,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.FLIP_OUT_Y)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -209,7 +195,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ROTATE_IN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -221,7 +206,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ROTATE_IN_UP_LEFT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -233,7 +217,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ROTATE_OUT_DOWN_LEFT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -245,7 +228,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ROTATE_OUT_UP_RIGHT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -257,7 +239,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.SLIDE_IN_LEFT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -269,7 +250,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.SLIDE_OUT_DOWN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -281,7 +261,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ZOOM_IN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -293,7 +272,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ZOOM_IN_RIGHT)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -305,7 +283,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ZOOM_OUT_DOWN)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -317,7 +294,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ZOOM_OUT_UP)
                                 ))
-
                 )
                 .appendChild(Row.create()
                         .appendChild(Column.span4()
@@ -329,7 +305,6 @@ public class AnimationsBasicSample extends BaseDominoElement<HTMLDivElement, Ani
                         .appendChild(Column.span4()
                                 .appendChild(createCard(Transition.ROLL_OUT)
                                 ))
-
                 );
         init(this);
     }

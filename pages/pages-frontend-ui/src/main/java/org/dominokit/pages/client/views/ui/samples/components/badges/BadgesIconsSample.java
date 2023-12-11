@@ -1,5 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.badges;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_white;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_md;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_xl;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -7,8 +16,6 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BadgesIconsSample extends BaseDominoElement<HTMLDivElement, BadgesIconsSample> {
 

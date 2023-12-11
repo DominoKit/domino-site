@@ -1,15 +1,34 @@
 package org.dominokit.pages.client.views.ui.samples.components.badges;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_inherit;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_red;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_border;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_accent_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_amber;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_solid;
+import static org.dominokit.domino.ui.utils.Domino.dui_border_teal_d_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_inherit;
+import static org.dominokit.domino.ui.utils.Domino.dui_flex;
+import static org.dominokit.domino.ui.utils.Domino.dui_grow_1;
+import static org.dominokit.domino.ui.utils.Domino.dui_items_center;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_4;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_md;
+import static org.dominokit.domino.ui.utils.Domino.text;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.Arrays;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.lists.ListGroup;
 import org.dominokit.domino.ui.style.CssClass;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import java.util.Arrays;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BadgesListsSample extends BaseDominoElement<HTMLDivElement, BadgesListsSample> {
 

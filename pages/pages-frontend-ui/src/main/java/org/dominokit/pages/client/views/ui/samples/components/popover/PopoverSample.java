@@ -1,5 +1,16 @@
 package org.dominokit.pages.client.views.ui.samples.components.popover;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent;
+import static org.dominokit.domino.ui.utils.Domino.dui_elevation_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_2px;
+import static org.dominokit.domino.ui.utils.Domino.dui_m_t_0;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_sm;
+import static org.dominokit.domino.ui.utils.Domino.h;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.button.Button;
 import org.dominokit.domino.ui.cards.Card;
@@ -10,8 +21,6 @@ import org.dominokit.domino.ui.menu.direction.DropDirection;
 import org.dominokit.domino.ui.popover.Popover;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class PopoverSample extends BaseDominoElement<HTMLDivElement, PopoverSample> {
 

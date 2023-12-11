@@ -1,6 +1,14 @@
 package org.dominokit.pages.client.views.ui.samples.components.tree;
 
+import static java.util.Objects.nonNull;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_bg_accent_d_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_rounded_full;
+import static org.dominokit.pages.shared.model.Countries.COUNTRIES;
+
 import elemental2.dom.HTMLDivElement;
+import java.util.List;
 import org.dominokit.domino.ui.badges.Badge;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
@@ -15,12 +23,6 @@ import org.dominokit.domino.ui.utils.BaseDominoElement;
 import org.dominokit.domino.ui.utils.PostfixAddOn;
 import org.dominokit.pages.shared.model.Countries;
 import org.dominokit.pages.shared.model.Country;
-
-import java.util.List;
-
-import static java.util.Objects.nonNull;
-import static org.dominokit.domino.ui.utils.Domino.*;
-import static org.dominokit.pages.shared.model.Countries.COUNTRIES;
 
 public class FeaturedTreeSample extends BaseDominoElement<HTMLDivElement, FeaturedTreeSample> {
     private DivElement element;

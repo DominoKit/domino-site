@@ -18,7 +18,8 @@ public abstract class SampleViewImpl extends BaseElementView<HTMLDivElement> imp
 
     @Override
     public void renderSamples() {
-        DomGlobal.document.querySelectorAll("[dui-site-data='dui-sample-container']")
+        DomGlobal.setTimeout(p0 -> {
+            DomGlobal.document.querySelectorAll("[dui-site-data='dui-sample-container']")
                 .asList()
                 .stream()
                 .map(Domino::elementOf)
@@ -27,10 +28,11 @@ public abstract class SampleViewImpl extends BaseElementView<HTMLDivElement> imp
                         String sampleId = element.getAttribute("dui-sample-id");
                         if (samples.containsKey(sampleId)) {
                             element.clearElement()
-                                    .appendChild(DemoComponent.create(samples.get(sampleId)));
+                                .appendChild(DemoComponent.create(samples.get(sampleId)));
                         }
                     }
                 });
+        }, 0);
     }
 
     protected void register(DemoSample demoSample) {

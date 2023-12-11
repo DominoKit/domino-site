@@ -1,12 +1,25 @@
 package org.dominokit.pages.client.views.ui.samples.typography;
 
+import static org.dominokit.domino.ui.utils.Domino.b;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_blue_grey;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_orange;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_fg_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_font_bold;
+import static org.dominokit.domino.ui.utils.Domino.dui_italic;
+import static org.dominokit.domino.ui.utils.Domino.dui_line_through;
+import static org.dominokit.domino.ui.utils.Domino.dui_overline;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_underline;
+import static org.dominokit.domino.ui.utils.Domino.p;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class TypographyStylesSample extends BaseDominoElement<HTMLDivElement, TypographyStylesSample> {
 

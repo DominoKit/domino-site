@@ -1,5 +1,20 @@
 package org.dominokit.pages.client.views.ui.samples.components.notifications;
 
+import static org.dominokit.domino.ui.notifications.Notification.Position.BOTTOM_LEFT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.BOTTOM_RIGHT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_LEFT;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_MIDDLE;
+import static org.dominokit.domino.ui.notifications.Notification.Position.TOP_RIGHT;
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_cyan;
+import static org.dominokit.domino.ui.utils.Domino.dui_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_light_green;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_pink;
+import static org.dominokit.domino.ui.utils.Domino.dui_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_teal;
+import static org.dominokit.domino.ui.utils.Domino.dui_w_full;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.animations.Transition;
 import org.dominokit.domino.ui.button.Button;
@@ -8,9 +23,6 @@ import org.dominokit.domino.ui.grid.Column;
 import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.notifications.Notification;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.notifications.Notification.Position.*;
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class NotificationsAnimationSample extends BaseDominoElement<HTMLDivElement, NotificationsAnimationSample> {
 

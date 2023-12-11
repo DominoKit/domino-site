@@ -1,13 +1,13 @@
 package org.dominokit.pages.client.views.ui.samples.components.pagination;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+
 import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.elements.DivElement;
 import org.dominokit.domino.ui.pagination.Pager;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.div;
-import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
 
 public class PagerPaginationSample extends BaseDominoElement<HTMLDivElement, PagerPaginationSample> {
 

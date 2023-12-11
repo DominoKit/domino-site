@@ -1,5 +1,12 @@
 package org.dominokit.pages.client.views.ui.samples.components.infobox;
 
+import static org.dominokit.domino.ui.utils.Domino.div;
+import static org.dominokit.domino.ui.utils.Domino.dui_deep_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_indigo;
+import static org.dominokit.domino.ui.utils.Domino.dui_p_2;
+import static org.dominokit.domino.ui.utils.Domino.dui_purple;
+import static org.dominokit.domino.ui.utils.Domino.dui_red;
+
 import elemental2.dom.HTMLDivElement;
 import org.dominokit.domino.ui.counter.Counter;
 import org.dominokit.domino.ui.elements.DivElement;
@@ -8,8 +15,6 @@ import org.dominokit.domino.ui.grid.Row;
 import org.dominokit.domino.ui.icons.lib.Icons;
 import org.dominokit.domino.ui.infoboxes.InfoBox;
 import org.dominokit.domino.ui.utils.BaseDominoElement;
-
-import static org.dominokit.domino.ui.utils.Domino.*;
 
 public class BasicInfoBoxSample extends BaseDominoElement<HTMLDivElement, BasicInfoBoxSample> {
     private DivElement element;
