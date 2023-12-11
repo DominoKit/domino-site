@@ -28,7 +28,6 @@ public class AppClientModule implements EntryPoint {
           if (ClientApp.make().getHistory().currentToken().isEmpty()) {
             ClientApp.make().getHistory().fireState(StateToken.of("home"));
           }else {
-            ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
             DominoEvents.fire(ContentState.class, new ContentState(true));
           }
         }));

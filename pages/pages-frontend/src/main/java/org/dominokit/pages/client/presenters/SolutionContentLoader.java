@@ -17,6 +17,7 @@ public class SolutionContentLoader implements ContentLoader {
 
     @Override
     public void loadContent(HistoryToken token, PagesView view) {
+        DomGlobal.console.info("SolutionContentLoader : Loading content --- > ");
         String page = token.paths().get(token.paths().size() - 1);
         boolean docsContent = token.paths().contains("docs") && nonNull(DomGlobal.document.getElementById("dui-site-left-menu"));
         getContent(token.path(), page, docsContent, content -> {
