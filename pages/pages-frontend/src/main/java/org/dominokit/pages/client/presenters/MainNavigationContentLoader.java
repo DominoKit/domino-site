@@ -30,7 +30,6 @@ public class MainNavigationContentLoader implements ContentLoader {
 
     @Override
     public void loadContent(HistoryToken token, PagesView view) {
-        DomGlobal.console.info("MainNavigationContentLoader : Loading direct url --- > ");
         String page = token.paths().get(token.paths().size() - 1);
         getContent(token.path(), page, false , content -> {
             view.replaceContent(content, "dui-content-container");

@@ -1,7 +1,7 @@
 package org.dominokit;
 
 import com.google.gwt.core.client.EntryPoint;
-import elemental2.dom.DomGlobal;
+import java.util.logging.Logger;
 import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.extension.DominoEvents;
 import org.dominokit.domino.gwt.client.app.DominoGWT;
@@ -10,11 +10,8 @@ import org.dominokit.domino.history.TokenFilter;
 import org.dominokit.domino.ui.themes.DominoThemeManager;
 import org.dominokit.domino.ui.utils.ElementsFactory;
 import org.dominokit.domino.view.DominoViewOptions;
-import org.dominokit.domino.view.slots.ElementIdSlot;
 import org.dominokit.pages.shared.events.ContentState;
 import org.dominokit.rest.DominoRestConfig;
-
-import java.util.logging.Logger;
 
 public class AppClientModule implements EntryPoint {
 
@@ -26,7 +23,6 @@ public class AppClientModule implements EntryPoint {
         DominoThemeManager.INSTANCE.applyUserThemes();
 
         ClientApp.make().run(dominoOptions -> dominoOptions.setApplicationStartHandler(() -> {
-          DomGlobal.console.info(":= [:] FIRING CONTENT EVENT [:] =:");
           DominoEvents.fire(ContentState.class, new ContentState(true));
         }));
         LOGGER.info("dominokit-site Application frontend have been initialized.");
