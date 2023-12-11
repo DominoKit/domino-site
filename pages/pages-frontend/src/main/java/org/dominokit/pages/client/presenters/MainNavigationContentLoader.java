@@ -1,7 +1,9 @@
 package org.dominokit.pages.client.presenters;
 
+import org.dominokit.domino.api.client.ClientApp;
 import org.dominokit.domino.api.client.extension.DominoEvents;
 import org.dominokit.domino.history.HistoryToken;
+import org.dominokit.domino.history.StateToken;
 import org.dominokit.pages.client.views.PagesView;
 import org.dominokit.pages.shared.events.ContentState;
 
@@ -32,6 +34,7 @@ public class MainNavigationContentLoader implements ContentLoader {
             view.enhancePadding();
             view.registerSlots();
             DominoEvents.fire(ContentState.class, new ContentState(true));
+            ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
         });
     }
 }
