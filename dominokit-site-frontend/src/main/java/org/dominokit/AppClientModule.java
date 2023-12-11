@@ -2,6 +2,7 @@ package org.dominokit;
 
 import com.google.gwt.core.client.EntryPoint;
 import org.dominokit.domino.api.client.ClientApp;
+import org.dominokit.domino.api.client.extension.DominoEvents;
 import org.dominokit.domino.gwt.client.app.DominoGWT;
 import org.dominokit.domino.history.StateToken;
 import org.dominokit.domino.history.TokenFilter;
@@ -9,6 +10,7 @@ import org.dominokit.domino.ui.themes.DominoThemeManager;
 import org.dominokit.domino.ui.utils.ElementsFactory;
 import org.dominokit.domino.view.DominoViewOptions;
 import org.dominokit.domino.view.slots.ElementIdSlot;
+import org.dominokit.pages.shared.events.ContentState;
 import org.dominokit.rest.DominoRestConfig;
 
 import java.util.logging.Logger;
@@ -27,6 +29,7 @@ public class AppClientModule implements EntryPoint {
             ClientApp.make().getHistory().fireState(StateToken.of("home"));
         }else {
           ClientApp.make().getHistory().fireState(StateToken.of(ClientApp.make().getHistory().currentToken()));
+          DominoEvents.fire(ContentState.class, new ContentState(true));
         }
 
         ClientApp.make().getHistory()
