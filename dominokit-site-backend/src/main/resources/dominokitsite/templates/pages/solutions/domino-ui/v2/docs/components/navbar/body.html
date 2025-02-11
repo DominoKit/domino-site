@@ -1,0 +1,77 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-navbar"
+         dui-site-data="org.dominokit.domino.ui.layout.NavBar"></div>
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/navbar" aria-expanded="true">
+                Alerts
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Simple,Addons,Body,Docs">
+
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Navigation bar</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-navbar-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/navbar-anatomy.png"
+         class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive"
+         alt="navbar-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">navigation prefix addons.
+        </li>
+        <li class="dui">Navigation bar title.
+        </li>
+        <li class="dui">Navigation bar body.
+        </li>
+        <li class="dui">Navigation bar postfix addons.
+        </li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-simple">
+        <span class="dui dui-fg-teal">Simple navigation bar</span>
+        <small class="dui">Simple content header with title and optional description</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="navbar-simple"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-addons">
+        <span class="dui dui-fg-teal">Navigation bar addons</span>
+        <small class="dui">Navigation bar can have optional prefix and postfix addons.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="navbar-addons"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-body">
+        <span class="dui dui-fg-teal">Navigation bar body</span>
+        <small class="dui">Navigation bar can have other components added to its main body</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="navbar-body"></div>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-navbar-method-docs', 'NavBar', 'https://www.javadoc.io/doc/org.dominokit/domino-ui/latest/org/dominokit/domino/ui/layout/NavBar.html')"></div>
+
+</div>

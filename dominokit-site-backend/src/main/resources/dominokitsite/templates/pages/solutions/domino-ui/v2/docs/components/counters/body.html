@@ -1,0 +1,70 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-count-circle"
+         dui-site-data="org.dominokit.pro.domino.ui.counter.CountCircle"></div>
+
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-count-date"
+         dui-site-data="org.dominokit.pro.domino.ui.counter.DateCountDown"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/counters" aria-expanded="true">
+                Counters <span class="dui dui-badge dui-rounded-full">Pro</span>
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Simple,Auto,Date,Docs">
+
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Counters</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-count-circle-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-count-date-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-simple">
+        <span class="dui dui-fg-teal">Simple counter</span>
+        <small class="dui">Counters like progress bar with manual/auto control</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="counters-simple"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-auto">
+        <span class="dui dui-fg-teal">Auto counter</span>
+        <small class="dui">Update counter based on custom intervals</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="counters-auto"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-date">
+        <span class="dui dui-fg-teal">Date count down</span>
+        <small class="dui">Special counter to countdown dates</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="counters-date"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-count-circle-method-docs', 'CountCircle', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/counters/CountCircle.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-count-date-method-docs', 'DateCountDown', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/counters/DateCountDown.html')"></div>
+
+</div>

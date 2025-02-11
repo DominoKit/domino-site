@@ -17,10 +17,12 @@
         <vertx.version>3.9.0</vertx.version>
         <domino.history.version>1.0.1</domino.history.version>
         <domino.rest.version>1.0.1</domino.rest.version>
-        <domino.ui.version>2.0.0-RC5</domino.ui.version>
+        <domino.ui.version>HEAD-SNAPSHOT</domino.ui.version>
+        <domino.ui.pro.version>HEAD-SNAPSHOT</domino.ui.pro.version>
         <domino.history.version>1.0.1</domino.history.version>
         <domino.jackson.version>1.0.4</domino.jackson.version>
         <domino.mvp.version>HEAD-SNAPSHOT</domino.mvp.version>
+        <elemental2.version>1.2.3</elemental2.version>
     </properties>
 
     <dependencyManagement>
@@ -44,6 +46,11 @@
                 <artifactId>domino-ui</artifactId>
                 <version>${domino.ui.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.dominokit</groupId>
+                <artifactId>domino-ui-pro</artifactId>
+                <version>${domino.ui.pro.version}</version>
+            </dependency>
             <!-- https://mvnrepository.com/artifact/io.vertx/vertx-web-templ-thymeleaf -->
             <dependency>
                 <groupId>io.vertx</groupId>
@@ -53,6 +60,28 @@
             <dependency>
                 <groupId>org.dominokit</groupId>
                 <artifactId>domino-history-shared</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.google.elemental2</groupId>
+                <artifactId>elemental2-dom</artifactId>
+                <version>${elemental2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.elemental2</groupId>
+                <artifactId>elemental2-dom</artifactId>
+                <version>${elemental2.version}</version>
+                <classifier>sources</classifier>
+            </dependency>
+            <dependency>
+                <groupId>com.google.elemental2</groupId>
+                <artifactId>elemental2-core</artifactId>
+                <version>${elemental2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.elemental2</groupId>
+                <artifactId>elemental2-core</artifactId>
+                <version>${elemental2.version}</version>
+                <classifier>sources</classifier>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -133,6 +162,19 @@
                             <codeserverArg>-src</codeserverArg>
                             <codeserverArg>
                                 /mnt/drive2/Development/Dominokit/domino-ui/domino-ui-shared/src/main/java
+                            </codeserverArg>
+
+                            <codeserverArg>-src</codeserverArg>
+                            <codeserverArg>
+                                /mnt/drive2/Development/Dominokit/domino-ui-pro/src/main/java
+                            </codeserverArg>
+                            <codeserverArg>-src</codeserverArg>
+                            <codeserverArg>
+                                /mnt/drive2/Development/Dominokit/domino-ui-pro/target/generated-sources/annotations
+                            </codeserverArg>
+                            <codeserverArg>-src</codeserverArg>
+                            <codeserverArg>
+                                /mnt/drive2/Development/Dominokit/domino-ui-pro/src/main/resources
                             </codeserverArg>
                         </codeserverArgs>
                     </configuration>

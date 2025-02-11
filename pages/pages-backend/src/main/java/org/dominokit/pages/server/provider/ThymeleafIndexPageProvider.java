@@ -66,6 +66,8 @@ public class ThymeleafIndexPageProvider implements IndexPageProvider {
                     content = websiteDocument.html();
                     response.putHeader("Content-length", content.length() + "")
                             .write(content);
+                }else {
+                    LOGGER.error("Failed", event.cause());
                 }
                 response.end();
             });

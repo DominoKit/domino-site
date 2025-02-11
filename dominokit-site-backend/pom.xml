@@ -58,6 +58,13 @@
 
 		<dependency>
 			<groupId>org.dominokit</groupId>
+			<artifactId>domino-ui-pro</artifactId>
+			<version>${domino.ui.pro.version}</version>
+            <classifier>javadoc</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.dominokit</groupId>
 			<artifactId>domino-history-client</artifactId>
 			<version>${domino.history.version}</version>
             <classifier>javadoc</classifier>

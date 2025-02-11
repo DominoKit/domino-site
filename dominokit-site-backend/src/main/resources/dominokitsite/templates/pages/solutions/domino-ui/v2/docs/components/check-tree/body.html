@@ -1,0 +1,80 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tree-root"
+         dui-site-data="org.dominokit.domino.ui.tree.TreeRoot"></div>
+
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-tree-node"
+         dui-site-data="org.dominokit.domino.ui.tree.TreeNode"></div>
+
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-check-tree"
+         dui-site-data="org.dominokit.pro.domino.ui.tree.CheckTree"></div>
+
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-check-tree-item"
+         dui-site-data="org.dominokit.pro.domino.ui.tree.CheckTreeItem"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/check-tree" aria-expanded="true">
+                Check tree <span class="dui dui-badge dui-rounded-full">Pro</span>
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Simple,Nested,Featured,Docs">
+
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Check tree</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-tree-root-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-tree-node-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-check-tree-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-check-tree-item-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-simple">
+        <span class="dui dui-fg-teal">Simple check tree</span>
+        <small class="dui">Menu like check tree</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="check-tree-simple"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-nested">
+        <span class="dui dui-fg-teal">Nested check tree</span>
+        <small class="dui">Check tree with nested selection</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="check-tree-nested"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-featured">
+        <span class="dui dui-fg-teal">Check tree other features</span>
+        <small class="dui">Check tree supports normal tree features</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="check-tree-featured"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-root-docs', 'TreeRoot', 'https://www.javadoc.io/doc/org/dominokit/domino/ui/tree/TreeRoot.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-tree-node-method-docs', 'TreeNode', 'https://www.javadoc.io/doc/org/dominokit/domino/ui/tree/TreeNode.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-check-tree-method-docs', 'CheckTree', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/tree/CheckTree.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-check-tree-item-method-docs', 'CheckTreeItem', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/tree/CheckTreeItem.html')"></div>
+
+</div>

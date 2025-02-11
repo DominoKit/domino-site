@@ -787,3 +787,7 @@ pre {
 pre code {
     white-space: pre;
 }
+
+.dui-site-menu-item-text {
+    flex-grow: 1;
+}

@@ -834,3 +834,13 @@ body.dui {
 .dui-site-solution-doc-body > .dui-breadcrumb > .dui-active{
     opacity: 1;
 }
+
+
+.dui-site-menu-item-text {
+    flex-grow: 1;
+}
+
+.dui-site-menu-link .dui-badge {
+    margin-right: var(--dui-spc-4);
+    border-radius: var(--dui-spc-9999px);
+}

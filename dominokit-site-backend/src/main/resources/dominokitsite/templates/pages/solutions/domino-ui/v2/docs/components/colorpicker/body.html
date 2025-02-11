@@ -1,0 +1,65 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-colorpicker"
+         dui-site-data="org.dominokit.pro.domino.ui.colorpicker.ColorPicker"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/colorpicker" aria-expanded="true">
+                Color picker
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Basic,Button,Popover,Docs">
+
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Color picker</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-colorpicker-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-basic">
+        <span class="dui dui-fg-teal">Basic picker</span>
+        <small class="dui">Full featured color picker supporting different color formats.</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="colorpicker-basic"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-button">
+        <span class="dui dui-fg-teal">Picker button</span>
+        <small class="dui">Use a button to open color picker</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="colorpicker-button"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-popover">
+        <span class="dui dui-fg-teal">Color picker in a popover</span>
+        <small class="dui">Open the color picker in a custom popover</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="colorpicker-popover"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-colorpicker-method-docs', 'ColorPicker', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/colorpicker/ColorPicker.html')"></div>
+
+</div>

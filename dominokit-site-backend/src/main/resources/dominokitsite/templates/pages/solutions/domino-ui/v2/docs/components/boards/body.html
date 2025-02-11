@@ -1,0 +1,88 @@
+<div th:fragment="content" class="dui dui-site-solution-doc-body">
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-boards"
+         dui-site-data="org.dominokit.pro.domino.ui.boards.BaseBoard"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-boards-column"
+         dui-site-data="org.dominokit.pro.domino.ui.boards.ColumnsBoard"></div>
+    <div class="dui dui-site-component-docs-class" dui-site-docs="true" dui-site-data-id-prefix="dui-boards-list"
+         dui-site-data="org.dominokit.pro.domino.ui.boards.ListsBoard"></div>
+
+    <div id="dui-side-nav-top"></div>
+    <ol class="dui dui-breadcrumb dui-p-0">
+        <li class="dui">
+            <a class="dui dui-fg-teal" tabindex="0" dui-site-data="nav-anchor" href="/solutions/domino-ui/v2"
+               aria-expanded="true">
+                Domino UI
+            </a>
+        </li>
+        <li class="dui">
+            <a class="dui" tabindex="0" aria-expanded="true">
+                Components
+            </a>
+        </li>
+        <li class="dui dui-active">
+            <a class="dui" tabindex="0" dui-site-data="nav-anchor"
+               href="/solutions/domino-ui/v2/docs/components/boards" aria-expanded="true">
+                Boards <span class="dui dui-badge dui-rounded-full">Pro</span>
+            </a>
+        </li>
+    </ol>
+
+    <div class="dui dui-site-scroll-fire" id="dui-site-doc-page-side-nav"
+         dui-site-data="Top,Column,List,Docs">
+
+    </div>
+
+    <h1 class="dui dui-site-docs-title">Boards</h1>
+
+    <div class="dui dui-site-component-docs" id="dui-boards-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-boards-column-class-docs"></div>
+    <div class="dui dui-site-component-docs" id="dui-boards-list-class-docs"></div>
+
+    <h2 class="dui dui-site-docs-subtitle">Anatomy</h2>
+
+    <img src="/assets/boards-column-anatomy.png"
+         class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive"
+         alt="boards-column-anatomy.">
+    <img src="/assets/boards-list-anatomy.png"
+         class="dui dui-rounded dui-border dui-border-solid dui-border-teal dui-image-responsive"
+         alt="boards-list-anatomy.">
+
+    <ol class="dui dui-site-docs-list">
+        <li class="dui">Boards header which is a NavBar.
+        </li>
+        <li class="dui">Board group.
+        </li>
+        <li class="dui">Board group header.
+        </li>
+        <li class="dui">Board group item.
+        </li>
+    </ol>
+
+    <h2 class="dui dui-site-docs-subtitle">Examples</h2>
+
+    <div id="dui-demo-sample-slot"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-context">
+        <span class="dui dui-fg-teal">Columns board</span>
+        <small class="dui">Kanban like board</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="boards-column"></div>
+
+    <h3 class="dui dui-docs-demo-sample-title" id="dui-side-nav-list">
+        <span class="dui dui-fg-teal">List board</span>
+        <small class="dui">Uses lists instead of columns</small>
+    </h3>
+    <div class="dui" dui-site-data="dui-sample-container" dui-sample-id="boards-list"></div>
+
+    <div class="dui dui-flex dui-justify-center">
+        <div th:replace="fragments/commons/components/open-menu :: content"></div>
+    </div>
+
+
+    <div id="dui-side-nav-docs"></div>
+
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-boards-method-docs', 'BaseBoard', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/boards/BaseBoard.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-boards-column-method-docs', 'ColumnsBoard', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/boards/ColumnsBoard.html')"></div>
+    <div th:replace="fragments/commons/components/javadocs :: content('dui-boards-list-method-docs', 'ListsBoard', 'https://www.javadoc.io/doc/org/dominokit/pro/domino/ui/boards/ListsBoard.html')"></div>
+
+</div>
